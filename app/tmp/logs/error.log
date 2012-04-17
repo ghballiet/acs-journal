@@ -1,0 +1,619 @@
+2012-04-13 03:06:53 Error: [MissingControllerException] Controller class SubmissionInfoController could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-04-13 03:07:21 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/submission_info.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submission_info')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submission_info', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('submission_info')
+#3 [internal function]: PagesController->display('submission_info')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:20:28 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/css/submission_info.css.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('css/submission_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('css/submission_...', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('css/submission_...')
+#3 [internal function]: PagesController->display('css', 'submission_info...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:22:03 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/css/submission_info.css.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('css/submission_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('css/submission_...', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('css/submission_...')
+#3 [internal function]: PagesController->display('css', 'submission_info...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:22:10 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/css/submission_info.css.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('css/submission_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('css/submission_...', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('css/submission_...')
+#3 [internal function]: PagesController->display('css', 'submission_info...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:22:21 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/css/submission_info.css.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('css/submission_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('css/submission_...', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('css/submission_...')
+#3 [internal function]: PagesController->display('css', 'submission_info...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:22:34 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/css/submission_info.css.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('css/submission_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('css/submission_...', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('css/submission_...')
+#3 [internal function]: PagesController->display('css', 'submission_info...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:22:41 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/css/submission_info.css.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('css/submission_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('css/submission_...', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('css/submission_...')
+#3 [internal function]: PagesController->display('css', 'submission_info...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:22:43 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/css/submission_info.css.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('css/submission_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('css/submission_...', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('css/submission_...')
+#3 [internal function]: PagesController->display('css', 'submission_info...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:22:45 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/css/submission_info.css.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('css/submission_...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('css/submission_...', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('css/submission_...')
+#3 [internal function]: PagesController->display('css', 'submission_info...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:34:24 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/login', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(80): Controller->render('users/login')
+#3 [internal function]: PagesController->display('users', 'login')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:34:59 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/login', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/login')
+#3 [internal function]: PagesController->display('users', 'login')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:37:20 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/submit.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submit', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('submit')
+#3 [internal function]: PagesController->display('submit')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:37:28 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/submit.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submit', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(87): Controller->render('submit')
+#3 [internal function]: PagesController->display('submit')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:37:29 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/submit.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submit', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(87): Controller->render('submit')
+#3 [internal function]: PagesController->display('submit')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:37:32 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/submit.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submit', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(87): Controller->render('submit')
+#3 [internal function]: PagesController->display('submit')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:37:49 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/submit.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submit', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(87): Controller->render('submit')
+#3 [internal function]: PagesController->display('submit')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:37:50 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/submit.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submit', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(87): Controller->render('submit')
+#3 [internal function]: PagesController->display('submit')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:37:54 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/submit.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submit')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submit', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('submit')
+#3 [internal function]: PagesController->display('submit')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 03:50:03 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/img/waves.png.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('img/waves.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('img/waves.png', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('img/waves.png')
+#3 [internal function]: PagesController->display('img', 'waves.png')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:00:35 Error: [CakeException] The "scripts" block was left open. Blocks are not allowed to cross files.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(463): View->_render('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submission_info', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('submission_info')
+#3 [internal function]: PagesController->display('submission_info')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:00:39 Error: [CakeException] The "scripts" block was left open. Blocks are not allowed to cross files.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(463): View->_render('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submission_info', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('submission_info')
+#3 [internal function]: PagesController->display('submission_info')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:00:51 Error: [CakeException] The "scripts" block was left open. Blocks are not allowed to cross files.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(463): View->_render('/Applications/X...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('submission_info', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('submission_info')
+#3 [internal function]: PagesController->display('submission_info')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:07:16 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('login', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('login')
+#3 [internal function]: PagesController->display('login')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:07:43 Error: [MissingActionException] Action PagesController::login() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:07:49 Error: [MissingActionException] Action PagesController::submission_info() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:07:50 Error: [MissingActionException] Action PagesController::submission_info() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:07:59 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('login', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('login')
+#3 [internal function]: PagesController->display('login')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:08:00 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('login', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('login')
+#3 [internal function]: PagesController->display('login')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:08:09 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('login')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('login', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('login')
+#3 [internal function]: PagesController->display('login')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:08:24 Error: [MissingActionException] Action PagesController::login() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:08:27 Error: [MissingActionException] Action PagesController::submission_info() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:08:49 Error: [MissingActionException] Action PagesController::submission_info() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:08:59 Error: [MissingActionException] Action PagesController::submission_info() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:09:16 Error: [MissingActionException] Action PagesController::login() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:09:55 Error: [MissingActionException] Action PagesController::login() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:10:10 Error: [MissingActionException] Action PagesController::login() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:10:34 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-04-13 04:12:02 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-04-13 04:12:40 Error: [MissingActionException] Action UsersController::login() could not be found.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-13 04:13:27 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/User/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-04-13 04:13:46 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/User/login.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-04-13 04:14:04 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Model.php(3398): Model->setSource('users')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Model.php(1276): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/Helper/FormHelper.php(191): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/Helper/FormHelper.php(444): FormHelper->_introspectModel('User', 'fields')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/app/View/User/login.ctp(2): FormHelper->create('User', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(908): include('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(872): View->_evaluate('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(463): View->_render('/Applications/X...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#9 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#10 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-04-13 04:14:11 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Model.php(3398): Model->setSource('users')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Model.php(1276): Model->getDataSource()
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/Helper/FormHelper.php(191): Model->schema()
+#3 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/Helper/FormHelper.php(444): FormHelper->_introspectModel('User', 'fields')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/app/View/User/login.ctp(2): FormHelper->create('User', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(908): include('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(872): View->_evaluate('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(463): View->_render('/Applications/X...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#9 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#10 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-04-13 04:54:30 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:55:06 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:55:09 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:55:30 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:55:32 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:55:47 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:56:02 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:56:04 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 04:56:14 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:21:38 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:21:40 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:21:56 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:21:58 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:22:08 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:22:29 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:22:33 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:22:34 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:22:42 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:22:52 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:23:12 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:23:13 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/users/register.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('users/register')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('users/register', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('users/register')
+#3 [internal function]: PagesController->display('users', 'register')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:23:20 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/fifteen.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('fifteen')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('fifteen', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('fifteen')
+#3 [internal function]: PagesController->display('fifteen')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 05:23:24 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Pages/regist.ctp" is missing.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(460): View->_getViewFileName('regist')
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render('regist', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/app/Controller/PagesController.php(84): Controller->render('regist')
+#3 [internal function]: PagesController->display('regist')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-04-13 07:04:06 Error: [MissingConnectionException] Database connection "SQLSTATE[28000] [1045] Access denied for user 'cogsysor_journal'@'localhost' (using password: YES)" is missing, or could not be created.
+#0 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Datasource/DboSource.php(245): Mysql->connect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Model.php(3372): ConnectionManager::getDataSource('default')
+#3 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Model.php(1083): Model->setDataSource('default')
+#4 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Model.php(3398): Model->setSource('users')
+#5 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Model/Model.php(1276): Model->getDataSource()
+#6 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/Helper/FormHelper.php(191): Model->schema()
+#7 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/Helper/FormHelper.php(444): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/XAMPP/xamppfiles/htdocs/journal/app/View/Helper/BootstrapFormHelper.php(20): FormHelper->create('User', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/journal/app/View/User/register.ctp(245): BootstrapFormHelper->create('User')
+#10 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(908): include('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(872): View->_evaluate('/Applications/X...', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/View/View.php(463): View->_render('/Applications/X...')
+#13 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#14 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#15 /Applications/XAMPP/xamppfiles/htdocs/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#16 /Applications/XAMPP/xamppfiles/htdocs/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
