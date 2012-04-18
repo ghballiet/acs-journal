@@ -43,6 +43,15 @@
               <li><? echo $this->Html->link('Submission Info', '/submission_info'); ?></li>
             </ul>
             <ul class="nav pull-right">
+              <?
+              if($user['role'] == '1') {
+                $title = 'Administration';
+                $arr = array(
+                  array('text'=>'Collections', 'link'=>'/manage_collections', 'icon'=>'book'),
+                  array('text'=>'Users', 'link'=>'/manage_users', 'icon'=>'user')
+                );
+              }
+              ?>
               <li class="divider-vertical"></li>
               <?
               $title = null;
