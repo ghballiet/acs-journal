@@ -1,0 +1,34 @@
+- use FAQ from the conference
+- if someone is accepted to the conference, it will be accepted into
+  the journal for that conference
+- from address for emails: acs@cogsys.org, acs2012@cogsys.org, etc
+- we need to store multiple versions of the paper, as revisions are
+  made, etc; there is some version which is now above that threshold
+- papers can be in more than one colleciton
+- metareview is where the editor writes a review, which is a
+  high-level summary of the other reviews, and which includes a
+  decision about the paper. this is provided to the author, as a sort
+  of cover letter.
+- classifications / categories of papers are associated with
+  collections, and so must be defined when a collection is created
+- coauthors should be required to approve or decline requests to have
+  them listed as coauthors of the paper
+- we should be able to order papers within a collection (those which
+  have been accepted); this ordering might be alphabetical, it might
+  be order in which they were submitted, etc. we can order the entire
+  collection (regardless of paper categorizations) and the order will
+  be maintained within each category.
+- user roles: admin, editor, reviewer, author (in order of rank)
+- information associated with a collection:
+  - title
+  - description
+  - masthead
+    - list of roles (editor, asst editor), names, and emails
+  - type (annual conference, special issue)
+  - period of open submission (start and end dates)
+  - submission deadline, and earliest submission
+- information associated with a publication:
+  - issue #
+  - volume #
+  - publication date
+  - issn
