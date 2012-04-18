@@ -50,7 +50,7 @@
                   array('text'=>'Collections', 'link'=>'/manage_collections', 'icon'=>'book'),
                   array('text'=>'Users', 'link'=>'/manage_users', 'icon'=>'user')
                 );
-                echo $this->Bootstrap->dropdown($title, $links);
+                echo $this->Bootstrap->dropdown($title, $arr);
               }
               ?>
               <li class="divider-vertical"></li>
