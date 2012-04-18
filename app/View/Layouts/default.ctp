@@ -44,7 +44,7 @@
             </ul>
             <ul class="nav pull-right">
               <?
-              if($user['role'] == '1') {
+              if($user['role_id'] == '1') {
                 $title = 'Administration';
                 $arr = array(
                   array('text'=>'Collections', 'link'=>'/manage_collections', 'icon'=>'book'),
