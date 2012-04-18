@@ -12,8 +12,8 @@ create table users (
   postal varchar(250),
   country varchar(250),
   phone varchar(250),
-  created timestamp,
   role_id integer,
+  created timestamp,
   modified timestamp on update current_timestamp
 );
 
