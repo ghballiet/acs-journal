@@ -9,6 +9,8 @@ $this->end();
       <ul class="nav nav-list">
         <li class="nav-header">Contents</li>
         <li><a href="#overview">Overview</a></li>
+        <li><a href="#participation">Participation, Submission, and Publication</a></li>
+        <li><a href="#review_process">Review Process</a></li>
       </ul>
     </div>
   </div>
@@ -59,5 +61,66 @@ $this->end();
     especially welcome submissions from those working in these and other
     areas who are interested in complex cognition, human-level
     intelligence, and related topics.</p>
+    
+    <h1 id="participation">Participation, Submission, and Publication</h1>
+    <p>Because attendance at the meeting will be selective,
+    researchers who would like to participate must submit a brief
+    statement of interest at the symposium Web site, along with links
+    to one or more papers they have written in the area of cognitive
+    systems. The organizing committee will use this information to
+    determine whether to invite applicants to participate in the
+    meeting.</p>
+    
+    <p>We also invite researchers to submit papers for presentation at
+    the event. Submitted papers should follow the AAAI two-column
+    format and should be no more than eight (8) pages in length. Any
+    papers that diverge from this format or that exceed this length
+    will be returned without review. In addition, each submission
+    should state explicitly the problem or capability it addresses,
+    describe its response to this problem, make claims about this
+    approach, and provide evidence in support of these claims. Every
+    paper should also discuss related efforts, examine limitations of
+    the reported work, and outline plans for future research.</p>
+    
+    <p>Accepted papers will appear in a AAAI technical report that
+    will be available at the meeting. To improve overall quality of
+    these publications, some submissions may be accepted on a
+    conditional basis. To increase participation despite a limited
+    number of speaker slots, we expect to accept some submissions for
+    poster presentation at the meeting.</p>
+    
+    <h1 class="review_process">Review Process</h1>
+    <p>Because the symposium aims to encourage research toward a
+    broader understanding of intelligence, its criteria for
+    determining contributions will differ from those used in
+    traditional circles. Progress may take many forms, including
+    demonstrating new functionality, integrating different facets of
+    intelligence, presenting a novel approach to an established
+    problem, explaining complex cognition in humans, and formally
+    analyzing a difficult new task. We also welcome submissions on new
+    problems or testbeds that challenge existing approaches.</p>
+    
+    <p>Papers that report incremental variants of existing methods,
+    minor improvements on performance metrics for established tasks,
+    or mathematical analyses of component algorithms are not in
+    themselves relevant to this meeting unless they aid progress
+    toward cognitive systems with broad functionality.
+
+    <p>Each submission will be assigned to multiple referees who will
+    evaluate the paper for its contribution to understanding cognitive
+    systems, clarity of claims about this contribution, convincing
+    evidence in support of those claims, and cogent presentation of
+    its ideas to readers. We encourage authors to examine the review
+    form before drafting their manuscripts to ensure that their
+    submissions address all of the dimensions on which reviewers will
+    evaluate them.</p>
+
+    <p>Although we expect most submissions to be accepted or rejected
+    outright, some papers may be accepted conditionally. In such
+    cases, the authors will receive an itemized list of changes they
+    must make in their final paper. Revised papers that satisfy these
+    conditions will be included in the publication associated with the
+    symposium.</p>
+    </p>
   </div>
 </div>
