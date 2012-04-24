@@ -190,7 +190,7 @@ $this->end();
   
     <h2 id="program_committee">Program Committee</h2>
     <div class="well">
-      <dl class="dl-horizontal columns">
+      <dl class="dl-horizontal">
         <dt>David Aha</dt><dd>Naval Research Laboratory</dd>
         <dt>James Allen</dt><dd>University of Rochester</dd>
         <dt>Chitta Baral</dt><dd>Arizona State University</dd>
