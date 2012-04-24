@@ -9,8 +9,7 @@ $this->end();
       <ul class="nav nav-list">
         <li class="nav-header">Contents</li>
         <li><a href="#overview">Overview</a></li>
-        <li><a href="#participation">Participation, Submission, and Publication</a></li>
-        <li><a href="#review_process">Review Process</a></li>
+        <li><a href="#submission">Submission, Review, and Publication</a></li>
         <li><a href="#info">Location, Dates, and Other Information</a></li>
         <li><a href="#organizing_committee">Organizing Committee</a></li>
         <li><a href="#program_committee">Program Committee</a></li>
@@ -67,7 +66,7 @@ $this->end();
 
 
 
-    <h2 id="participation">Participation, Submission, and Publication</h2>
+    <h2 id="submission">Submission, Review, and Publication</h2>
 
     <p>We also invite researchers to submit papers for presentation at
     the event. Submitted papers should follow the single column format
@@ -84,11 +83,6 @@ $this->end();
     basis. To increase participation despite a limited number of
     speaker slots, we expect to accept some submissions for poster
     presentation at the meeting.</p>
-
-
-
-    
-    <h2 id="review_process">Review Process</h2>
 
     <p>Because the conference aims to encourage research toward a
     broader understanding of intelligence, its criteria for
