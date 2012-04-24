@@ -201,7 +201,7 @@ $this->end();
         <dt>Ashok Goel</dt><dd>Georgia Institute of Technology</dd>
         <dt>Jerry Hobbs</dt><dd>University of Southern California</dd>
         <dt>Randolph Jones</dt><dd>Soar Technology</dd>
-        <dt>Kai-Uwe Kuehnberger</dt><dd>University of Osnabr&uumlt;ck</dd>
+        <dt>Kai-Uwe Kuehnberger</dt><dd>University of Osnabr&uuml;ck</dd>
         <dt>David McDonald</dt><dd>Smart Information Flow Technologies</dd>
         <dt>Paul Rosenbloom</dt><dd>University of Southern California</dd>
         <dt>Claude Sammut</dt><dd>University of New South Wales</dd>
