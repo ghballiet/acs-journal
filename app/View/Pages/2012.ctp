@@ -187,31 +187,31 @@ $this->end();
         <dt>Sergei Nirenburg</dt><dd>University of Maryland, Baltimore County</dd>
       </dl>
     </div>
-  </div>
   
-  <h2 id="program_committee">Program Committee</h2>
-  <div class="well">
-    <dl class="dl-horizontal columns">
-      <dt>David Aha</dt><dd>Naval Research Laboratory</dd>
-      <dt>James Allen</dt><dd>University of Rochester</dd>
-      <dt>Chitta Baral</dt><dd>Arizona State University</dd>
-      <dt>Gautam Biswas</dt><dd>Vanderbilt University</dd>
-      <dt>Jim Blythe</dt><dd>University of Southern California</dd>
-      <dt>Michael Cox</dt><dd>University of Maryland</dd>
-      <dt>Scott Fahlman</dt><dd>Carnegie Mellon University</dd>
-      <dt>Ashok Goel</dt><dd>Georgia Institute of Technology</dd>
-      <dt>Jerry Hobbs</dt><dd>University of Southern California</dd>
-      <dt>Randolph Jones</dt><dd>Soar Technology</dd>
-      <dt>Kai-Uwe Kuehnberger</dt><dd>University of Osnabr&uumlt;ck</dd>
-      <dt>David McDonald</dt><dd>Smart Information Flow Technologies</dd>
-      <dt>Paul Rosenbloom</dt><dd>University of Southern California</dd>
-      <dt>Claude Sammut</dt><dd>University of New South Wales</dd>
-      <dt>Matthias Scheutz</dt><dd>Tufts University</dd>
-      <dt>Ute Schmidt</dt><dd>University of Bamberg</dd>
-      <dt>Stuart Shapiro</dt><dd>SUNY at Buffalo</dd>
-      <dt>Bill Swartout</dt><dd>University of Southern California</dd>
-      <dt>Patrick Winston</dt><dd>Massachusetts Institute of Technology</dd>
-      <dt>R. Michael Young</dt><dd>North Carolina State University</dd>
-    </dl>
+    <h2 id="program_committee">Program Committee</h2>
+    <div class="well">
+      <dl class="dl-horizontal columns">
+        <dt>David Aha</dt><dd>Naval Research Laboratory</dd>
+        <dt>James Allen</dt><dd>University of Rochester</dd>
+        <dt>Chitta Baral</dt><dd>Arizona State University</dd>
+        <dt>Gautam Biswas</dt><dd>Vanderbilt University</dd>
+        <dt>Jim Blythe</dt><dd>University of Southern California</dd>
+        <dt>Michael Cox</dt><dd>University of Maryland</dd>
+        <dt>Scott Fahlman</dt><dd>Carnegie Mellon University</dd>
+        <dt>Ashok Goel</dt><dd>Georgia Institute of Technology</dd>
+        <dt>Jerry Hobbs</dt><dd>University of Southern California</dd>
+        <dt>Randolph Jones</dt><dd>Soar Technology</dd>
+        <dt>Kai-Uwe Kuehnberger</dt><dd>University of Osnabr&uumlt;ck</dd>
+        <dt>David McDonald</dt><dd>Smart Information Flow Technologies</dd>
+        <dt>Paul Rosenbloom</dt><dd>University of Southern California</dd>
+        <dt>Claude Sammut</dt><dd>University of New South Wales</dd>
+        <dt>Matthias Scheutz</dt><dd>Tufts University</dd>
+        <dt>Ute Schmidt</dt><dd>University of Bamberg</dd>
+        <dt>Stuart Shapiro</dt><dd>SUNY at Buffalo</dd>
+        <dt>Bill Swartout</dt><dd>University of Southern California</dd>
+        <dt>Patrick Winston</dt><dd>Massachusetts Institute of Technology</dd>
+        <dt>R. Michael Young</dt><dd>North Carolina State University</dd>
+      </dl>
+    </div>
   </div>
 </div>
