@@ -1,7 +1,10 @@
+<div class="page-header">
+  <h1>Please log in to continue.</h1>
+</div>
 <?
 echo $this->BootstrapForm->create('User');
 ?>
-<fieldset><legend>Please log in to continue.</legend>
+<fieldset>
   <div class="control-group">
     <div class="controls">
       <p class="help-block">Don't have an account?

@@ -241,10 +241,14 @@ $countries = array(
   "ZM" => "Zambia",
   "ZW" => "Zimbabwe"
 );
+?>
+<div class="page-header">
+  <h1>Create an Account</h1>
+</div>
+<?
 echo $this->BootstrapForm->create('User');
 ?>
 <fieldset>
-  <legend>Create an account</legend>
   <?
   echo $this->BootstrapForm->input('name', array('icon'=>'user', 
     'autofocus'=>'true'));
