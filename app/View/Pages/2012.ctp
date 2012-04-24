@@ -19,13 +19,13 @@ $this->end();
   </div>
   <div class="span9">
     <div class="page-header">
-      <h1>ACS 2012</h1>
+      <h1>First Conference on Advances in Cognitive Systems</h1>
     </div>
     
     <h2 id="overview">Overview</h2>
     <p>We invite submissions to the First Conference on Advances in
     Cognitive Systems, which will take place in Mountain View,
-    California on December 7, 8, and 9 2012. The meeting will bring
+    California, on December 7, 8, and 9 2012. The meeting will bring
     together researchers with interests in human-level intelligence,
     complex cognition, integrated intelligent systems, cognitive
     architectures, and related topics. This event harks a return to
