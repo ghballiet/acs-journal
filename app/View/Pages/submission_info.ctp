@@ -18,7 +18,9 @@ $this->end();
     </div>    
   </div>
   <div class="span9 right">
-    <h1>Information for Authors</h1>
+    <div class="page-header">
+      <h1>Information for Authors</h1>      
+    </div>
     <h2 id="aims">Aims and Themes</h2>
     <p>We invite submissions to <i>Advances in Cognitive Systems</i>, a journal 
     that publishes contributions about human-level intelligence, complex
