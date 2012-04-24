@@ -11,6 +11,7 @@ $this->end();
         <li><a href="#overview">Overview</a></li>
         <li><a href="#participation">Participation, Submission, and Publication</a></li>
         <li><a href="#review_process">Review Process</a></li>
+        <li><a href="#info">Location, Dates, and Other Information</a></li>
       </ul>
     </div>
   </div>
@@ -100,7 +101,7 @@ $this->end();
 
 
     
-    <h1 class="review_process">Review Process</h1>
+    <h1 id="review_process">Review Process</h1>
     <div class="columns">
       <p>Because the symposium aims to encourage research toward a
       broader understanding of intelligence, its criteria for
@@ -133,6 +134,36 @@ $this->end();
       must make in their final paper. Revised papers that satisfy these
       conditions will be included in the publication associated with the
       symposium.</p>      
+    </div>
+    
+    <h1 id="info">Location, Dates, and Other Information</h1>
+    <div class="columns">
+      <p>The AAAI Fall Symposium on Advances in Cognitive Systems will
+      run from Friday, November 4, through Sunday, November 6, 2011,
+      in Arlington, Virginia, as part of the AAAI Fall Symposia.</p>
+      
+      <p>The meeting aims to be as inclusive as possible while still
+      fostering innovative research on the computational nature of
+      intelligence. Authors who have questions about whether their
+      research is appropriate for the meeting should contact the
+      Program Chair, Pat Langley (langley@asu.edu), for additional
+      information.</p>
+      
+      <h2>Important Dates</h2>
+      <div class="well">
+        <dl class="dl-horizontal">
+          <dt>May 20, 2011</dt>
+          <dd>deadline for statement of interest</dd>
+          <dt>July 15, 2011</dt>
+          <dd>deadline for paper submission</dd>
+          <dt>August 8, 2011</dt>
+          <dd>decisions about paper acceptance</dd>
+          <dt>September 9, 2011</dt>
+          <dd> deadline for final papers</dd>
+          <dt>November 4-6, 2011</dt>
+          <dd>symposium</dd>
+        </dl>
+      </div>
     </div>
   </div>
 </div>
