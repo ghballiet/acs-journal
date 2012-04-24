@@ -129,9 +129,8 @@ $this->end();
     fostering innovative research on the computational nature of
     intelligence. Authors who have questions about whether their
     research is appropriate for the meeting should contact the Program
-    Chair, Pat Langley (<a href="mailto:Pat
-    Langley <patrick.w.langley@gmail.com>">patrick.w.langley@gmail.com</a>),
-    for additional information.</p>
+    Chair, Pat Langley (<a href="mailto:Pat Langley <patrick.w.langley@gmail.com>">
+    patrick.w.langley@gmail.com</a>), for additional information.</p>
         
     <h3>Important Dates</h3>
     <div class="well">
