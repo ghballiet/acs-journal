@@ -165,5 +165,17 @@ $this->end();
         </dl>
       </div>
     </div>
+    
+    <h1 id="organizing_committee">Organizing Committee</h1>
+    <div class="columns well">
+      <dl class="dl-horizontal">
+        <dt>Paul Bello</dt><dd>Office of Naval Research</dd>
+        <dt>Nick Cassimatis</dt><dd>Rensslaer Polytechnic Institute</dd>
+        <dt>Kenneth Forbus</dt><dd>Northwestern University</dd>
+        <dt>John Laird</dt><dd>University of Michigan, Ann Arbor</dd>
+        <dt>Pat Langley</dt><dd>Arizona State University / ISLE</dd>
+        <dt>Sergei Nirenburg</dt><dd>University of Maryland, Baltimore County</dd>
+      </dl>
+    </div>
   </div>
 </div>
