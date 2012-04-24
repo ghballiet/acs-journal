@@ -143,15 +143,15 @@ $this->end();
     <h3>Important Dates</h3>
     <div class="well">
       <dl class="dl-horizontal">
-        <dt>May 20, 2011</dt>
+        <dt>May 20</dt>
         <dd>deadline for statement of interest</dd>
-        <dt>July 15, 2011</dt>
+        <dt>July 15</dt>
         <dd>deadline for paper submission</dd>
-        <dt>August 8, 2011</dt>
+        <dt>August 8</dt>
         <dd>decisions about paper acceptance</dd>
-        <dt>September 9, 2011</dt>
+        <dt>September 9</dt>
         <dd> deadline for final papers</dd>
-        <dt>November 4-6, 2011</dt>
+        <dt>December 7-9</dt>
         <dd>conference</dd>
       </dl>
     </div>
