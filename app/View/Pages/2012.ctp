@@ -18,6 +18,10 @@ $this->end();
     </div>
   </div>
   <div class="span9">
+    <div class="page-header">
+      <h1>ACS 2012</h1>
+    </div>
+    
     <h2 id="overview">Overview</h2>
     <p>We invite submissions to the AAAI Fall Symposium on Advances in
     Cognitive Systems, which will take place in Arlington, Virginia on
