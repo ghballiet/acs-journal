@@ -16,7 +16,7 @@ $this->end();
     </div>
   </div>
   <div class="span9">
-    <h1 id="overview">Overview</h1>
+    <h2 id="overview">Overview</h2>
     <div class="columns">
       <p>We invite submissions to the AAAI Fall Symposium on Advances in
       Cognitive Systems, which will take place in Arlington, Virginia on
@@ -69,7 +69,7 @@ $this->end();
 
 
 
-    <h1 id="participation">Participation, Submission, and Publication</h1>
+    <h2 id="participation">Participation, Submission, and Publication</h2>
     <div class="columns">
       <p>Because attendance at the meeting will be selective,
       researchers who would like to participate must submit a brief
@@ -101,7 +101,7 @@ $this->end();
 
 
     
-    <h1 id="review_process">Review Process</h1>
+    <h2 id="review_process">Review Process</h2>
     <div class="columns">
       <p>Because the symposium aims to encourage research toward a
       broader understanding of intelligence, its criteria for
@@ -136,7 +136,7 @@ $this->end();
       symposium.</p>      
     </div>
     
-    <h1 id="info">Location, Dates, and Other Information</h1>
+    <h2 id="info">Location, Dates, and Other Information</h2>
     <div class="columns">
       <p>The AAAI Fall Symposium on Advances in Cognitive Systems will
       run from Friday, November 4, through Sunday, November 6, 2011,
@@ -149,7 +149,7 @@ $this->end();
       Program Chair, Pat Langley (langley@asu.edu), for additional
       information.</p>
       
-      <h2>Important Dates</h2>
+      <h3>Important Dates</h3>
       <div class="well">
         <dl class="dl-horizontal">
           <dt>May 20, 2011</dt>
@@ -166,7 +166,7 @@ $this->end();
       </div>
     </div>    
     
-    <h1 id="organizing_committee">Organizing Committee</h1>
+    <h2 id="organizing_committee">Organizing Committee</h2>
     <div class="well">
       <dl class="dl-horizontal columns">
         <dt>Paul Bello</dt><dd>Office of Naval Research</dd>
