@@ -164,11 +164,11 @@ $this->end();
           <dd>symposium</dd>
         </dl>
       </div>
-    </div>
+    </div>    
     
     <h1 id="organizing_committee">Organizing Committee</h1>
-    <div class="columns well">
-      <dl class="dl-horizontal">
+    <div class="well">
+      <dl class="dl-horizontal columns">
         <dt>Paul Bello</dt><dd>Office of Naval Research</dd>
         <dt>Nick Cassimatis</dt><dd>Rensslaer Polytechnic Institute</dd>
         <dt>Kenneth Forbus</dt><dd>Northwestern University</dd>
