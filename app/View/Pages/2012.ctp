@@ -23,7 +23,7 @@ $this->end();
     </div>
     
     <h2 id="overview">Overview</h2>
-    <p>We invite submissions to the AAAI Fall Symposium on Advances in
+    <p>We invite submissions to the First Conference on Advances in
     Cognitive Systems, which will take place in Mountain View,
     California on December 7, 8, and 9 2012. The meeting will bring
     together researchers with interests in human-level intelligence,
@@ -71,29 +71,26 @@ $this->end();
 
     <p>We also invite researchers to submit papers for presentation at
     the event. Submitted papers should follow the single column format
-    at <a href="#">URL GOES HERE</a> and should be no more than eight
-    (8) pages in length. Any papers that diverge from this format or
-    that exceed this length will be returned without review. In
-    addition, each submission should state explicitly the problem or
-    capability it addresses, describe its response to this problem,
-    make claims about this approach, and provide evidence in support
-    of these claims. Every paper should also discuss related efforts,
-    examine limitations of the reported work, and outline plans for
-    future research.</p>
-
-    <p>Accepted papers will appear in a AAAI technical report that
-    will be available at the meeting. To improve overall quality of
-    these publications, some submissions may be accepted on a
-    conditional basis. To increase participation despite a limited
-    number of speaker slots, we expect to accept some submissions for
-    poster presentation at the meeting.</p>
+    at <a href="#">URL GOES HERE</a> and should be no more than
+    fourteen (14) pages in length. Any papers that diverge from this
+    format or that exceed this length will be returned without
+    review. In addition, each submission should state explicitly the
+    problem or capability it addresses, describe its response to this
+    problem, make claims about this approach, and provide evidence in
+    support of these claims. Every paper should also discuss related
+    efforts, examine limitations of the reported work, and outline
+    plans for future research. To improve overall quality of these
+    publications, some submissions may be accepted on a conditional
+    basis. To increase participation despite a limited number of
+    speaker slots, we expect to accept some submissions for poster
+    presentation at the meeting.</p>
 
 
 
     
     <h2 id="review_process">Review Process</h2>
 
-    <p>Because the symposium aims to encourage research toward a
+    <p>Because the conference aims to encourage research toward a
     broader understanding of intelligence, its criteria for
     determining contributions will differ from those used in
     traditional circles. Progress may take many forms, including
@@ -123,16 +120,16 @@ $this->end();
     cases, the authors will receive an itemized list of changes they
     must make in their final paper. Revised papers that satisfy these
     conditions will be included in the publication associated with the
-    symposium.</p>
+    conference.</p>
     
 
 
 
     <h2 id="info">Location, Dates, and Other Information</h2>
 
-    <p>The AAAI Fall Symposium on Advances in Cognitive Systems will
-    run from Friday, November 4, through Sunday, November 6, 2011,
-    in Arlington, Virginia, as part of the AAAI Fall Symposia.</p>
+    <p>The First Conference on Advances in Cognitive Systems will run
+    from Friday, December 7, through Sunday, December 9, 2012, in
+    Mountain View, California.</p>
     
     <p>The meeting aims to be as inclusive as possible while still
     fostering innovative research on the computational nature of
@@ -155,7 +152,7 @@ $this->end();
         <dt>September 9, 2011</dt>
         <dd> deadline for final papers</dd>
         <dt>November 4-6, 2011</dt>
-        <dd>symposium</dd>
+        <dd>conference</dd>
       </dl>
     </div>
     
