@@ -4,7 +4,7 @@ echo $this->Html->css('acs_2012');
 $this->end();
 ?>
 <div class="row">
-  <div class="span2">
+  <div class="span3">
     <div class="well sidebar-nav">
       <ul class="nav nav-list">
         <li class="nav-header">Contents</li>
@@ -17,7 +17,7 @@ $this->end();
       </ul>
     </div>
   </div>
-  <div class="span10">
+  <div class="span9">
     <h2 id="overview">Overview</h2>
     <div class="columns">
       <p>We invite submissions to the AAAI Fall Symposium on Advances in
