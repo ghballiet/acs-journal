@@ -86,106 +86,105 @@ may be offset by its position on others that make it highly relevant.</p>
       as humans, although papers that take this stance may benefit from
       making these differences explicit.</dd>
     </p>    
+    <p>
+      <dt>Will you publish papers that describe a new cognitive architecture
+      or substantial extensions or revisions to an existing one?</dt>
+      <dd>Certainly. Research on architectures for intelligence is one of
+      the mainstays of cognitive systems. However, papers on new models
+      stated within an existing architecture should emphasize novel
+      insights (e.g., unexpected abilities or limitations) that have
+      resulted from the exercise.</dd>
+    </p>
+    <p>
+      <dt>Will you consider papers on integrated approaches to intelligence
+      that do not involve a cognitive architecture?</dt>
+      <dd>Definitely. Although cognitive architectures adopt a tightly
+      integrated approach to intelligence, frameworks that utilize 
+      less closely linked modules are also legitimate candidates.</dd>
+    </p>
+    <p>
+      <dt>Will you consider papers on integrated approaches to intelligence that
+      do not involve a cognitive architecture?</dt>
+      <dd>Definitely. Although cognitive architectures adopt a tightly
+      integrated approach to intelligence, frameworks that utilize less
+      closely linked modules are also legitimate candidates.
+      </dd>
+    </p>
+    <p>
+      <dt>Will you publish papers that present theoretical analyses of problems
+      that cognitive systems must address?</dt>
+      <dd>Yes. Submissions that report theoretical analyses are just as welcome
+      as ones that describe experiments with computational artifacts. Both
+      have important roles to play in the study of cognitive systems.</dd>
+    </p>    
+    <p>
+      <dt>Will you consider papers that propose new tasks or problems that
+      challenge the current abilities of cognitive systems?</dt>
+      <dd>Certainly. The community needs challenge problems to drive research in
+      new directions, so we encourage submissions on tasks that existing
+      methods cannot handle, provided they describe the problem clearly and
+      propose ways to evaluate progress.</dd>
+    </p>
+    <p>
+      <dt>Will you publish papers that survey existing approaches to a class of
+      problems and their limitations?</dt>
+      <dd>Yes, but such submissions will be more compelling if they include
+      careful analyses of the underlying reasons for these limitations and
+      propose alternative ways to address the problem class that would not
+      suffer from the same drawbacks.</dd>
+    </p>
+    <p>
+      <dt>Will you publish papers that describe logical approaches to
+      cognitive systems?</dt>
+      <dd>Yes. Many central insights about cognitive systems have come from the
+      logical tradition, and submissions cast within this framework are
+      welcome, provided they present material in a manner accessible to the
+      broader community.</dd>
+    </p>
+    <p>
+      <dt>Will you consider papers that describe probabilistic or statistical
+      approaches to cognitive systems?</dt>
+      <dd>Yes. Approaches that use probabilistic or statistical information as
+      annotations to rich cognitive structures are quite appropriate,
+      provided they present material in a way accessible to the broader
+      community. Submissions that describe purely numerical approaches are
+      not appropriate for the meeting.</dd>
+    </p>
+    <p>
+      <dt>Will you publish papers that discuss computational methods for
+      learning?</dt>
+      <dd>Definitely. However, the most appropriate submissions will describe
+      approaches that acquire rich cognitive structures at roughly the same
+      rates as humans, possibly taking advantage of prior knowledge to
+      constrain the learning task. Papers on purely statistical learning
+      methods are not appropriate for the meeting.</dd>
+    </p>
+    <p>
+      <dt>Will you consider submissions that present incremental improvements on
+      existing computational techniques?</dt>
+      <dd>Although we hope to encourage innovative research that moves beyond
+      incremental refinements, we will also consider papers that extend and
+      build on existing methods. However, they should do more than
+      demonstrate minor improvements on standard performance metrics, which
+      is the default in the mainstream literature.</dd>
+    </p>
+    <p>
+      <dt>Will you publish papers that describe how to achieve an aspect of
+      cognition or intelligence that has not been studied before?</dt>
+      <dd>Certainly. We hope to include some papers on understudied topics like
+      creativity, emotion, personality, and metacognition, provided they
+      present a well-specified approach, provide supported claims, and
+      otherwise address the review criteria.</dd>
+    </p>
+    <p>
+      <dt>Will you consider submissions that propose a new way to approach an
+      aspect of cognition or intelligence that has been studied?</dt>
+      <dd>Yes. We hope the meeting will encourage submissions of this sort, in
+      that the review criteria do not require demonstrating that a novel
+      approach is better than more established approaches along some
+      performance metric.</dd>
+    </p>
   </dl>
-
-   Do papers have to present approaches or mechanisms that are
-   consistent with knowledge of human cognition?
-
-   Definitely not. There may well exist approaches to achieving
-   broadly intelligent systems that do not operate in the same manner
-   as humans, although papers that take this stance may benefit from
-   making these differences explicit.
-
-1. Will you publish papers that describe a new cognitive architecture
-   or substantial extensions or revisions to an existing one?
-
-   Certainly. Research on architectures for intelligence is one of
-   the mainstays of cognitive systems. However, papers on new models
-   stated within an existing architecture should emphasize novel
-   insights (e.g., unexpected abilities or limitations) that have
-   resulted from the exercise.
-
-1. Will you consider papers on integrated approaches to intelligence
-   that do not involve a cognitive architecture?
-
-   Definitely. Although cognitive architectures adopt a tightly
-   integrated approach to intelligence, frameworks that utilize 
-   less closely linked modules are also legitimate candidates.
-
-1. Will you publish papers that present theoretical analyses of
-   problems that cognitive systems must address?
-
-   Yes. Submissions that report theoretical analyses are just as
-   welcome as ones that describe experiments with computational
-   artifacts. Both have important roles to play in the study of
-   cognitive systems.
-
-1. Will you consider papers that propose new tasks or problems that
-   challenge the current abilities of cognitive systems?
-
-   Certainly. The community needs challenge problems to drive research
-   in new directions, so we encourage submissions on tasks that
-   existing methods cannot handle, provided they describe the problem
-   clearly and propose ways to evaluate progress.
-
-1. Will you publish papers that survey existing approaches to a class
-   of problems and their limitations?
-
-   Yes, but such submissions will be more compelling if they include
-   careful analyses of the underlying reasons for these limitations
-   and propose alternative ways to address the problem class that
-   would not suffer from the same drawbacks.
-
-1. Will you publish papers that describe logical approaches to
-   cognitive systems?
-
-   Yes. Many central insights about cognitive systems have come from
-   the logical tradition, and submissions cast within this framework
-   are welcome, provided they present material in a manner accessible
-   to the broader community.
-
-1. Will you consider papers that describe probabilistic or statistical
-   approaches to cognitive systems?
-
-   Yes. Approaches that use probabilistic or statistical information
-   as annotations to rich cognitive structures are quite appropriate,
-   provided they present material in a way accessible to the broader
-   community. Submissions that describe purely numerical approaches
-   are not appropriate for the meeting.
-
-1. Will you publish papers that discuss computational methods for
-   learning?
-
-   Definitely. However, the most appropriate submissions will describe
-   approaches that acquire rich cognitive structures at roughly the
-   same rates as humans, possibly taking advantage of prior knowledge
-   to constrain the learning task. Papers on purely statistical
-   learning methods are not appropriate for the meeting.
-
-1. Will you consider submissions that present incremental improvements
-   on existing computational techniques?
-
-   Although we hope to encourage innovative research that moves beyond
-   incremental refinements, we will also consider papers that extend
-   and build on existing methods. However, they should do more than
-   demonstrate minor improvements on standard performance metrics,
-   which is the default in the mainstream literature.
-
-1. Will you publish papers that describe how to achieve an aspect of
-   cognition or intelligence that has not been studied before?
-
-   Certainly. We hope to include some papers on understudied topics
-   like creativity, emotion, personality, and metacognition, provided
-   they present a well-specified approach, provide supported claims,
-   and otherwise address the review criteria.
-
-1. Will you consider submissions that propose a new way to approach an
-   aspect of cognition or intelligence that has been studied?
-
-   Yes. We hope the meeting will encourage submissions of this sort,
-   in that the review criteria do not require demonstrating that a
-   novel approach is better than more established approaches along
-   some performance metric.
 </div>
 
 <p>We encourage authors to consider these guidelines seriously before
