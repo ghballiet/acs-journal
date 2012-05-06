@@ -38,53 +38,57 @@ may be offset by its position on others that make it highly relevant.</p>
 
 <div class="well">
   <dl>
-<p>      <dt>Do papers have to report an implemented computer
+    <p>
+      <dt>Do papers have to report an implemented computer
       program?</dt>
       <dd>No. Submissions may analyze a challenging problem, propose a new
       representation, present an insightful characterization of human
       intelligence, or provide formal results about an approach.
       </dd>
-</p>
+    </p>
+    <p>      
       <dt>If a paper describes an implemented program, must it involve
       the integration of two or more distinct cognitive abilities?</dt>
       <dd>No. Submissions on integrated systems are very welcome, but a paper
       may focus a single facet of cognition if it discusses its role within
       a larger cognitive system.</dd>
+    </p>
+    <p>
+      <dt>If a paper describes an implemented program, must it present
+      experimental results with quantitative performance metrics?</dt>
+      <dd>No. Submissions should make explicit claims and provide evidence 
+      to support them, but such evidence may take many forms, including
+      demonstrations of new functionality and well-reasoned, convincing,
+      verbal arguments.</dd>
+    </p>
+    <p>
+      <dt>Will you consider papers that describe computational models of
+       human cognition?</dt>
+      <dd>Certainly. Research on cognitive systems aims to reproduce the full
+       range of intelligent behavior, and people remain our only examples
+       of broadly intelligent systems. Many key ideas in AI were first
+       presented in models of human cognition, and we hope to publish some
+       papers that continue that tradition.</dd>
+    </p>
+    <p>
+      <dt>If a paper describes a computational model of human cognition, must
+      it present comparisons of the model's predictions to quantitative
+      results from psychological experiments?</dt>
+      <dd>Definitely not. Submissions may demonstrate that a cognitive system
+      exhibits the same qualitative capabilities as humans under the same
+      qualitative conditions and constraints.</dd>
+    </p>
+    <p>
+      <dt>Do papers have to present approaches or mechanisms that are
+      consistent with knowledge of human cognition?</dt>
+      <dd>Definitely not. There may well exist approaches to achieving
+      broadly intelligent systems that do not operate in the same manner
+      as humans, although papers that take this stance may benefit from
+      making these differences explicit.</dd>
+    </p>    
   </dl>
 
-If a paper describes an implemented program, must it involve the
-   integration of two or more distinct cognitive abilities?
-
-   No. Submissions on integrated systems are very welcome, but a paper
-   may focus a single facet of cognition if it discusses its role
-   within a larger cognitive system.
-
-1. If a paper describes an implemented program, must it present
-   experimental results with quantitative performance metrics?
-
-   No. Submissions should make explicit claims and provide evidence 
-   to support them, but such evidence may take many forms, including
-   demonstrations of new functionality and well-reasoned, convincing,
-   verbal arguments.
-
-1. Will you consider papers that describe computational models of
-   human cognition?
-
-   Certainly. Research on cognitive systems aims to reproduce the full
-   range of intelligent behavior, and people remain our only examples
-   of broadly intelligent systems. Many key ideas in AI were first
-   presented in models of human cognition, and we hope to publish some
-   papers that continue that tradition.
-
-1. If a paper describes a computational model of human cognition, must
-   it present comparisons of the model's predictions to quantitative
-   results from psychological experiments?
-
-   Definitely not. Submissions may demonstrate that a cognitive system
-   exhibits the same qualitative capabilities as humans under the same
-   qualitative conditions and constraints.
-
-1. Do papers have to present approaches or mechanisms that are
+   Do papers have to present approaches or mechanisms that are
    consistent with knowledge of human cognition?
 
    Definitely not. There may well exist approaches to achieving
