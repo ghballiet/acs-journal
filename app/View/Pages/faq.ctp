@@ -46,9 +46,16 @@ may be offset by its position on others that make it highly relevant.</p>
       intelligence, or provide formal results about an approach.
       </p>
     </li>
+    <li>
+      <strong>If a paper describes an implemented program, must it involve
+      the integration of two or more distinct cognitive abilities?</strong>
+      <p>No. Submissions on integrated systems are very welcome, but a paper
+      may focus a single facet of cognition if it discusses its role within
+      a larger cognitive system.</p>
+    </li>
   </ul>
 
-1. If a paper describes an implemented program, must it involve the
+If a paper describes an implemented program, must it involve the
    integration of two or more distinct cognitive abilities?
 
    No. Submissions on integrated systems are very welcome, but a paper
