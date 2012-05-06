@@ -37,23 +37,20 @@ position along some dimension that might argue against its relevance
 may be offset by its position on others that make it highly relevant.</p>
 
 <div class="well">
-  <ul>
-    <li>
-      <strong>Do papers have to report an implemented computer
-      program?</strong>
-      <p>No. Submissions may analyze a challenging problem, propose a new
+  <dl>
+      <dt>Do papers have to report an implemented computer
+      program?</dt>
+      <dd>No. Submissions may analyze a challenging problem, propose a new
       representation, present an insightful characterization of human
       intelligence, or provide formal results about an approach.
-      </p>
-    </li>
-    <li>
-      <strong>If a paper describes an implemented program, must it involve
-      the integration of two or more distinct cognitive abilities?</strong>
-      <p>No. Submissions on integrated systems are very welcome, but a paper
+      </dd>
+
+      <dt>If a paper describes an implemented program, must it involve
+      the integration of two or more distinct cognitive abilities?</dt>
+      <dd>No. Submissions on integrated systems are very welcome, but a paper
       may focus a single facet of cognition if it discusses its role within
-      a larger cognitive system.</p>
-    </li>
-  </ul>
+      a larger cognitive system.</dd>
+  </dl>
 
 If a paper describes an implemented program, must it involve the
    integration of two or more distinct cognitive abilities?
