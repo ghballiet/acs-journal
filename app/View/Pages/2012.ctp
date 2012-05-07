@@ -72,7 +72,7 @@ and related topics.
 <p>
 We also invite researchers to submit papers for presentation at
 the conference. Submitted papers should follow the single column 
-format at <a href="#">URL GOES HERE</a> and should be no more than
+format at <a href="http://cogsys.org/formats/">http://cogsys.org/formats/</a> and should be no more than
 sixteen (16) pages in length. Any papers that diverge from this
 format or that exceed this length will be returned without review. In
 addition, each submission should state explicitly the problem or
