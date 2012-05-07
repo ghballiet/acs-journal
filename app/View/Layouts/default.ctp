@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<? echo $this->Html->url('/'); ?>">ACS</a>
+          <a class="brand" href="<? echo $this->Html->url('/'); ?>"><? echo $this->Html->image('acs_cropped_white.png'); ?></a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><? echo $this->Html->link('Content', '/content'); ?></li>
