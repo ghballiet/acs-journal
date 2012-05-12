@@ -73,8 +73,8 @@ and related topics.
 We also invite researchers to submit papers for presentation at the
 conference. Submissions should follow the instructions provided at</p>
 
-<h5><a href="http://www.cogsys.org/conference/instructions/">
-http://www.cogsys.org/conference/instructions/</a>,</h5>
+<h4><a href="http://www.cogsys.org/conference/instructions/">
+http://www.cogsys.org/conference/instructions/</a>,</h4>
 
 <p>which gives detailed information about format and provides Latex and
 Word templates. Papers should be typeset in single column and should
@@ -82,8 +82,8 @@ be no more than sixteen (16) pages in length. Any papers that diverge
 from this format or that exceed this length will be returned without
 review. All papers must be submitted electronically at</p>
 
-<h5><a href="http://www.cogsys.org/acs/2012/submit/">
-http://www.cogsys.org/acs/2012/submit/</a></h5>
+<h4><a href="http://www.cogsys.org/acs/2012/submit/">
+http://www.cogsys.org/acs/2012/submit/</a></h4>
 
 <p>In addition, each submission should state explicitly the problem or
 capability it addresses, describe its response to this problem, make
