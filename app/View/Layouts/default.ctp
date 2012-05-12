@@ -40,7 +40,7 @@
               <li><? echo $this->Html->link('Content', '/content'); ?></li>
               <li><? echo $this->Html->link('Masthead', '/masthead'); ?></li>
               <li><? echo $this->Html->link('FAQ', '/faq'); ?></li>
-              <li><? echo $this->Html->link('Submission Info', '/submission_info'); ?></li>
+              <li><? echo $this->Html->link('Instructions', '/instructions'); ?></li>
             </ul>
             <ul class="nav pull-right">
               <?
