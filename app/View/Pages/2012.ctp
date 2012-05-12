@@ -18,10 +18,11 @@ $this->end();
   </div>
   <div class="span9"> -->
     <div class="page-header">
-      <h1>First Annual Conference on Advances in Cognitive Systems</h1>
+      <h1>First Annual Conference on Advances in Cognitive Systems<br>
+        <small>December 7-9, 2012, Mountain View, California</small></h1>
     </div>
     
-    <h2 id="overview">Overview</h2>
+    <h3 id="overview">Overview</h3>
     <p>
 We invite submissions to the First Annual Conference on Advances in Cognitive
 Systems, which will take place in Mountain View, California, on
@@ -67,14 +68,14 @@ who are interested in complex cognition, human-level intelligence,
 and related topics.
 </p>
 
-<h2 id="submission">Submission, Review, and Publication</h2>
+<h3 id="submission">Submission, Review, and Publication</h3>
 
 <p>
 We also invite researchers to submit papers for presentation at the
 conference. Submissions should follow the instructions provided at</p>
 
 <h4><a href="http://www.cogsys.org/conference/instructions/">
-http://www.cogsys.org/conference/instructions/</a>,</h4>
+http://www.cogsys.org/conference/instructions/</a> ,</h4>
 
 <p>which gives detailed information about format and provides Latex and
 Word templates. Papers should be typeset in single column and should
@@ -133,7 +134,7 @@ basis. We may accept some submissions for poster presentation at
 the meeting.
 </p>
 
-<h2 id="info">Location, Dates, and Other Information</h2>
+<h3 id="info">Location, Dates, and Other Information</h3>
 
 <p>
 The First Annual Conference on Advances in Cognitive Systems will run from
@@ -167,7 +168,7 @@ for additional information.
       </dl>
     </div>
 
-    <h2 id="organizing_committee">Organizing Committee</h2>
+    <h3 id="organizing_committee">Organizing Committee</h3>
     <div class="well">
       <dl class="dl-horizontal">
         <dt>Paul Bello</dt><dd>Office of Naval Research</dd>
