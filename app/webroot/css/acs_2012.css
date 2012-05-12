@@ -5,3 +5,4 @@
 .columns{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;}
 .dl-horizontal dt{width:200px;}
 .dl-horizontal dd{margin-left:210px;}
+h3{text-align:center;margin-bottom:18px;}
