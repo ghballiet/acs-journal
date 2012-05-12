@@ -114,11 +114,12 @@ Each submission will be assigned to multiple referees who will
 evaluate the paper for its contribution to understanding cognitive
 systems, clarity of claims about this contribution, convincing
 evidence in support of those claims, and cogent presentation of its
-ideas to readers. We encourage authors to examine the <i>review
-form</i> before drafting their manuscripts to ensure that their
-submissions address all of the dimensions on which reviewers will
-evaluate them. Accepted papers will appear in <i>Advances in Cognitive
-Systems</i>, an electronic journal associated with the conference.
+ideas to readers. We encourage authors to examine the <a
+href="http://cogsys.org/acs/2011/review-form/">review form</a> before
+drafting their manuscripts to ensure that their submissions address
+all of the dimensions on which reviewers will evaluate them. Accepted
+papers will appear in <i>Advances in Cognitive Systems</i>, an
+electronic journal associated with the conference.
 </p>
 
 <p>
