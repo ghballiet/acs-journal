@@ -18,12 +18,12 @@ $this->end();
   </div>
   <div class="span9"> -->
     <div class="page-header">
-      <h1>First Conference on Advances in Cognitive Systems</h1>
+      <h1>First Annual Conference on Advances in Cognitive Systems</h1>
     </div>
     
     <h2 id="overview">Overview</h2>
     <p>
-We invite submissions to the First Conference on Advances in Cognitive
+We invite submissions to the First Annual Conference on Advances in Cognitive
 Systems, which will take place in Mountain View, California, on
 December 7, 8, and 9, 2012. Like the 2011 Fall Symposium on the same
 topic, the meeting will bring together researchers with interests in
@@ -70,17 +70,27 @@ and related topics.
 <h2 id="submission">Submission, Review, and Publication</h2>
 
 <p>
-We also invite researchers to submit papers for presentation at
-the conference. Submitted papers should follow the single column 
-format at <a href="http://cogsys.org/formats/">http://cogsys.org/formats/</a> and should be no more than
-sixteen (16) pages in length. Any papers that diverge from this
-format or that exceed this length will be returned without review. In
-addition, each submission should state explicitly the problem or
+We also invite researchers to submit papers for presentation at the
+conference. Submissions should follow the instructions provided at</p>
+
+<h3><a href="http://www.cogsys.org/conference/instructions/">
+http://www.cogsys.org/conference/instructions/</a>,</h3>
+
+<p>which gives detailed information about format and provides Latex and
+Word templates. Papers should be typeset in single column and should
+be no more than sixteen (16) pages in length. Any papers that diverge
+from this format or that exceed this length will be returned without
+review. All papers must be submitted electronically at</p>
+
+<h3><a href="http://www.cogsys.org/acs/2012/submit/">
+http://www.cogsys.org/acs/2012/submit/</a></h3>
+
+<p>In addition, each submission should state explicitly the problem or
 capability it addresses, describe its response to this problem, make
 claims about this approach, and provide evidence in support of these
 claims. Every paper should also discuss related efforts, examine
 limitations of the reported work, and outline plans for future
-research. 
+research.
 </p>
 
 <p>
@@ -125,7 +135,7 @@ the meeting.
 <h2 id="info">Location, Dates, and Other Information</h2>
 
 <p>
-The First Conference on Advances in Cognitive Systems will run from
+The First Annual Conference on Advances in Cognitive Systems will run from
 Friday, December 7, through Sunday, December 9, 2012, in Mountain
 View, California. The meeting will include extended technical
 presentations, leisurely breaks to encourage discussions, and 
