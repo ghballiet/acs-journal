@@ -3,7 +3,7 @@ $this->start('css');
 echo $this->Html->css('acs_2012');
 $this->end();
 ?>
-<div class="row">
+<!-- <div class="row">
   <div class="span3">
     <div class="well sidebar-nav">
       <ul class="nav nav-list">
@@ -16,7 +16,7 @@ $this->end();
       </ul>
     </div>
   </div>
-  <div class="span9">
+  <div class="span9"> -->
     <div class="page-header">
       <h1>First Conference on Advances in Cognitive Systems</h1>
     </div>
@@ -168,5 +168,5 @@ for additional information.
       </dl>
     </div>
   
-  </div>
-</div>
+  <!-- </div>
+</div> -->
