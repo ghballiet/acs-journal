@@ -45,7 +45,20 @@ $papers = array(
   <h1>Advances in Cognitive Systems, Volume 1<br><small>Table of Contents</small></h1>
 </div>
 
-<? pr($papers); ?>
-
 <table class="table">
+<?
+
+
+foreach($papers as $paper) {
+  $buttons = '';
+  $buttons .= $this->Html->link('PDF', $paper['url'],
+                                array('class'=>'btn btn-mini btn-danger'));
+  $buttons .= '&nbsp;';
+  $buttons .= $this->Html->link('Abstract', '#', array('class'=>'btn btn-min');
+
+  echo $this->Html->tableCells(array(
+    $paper['title'], $paper['author'], $buttons
+  );
+}
+?>
 </table>
