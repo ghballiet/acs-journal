@@ -59,7 +59,7 @@ foreach($papers as $i=>$paper) {
   echo $this->Html->tableHeaders(array('Title', 'Author', 'Page', ''));
 
   echo $this->Html->tableCells(array(
-    $paper['title'], $paper['author'], $i * 6; $buttons
+    $paper['title'], $paper['author'], $i * 6, $buttons
   ), array(), array(), true);
 }
 ?>
