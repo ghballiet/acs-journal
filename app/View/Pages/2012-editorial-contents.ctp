@@ -58,7 +58,7 @@ foreach($papers as $paper) {
 
   echo $this->Html->tableCells(array(
     $paper['title'], $paper['author'], $buttons
-  );
+  ));
 }
 ?>
 </table>
