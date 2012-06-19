@@ -49,15 +49,17 @@ $papers = array(
 <?
 
 
-foreach($papers as $paper) {
+foreach($papers as $i=>$paper) {
   $buttons = '';
   $buttons .= $this->Html->link('PDF', $paper['url'],
                                 array('class'=>'btn btn-mini btn-danger'));
   $buttons .= '&nbsp;';
   $buttons .= $this->Html->link('Abstract', '#', array('class'=>'btn btn-mini'));
 
+  echo $this->Html->tableHeaders(array('Title', 'Author', 'Page', ''));
+
   echo $this->Html->tableCells(array(
-    $paper['title'], $paper['author'], $buttons
+    $paper['title'], $paper['author'], $i * 6; $buttons
   ), array(), array(), true);
 }
 ?>
