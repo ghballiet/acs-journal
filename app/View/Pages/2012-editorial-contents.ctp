@@ -54,7 +54,7 @@ foreach($papers as $paper) {
   $buttons .= $this->Html->link('PDF', $paper['url'],
                                 array('class'=>'btn btn-mini btn-danger'));
   $buttons .= '&nbsp;';
-  $buttons .= $this->Html->link('Abstract', '#', array('class'=>'btn btn-min');
+  $buttons .= $this->Html->link('Abstract', '#', array('class'=>'btn btn-min'));
 
   echo $this->Html->tableCells(array(
     $paper['title'], $paper['author'], $buttons
