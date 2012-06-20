@@ -86,8 +86,6 @@
       <? echo $this->Session->flash(); ?>
       <? echo $this->fetch('content'); ?>
 
-      <hr>
-
       <footer>
         <p>Copyright &copy; 2012 Cognitive Systems Foundation. All Rights Reserved.</p>
       </footer>
