@@ -45,7 +45,7 @@ $papers = array(
   <h1>Advances in Cognitive Systems, Volume 1<br><small>Table of Contents</small></h1>
 </div>
 
-<table class="table">
+<table class="table table-bordered">
 <?
 echo $this->Html->tableHeaders(array('Title', 'Author', 'Page', ''));
 
