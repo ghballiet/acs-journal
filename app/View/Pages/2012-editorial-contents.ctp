@@ -53,7 +53,7 @@ $papers = array(
 
 <table class="table">
 <?
-echo $this->Html->tableHeaders(array('Title', 'Author', 'Page', ''));
+echo $this->Html->tableHeaders(array('Title', 'Authors', 'Page', ''));
 
 foreach($papers as $i=>$paper) {
   $buttons = '';
