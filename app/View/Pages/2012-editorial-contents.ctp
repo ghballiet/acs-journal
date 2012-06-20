@@ -42,10 +42,10 @@ $papers = array(
 );
 ?>
 <div class="page-header">
-  <h1>Advances in Cognitive Systems, Volume 1<br><small>Table of Contents</small></h1>
+  <h1>Advances in Cognitive Systems<br>Volume 1<br><small>Table of Contents</small></h1>
 </div>
 
-<table class="table table-bordered">
+<table class="table">
 <?
 echo $this->Html->tableHeaders(array('Title', 'Author', 'Page', ''));
 
@@ -57,7 +57,7 @@ foreach($papers as $i=>$paper) {
   $buttons .= $this->Html->link('Abstract', '#', array('class'=>'btn btn-mini'));
 
   echo $this->Html->tableCells(array(
-    $paper['title'], $paper['author'], $i * 6, $buttons
+    $paper['title'], $paper['author'], ($i+1) * 6, $buttons
   ), array(), array(), true);
 }
 ?>
