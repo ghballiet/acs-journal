@@ -157,11 +157,11 @@ for additional information.
     <h3>Important Dates</h3>
     <div class="well">
       <dl class="dl-horizontal">
-        <dt>July 15, 2012</dt>
+        <dt>September 1, 2012</dt>
         <dd>Deadline for paper submission</dd>
-        <dt>September 15, 2012</dt>
+        <dt>October 12, 2012</dt>
         <dd>Decisions about paper acceptance</dd>
-        <dt>October 15, 2012</dt>
+        <dt>November 9, 2012</dt>
         <dd>Deadline for final papers</dd>
         <dt>December 7-9, 2012</dt>
         <dd>Conference</dd>
