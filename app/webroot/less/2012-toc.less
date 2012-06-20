@@ -1,0 +1,33 @@
+@import "variables";
+@import "mixins";
+
+.page-header {
+  text-align: center; 
+  border-bottom: none;
+
+  h1 { font-size: 22px; }
+  div.published_info {
+    font-size: 17px;
+    font-weight: bold; 
+    margin-top: 10px;
+    
+    div.volume, div.date { display: inline-block; }
+    div.volume { margin-right: 20px; }
+  }
+  h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: @grayLight;
+  }
+}
+
+table {
+  border-bottom: solid 1px #ddd;
+  td.column-1 {
+    font-style: italic;
+  }
+  td.column-3 {
+    text-align: right;
+    padding-right: 12px;
+  }
+}
