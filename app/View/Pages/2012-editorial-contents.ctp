@@ -5,7 +5,7 @@ $this->end();
 
 $papers = array(
   array(
-    'title' => 'The Cognitive Systems Paradigm',
+    'title' => 'The Cognitive Systems Paradigm <span class="badge badge-info">editorial</span>',
     'author' => 'Pat Langley',
     'url' => '#'
   ),
