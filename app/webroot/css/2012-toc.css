@@ -3,7 +3,8 @@
 .hide-text{overflow:hidden;text-indent:100%;white-space:nowrap;}
 .input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 .page-header{text-align:center;border-bottom:none;}.page-header h1{font-size:22px;}
-.page-header div.published_info{font-size:18px;font-weight:bold;margin-top:10px;}
+.page-header div.published_info{font-size:18px;font-weight:bold;margin-top:10px;}.page-header div.published_info div.volume{float:left;}
+.page-header div.published_info div.date{float:right;}
 .page-header h2{font-size:16px;margin-top:10px;color:#999999;}
 table{border-bottom:solid 1px #ddd;}table td.column-1{font-style:italic;}
 table td.column-3{text-align:right;padding-right:12px;}
