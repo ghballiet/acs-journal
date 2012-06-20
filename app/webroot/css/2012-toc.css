@@ -6,5 +6,5 @@
 .page-header div.published_info{font-size:17px;font-weight:bold;margin-top:10px;}.page-header div.published_info div.volume,.page-header div.published_info div.date{display:inline-block;}
 .page-header div.published_info div.volume{margin-right:20px;}
 .page-header h2{font-size:16px;margin-top:10px;color:#999999;}
-table{border-bottom:solid 1px #ddd;}table td.column-1{font-style:italic;}table td.column-1 span{font-style:normal;}
+table{border-bottom:solid 1px #ddd;}table td.column-1{font-style:italic;}table td.column-1 span.badge{font-style:normal;font-size:.9em;}
 table td.column-3{text-align:right;padding-right:12px;}
