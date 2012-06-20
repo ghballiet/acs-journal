@@ -42,7 +42,13 @@ $papers = array(
 );
 ?>
 <div class="page-header">
-  <h1>Advances in Cognitive Systems<span>Volume 1, Issue 1<span><small>Table of Contents</small></h1>
+  <h1>Advances in Cognitive Systems</h1>
+  <div class="published_info">
+    <div class="volume">Volume 1, Issue 1</div>
+    <div class="date">September, 2012</div>
+    <div class="clearfix"></div>
+  </div>
+  <h2>Table of Contents</h2>
 </div>
 
 <table class="table">
