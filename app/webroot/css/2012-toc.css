@@ -6,4 +6,4 @@
 .page-header h1 span{font-size:18px;margin-top:10px;}
 .page-header h1 small{font-size:16px;margin-top:10px;}
 table{border-bottom:solid 1px #ddd;}table td.column-1{font-style:italic;}
-table td.column-3{text-align:right;}
+table td.column-3{text-align:right;padding-right:12px;}
