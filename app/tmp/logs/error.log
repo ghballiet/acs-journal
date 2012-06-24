@@ -1158,3 +1158,13 @@
 #6 /home/cogsysor/public_html/conference/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #7 /home/cogsysor/public_html/conference/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2012-06-19 21:58:30 Error: [MissingViewException] View file "/home/cogsysor/public_html/conference/app/View/Pages/submission_info.ctp" is missing.
+#0 /home/cogsysor/public_html/conference/lib/Cake/View/View.php(460): View->_getViewFileName('submission_info')
+#1 /home/cogsysor/public_html/conference/lib/Cake/Controller/Controller.php(959): View->render('submission_info', NULL)
+#2 /home/cogsysor/public_html/conference/app/Controller/PagesController.php(85): Controller->render('submission_info')
+#3 [internal function]: PagesController->display('submission_info')
+#4 /home/cogsysor/public_html/conference/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /home/cogsysor/public_html/conference/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /home/cogsysor/public_html/conference/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /home/cogsysor/public_html/conference/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
