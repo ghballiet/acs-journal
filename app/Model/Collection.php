@@ -7,7 +7,8 @@ class Collection extends AppModel {
   public $validate = array(
     'title' => array(
       'rule' => 'isUnique',
-      'required' => 'true'
+      'required' => 'true',
+      'message' => 'This title is already in use.'
     )
   );
 }
