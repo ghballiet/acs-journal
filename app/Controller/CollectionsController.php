@@ -8,7 +8,7 @@ class CollectionsController extends AppController {
   public function manage() {
     $collections = $this->Collection->find('all', array('order'=>
                                                        array('Collection.title')));
-    $this-set('collections', $collections);
+    $this->set('collections', $collections);
   }
 }
 ?>
