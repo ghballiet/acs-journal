@@ -4,5 +4,8 @@
 
 <?
 echo $this->BootstrapForm->create('Collection');
+echo $this->BootstrapForm->input('title');
+echo $this->BootstrapForm->input('description');
+echo $this->BootstrapForm->input('accepting_submissions');
 echo $this->BootstrapForm->end('Create Collection');
 ?>

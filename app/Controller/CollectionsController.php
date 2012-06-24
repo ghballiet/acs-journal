@@ -12,9 +12,13 @@ class CollectionsController extends AppController {
   }
 
   public function add() {
-    // TODO: the whole if(post) thing, add it, make sure to use the
-    // proper alert classes and such. additionally, make sure to
-    // validate in the model.
+    if($this->request->is('post') &&
+       $collection = $this->Collection->save($this->request->data)) {
+      $title = $collection['Collection']['title'];
+      $this->alertSuccess('Success!', sprintf('Succesfully created <strong>%s</strong>.', 
+                                              $title), true);
+      $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
+    }
   }
 }
 ?>
