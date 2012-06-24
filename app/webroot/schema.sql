@@ -21,6 +21,7 @@ create table if not exists submissions (
   paper_id integer,
   presenter_name varchar(500),
   category_id integer,
+  collection_id integer,
   modified timestamp on update current_timestamp
 );
 
