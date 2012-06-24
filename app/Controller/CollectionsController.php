@@ -16,10 +16,33 @@ class CollectionsController extends AppController {
     if($this->request->is('post') &&
        $collection = $this->Collection->save($this->request->data)) {
       $title = $collection['Collection']['title'];
+
+      // make this user an administrator of the collection.
+      $admin_role_type = $this->Collection->Role->RoleType->findByName('admin');
+      pr($admin_role_type);
+
       $this->alertSuccess('Success!', sprintf('Succesfully created <strong>%s</strong>.', 
                                               $title), true);
       $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
+    } else {
+      $this->alertError('Uh-oh.', 'Something went wrong. Please correct any errors below, and ' .
+                        'try again.');
     }
+  }
+
+  public function edit($id = null) {
+    $this->Collection->id = $id;
+    $collection = $this->Collection->read();
+  }
+
+  public function delete($id = null) {
+    $this->Collection->id = $id;
+    $collection = $this->Collection->read();
+    $this->Collection->delete($id);
+    $title = $collection['Collection']['title'];
+    $this->alertSuccess('Success!', sprintf('Succesfully deleted <strong>%s</strong>.',
+                                            $title), true);
+    $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
   }
 }
 ?>
