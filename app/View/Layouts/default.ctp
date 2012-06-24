@@ -46,7 +46,7 @@
     if(isset($user) && $user['is_admin'] == '1') {
       $title = 'Administration';
       $arr = array(
-        array('text'=>'Collections', 'link'=>'/manage_collections', 'icon'=>'book'),
+        array('text'=>'Collections', 'link'=>array('controller'=>'collections', 'action'=>'manage'), 'icon'=>'book'),
         array('text'=>'Users', 'link'=>'/manage_users', 'icon'=>'user')
       );
       echo $this->Bootstrap->dropdown($title, $arr);
