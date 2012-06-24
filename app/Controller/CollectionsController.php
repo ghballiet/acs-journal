@@ -52,7 +52,7 @@ class CollectionsController extends AppController {
     $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
   }
 
-  public function index($id = null) {
+  public function view($id = null) {
     if($id == null)
       $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
     

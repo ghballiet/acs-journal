@@ -15,7 +15,7 @@ foreach($collections as $collection) {
   $title = $collection['Collection']['title'];
   $id = $collection['Collection']['id'];
   $link = $this->Html->link($title, array(
-    'controller'=>'collections', 'action'=>'index', $id
+    'controller'=>'collections', 'action'=>'view', $id
   ));
   $num_submissions = count($collection['Submission']);
   $accepting = $collection['Collection']['accepting_submissions'] == 1; 
