@@ -1,7 +1,6 @@
 <?
 class User extends AppModel {
   public $name = 'User';
-  public $belongsTo = 'Role';
   
   public $validate = array(
     'email'=>array(
