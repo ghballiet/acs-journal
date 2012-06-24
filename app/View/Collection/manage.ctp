@@ -14,8 +14,8 @@ echo $this->Html->tableHeaders(array('Title', 'Submissions', 'Accepting Submissi
 foreach($collections as $collection) {
   $title = $collection['Collection']['title'];
   $num_submissions = count($collection['Submission']);
-  $accepting = $collection['Collection']['accepting_submissions'] === 1; 
-  $modified = $collections['Collection']['modified'];
+  $accepting = $collection['Collection']['accepting_submissions'] == 1; 
+  $modified = $collection['Collection']['modified'];
 
   echo $this->Html->tableCells(array($title, $num_submissions, $accepting, $modified), 
                                array(), array(), true);
