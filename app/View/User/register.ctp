@@ -262,7 +262,8 @@ echo $this->BootstrapForm->create('User');
     'type'=>'password'));
   echo $this->BootstrapForm->input('address', array('icon'=>'map-marker'));
   echo $this->BootstrapForm->input('adddress2', array('icon'=>'map-marker',
-    'label'=>'Address 2 (optional)'));
+                                                      'label'=>'Address 2 (optional)',
+                                                      'required' => false));
   echo $this->BootstrapForm->input('city', array('icon'=>'map-marker'));
   echo $this->BootstrapForm->input('state', array('icon'=>'map-marker',
     'label'=>'State/Province'));

@@ -1,5 +1,5 @@
 -- the database schema
-create table users (
+create table if not exists users (
   id integer primary key auto_increment,
   name varchar(500),
   surname varchar(500),
@@ -12,41 +12,36 @@ create table users (
   postal varchar(250),
   country varchar(250),
   phone varchar(250),
-  role_id integer,
+  is_admin boolean default false,
   modified timestamp on update current_timestamp
 );
 
-create table roles (
-  id integer primary key auto_increment,
-  name varchar(250), 
-  description longtext, 
-  modified timestamp on update current_timestamp
-);
-
-create table submissions (
+create table if not exists submissions (
   id integer primary key auto_increment,
   paper_id integer,
   presenter_name varchar(500),
+  category_id integer,
   modified timestamp on update current_timestamp
 );
 
-create table papers (
+create table if not exists papers (
   id integer primary key auto_increment,
   title varchar(500),
   abstract longtext,
   paper longblob, 
-  user_id integer, 
+  user_id integer,   
+  collection_id integer,
   modified timestamp on update current_timestamp
 );
 
-create table keywords (
+create table if not exists keywords (
   id integer primary key auto_increment,
   value varchar(500),
   paper_id integer,
   modified timestamp on update current_timestamp
 );
 
-create table coauthors (
+create table if not exists coauthors (
   id integer primary key auto_increment,
   name varchar(500),
   email varchar(500),
@@ -55,7 +50,7 @@ create table coauthors (
   modified timestamp on update current_timestamp  
 );
 
-create table collections (
+create table if not exists collections (
   id integer primary key auto_increment,
   title varchar(500),
   description longtext, 
@@ -63,23 +58,25 @@ create table collections (
   modified timestamp on update current_timestamp
 );
 
-create table collections_submissions (
-  id integer primary key auto_increment,
-  collection_id integer,
-  submission_id integer,
-  modified timestamp on update current_timestamp
-);
-
-create table categories (
+create table if not exists categories (
   id integer primary key auto_increment,
   name varchar(500),
   description longtext,
+  collection_id integer,  
   modified timestamp on update current_timestamp
 );
 
-create table categories_submissions (
+create table if not exists roles (
   id integer primary key auto_increment,
-  category_id integer,
-  submission_id integer,
+  role_type_id integer,
+  user_id integer,
+  collection_id integer,
+  modified timestamp on update current_timestamp  
+);
+
+create table if not exists role_types (
+  id integer primary key auto_increment,
+  name varchar(200),
+  description longtext, 
   modified timestamp on update current_timestamp
 );
