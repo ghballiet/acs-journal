@@ -13,7 +13,7 @@ create table if not exists users (
   country varchar(250),
   phone varchar(250),
   is_admin boolean default false,
-  modified timestamp on update current_timestamp
+  modified timestamp default current_timestamp on update current_timestamp
 );
 
 create table if not exists submissions (
@@ -22,7 +22,7 @@ create table if not exists submissions (
   presenter_name varchar(500),
   category_id integer,
   collection_id integer,
-  modified timestamp on update current_timestamp
+  modified timestamp default current_timestamp on update current_timestamp
 );
 
 create table if not exists papers (
@@ -32,14 +32,14 @@ create table if not exists papers (
   paper longblob, 
   user_id integer,   
   collection_id integer,
-  modified timestamp on update current_timestamp
+  modified timestamp default current_timestamp on update current_timestamp
 );
 
 create table if not exists keywords (
   id integer primary key auto_increment,
   value varchar(500),
   paper_id integer,
-  modified timestamp on update current_timestamp
+  modified timestamp default current_timestamp on update current_timestamp
 );
 
 create table if not exists coauthors (
@@ -48,7 +48,7 @@ create table if not exists coauthors (
   email varchar(500),
   institution varchar(500),
   paper_id integer,
-  modified timestamp on update current_timestamp  
+  modified timestamp default current_timestamp on update current_timestamp  
 );
 
 create table if not exists collections (
@@ -56,7 +56,7 @@ create table if not exists collections (
   title varchar(500),
   description longtext, 
   accepting_submissions boolean,
-  modified timestamp on update current_timestamp
+  modified timestamp default current_timestamp on update current_timestamp
 );
 
 create table if not exists categories (
@@ -64,7 +64,7 @@ create table if not exists categories (
   name varchar(500),
   description longtext,
   collection_id integer,  
-  modified timestamp on update current_timestamp
+  modified timestamp default current_timestamp on update current_timestamp
 );
 
 create table if not exists roles (
@@ -72,12 +72,12 @@ create table if not exists roles (
   role_type_id integer,
   user_id integer,
   collection_id integer,
-  modified timestamp on update current_timestamp  
+  modified timestamp default current_timestamp on update current_timestamp  
 );
 
 create table if not exists role_types (
   id integer primary key auto_increment,
   name varchar(200),
   description longtext, 
-  modified timestamp on update current_timestamp
+  modified timestamp default current_timestamp on update current_timestamp
 );

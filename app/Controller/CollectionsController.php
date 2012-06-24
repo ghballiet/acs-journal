@@ -22,7 +22,8 @@ class CollectionsController extends AppController {
       $role = array('Role'=>array(
         'role_type_id' => $admin_role_type['RoleType']['id'],
         'user_id' => $this->Auth->user('id'),
-        'collection_id' => $collection['Collection']['id']
+        'collection_id' => $collection['Collection']['id'],
+        'modified' => $collection['Collection']['modified']
       ));
       $this->Collection->Role->create();
       $this->Collection->Role->save($role);
