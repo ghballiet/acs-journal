@@ -24,7 +24,7 @@ class CollectionsController extends AppController {
       $this->alertSuccess('Success!', sprintf('Succesfully created <strong>%s</strong>.', 
                                               $title), true);
       $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
-    } else {
+    } else if($this->request->is('post')) {
       $this->alertError('Uh-oh.', 'Something went wrong. Please correct any errors below, and ' .
                         'try again.');
     }
