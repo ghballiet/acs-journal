@@ -42,40 +42,40 @@
               <li><? echo $this->Html->link('Instructions', '/instructions'); ?></li>
             </ul>
             <ul class="nav pull-right">
-              <?
-              if($user['is_admin'] == '1') {
-                $title = 'Administration';
-                $arr = array(
-                  array('text'=>'Collections', 'link'=>'/manage_collections', 'icon'=>'book'),
-                  array('text'=>'Users', 'link'=>'/manage_users', 'icon'=>'user')
-                );
-                echo $this->Bootstrap->dropdown($title, $arr);
-              }
-              ?>
+<?
+    if(isset($user) && $user['is_admin'] == '1') {
+      $title = 'Administration';
+      $arr = array(
+        array('text'=>'Collections', 'link'=>'/manage_collections', 'icon'=>'book'),
+        array('text'=>'Users', 'link'=>'/manage_users', 'icon'=>'user')
+      );
+      echo $this->Bootstrap->dropdown($title, $arr);
+    }
+?>
               <li class="divider-vertical"></li>
-              <?
-              $title = null;
-              $links = array();
+<?php
+$title = null;
+$links = array();
+
+if(!isset($user) || $user == null) {
+  $title = 'Account';
+  $links = array(
+    array('text'=>'Log In', 'link'=>'/login', 'icon'=>'user'),
+    array('text'=>'Register', 'link'=>'/register', 'icon'=>'list-alt')
+  );
+} else {
+  $title = sprintf('%s %s', 
+                   $user['name'], $user['surname']);
+  $links = array(
+    array('text'=>'Dashboard', 'link'=>'/dashboard', 'icon'=>'home'),
+    array('text'=>'Account Settings', 'link'=>'/settings', 'icon'=>'cog'),
+    true,
+    array('text'=>'Log Out', 'link'=>'/logout', 'icon'=>'off')
+  );
+}
               
-              if(!isset($user) || $user == null) {
-                $title = 'Account';
-                $links = array(
-                  array('text'=>'Log In', 'link'=>'/login', 'icon'=>'user'),
-                  array('text'=>'Register', 'link'=>'/register', 'icon'=>'list-alt')
-                );
-              } else {
-                $title = sprintf('%s %s', 
-                  $user['name'], $user['surname']);
-                $links = array(
-                  array('text'=>'Dashboard', 'link'=>'/dashboard', 'icon'=>'home'),
-                  array('text'=>'Account Settings', 'link'=>'/settings', 'icon'=>'cog'),
-                  true,
-                  array('text'=>'Log Out', 'link'=>'/logout', 'icon'=>'off')
-                );
-              }
-              
-              echo $this->Bootstrap->dropdown($title, $links);
-              ?>
+echo $this->Bootstrap->dropdown($title, $links);
+?>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
