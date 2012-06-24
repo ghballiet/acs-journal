@@ -20,8 +20,8 @@ class CollectionsController extends AppController {
       // make this user an administrator of the collection.
       $admin_role_type = $this->Collection->Role->RoleType->findByName('admin');
       $role = array('Role'=>array(
-        'role_type_id' => $admin_role_type['Role_Type']['id'],
-        'user_id' => $user['id'],
+        'role_type_id' => $admin_role_type['RoleType']['id'],
+        'user_id' => $this->Auth->user('id'),
         'collection_id' => $collection['Collection']['id']
       ));
       $this->Collection->Role->create();
