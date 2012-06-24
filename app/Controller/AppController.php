@@ -39,7 +39,7 @@ class AppController extends Controller {
     'Bootstrap');
 
   public function beforeFilter() {
-    $this->set('user', $this->Auth->user());
+    $this->set('user', AuthComponent::user());
   }
   
   private function alert($title, $msg, $class, $closable = false) {
