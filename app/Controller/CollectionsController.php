@@ -51,5 +51,14 @@ class CollectionsController extends AppController {
                                             $title), true);
     $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
   }
+
+  public function index($id = null) {
+    if($id == null)
+      $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
+    
+    $this->Collection->id = $id;
+    $collection = $this->Collection->read();
+    $this->set('collection', $collection);
+  }
 }
 ?>
