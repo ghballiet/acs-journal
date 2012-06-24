@@ -37,6 +37,10 @@ class AppController extends Controller {
       array('username' => 'email')))));
   public $helpers = array('Html', 'Form', 'Session', 'BootstrapForm', 
     'Bootstrap');
+
+  public function beforeFilter() {
+    $this->set('user', $this->Auth->user());
+  }
   
   private function alert($title, $msg, $class, $closable = false) {
     $str = sprintf('<strong>%s</strong> %s', $title, $msg);

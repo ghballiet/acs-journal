@@ -4,7 +4,6 @@ class UsersController extends AppController {
   
   public function beforeFilter() {
     $this->Auth->allow('login', 'register');
-    $this->set('user', $this->Auth->user());
   }
   
   public function register() {

@@ -3,7 +3,6 @@ class CollectionsController extends AppController {
   public $name = 'Collection';
   
   public function beforeFilter() {
-    $this->set('user', $this->Auth->user());
   }
 
   public function manage() {
