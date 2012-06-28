@@ -57,9 +57,7 @@ class CollectionsController extends AppController {
       $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
     
     $this->Collection->id = $id;
-    $collection = $this->Collection->find('threaded',
-                                          array('conditions'=>
-                                                array('Collection.id'=>$id)));
+    $collection = $this->Collection->findById($id);
     $this->set('collection', $collection);
   }
 }
