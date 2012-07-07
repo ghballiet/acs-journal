@@ -17,7 +17,7 @@
      <li><a href="#pending_submissions" data-toggle="tab">Pending</a></li>
      <li><a href="#past_submissions" data-toggle="tab">Past</a></li>
    </ul>
-   <div class="tab-contents">
+   <div class="tab-content">
      <div class="tab-pane" id="pending_submissions">
        Pending.
      </div>
