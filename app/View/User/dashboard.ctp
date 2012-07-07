@@ -30,7 +30,9 @@ if(count($papers) == 0) {
     $title = $paper['Paper']['title'];
     $modified = $paper['Paper']['modified'];
     
-    echo $this->Html->tableCells(array($id, $title, $modified, ''));
+    echo $this->Html->tableCells(
+      array($title, $abstract, $modified, ''),
+      array(), array(), true);
   }
   echo '</table>';
 }
