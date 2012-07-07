@@ -3,7 +3,7 @@
 </div>
 
 <div class="row">
-  <div class="span2 sidebar">
+  <div class="span3 sidebar">
     <ul class="nav nav-list well">
       <li class="nav-header">Quick Links</li>
       <li><a href="#">Lorem Ipsum</a></li>
@@ -11,7 +11,7 @@
     </ul>
   </div>
 
-  <div class="span10 submisssions">
+  <div class="span9 submisssions">
    <h2>My Submissions</h2>
    <ul class="nav nav-tabs" id="#submissions">
      <li class="active"><a href="#pending_submissions" data-toggle="tab">Pending</a></li>
