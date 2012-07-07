@@ -39,7 +39,7 @@ if(count($papers) == 0) {
     );
 
     $btns = array($delete);
-    $btn_html = $btns.join(' ');
+    $btn_html = $btns.implode(' ');
     
     echo $this->Html->tableCells(
       array($title, $abstract, $modified, $btn_html),
