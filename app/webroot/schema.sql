@@ -31,7 +31,6 @@ create table if not exists papers (
   abstract longtext,
   paper longblob, 
   user_id integer,   
-  collection_id integer,
   modified timestamp default current_timestamp on update current_timestamp
 );
 

@@ -18,7 +18,7 @@ if(count($papers) == 0) {
   echo 'You haven\'t uploaded any papers. ';
   echo $this->Html->link(
     'Submit a Paper',
-    array('controller'=>'submissions', 'action'=>'upload'),
+    array('controller'=>'papers', 'action'=>'upload'),
     array('class'=>'btn btn-primary'));
   echo '</div>';
 } else {

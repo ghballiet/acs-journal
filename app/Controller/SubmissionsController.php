@@ -5,9 +5,5 @@ class SubmissionsController extends AppController {
   public function beforeFilter() {
     $this->set('user', $this->Auth->user());
   }
-
-  public function upload() {
-    
-  }
 }
 ?>
