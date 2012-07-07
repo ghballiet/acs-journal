@@ -8,18 +8,28 @@ class PapersController extends AppController {
 
   public function upload() {
     if($this->request->is('post')) {
-      $paper = $this->request->data['Paper']['paper'];
+      $data = $this->request->data;
       pr($this->request->data);
 
       // make sure they uploaded a pdf
-      if($paper['type'] != 'application/pdf') {
-        $this->alertError(
-          'Uh-oh.',
-          sprintf('Only PDF submissions will be accepted. It ' .
-            'looks like you tried to upload a file of type <kbd>%s</kbd>.', 
-            $paper['type'])
+      if($data['Paper']['paper']['type'] != 'application/pdf') {
+        $this->alertError('Uh-oh.',
+          'Papers must be uploaded as PDF files.'
         );
         return false;
+      }
+
+      // read the pdf, and store the contents in the database
+      $tmp_name = $data['Paper']['paper']['tmp_name'];
+      $contents = file_get_contents($tmp_name);
+      $data['Paper']['paper'] = $contents;
+
+      if($paper = $this->Paper->save($data)) {
+        // delete the temporary file :)
+        unset($tmp_file);
+        
+        $this->alertSuccess('Success!', 'Your paper was uploaded successfully.');
+        $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
       }
     }
   }
