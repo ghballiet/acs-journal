@@ -36,7 +36,7 @@ class UsersController extends AppController {
   }
   
   public function dashboard() {
-    $collections = $this->User->Role->Collection->find('all');
+    $collections = $this->User->Role->Collection->findAllByAcceptingSubmissions(1);
     $this->set('collections', $collections);
   }
   
