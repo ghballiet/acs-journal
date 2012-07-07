@@ -37,9 +37,12 @@ if(count($papers) == 0) {
       array('controller'=>'papers', 'action'=>'delete', $id),
       'btn-mini btn-danger'
     );
+
+    $btns = array($delete);
+    $btn_html = $btns.join(' ');
     
     echo $this->Html->tableCells(
-      array($title, $abstract, $modified, ''),
+      array($title, $abstract, $modified, $btn_html),
       array(), array(), true);
   }
   echo '</table>';
