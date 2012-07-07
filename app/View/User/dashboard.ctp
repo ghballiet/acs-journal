@@ -19,7 +19,7 @@ if(count($papers) == 0) {
   echo $this->Html->link(
     'Submit a Paper',
     array('controller'=>'submissions', 'action'=>'new'),
-    array('class'=>'btn btn-primary btn-mini'));
+    array('class'=>'btn btn-primary'));
   echo '</div>';
 } else {
    
