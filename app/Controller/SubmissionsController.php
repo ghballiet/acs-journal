@@ -6,7 +6,7 @@ class SubmissionsController extends AppController {
     
   }
 
-  public function new() {
+  public function upload() {
     
   }
 }
