@@ -22,7 +22,17 @@ if(count($papers) == 0) {
     array('class'=>'btn btn-primary'));
   echo '</div>';
 } else {
-   
+  echo '<table class="table table-condensed">';
+  echo $this->Html->tableHeaders(array(
+      'Title', 'Abstract', 'Modified', ''));
+  foreach($papers as $paper) {
+    $id = $paper['Paper']['id'];
+    $title = $paper['Paper']['title'];
+    $modified = $paper['Paper']['modified'];
+    
+    echo $this->Html->tableCells(array($id, $title, $modified, ''));
+  }
+  echo '</table>';
 }
 ?>
   </div>
