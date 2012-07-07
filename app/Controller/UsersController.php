@@ -39,8 +39,8 @@ class UsersController extends AppController {
     $collections = $this->User->Role->Collection->findAllByAcceptingSubmissions(1);
     $this->set('collections', $collections);
 
-    $submissions = $this->User->Submission->findAllByUserId($this->Auth->user('id'));
-    $this->set('submissions', $submissions);
+    $papers = $this->User->Submission->Paper->findAllByUserId($this->Auth->user('id'));
+    $this->set('papers', $papers);
   }
   
   public function logout() {
