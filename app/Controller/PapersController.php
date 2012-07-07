@@ -8,7 +8,18 @@ class PapersController extends AppController {
 
   public function upload() {
     if($this->request->is('post')) {
-      pr($this->request->data);
+      $paper = $this->request->data['Paper']['paper'];
+
+      // make sure they uploaded a pdf
+      if($paper['type'] != 'application/pdf') {
+        $this->alertError(
+          'Uh-oh.',
+          sprintf('Only PDF submissions will be accepted. It ' .
+            'looks like you tried to upload a file of type <kbd>%s</kbd>.', 
+            $paper['type'])
+        );
+        return false;
+      }
     }
   }
 }
