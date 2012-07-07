@@ -2,4 +2,28 @@
   <h1>Dashboard</h1>
 </div>
 
-<? pr($collections); ?>
+<div class="row">
+  <div class="span2 sidebar well">
+    <ul class="nav nav-list">
+      <li class="nav-header">Quick Links</li>
+      <li><a href="#">Lorem Ipsum</a></li>
+      <li><a href="#">Dolor Sit Amet</a></li>
+    </ul>
+  </div>
+
+  <div class="span10 submisssions">
+   <h2>My Submissions</h2>
+   <ul class="nav nav-tabs" id="#submissions">
+     <li class="active"><a href="#pending_submissions">Pending</a></li>
+     <li><a href="#past_submissions">Past</a></li>
+   </ul>
+   <div class="tab-contents">
+     <div class="tab-pane active" id="pending_submissions">
+       Pending.
+     </div>
+     <div class="tab-pane" id="past_submissions">
+       Past.
+     </div>
+   </div>
+  </div>
+</div>
