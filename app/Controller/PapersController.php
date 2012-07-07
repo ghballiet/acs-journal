@@ -7,7 +7,9 @@ class PapersController extends AppController {
   }
 
   public function upload() {
-    
+    if($this->request->is('post')) {
+      pr($this->request->data);
+    }
   }
 }
 ?>
