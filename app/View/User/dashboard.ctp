@@ -14,11 +14,11 @@
   <div class="span10 submisssions">
    <h2>My Submissions</h2>
    <ul class="nav nav-tabs" id="#submissions">
-     <li class="active"><a href="#pending_submissions">Pending</a></li>
-     <li><a href="#past_submissions">Past</a></li>
+     <li><a href="#pending_submissions" data-toggle="tab">Pending</a></li>
+     <li><a href="#past_submissions" data-toggle="tab">Past</a></li>
    </ul>
    <div class="tab-contents">
-     <div class="tab-pane active" id="pending_submissions">
+     <div class="tab-pane" id="pending_submissions">
        Pending.
      </div>
      <div class="tab-pane" id="past_submissions">
