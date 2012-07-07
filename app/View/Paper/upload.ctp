@@ -8,6 +8,6 @@ echo $this->BootstrapForm->input('title',
   array('autofocus'=>'true')
 );
 echo $this->BootstrapForm->input('abstract');
-echo $this->BootstrapForm->input('paper');
+echo $this->BootstrapForm->input('paper', array('type'=>'file'));
 echo $this->BootstrapForm->end('Upload Paper');
 ?>
