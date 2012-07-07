@@ -28,6 +28,7 @@ if(count($papers) == 0) {
   foreach($papers as $paper) {
     $id = $paper['Paper']['id'];
     $title = $paper['Paper']['title'];
+    $abstract = $paper['Paper']['abstract'];
     $modified = $paper['Paper']['modified'];
     
     echo $this->Html->tableCells(
