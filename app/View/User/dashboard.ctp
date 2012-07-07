@@ -12,7 +12,7 @@
   </div>
 
   <div class="span9 papers">
-   <h3>Papers</h3>
+   <h2>Papers</h2>
 <?
 if(count($papers) == 0) {
   echo '<div class="alert alert-info">';
