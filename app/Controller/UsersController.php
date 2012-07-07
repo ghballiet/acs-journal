@@ -39,7 +39,7 @@ class UsersController extends AppController {
     $collections = $this->User->Role->Collection->findAllByAcceptingSubmissions(1);
     $this->set('collections', $collections);
 
-    $papers = $this->User->Submission->Paper->findAllByUserId($this->Auth->user('id'));
+    $papers = $this->User->Paper->findAllByUserId($this->Auth->user('id'));
     $this->set('papers', $papers);
   }
   
