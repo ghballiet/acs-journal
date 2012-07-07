@@ -3,8 +3,8 @@
 </div>
 
 <div class="row">
-  <div class="span2 sidebar well">
-    <ul class="nav nav-list">
+  <div class="span2 sidebar">
+    <ul class="nav nav-list well">
       <li class="nav-header">Quick Links</li>
       <li><a href="#">Lorem Ipsum</a></li>
       <li><a href="#">Dolor Sit Amet</a></li>
