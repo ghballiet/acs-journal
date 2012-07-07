@@ -9,7 +9,6 @@ class PapersController extends AppController {
   public function upload() {
     if($this->request->is('post')) {
       $data = $this->request->data;
-      pr($this->request->data);
 
       // make sure they uploaded a pdf
       if($data['Paper']['paper']['type'] != 'application/pdf') {
