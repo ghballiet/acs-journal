@@ -36,7 +36,8 @@ class UsersController extends AppController {
   }
   
   public function dashboard() {
-    
+    $collections = $this->User->Role->Collection->find('all');
+    $this->set('collections', $collections);
   }
   
   public function logout() {
