@@ -11,19 +11,19 @@
     </ul>
   </div>
 
-  <div class="span9 submisssions">
-   <h2>My Submissions</h2>
-   <ul class="nav nav-tabs" id="#submissions">
-     <li class="active"><a href="#pending_submissions" data-toggle="tab">Pending</a></li>
-     <li><a href="#past_submissions" data-toggle="tab">Past</a></li>
-   </ul>
-   <div class="tab-content">
-     <div class="tab-pane active" id="pending_submissions">
-       Pending.
-     </div>
-     <div class="tab-pane" id="past_submissions">
-       Past.
-     </div>
-   </div>
+  <div class="span9 papers">
+<?
+if(count($papers) == 0) {
+  echo '<div class="alert alert-info">';
+  echo 'You haven\'t uploaded any papers. ';
+  echo $this->Html->link(
+    'Submit a Paper',
+    array('controller'=>'submissions', 'action'=>'new'),
+    array('class'=>'btn'));
+  echo '</div>';
+} else {
+   
+}
+?>
   </div>
 </div>
