@@ -18,6 +18,9 @@ class PapersController extends AppController {
         return false;
       }
 
+      // save the user id
+      $data['Paper']['user_id'] = $this->Auth->user('id');
+
       // read the pdf, and store the contents in the database
       $tmp_name = $data['Paper']['paper']['tmp_name'];
       $contents = file_get_contents($tmp_name);
