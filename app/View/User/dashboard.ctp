@@ -32,6 +32,12 @@ if(count($papers) == 0) {
     $abstract = $paper['Paper']['abstract'];
     $modified = $paper['Paper']['modified'];
     
+    $delete = $this->Bootstrap->linkBtn(
+      'Delete',
+      array('controller'=>'papers', 'action'=>'delete', $id),
+      'btn-mini btn-danger'
+    );
+    
     echo $this->Html->tableCells(
       array($title, $abstract, $modified, ''),
       array(), array(), true);
