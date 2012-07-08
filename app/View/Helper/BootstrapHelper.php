@@ -56,8 +56,12 @@ class BootstrapHelper extends AppHelper {
   }
 
   public function linkBtn($text, $link = null, $class = null, $options = array(), $confirm = null) {
+    $str = '';
     $options['class'] = 'btn ' . $class;
-    return $this->Html->link($text, $link, $options, $confirm);
+    $str .= '<div class="btn-group">';
+    $str .= $this->Html->link($text, $link, $options, $confirm);
+    $str .= '</div>';
+    return $str;
   }
 }
 ?>
