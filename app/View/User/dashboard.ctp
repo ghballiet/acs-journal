@@ -26,19 +26,46 @@ if(count($papers) == 0) {
   echo '<table class="table table-condensed">';
   echo $this->Html->tableHeaders(array(
       'Title', 'Abstract', 'Modified', ''));
+
+  // build a list of submission links for the dropdown menu
+  $submission_links = array();
+  foreach($collections as $collection) {
+    $id = $collection['Collection']['id'];
+    $title = $collection['Collection']['title'];
+    $link = array();
+    $link['text'] = $title;
+    $link['link'] = array('controller'=>'submissions', 'action'=>'create', $id);
+    $submission_links[] = $link;
+  }
+
   foreach($papers as $paper) {
     $id = $paper['Paper']['id'];
     $title = $paper['Paper']['title'];
     $abstract = $paper['Paper']['abstract'];
-    $modified = $paper['Paper']['modified'];
-    
+    $modified = $paper['Paper']['modified'];  
+
+    $links = $submission_links;
+    foreach($links as $l)
+      $l['link'][] = $id;
+
+    $submit = $this->Bootstrap->dropdown(
+      'Create Submission',
+      $links,
+      'btn btn-mini btn-inverse'
+    );
+
     $delete = $this->Bootstrap->linkBtn(
       'Delete',
       array('controller'=>'papers', 'action'=>'delete', $id),
       'btn-mini btn-danger'
     );
+    $edit = $this->Bootstrap->linkBtn(
+      'Edit',
+      array('controller'=>'papers', 'action'=>'edit', $id),
+      'btn-mini'
+    );
 
-    $btns = array($delete);
+    $btns = array($submit, $edit, $delete);
     $btn_html = implode(' ', $btns);
     
     echo $this->Html->tableCells(
