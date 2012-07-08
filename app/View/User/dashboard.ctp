@@ -53,8 +53,8 @@ if(count($papers) == 0) {
 
     $links = $submission_links;
     foreach($links as $l) {
-      pr($l);
       $l['link']['paper'] = $id;
+      pr($l);
     }
 
     $submit = $this->Bootstrap->dropdownBtn(
