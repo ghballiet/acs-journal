@@ -2,4 +2,4 @@
 .clearfix:after{clear:both;}
 .hide-text{overflow:hidden;text-indent:100%;white-space:nowrap;}
 .input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
-td.column-4 div.btn-group{margin:0px;}
+td.column-4 div.btn-toolbar{margin:0px;}
