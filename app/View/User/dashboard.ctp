@@ -58,7 +58,8 @@ if(count($papers) == 0) {
     $delete = $this->Bootstrap->linkBtn(
       'Delete',
       array('controller'=>'papers', 'action'=>'delete', $id),
-      'btn-mini btn-danger'
+      'btn-mini btn-danger', array(),
+      'Are you sure you want to delete this paper? This cannot be undone.'
     );
     $edit = $this->Bootstrap->linkBtn(
       'Edit',
