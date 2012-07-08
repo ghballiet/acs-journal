@@ -69,6 +69,7 @@ if(count($papers) == 0) {
 
     $btns = array($submit, $edit, $delete);
     $btn_html = implode(' ', $btns);
+    $btn_html = sprintf('<div class="btn-toolbar">%s</div>', $btn_html);
     
     echo $this->Html->tableCells(
       array($title, $abstract, $modified, $btn_html),
