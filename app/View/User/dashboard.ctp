@@ -12,15 +12,16 @@
   </div>
 
   <div class="span9 papers">
+<?
+echo $this->Html->link('Upload Paper', 
+  array('controller'=>'papers', 'action'=>'upload'),
+  array('class'=>'btn btn-primary pull-right'));
+?>
    <h2>Papers</h2>
 <?
 if(count($papers) == 0) {
   echo '<div class="alert alert-info">';
   echo 'You haven\'t uploaded any papers. ';
-  echo $this->Html->link(
-    'Submit a Paper',
-    array('controller'=>'papers', 'action'=>'upload'),
-    array('class'=>'btn btn-primary'));
   echo '</div>';
 } else {
   echo '<table class="table table-condensed">';
