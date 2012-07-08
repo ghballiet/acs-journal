@@ -41,7 +41,7 @@ if(count($papers) == 0) {
     $title = $collection['Collection']['title'];
     $link = array();
     $link['text'] = $title;
-    $link['link'] = array('controller'=>'submissions', 'action'=>'create', 'collection'=>$id);
+    $link['link'] = array('controller'=>'submissions', 'action'=>'create', $id);
     $submission_links[] = $link;
   }
 
@@ -51,10 +51,10 @@ if(count($papers) == 0) {
     $abstract = $paper['Paper']['abstract'];
     $modified = $paper['Paper']['modified'];  
 
-    $links = $submission_links;
-    foreach($links as $l) {
-      $l['link']['paper'] = $id;
-      pr($l);
+    $links = array();
+    foreach($submission_links as $link) {
+      $link['link'][] = $id;
+      $links[] = $link;
     }
 
     $submit = $this->Bootstrap->dropdownBtn(
