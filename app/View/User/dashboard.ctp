@@ -60,7 +60,7 @@ if(count($papers) == 0) {
     $submit = $this->Bootstrap->dropdownBtn(
       'Create Submission',
       $links,
-      'btn-mini btn-inverse'
+      'btn-mini'
     );
 
     $delete = $this->Bootstrap->linkBtn(
