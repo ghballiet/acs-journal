@@ -55,6 +55,8 @@ if(count($papers) == 0) {
     foreach($links as $l)
       $l['link']['paper'] = $id;
 
+    pr($links);
+
     $submit = $this->Bootstrap->dropdownBtn(
       'Create Submission',
       $links,
