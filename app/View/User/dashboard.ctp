@@ -1,3 +1,9 @@
+<?
+$this->begin('css');
+echo $this->Html->css('dashboard');
+$this->end();
+?>
+
 <div class="page-header">
   <h1>Dashboard</h1>
 </div>
