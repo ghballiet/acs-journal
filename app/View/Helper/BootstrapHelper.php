@@ -4,11 +4,10 @@ App::uses('AppHelper', 'View/Helper');
 class BootstrapHelper extends AppHelper {
   public $helpers = array('Html');
 
-  public function dropdown($title, $links, $class = null) {
+  public function dropdown($title, $links) {
     $str = '';
     $str .= '<li class="dropdown">';
-    $str .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" ';
-    $str .= sprintf('class="%s">', $class);
+    $str .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown">';
     $str .= sprintf('%s <b class="caret"></b></a>', $title);
     $str .= '<ul class="dropdown-menu">';
     foreach($links as $l) {
@@ -32,8 +31,8 @@ class BootstrapHelper extends AppHelper {
 
   public function dropdownBtn($title, $links, $class = null) {
     $str = '';
-    $str .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" ';
-    $str .= sprintf('class="btn %s">', $class);
+    $str .= '<a href="#" data-toggle="dropdown" ';
+    $str .= sprintf('class="dropdown-toggle btn %s">', $class);
     $str .= sprintf('%s <b class="caret"></b></a>', $title);
     $str .= '<ul class="dropdown-menu">';
     foreach($links as $l) {
