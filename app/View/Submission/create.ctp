@@ -16,8 +16,10 @@ echo $this->BootstrapForm->input('presenter_name');
 echo $this->BootstrapForm->end('Create Submission');
 ?>
 
+<? $this->start('scripts'); ?>
 <script type="text/javascript">
   $(document).ready(function() {
     $('#collection_link').popover();
   });
 </script>
+<? $this->end(); ?>
