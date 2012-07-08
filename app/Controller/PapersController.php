@@ -30,7 +30,7 @@ class PapersController extends AppController {
         // delete the temporary file :)
         unset($tmp_file);
         
-        $this->alertSuccess('Success!', 'Your paper was uploaded successfully.');
+        $this->alertSuccess('Success!', 'Your paper was uploaded successfully.', true);
         $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
       }
     }
