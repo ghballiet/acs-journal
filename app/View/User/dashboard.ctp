@@ -53,7 +53,7 @@ if(count($papers) == 0) {
 
     $links = $submission_links;
     foreach($links as $l) {
-      pr($link);
+      pr($l);
       $l['link']['paper'] = $id;
     }
 
