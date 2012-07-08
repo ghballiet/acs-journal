@@ -13,7 +13,8 @@ class SubmissionsController extends AppController {
     $this->set('paper', $paper);
 
     if($this->request->is('post')) {
-      
+      // TODO: create the submission, using the proper collection and
+      // paper ids
     }
   }
 }

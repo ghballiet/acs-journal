@@ -4,14 +4,14 @@
 
 <?
 echo $this->BootstrapForm->create('Submission');
-echo $this->BootstrapForm->input('collection_id', array(
-    'type'=>'hidden',
-    'value'=>$collection['Collection']['id'],
-    'label'=>false));
-echo $this->BootstrapForm->input('paper_id', array(
-    'type'=>'hidden',
-    'value'=>$paper['Paper']['id'],
-    'label'=>false));
+echo '<div class="control-group">';
+echo '<label for="SubmissionCollection">Collection</label>';
+echo '<div class="controls">';
+printf('<a href="#" rel="popover" data-content="%s" data-original-title="%s">%s</a>',
+  $collection['Collection']['description'], $collection['Collection']['title'],
+  $collection['Collection']['title']);
+echo '</div>';
+echo '</div>';
 echo $this->BootstrapForm->input('presenter_name');
 echo $this->BootstrapForm->end('Create Submission');
 ?>
