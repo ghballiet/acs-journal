@@ -30,6 +30,30 @@ class BootstrapHelper extends AppHelper {
     return $str;
   }
 
+  public function dropdownBtn($title, $links, $class = null) {
+    $str = '';
+    $str .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" ';
+    $str .= sprintf('class="btn %s">', $class);
+    $str .= sprintf('%s <b class="caret"></b></a>', $title);
+    $str .= '<ul class="dropdown-menu">';
+    foreach($links as $l) {
+      if($l === true) {
+        $str .= '<li class="divider"></li>';
+      } else {
+        $str .= '<li>';
+        $url = $this->Html->url($l['link']);
+        $str .= sprintf('<a href="%s">', $url);
+        if(isset($l['icon']))
+          $str .= sprintf('<i class="icon-%s"></i> ', $l['icon']);
+        $str .= $l['text'];
+        $str .= '</a>';
+        $str .= '</li>';
+      }
+    }
+    $str .= '</ul>';
+    return $str;
+  }
+
   public function linkBtn($text, $link = null, $class = null, $options = array()) {
     $options['class'] = 'btn ' . $class;
     return $this->Html->link($text, $link, $options);

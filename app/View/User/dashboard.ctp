@@ -48,10 +48,10 @@ if(count($papers) == 0) {
     foreach($links as $l)
       $l['link'][] = $id;
 
-    $submit = $this->Bootstrap->dropdown(
+    $submit = $this->Bootstrap->dropdownBtn(
       'Create Submission',
       $links,
-      'btn btn-mini btn-inverse'
+      'btn-mini btn-inverse'
     );
 
     $delete = $this->Bootstrap->linkBtn(
