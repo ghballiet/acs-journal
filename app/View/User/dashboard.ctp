@@ -1,5 +1,5 @@
 <?
-$this->begin('css');
+$this->start('css');
 echo $this->Html->css('dashboard');
 $this->end();
 ?>
