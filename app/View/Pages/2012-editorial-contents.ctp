@@ -43,7 +43,7 @@ $papers = array(
   array(
     'title' => 'When Do Robots Have to Think?',
     'author' => 'Claude Sammut',
-    'url' => '#'
+    'url' => '#',
     'pages' => 10,
   ),
   array(
