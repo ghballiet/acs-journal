@@ -5,39 +5,52 @@ $this->end();
 
 $papers = array(
   array(
+    'title' => 'Advances in Cognitive Systems',
+    'author' => 'Pat Langley', 
+    'url' => '#', 
+    'pages' => 1,
+  ),
+  array(
     'title' => 'The Cognitive Systems Paradigm',
     'author' => 'Pat Langley',
-    'url' => '#'
+    'url' => '#',
+    'pages' => 10,
   ),
   array(
     'title' => 'Beyond Idiot-Savant AI',
     'author' => 'Scott E. Fahlman',
-    'url' => '#'
+    'url' => '#',
+    'pages' => 7,
   ),
   array(
     'title' => 'The Right Way',
     'author' => 'Patrick Henry Winston',
-    'url' => '#'
+    'url' => '#',
+    'pages' => 12
   ),
   array(
     'title' => 'Human-Level Artificial Intelligence Must be an Extraordinary Science',
     'author' => 'Nicholas L. Cassimatis',
-    'url' => '#'
+    'url' => '#',
+    'pages' => 10,
   ),
   array(
     'title' => 'How Minds Will Be Built',
     'author' => 'Kenneth D. Forbus',
-    'url' => '#'
+    'url' => '#',
+    'pages' => 12, 
   ),
   array(
     'title' => 'When Do Robots Have to Think?',
     'author' => 'Claude Sammut',
     'url' => '#'
+    'pages' => 10,
   ),
   array(
     'title' => 'Evaluating Integrated, Knowledge-Rich Cognitive Systems',
     'author' => 'Randolph M. Jones, Robert E. Wray, and Michael van Lent',
-    'url' => '#'
+    'url' => '#',
+    'pages' => 0
   )
 );
 ?>
@@ -55,15 +68,19 @@ $papers = array(
 <?
 echo $this->Html->tableHeaders(array('Title', 'Authors', 'Page', ''));
 
+$page = 0;
+
 foreach($papers as $i=>$paper) {
   $buttons = '';
   $buttons .= $this->Html->link('PDF', $paper['url'],
                                 array('class'=>'btn btn-mini btn-danger'));
   $buttons .= '&nbsp;';
   $buttons .= $this->Html->link('Abstract', '#', array('class'=>'btn btn-mini'));
+  
+  $page += $paper['pages'];
 
   echo $this->Html->tableCells(array(
-    $paper['title'], $paper['author'], ($i+1) * 6, $buttons
+    $paper['title'], $paper['author'], $page, $buttons
   ), array(), array(), true);
 }
 ?>
