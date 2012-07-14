@@ -5,6 +5,16 @@ class PapersController extends AppController {
   public function beforeFilter() {
     $this->set('user', $this->Auth->user());
   }
+  
+  public function delete($id = null) {
+    $this->Paper->id = $id;
+    if($this->Paper->delete($id)) {
+      $this->alertSuccess('Success!', 'Paper successfully deleted.', true);
+      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+    } else {
+      $this->alertError('Uh-oh.', 'Something went wrong. Please submit your request again.');
+    }
+  }
 
   public function upload() {
     if($this->request->is('post')) {
