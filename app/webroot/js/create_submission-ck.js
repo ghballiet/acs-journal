@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".right a.btn").click(function(a){a.preventDefault();var b=$(".coauthor.base").clone().removeClass("base"),c=b.attr("id"),d=b.attr("name"),e=c.match(/.*[0-9]+.*/);console.log(e++)})});
+$(document).ready(function(){$(".right a.btn").click(function(a){a.preventDefault();var b=$(this),c=$(".coauthor.base").clone().removeClass("base");c.find("input").each(function(){var a=$(this).attr("id"),b=$(this).attr("name"),c=$(this).siblings("label");console.log(a,b,c)})})});
