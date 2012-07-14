@@ -6,16 +6,10 @@ class SubmissionsController extends AppController {
     $this->set('user', $this->Auth->user());
   }
 
-  public function create($collection_id, $paper_id) {
-    $collection = $this->Submission->Collection->findById($collection_id);
-    $paper = $this->Submission->Paper->findById($paper_id);
-    $this->set('collection', $collection);
-    $this->set('paper', $paper);
-
-    if($this->request->is('post')) {
-      // TODO: create the submission, using the proper collection and
-      // paper ids
-    }
+  public function create() {
+    $options = array('condition'=>array('Collection.accepting_submissions' => true));
+    $collections = $this->Submission->Collection->find('list', $options);
+    $this->set('collections', $collections);
   }
 }
 ?>
