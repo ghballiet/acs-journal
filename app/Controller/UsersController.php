@@ -27,7 +27,8 @@ class UsersController extends AppController {
       $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     if($this->request->is('post')) {
       if($this->Auth->login()) {
-        return $this->redirect($this->Auth->redirect());
+        return $this->redirect(
+          array('controller'=>'users', 'action'=>'dashboard'));
       } else {
         $this->alertError('An error has occurred.', 'Incorrect username ' .
           'or password.');
