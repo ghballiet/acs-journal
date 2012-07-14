@@ -68,7 +68,7 @@ $papers = array(
 <?
 echo $this->Html->tableHeaders(array('Title', 'Authors', 'Page', ''));
 
-$page = 0;
+$page = 1;
 
 foreach($papers as $i=>$paper) {
   $buttons = '';
@@ -76,12 +76,12 @@ foreach($papers as $i=>$paper) {
                                 array('class'=>'btn btn-mini btn-danger'));
   $buttons .= '&nbsp;';
   $buttons .= $this->Html->link('Abstract', '#', array('class'=>'btn btn-mini'));
-  
-  $page += $paper['pages'];
 
   echo $this->Html->tableCells(array(
     $paper['title'], $paper['author'], $page, $buttons
   ), array(), array(), true);
+
+  $page += $paper['pages'];
 }
 ?>
 </table>
