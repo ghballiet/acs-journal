@@ -47,7 +47,7 @@ $papers = array(
     'pages' => 10,
   ),
   array(
-    'title' => 'Evaluating Integrated, Knowledge-Rich Cognitive Systems',
+    'title' => 'Practical Evaluation of Integrated Cognitive Systems', 
     'author' => 'Randolph M. Jones, Robert E. Wray, and Michael van Lent',
     'url' => '#',
     'pages' => 0
