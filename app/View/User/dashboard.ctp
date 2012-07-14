@@ -8,16 +8,6 @@ $this->end();
   <h1>Dashboard</h1>
 </div>
 
-<div class="row">
-  <div class="span3 sidebar">
-    <ul class="nav nav-list well">
-      <li class="nav-header">Quick Links</li>
-      <li><a href="#">Lorem Ipsum</a></li>
-      <li><a href="#">Dolor Sit Amet</a></li>
-    </ul>
-  </div>
-
-  <div class="span9 papers">
 <?
 echo $this->Html->link('Upload Paper', 
   array('controller'=>'papers', 'action'=>'upload'),
@@ -86,5 +76,3 @@ if(count($papers) == 0) {
   echo '</table>';
 }
 ?>
-  </div>
-</div>
