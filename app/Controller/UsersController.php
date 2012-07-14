@@ -39,16 +39,13 @@ class UsersController extends AppController {
   public function dashboard() {
     $collections = $this->User->Role->Collection->findAllByAcceptingSubmissions(1);
     $this->set('collections', $collections);
-    $papers = $this->User->Paper->findAllByUserId($this->Auth->user('id'));
-    $this->set('papers', $papers);
+
+    $submissions = $this->User->Submission->findAllByUserId($this->Auth->user('id'));
+    $this->set('submissions', $submissions);
   }
   
   public function logout() {
     $this->redirect($this->Auth->logout());
-  }
-  
-  public function submit() {
-    
   }
 }
 ?>
