@@ -17,27 +17,34 @@ create table if not exists users (
 );
 
 create table if not exists submissions (
-  id integer primary key auto_increment,
-  paper_id integer,
-  presenter_name varchar(500),
+  id integer primary key auto_increment, 
+  title varchar(500), 
+  abstract longtext,
+  current_version integer,
+  final_version integer,
+  previous_submission integer,
+  locked boolean default false,
   category_id integer,
-  collection_id integer,
+  collection_id integer, 
+  user_id integer,
   modified timestamp default current_timestamp on update current_timestamp
 );
 
-create table if not exists papers (
+create table if not exists uploads (
   id integer primary key auto_increment,
-  title varchar(500),
-  abstract longtext,
-  paper longblob, 
-  user_id integer,   
+  name varchar(500),
+  type varchar(500),
+  size bigint,
+  content longblob,
+  extension varchar(10),
+  user_id integer,
   modified timestamp default current_timestamp on update current_timestamp
 );
 
 create table if not exists keywords (
   id integer primary key auto_increment,
   value varchar(500),
-  paper_id integer,
+  submission_id integer,
   modified timestamp default current_timestamp on update current_timestamp
 );
 
@@ -46,7 +53,7 @@ create table if not exists coauthors (
   name varchar(500),
   email varchar(500),
   institution varchar(500),
-  paper_id integer,
+  submission_id integer,
   modified timestamp default current_timestamp on update current_timestamp  
 );
 
