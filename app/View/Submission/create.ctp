@@ -28,6 +28,6 @@ echo $this->BootstrapForm->input('Coauthor.0.institution', array('label'=>'Insti
     </div>
   </div>
 </div>
-?>
+<?
 echo $this->BootstrapForm->end('Submit');
 ?>
