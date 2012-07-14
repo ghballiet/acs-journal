@@ -6,7 +6,7 @@
 echo $this->BootstrapForm->create('Submission', array('type'=>'file'));
 ?>
 <div class="row">
-  <div class="span8">
+  <div class="span6">
    <div class="left">
 <?
 echo $this->BootstrapForm->input('collection_id', array('label'=>'Venue', 'autofocus'=>true));
@@ -16,7 +16,7 @@ echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
 ?>
     </div>
   </div>
-  <div class="span4">
+  <div class="span6">
     <div class="right well">
 <?
 echo $this->Html->link('Add Coauthor', '#', array('class'=>'btn btn-mini pull-right'));
