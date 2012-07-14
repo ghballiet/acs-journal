@@ -1,3 +1,9 @@
+<?
+$this->start('css');
+echo $this->Html->css('submit');
+$this->end('css');
+?>
+
 <div class="page-header">
   <h1>Submit Paper</h1>
 </div>
