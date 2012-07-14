@@ -3,7 +3,7 @@ $this->start('css');
 echo $this->Html->css('submit');
 $this->end();
 
-$this->start('script');
+$this->start('scripts');
 echo $this->Html->script('create_submission');
 $this->end();
 ?>
