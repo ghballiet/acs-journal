@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".right a.btn").click(function(a){a.preventDefault();var b=$(".coauthor.base").clone().removeClass("base"),c=b.attr("id"),d=b.attr("name"),e=c.match(/.*[0-9]+.*/);console.log(e++)})});

@@ -1,7 +1,11 @@
 <?
 $this->start('css');
 echo $this->Html->css('submit');
-$this->end('css');
+$this->end();
+
+$this->start('script');
+echo $this->Html->script('create_submission');
+$this->end();
 ?>
 
 <div class="page-header">
@@ -26,7 +30,7 @@ echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
   <div class="span5">
     <div class="right">
       <h3>Coauthors</h3>
-      <div class="coauthor">
+      <div class="coauthor base">
 <?
 echo $this->BootstrapForm->input('Coauthor.0.name', array('label'=>'Name'));
 echo $this->BootstrapForm->input('Coauthor.0.email', array('label'=>'Email'));
