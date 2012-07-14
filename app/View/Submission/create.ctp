@@ -8,6 +8,7 @@ echo $this->BootstrapForm->create('Submission', array('type'=>'file'));
 <div class="row">
   <div class="span7">
    <div class="left">
+     <h2>Submission Information</h2>
 <?
 echo $this->BootstrapForm->input('collection_id', array('label'=>'Venue', 'autofocus'=>true));
 echo $this->BootstrapForm->input('title');
@@ -20,7 +21,7 @@ echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
     <div class="right">
 <?
 echo $this->Html->link('Add Coauthor', '#', array('class'=>'btn btn-mini pull-right'));
-echo $this->Html->tag('h4', 'Coauthors');
+echo $this->Html->tag('h2', 'Coauthors');
 ?>
       <div class="coauthor">
 <?
