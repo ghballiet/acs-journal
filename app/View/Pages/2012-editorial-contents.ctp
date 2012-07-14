@@ -57,9 +57,7 @@ $papers = array(
 <div class="page-header">
   <h1>Advances in Cognitive Systems</h1>
   <div class="published_info">
-    <div class="volume">Volume 1, Issue 1</div>
-    <div class="date">July, 2012</div>
-    <div class="clearfix"></div>
+    <div class="volume">Volume 1, Issue 1, July, 2012</div>
   </div>
   <h2>Table of Contents</h2>
 </div>
