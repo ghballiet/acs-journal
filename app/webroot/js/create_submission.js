@@ -8,7 +8,7 @@ $(document).ready(function() {
       var name = $(this).attr('name');
       var id = $(this).attr('id');
       var curr = parseInt(name.match(/[0-9]+/)[0]);
-      var next = curr++;
+      var next = curr + 1;
       console.log(name, curr, next);
       name = name.replace(curr, next);
       id = id.replace(curr, next);
