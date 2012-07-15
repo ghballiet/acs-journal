@@ -33,7 +33,6 @@ $view_links = array($view_paper_link);
 
 $view_btn = $this->Bootstrap->dropdownBtn(
   'View', $view_links, 'btn-primary pull-right');
-);
 ?>
 
 <div class="page-header">
