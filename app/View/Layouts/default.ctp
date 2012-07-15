@@ -45,8 +45,10 @@
 <?
 // dashboard
 if(isset($user)) {
+  echo '<li>';
   echo $this->Html->link(
     'Dashboard', array('controller'=>'users', 'action'=>'dashboard'));
+  echo '</li>';
 }
 
 // administration menu
