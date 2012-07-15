@@ -9,9 +9,16 @@ class UsersController extends AppController {
   
   public function register() {
     if($this->request->is('post')) {
-      if($this->User->save($this->request->data)) {
+      $password = $this->request->data['User']['password'];
+      if($user = $this->User->save($this->request->data)) {
         $this->alertSuccess('Thank you!', 'You have ' .
           'succesfully registered with ACS.', true);
+        $this->User->sendWelcomeEmail(array(
+          'name' => $user['User']['name'],
+          'surname' => $user['User']['surname'],
+          'password' => $password,
+          'email' => $user['User']['email']
+        ));
         if($this->Auth->login())
           return $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
       } else {

@@ -1,4 +1,6 @@
 <?
+App::uses('CakeEmail', 'Network/Email');
+
 class User extends AppModel {
   public $name = 'User';
   public $hasMany = array('Submission', 'Role', 'Upload');
@@ -49,6 +51,17 @@ class User extends AppModel {
   public function beforeSave($options = array()) {
     $this->data['User']['password'] = AuthComponent::password($this->data['User']['password']);
     return true;
+  }
+
+  // email functions
+  public function sendWelcomeEmail($data) {
+    $email = new CakeEmail();
+    $email->template('welcome', 'default');
+    $email->emailFormat('text');
+    $email->to($data['email']);
+    $email->from('donotreply@cogsys.org');
+    $email->viewVars($data);
+    $email->send();
   }
 }
 ?>
