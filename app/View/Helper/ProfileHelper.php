@@ -14,5 +14,11 @@ class ProfileHelper extends AppHelper {
   public function name($user) {
     return sprintf('%s %s', $user['name'], $user['surname']);
   }
+
+  public function badge($user) {
+    // TODO: display user profile information in a popover; display
+    // more information if the currently logged in user is an
+    // administrator. 
+  }
 }
 ?>

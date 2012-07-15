@@ -26,9 +26,16 @@ foreach($data['Coauthor'] as $coauthor)
 <div class="row">
   <div class="span4 left">
     <div class="authors">
+      <h3>Authors</h3>
+      <ul class="nav nav-tabs nav-stacked">
 <?
-
+// TODO: add user badges (using the profile helper)
+foreach($authors as $a) {
+  printf('<li><a href="mailto:%s">%s</a></li>', 
+         $a['email'], $a['name']);
+}
 ?>
+      </ul>
     </div>
   </div>
   <div class="span8 right">
