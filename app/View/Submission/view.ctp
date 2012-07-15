@@ -31,7 +31,8 @@ $url = $this->Html->url(array(
   'action'=>'paper',
   'ext'=>'pdf',
   $submission['id']), true);
-printf('<a href="%s" class="btn btn-danger pull-right"><i class="icon-file"></i> PDF</a>',
+printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
+       '<i class="icon-file"></i> PDF</a>',
        $url);
 
 // edit button - only display if current user (or, in the future, if
@@ -41,7 +42,8 @@ if($author['id'] == $user['id'] || $user['is_admin'] == '1') {
     'controller'=>'submissions', 
     'action'=>'edit',
     $submission['id']), true);
-  printf('<a href="%s" class="btn pull-right"><i class="icon-edit"></i> Edit</a>',
+  printf('<a href="%s" class="edit btn pull-right">' . 
+         '<i class="icon-edit"></i> Edit</a>',
          $url);
 }
 ?>
