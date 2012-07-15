@@ -3,12 +3,19 @@ $(document).ready(function() {
     // add a new set of coauthor info
     e.preventDefault();
     var btn = $(this);
-    var coauthor = $('.coauthor:last').clone().removeClass('base');
+    var coauthor = $('.right .coauthor:last').clone().removeClass('base');
     coauthor.find('input').each(function() {
-      var id = $(this).attr('id');
       var name = $(this).attr('name');
-      var num = parseInt(id.match(/.*[0-9]+.*/));
-      console.log(num, num++);
+      var id = $(this).attr('id');
+      var curr = parseInt(name.match(/[0-9]+/)[0]);
+      var next = curr++;
+      name = name.replace(curr, next);
+      id = id.replace(curr, next);
+      $(this).attr({
+        name: name,
+        id: id
+      });
+      console.log($(this));
     });
   });
 });
