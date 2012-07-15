@@ -24,10 +24,10 @@ foreach($data['Coauthor'] as $coauthor)
 </div>
 
 <div class="row">
-  <div class="span4 left">
+  <div class="span2 left">
     <div class="authors">
       <h3>Authors</h3>
-      <ul class="nav nav-tabs nav-stacked">
+      <ul class="nav nav-pills nav-stacked">
 <?
 // TODO: add user badges (using the profile helper)
 foreach($authors as $a) {
@@ -38,7 +38,7 @@ foreach($authors as $a) {
       </ul>
     </div>
   </div>
-  <div class="span8 right">
+  <div class="span10 right">
     <div class="abstract">
       <h3>Abstract</h3>
       <? echo $submission['abstract']; ?>
