@@ -13,7 +13,7 @@ class BootstrapHelper extends AppHelper {
   }
 
   public function gravatar($email, $size = '40px') {
-    $base_url = 'http://www.gravatar.com/avatar/%s?d=404&s=%s';
+    $base_url = 'http://www.gravatar.com/avatar/%s?d=mm&s=%s&r=g';
     $hash = md5(strtolower(trim($email)));
     $url = sprintf($base_url, $hash, $size);
     return $this->Html->image($url, array('class'=>'gravatar'));
