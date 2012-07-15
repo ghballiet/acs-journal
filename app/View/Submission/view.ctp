@@ -38,7 +38,7 @@ printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
 // actions menu: edit, delete, etc; depending on user's role
 $links = array();
 
-if($auth['id'] == $user['id'] || $user['is_admin'] == 1) {
+if($author['id'] == $user['id'] || $user['is_admin'] == 1) {
   // users or admins can edit and retract this submission
   $edit = array(
     'text' => 'Edit', 
