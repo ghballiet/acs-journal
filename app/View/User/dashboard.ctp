@@ -29,7 +29,7 @@ foreach($submissions as $submission) {
   $modified = $submission['Submission']['modified'];
   $modified = $this->Time->timeAgoInWords($modified);
   $locked = null;
-  
+
   if($submission['Submission']['locked'] == true) {
     $locked = '<i class="icon-lock"></i>';
   }

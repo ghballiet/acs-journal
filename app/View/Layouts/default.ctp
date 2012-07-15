@@ -43,14 +43,24 @@
             </ul>
             <ul class="nav pull-right">
 <?
-    if(isset($user) && $user['is_admin'] == '1') {
-      $title = 'Administration';
-      $arr = array(
-        array('text'=>'Collections', 'link'=>array('controller'=>'collections', 'action'=>'manage'), 'icon'=>'book'),
-        array('text'=>'Users', 'link'=>'/manage_users', 'icon'=>'user')
-      );
-      echo $this->Bootstrap->dropdown($title, $arr);
-    }
+// dashboard
+if(isset($user)) {
+  echo $this->Html->link(
+    'Dashboard', array('controller'=>'users', 'action'=>'dashboard'));
+}
+
+// administration menu
+if(isset($user) && $user['is_admin'] == '1') {
+  $title = 'Administration';
+  $arr = array(array(
+    'text'=>'Collections',
+    'link'=>array(
+      'controller'=>'collections', 
+      'action'=>'manage'),
+    'icon'=>'book'),
+  );
+  echo $this->Bootstrap->dropdown($title, $arr);
+}
 ?>
               <li class="divider-vertical"></li>
 <?php
@@ -67,7 +77,6 @@ if(!isset($user) || $user == null) {
   $title = sprintf('%s %s', 
                    $user['name'], $user['surname']);
   $links = array(
-    array('text'=>'Dashboard', 'link'=>'/dashboard', 'icon'=>'home'),
     array('text'=>'Account Settings', 'link'=>'/settings', 'icon'=>'cog'),
     true,
     array('text'=>'Log Out', 'link'=>'/logout', 'icon'=>'off')
