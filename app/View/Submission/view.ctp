@@ -45,7 +45,7 @@ if($auth['id'] == $user['id'] || $user['is_admin'] == 1) {
     'link' => array('action'=>'edit', $submission['id']),
     'icon' => 'edit');
   $retract = array(
-    'text' => 'Retract'
+    'text' => 'Retract',
     'link' => array('action'=>'retract', $submission['id']),
     'icon' => 'remove');
   $links[] = $edit;
