@@ -42,8 +42,7 @@ foreach($submissions as $submission) {
 
   $cells = array($locked, $title_link, $abstract, $venue, $modified, null);
   
-  // TODO: column classes
-  echo $this->Html->tableCells($cells);
+  echo $this->Html->tableCells($cells, array(), array(), true);
 }
 ?>
 </table>
