@@ -25,10 +25,10 @@ foreach($data['Coauthor'] as $coauthor)
 
 <div class="page-header">
 <?
-echo $this->Html->link(
-  '<i class="icon-file"></i> PDF',
-  array('controller'=>'submissions', 'action'=>'paper', $submission['id']),
-  array('class'=>'btn btn-danger pull-right'));
+$url = $this->Html->url(
+  array('controller'=>'submissions', 'action'=>'paper', $submission['id']));
+printf('<a href="%s" class="btn btn-danger pull-right"><i class="icon-file"></i> PDF</a>',
+       $url);
 ?>
   <h1><? echo $submission['title']; ?></h1>
 </div>
