@@ -24,7 +24,7 @@ foreach($data['Coauthor'] as $coauthor)
 </div>
 
 <div class="row">
-  <div class="span2 left">
+  <div class="span3 left">
     <div class="authors">
       <h3>Authors</h3>
       <ul class="nav nav-pills nav-stacked">
@@ -38,7 +38,7 @@ foreach($authors as $a) {
       </ul>
     </div>
   </div>
-  <div class="span10 right">
+  <div class="span9 right">
     <div class="abstract">
       <h3>Abstract</h3>
       <? echo $submission['abstract']; ?>
