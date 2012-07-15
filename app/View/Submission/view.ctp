@@ -42,7 +42,7 @@ foreach($authors as $a) {
       </ul>
     </div>
     <div class="timestamp">
-      <small>modified <? echo $modified; ?></small>
+      modified <? echo $modified; ?>
     </div>
   </div>
   <div class="span9 right">
