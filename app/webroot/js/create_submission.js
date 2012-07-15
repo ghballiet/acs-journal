@@ -16,6 +16,6 @@ $(document).ready(function() {
         id: id
       });      
     });
-    console.log(coauthor);
+    btn.before(coauthor);
   });
 });
