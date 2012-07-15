@@ -21,22 +21,16 @@ $authors[] = array(
 );
 foreach($data['Coauthor'] as $coauthor)
   $authors[] = $coauthor;
-
-// build the view links
-$view_paper_link = array(
-  'text' => 'PDF',
-  'link' => array(
-    'controller'=>'submissions', 'action'=>'paper', $submission['id']),
-  'icon' => 'file');
-
-$view_links = array($view_paper_link);
-
-$view_btn = $this->Bootstrap->dropdownBtn(
-  'View', $view_links, 'btn-primary', 'pull-right');
 ?>
 
 <div class="page-header">
-  <? echo $view_btn; ?>
+<?
+echo $this->Html->link(
+  '<i class="icon-file"></i> PDF',
+  array('controller'=>'submissions', 'action'=>'paper', $submission['id']),
+  array('class'=>'btn btn-danger pull-right'));        
+);
+?>
   <h1><? echo $submission['title']; ?></h1>
 </div>
 
