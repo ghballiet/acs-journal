@@ -56,7 +56,7 @@ if($auth['id'] == $user['id'] || $user['is_admin'] == 1) {
 if(count($links) > 0) {
   echo $this->Bootstrap->dropdownBtn(
     'Actions', $links, 'btn-primary', 'pull-right');
-
+}
 ?>
   <h1><? echo $submission['title']; ?></h1>
 </div>
