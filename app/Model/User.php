@@ -59,6 +59,7 @@ class User extends AppModel {
     $email->template('welcome', 'default');
     $email->emailFormat('text');
     $email->to($data['email']);
+    $email->subject('Welcome!');
     $email->from('donotreply@cogsys.org');
     $email->viewVars($data);
     $email->send();
