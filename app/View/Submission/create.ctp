@@ -33,7 +33,7 @@ echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
       <div class="coauthor base">
 <?
 echo $this->BootstrapForm->input('Coauthor.0.name', array('label'=>'Name'));
-echo $this->BootstrapForm->input('Coauthor.0.email', array('label'=>'Email'));
+echo $this->BootstrapForm->input('Coauthor.0.email', array('label'=>'Email', 'type'=>'email'));
 echo $this->BootstrapForm->input('Coauthor.0.institution', array('label'=>'Institution'));
 ?>
       </div>

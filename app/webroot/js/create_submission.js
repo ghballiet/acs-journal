@@ -5,6 +5,7 @@ $(document).ready(function() {
     var btn = $(this);
     var coauthor = $('.right .coauthor:last').clone().removeClass('base');
     coauthor.find('input').each(function() {
+      $(this).val('');
       var name = $(this).attr('name');
       var id = $(this).attr('id');
       var curr = parseInt(name.match(/[0-9]+/)[0]);
