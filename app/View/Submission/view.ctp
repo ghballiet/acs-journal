@@ -35,17 +35,28 @@ printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
        '<i class="icon-file"></i> PDF</a>',
        $url);
 
-// edit button - only display if current user (or, in the future, if
-// the user is an administrator
-if($author['id'] == $user['id'] || $user['is_admin'] == '1') {
-  $url = $this->Html->url(array(
-    'controller'=>'submissions', 
-    'action'=>'edit',
-    $submission['id']), true);
-  printf('<a href="%s" class="edit btn pull-right">' . 
-         '<i class="icon-edit"></i> Edit</a>',
-         $url);
+// actions menu: edit, delete, etc; depending on user's role
+$links = array();
+
+if($auth['id'] == $user['id'] || $user['is_admin'] == 1) {
+  // users or admins can edit and retract this submission
+  $edit = array(
+    'text' => 'Edit', 
+    'link' => array('action'=>'edit', $submission['id']),
+    'icon' => 'edit');
+  $retract = array(
+    'text' => 'Retract'
+    'link' => array('action'=>'retract', $submission['id']),
+    'icon' => 'remove');
+  $links[] = $edit;
+  $links[] = $retract;
 }
+
+// only display this menu if we have some links to show
+if(count($links) > 0) {
+  echo $this->Bootstrap->dropdownBtn(
+    'Actions', $links, 'btn-primary', 'pull-right');
+
 ?>
   <h1><? echo $submission['title']; ?></h1>
 </div>
