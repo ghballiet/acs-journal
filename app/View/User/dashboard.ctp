@@ -27,6 +27,7 @@ foreach($submissions as $submission) {
   $abstract = $submission['Submission']['abstract'];
   $venue = $submission['Collection']['title'];
   $modified = $submission['Submission']['modified'];
+  $modified = $this->Time->niceShort($modified);
   $locked = null;
   
   if($submission['Submission']['locked'] == true) {
