@@ -6,6 +6,12 @@ class SubmissionsController extends AppController {
     $this->set('user', $this->Auth->user());
   }
 
+  public function view($id) {
+    $this->Submission->id = $id;
+    $submission = $this->Submission->read();
+    $this->set('data', $submission);
+  }
+
   public function create() {
     $options = array('condition'=>array('Collection.accepting_submissions' => true));
     $collections = $this->Submission->Collection->find('list', $options);
