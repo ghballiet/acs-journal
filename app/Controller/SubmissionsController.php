@@ -48,8 +48,10 @@ class SubmissionsController extends AppController {
       $submission = $this->Submission->save($submission);
 
       // build the coauthors
-      foreach($coauthors as $coauthor)
-        &$coauthor['submission_id'] = $submission['Submission']['id'];
+      foreach($coauthors as $i=>$coauthor) {
+        $coauthor['submission_id'] = $submission['Submission']['id'];
+        $coauthors[$i] = $coauthor;
+      }
       $coauthors = array('Coauthor' => $coauthors);
       
       // save the coauthors
