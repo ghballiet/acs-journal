@@ -51,19 +51,17 @@ class SubmissionsController extends AppController {
       // build the coauthors
       $ca = array();
       foreach($coauthors as $i=>$coauthor) {
-        $c = $coauthor;
-        $c['submission_id'] = $submission['Submission']['id'];
-        $ca[] = $c;
+        $coauthor['submission_id'] = $submission['Submission']['id'];
+        $coauthor = array('Coauthor' => $coauthor);
+        $this->Submission->Coauthor->create();
+        $this->Submission->Coauthor->save($coauthor);
       }
       
-      // save the coauthors
-      $coauthors = $this->Submission->Coauthor->saveMany($coauthors);
-
       // success!
       $this->alertSuccess(
         'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
                             $submission['Submission']['title']));
-      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+      // $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
 }
