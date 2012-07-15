@@ -20,7 +20,8 @@ echo $this->BootstrapForm->create('Submission', array('type'=>'file'));
    <div class="left">
      <h3>Submission Information</h3>
 <?
-echo $this->BootstrapForm->input('collection_id', array('label'=>'Venue', 'autofocus'=>true));
+echo $this->BootstrapForm->input('collection_id', 
+                                 array('label'=>'Venue', 'autofocus'=>true));
 echo $this->BootstrapForm->input('title');
 echo $this->BootstrapForm->input('abstract');
 
