@@ -74,8 +74,9 @@ if(!isset($user) || $user == null) {
     array('text'=>'Register', 'link'=>'/register', 'icon'=>'list-alt')
   );
 } else {
-  $title = sprintf('%s %s', 
-                   $user['name'], $user['surname']);
+  $image = $this->Bootstrap->gravatar($user['email']);
+  $title = sprintf('%s %s %s', 
+                   $image, $user['name'], $user['surname']);
   $links = array(
     array('text'=>'Account Settings', 'link'=>'/settings', 'icon'=>'cog'),
     true,
