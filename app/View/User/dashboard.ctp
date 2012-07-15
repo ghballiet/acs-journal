@@ -17,9 +17,25 @@ echo $this->Html->link(
 ?>
 <h2>My Submissions</h2>
 
-<?
-pr($submissions);
-?>
-
 <table class="table table-condensed">
+<?
+echo $this->Html->tableHeaders(array(
+  '', 'Title', 'Abstract', 'Venue', 'Modified', ''));
+
+foreach($submissions as $submission) {
+  $title = $submission['Submission']['title'];
+  $abstract = $submission['Submission']['abstract'];
+  $venue = $submission['Collection']['title'];
+  $modified = $submission['Submission']['modified'];
+  $locked = null;
+  
+  if($submission['Submission']['locked'] == true) {
+    $locked = $this->Html->tag('i', array('class'=>'icon-lock'));
+  }
+
+  $cells = array($locked, $title, $abstract, $venue, $modified, null);
+  
+  echo $this->Html->tableCells($cells);
+}
+?>
 </table>
