@@ -37,9 +37,9 @@ class BootstrapHelper extends AppHelper {
     return $str;
   }
 
-  public function dropdownBtn($title, $links, $class = null) {
+  public function dropdownBtn($title, $links, $class = null, $parent_class = null) {
     $str = '';
-    $str .= '<div class="btn-group">';
+    $str .= sprintf('<div class="btn-group" class="%s">', $parent_class);
     $str .= '<a data-toggle="dropdown" ';
     $str .= sprintf('class="btn dropdown-toggle %s">', $class);
     $str .= sprintf('%s <span class="caret"></span></a>', $title);
