@@ -30,7 +30,7 @@ foreach($submissions as $submission) {
   $locked = null;
   
   if($submission['Submission']['locked'] == true) {
-    $locked = $this->Html->tag('i', array('class'=>'icon-lock'));
+    $locked = '<i class="icon-lock"></i>';
   }
 
   $cells = array($locked, $title, $abstract, $venue, $modified, null);
