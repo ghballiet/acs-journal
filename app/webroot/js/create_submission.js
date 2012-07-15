@@ -9,14 +9,13 @@ $(document).ready(function() {
       var id = $(this).attr('id');
       var curr = parseInt(name.match(/[0-9]+/)[0]);
       var next = curr + 1;
-      console.log(name, curr, next);
       name = name.replace(curr, next);
       id = id.replace(curr, next);
       $(this).attr({
         name: name,
         id: id
-      });
-      console.log($(this));
+      });      
     });
+    console.log(this);
   });
 });
