@@ -28,8 +28,7 @@ foreach($data['Coauthor'] as $coauthor)
 echo $this->Html->link(
   '<i class="icon-file"></i> PDF',
   array('controller'=>'submissions', 'action'=>'paper', $submission['id']),
-  array('class'=>'btn btn-danger pull-right'));        
-);
+  array('class'=>'btn btn-danger pull-right'));
 ?>
   <h1><? echo $submission['title']; ?></h1>
 </div>
