@@ -5,8 +5,9 @@
 
 .coauthor {
   margin-bottom: @gridGutterWidth;
+  border-bottom: solid 1px darken(@grayLight, 5);
 }
 
-.coauthor:nth-child(2n - 1) {
-  border-bottom: solid 1px darken(@grayLighter, 5);
+div.right .coauthor:last-child {
+  border-bottom: none;
 }

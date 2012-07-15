@@ -3,5 +3,5 @@
 .hide-text{overflow:hidden;text-indent:100%;white-space:nowrap;}
 .input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 .left h3,.right h3{margin-bottom:20px;}
-.coauthor{margin-bottom:20px;}
-.coauthor:nth-child(2n - 1){border-bottom:solid 1px #e1e1e1;}
+.coauthor{margin-bottom:20px;border-bottom:solid 1px #8c8c8c;}
+div.right .coauthor:last-child{border-bottom:none;}
