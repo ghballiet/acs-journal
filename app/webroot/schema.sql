@@ -5,6 +5,7 @@ create table if not exists users (
   surname varchar(500),
   email varchar(500),
   password varchar(500),
+  institution varchar(500),
   address varchar(500),
   address2 varchar(500),
   city varchar(250),

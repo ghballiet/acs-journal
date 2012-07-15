@@ -10,33 +10,31 @@ $author = $data['User'];
 $modified = $this->Time->timeAgoInWords($submission['modified']);
 
 $authors = array();
-$authors[] = array($author['email'] => $this->Profile->name($author));
+$authors[] = array(
+  'name' => $this->Profile->name($author);
+  'email' => $author['email'],
+  'institution' => $author['institution']
+);
 foreach($data['Coauthor'] as $coauthor)
-  $authors[] = array($coauthor['email'] => $coauthor['name']);
+  $authors[] = $coauthor;
 ?>
 
 <div class="page-header">
-  <h1>
-    <? echo $submission['title']; ?>
-    <small>modified <? echo $modified; ?></small>
-  </h1>
+  <h1><? echo $submission['title']; ?></h1>
 </div>
 
 <div class="row">
-  <div class="span4">
-    <div class="well">
-      <h2>Abstract</h2>
-      <div class="abstract"><? echo $submission['abstract']; ?></div>
+  <div class="span4 left">
+    <div class="authors">
+<?
+
+?>
     </div>
   </div>
-  <div class="span8">
-    <table class="table">
-<?
-pr($authors);
-$rows = array(
-
-);
-?>      
-    </table>
+  <div class="span8 right">
+    <div class="abstract">
+      <h3>Abstract</h3>
+      <? echo $submission['abstract']; ?>
+    </div>
   </div>
 </div>

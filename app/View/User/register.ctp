@@ -270,7 +270,7 @@ echo $this->BootstrapForm->create('User');
   echo $this->BootstrapForm->input('country', array('icon'=>'map-marker',
     'options'=>$countries, 'default'=>'US'));
   echo $this->BootstrapForm->input('postal', array('icon'=>'map-marker'));
-  echo $this->BootstrapForm->input('phone', array('icon'=>'signal',
+  echo $this->BootstrapForm->input('phone', array('icon'=>'phone',
     'type'=>'tel'));
   
   echo $this->BootstrapForm->end('Register');
