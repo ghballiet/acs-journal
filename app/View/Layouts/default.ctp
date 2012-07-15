@@ -70,7 +70,7 @@ $links = array();
 if(!isset($user) || $user == null) {
   $title = 'Account';
   $links = array(
-    array('text'=>'Log In', 'link'=>'/login', 'icon'=>'user'),
+    array('text'=>'Log In', 'link'=>'/login', 'icon'=>'signin'),
     array('text'=>'Register', 'link'=>'/register', 'icon'=>'list-alt')
   );
 } else {
@@ -80,12 +80,12 @@ if(!isset($user) || $user == null) {
   $settings = array(
     'text' => 'Account Settings',
     'link' => array('controller'=>'users', 'action'=>'settings'),
-    'icon' => 'cog'
+    'icon' => 'cogs'
   );
   $logout = array(
     'text' => 'Log Out', 
     'link' => array('controller'=>'users', 'action'=>'logout'),
-    'icon' => 'off'
+    'icon' => 'signout'
   );
   $links = array($settings, true, $logout);
 }
