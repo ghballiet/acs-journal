@@ -11,7 +11,7 @@ $modified = $this->Time->timeAgoInWords($submission['modified']);
 
 $authors = array();
 $authors[] = array(
-  'name' => $this->Profile->name($author);
+  'name' => $this->Profile->name($author),
   'email' => $author['email'],
   'institution' => $author['institution']
 );
