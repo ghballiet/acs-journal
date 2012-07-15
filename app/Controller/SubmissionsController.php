@@ -15,7 +15,7 @@ class SubmissionsController extends AppController {
       $data = $this->request->data;
       $submission = $data['Submission'];
       $upload = $submission['Upload'];
-      $coauthors = $data['Coauthors'];
+      $coauthors = $data['Coauthor'];
 
       // remove the upload from the submission data array
       unset($submission['Upload']);
@@ -34,8 +34,8 @@ class SubmissionsController extends AppController {
       $upload['user_id'] = $this->Auth->user('id');
 
       // save the upload
-      $this->Submission->Upload->create();
-      $upload = $this->Submission->Upload->save(array('Upload'=>$upload));
+      $this->Submission->Paper->create();
+      $upload = $this->Submission->Paper->save(array('Upload'=>$upload));
 
       // build the submission data
       $submission['user_id'] = $this->Auth->user('id');
