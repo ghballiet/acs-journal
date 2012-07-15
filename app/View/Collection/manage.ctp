@@ -20,6 +20,7 @@ foreach($collections as $collection) {
   $num_submissions = count($collection['Submission']);
   $accepting = $collection['Collection']['accepting_submissions'] == 1; 
   $modified = $collection['Collection']['modified'];
+  $modified = $this->Time->timeAgoInWords($modified);
   $edit = $this->Html->link('Edit',
                             array('controller'=>'collections', 
                                   'action'=>'edit', $id),
@@ -29,10 +30,12 @@ foreach($collections as $collection) {
                                     'action'=>'delete',
                                     $collection['Collection']['id']),
                               array('class'=>'btn btn-mini btn-danger'),
-                              'Are you sure you want to delete this collection? This cannot be undone.');
+                              'Are you sure you want to delete this collection? ' . 
+                              'This cannot be undone.');
 
-  echo $this->Html->tableCells(array($link, $num_submissions, $accepting, $modified, $edit . ' ' . $delete), 
-                               array(), array(), true);
+  echo $this->Html->tableCells(
+    array($link, $num_submissions, $accepting, $modified, $edit . ' ' . $delete), 
+    array(), array(), true);
 }
 ?>
 </table>
