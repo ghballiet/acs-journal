@@ -23,6 +23,9 @@ echo $this->BootstrapForm->create('Submission', array('type'=>'file'));
 echo $this->BootstrapForm->input('collection_id', array('label'=>'Venue', 'autofocus'=>true));
 echo $this->BootstrapForm->input('title');
 echo $this->BootstrapForm->input('abstract');
+
+// TODO: add keywords
+
 echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
 ?>
     </div>
@@ -32,6 +35,7 @@ echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
       <h3>Coauthors</h3>
       <div class="coauthor base">
 <?
+// TODO: add code here to rebuild the full list of coauthors (if sent in request data)
 echo $this->BootstrapForm->input('Coauthor.0.name', array('label'=>'Name'));
 echo $this->BootstrapForm->input('Coauthor.0.email', array('label'=>'Email', 'type'=>'email'));
 echo $this->BootstrapForm->input('Coauthor.0.institution', array('label'=>'Institution'));
