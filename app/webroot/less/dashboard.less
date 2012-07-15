@@ -3,12 +3,11 @@
 
 h2 { margin-bottom: @gridGutterWidth; }
 
-
-td.column-4 div.btn-toolbar { margin: 0px; }
-
-td.column-2 {
+td.column-2, td.column-3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
 }
+
+td.column-2 { max-width: 200px; }
+td.column-3 { max-width: 250px; }

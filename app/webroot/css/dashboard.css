@@ -3,5 +3,6 @@
 .hide-text{overflow:hidden;text-indent:100%;white-space:nowrap;}
 .input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 h2{margin-bottom:20px;}
-td.column-4 div.btn-toolbar{margin:0px;}
-td.column-2{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;}
+td.column-2,td.column-3{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+td.column-2{max-width:200px;}
+td.column-3{max-width:250px;}
