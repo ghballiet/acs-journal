@@ -77,11 +77,17 @@ if(!isset($user) || $user == null) {
   $image = $this->Bootstrap->gravatar($user['email']);
   $title = sprintf('%s %s %s', 
                    $image, $user['name'], $user['surname']);
-  $links = array(
-    array('text'=>'Account Settings', 'link'=>'/settings', 'icon'=>'cog'),
-    true,
-    array('text'=>'Log Out', 'link'=>'/logout', 'icon'=>'off')
+  $settings = array(
+    'text' => 'Account Settings',
+    'link' => array('controller'=>'users', 'action'=>'settings'),
+    'icon' => 'cog'
   );
+  $logout = array(
+    'text' => 'Log Out', 
+    'link' => array('controller'=>'users', 'action'=>'logout'),
+    'icon' => 'off'
+  );
+  $links = array($settings, true, $logout);
 }
               
 echo $this->Bootstrap->dropdown($title, $links);
