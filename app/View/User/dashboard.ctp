@@ -24,6 +24,12 @@ echo $this->Html->tableHeaders(array(
 
 foreach($submissions as $submission) {
   $title = $submission['Submission']['title'];
+  $id = $submission['Submission']['id'];
+
+  $title_link = $this->Html->link(
+    $title,
+    array('controller'=>'submissions', 'action'=>'view', $id));
+
   $abstract = $submission['Submission']['abstract'];
   $venue = $submission['Collection']['title'];
   $modified = $submission['Submission']['modified'];
@@ -34,7 +40,7 @@ foreach($submissions as $submission) {
     $locked = '<i class="icon-lock"></i>';
   }
 
-  $cells = array($locked, $title, $abstract, $venue, $modified, null);
+  $cells = array($locked, $title_link, $abstract, $venue, $modified, null);
   
   echo $this->Html->tableCells($cells);
 }
