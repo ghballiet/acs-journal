@@ -25,13 +25,25 @@ foreach($data['Coauthor'] as $coauthor)
 
 <div class="page-header">
 <?
+// download button
 $url = $this->Html->url(array(
   'controller'=>'submissions',
   'action'=>'paper',
   'ext'=>'pdf',
-  $submission['id']));
+  $submission['id']), true);
 printf('<a href="%s" class="btn btn-danger pull-right"><i class="icon-file"></i> PDF</a>',
        $url);
+
+// edit button - only display if current user (or, in the future, if
+// the user is an administrator
+if($author['id'] == $user['id'] || $user['is_admin'] == '1') {
+  $url = $this->Html->url(array(
+    'controller'=>'submissions', 
+    'action'=>'edit',
+    $submission['id']), true);
+  printf('<a href="%s" class="btn pull-right"><i class="icon-edit"></i> Edit</a>',
+         $url);
+}
 ?>
   <h1><? echo $submission['title']; ?></h1>
 </div>
