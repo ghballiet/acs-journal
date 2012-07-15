@@ -1,7 +1,10 @@
 @import "variables";
 @import "mixins";
 
-.left h3, .right h3 { margin-bottom: @gridGutterWidth; }
+.left, .right {
+  h3 { margin-bottom: @gridGutterWidth; }
+  input, select { width: 100%; }
+}
 
 .right {
   .coauthor {
