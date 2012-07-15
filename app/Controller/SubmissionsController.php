@@ -17,6 +17,7 @@ class SubmissionsController extends AppController {
     $this->Submission->id = $id;
     $submission = $this->Submission->read();
     $paper = $submission['Paper'];
+    $this->set('title_for_layout', $submission['Submission']['title']);
 
     $this->response->type($paper['type']);
     $this->response->body($paper['content']);
