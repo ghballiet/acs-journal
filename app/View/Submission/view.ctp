@@ -25,7 +25,7 @@ foreach($data['Coauthor'] as $coauthor)
 
 <div class="row">
   <div class="span3 left">
-    <div class="authors">
+    <div class="authors well">
       <h3>Authors</h3>
       <ul class="nav nav-pills nav-stacked">
 <?
