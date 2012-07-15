@@ -26,7 +26,7 @@ foreach($data['Coauthor'] as $coauthor)
   <div class="span4">
     <div class="well">
       <h2>Abstract</h2>
-      <div class="abstract"><? echo $abstract; ?></div>
+      <div class="abstract"><? echo $submission['abstract']; ?></div>
     </div>
   </div>
   <div class="span8">
