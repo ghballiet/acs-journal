@@ -23,8 +23,9 @@ class SubmissionsController extends AppController {
       // first, make sure a PDF file was uploaded
       if($upload['type'] != 'application/pdf') {
         $this->alertError(
-          'Error!', sprintf('The file you uploaded - <strong>%s</strong> - was not ' . 
-                            'a PDF file. Please select a PDF and re-submit.', $upload['name']));
+          'Error!',
+          sprintf('The file you uploaded - <strong>%s</strong> - was not ' . 
+                  'a PDF file. Please select a PDF and re-submit.', $upload['name']));
         return false;
       }
       
@@ -50,8 +51,9 @@ class SubmissionsController extends AppController {
       // build the coauthors
       $ca = array();
       foreach($coauthors as $i=>$coauthor) {
-        $coauthor['submission_id'] = $submission['Submission']['id'];
-        $ca[] = $coauthor;
+        $c = $coauthor;
+        $c['submission_id'] = $submission['Submission']['id'];
+        $ca[] = $c;
       }
       
       // save the coauthors
