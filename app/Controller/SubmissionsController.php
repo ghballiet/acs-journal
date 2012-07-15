@@ -32,31 +32,40 @@ class SubmissionsController extends AppController {
       $upload['content'] = file_get_contents($upload['tmp_name']);
       $upload['extension'] = pathinfo($upload['tmp_name'], PATHINFO_EXTENSION);
       $upload['user_id'] = $this->Auth->user('id');
+      $upload = array('Paper' => $upload);
+      pr($upload);
 
       // save the upload
       $this->Submission->Paper->create();
-      $upload = $this->Submission->Paper->save(array('Upload'=>$upload));
+      $upload = $this->Submission->Paper->save($upload);
+      pr($upload);
 
       // build the submission data
       $submission['user_id'] = $this->Auth->user('id');
       $submission['current_version'] = $upload['Upload']['id'];
+      $submission = array('Submission' => $submission);
+      pr($submission);
 
       // save the submission
       $this->Submission->create();
-      $submission = $this->Submission->save(array('Submission'=>$submission));
+      $submission = $this->Submission->save($submission);
+      pr($submission);
 
       // build the coauthors
       foreach($coauthors as $coauthor)
         $coauthor['submission_id'] = $submission['Submission']['id'];
+      $coauthors = array('Coauthor' => $coauthors);
+      pr($coauthors);
       
       // save the coauthors
-      $coauthors = $this->Submission->Coauthor->saveAll(array('Coauthor'=>$coauthors));
+      $coauthors = $this->Submission->Coauthor->saveAll($coauthors);
+      pr($coauthors);
 
       // success!
       $this->alertSuccess(
         'Success!', sprintf('<strong>%s</strong> was successfully submitted to <strong>%s</strong>.',
                             $submission['Submission']['title'], $submission['Collection']['title']));
-      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+      // $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
 }
