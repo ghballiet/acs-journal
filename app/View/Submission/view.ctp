@@ -1,4 +1,8 @@
 <?
+$this->begin('css');
+echo $this->Html->css('view_submission');
+$this->end();
+
 // general variables to be used on the page
 $submission = $data['Submission'];
 $paper = $data['Paper'];
@@ -36,6 +40,9 @@ foreach($authors as $a) {
 }
 ?>
       </ul>
+    </div>
+    <div class="timestamp">
+      <small>modified <? echo $modified; ?></small>
     </div>
   </div>
   <div class="span9 right">
