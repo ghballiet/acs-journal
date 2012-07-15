@@ -46,7 +46,6 @@ class SubmissionsController extends AppController {
       // save the submission
       $this->Submission->create();
       $submission = $this->Submission->save($submission);
-      pr($submission);
 
       // build the coauthors
       $ca = array();
@@ -60,9 +59,9 @@ class SubmissionsController extends AppController {
 
       // success!
       $this->alertSuccess(
-        'Success!', sprintf('<strong>%s</strong> was successfully submitted to <strong>%s</strong>.',
-                            $submission['Submission']['title'], $submission['Collection']['title']));
-      // $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+        'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
+                            $submission['Submission']['title']));
+      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
 }
