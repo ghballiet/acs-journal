@@ -4,6 +4,14 @@ App::uses('AppHelper', 'View/Helper');
 class BootstrapHelper extends AppHelper {
   public $helpers = array('Html');
 
+  public function navLink($title, $link, $options = array()) {
+    $str = '';
+    $str .= '<li>';
+    $str .= $this->Html->link($title, $link, $options);
+    $str .= '</li>';
+    return $str;
+  }
+
   public function dropdown($title, $links) {
     $str = '';
     $str .= '<li class="dropdown">';
