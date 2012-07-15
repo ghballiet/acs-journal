@@ -33,33 +33,27 @@ class SubmissionsController extends AppController {
       $upload['extension'] = pathinfo($upload['tmp_name'], PATHINFO_EXTENSION);
       $upload['user_id'] = $this->Auth->user('id');
       $upload = array('Paper' => $upload);
-      pr($upload);
 
       // save the upload
       $this->Submission->Paper->create();
       $upload = $this->Submission->Paper->save($upload);
-      pr($upload);
 
       // build the submission data
       $submission['user_id'] = $this->Auth->user('id');
-      $submission['current_version'] = $upload['Upload']['id'];
+      $submission['current_version'] = $upload['Paper']['id'];
       $submission = array('Submission' => $submission);
-      pr($submission);
 
       // save the submission
       $this->Submission->create();
       $submission = $this->Submission->save($submission);
-      pr($submission);
 
       // build the coauthors
       foreach($coauthors as $coauthor)
-        $coauthor['submission_id'] = $submission['Submission']['id'];
+        &$coauthor['submission_id'] = $submission['Submission']['id'];
       $coauthors = array('Coauthor' => $coauthors);
-      pr($coauthors);
       
       // save the coauthors
-      $coauthors = $this->Submission->Coauthor->saveAll($coauthors);
-      pr($coauthors);
+      $coauthors = $this->Submission->Coauthor->saveMany($coauthors);
 
       // success!
       $this->alertSuccess(
