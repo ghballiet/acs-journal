@@ -12,6 +12,16 @@ class SubmissionsController extends AppController {
     $this->set('data', $submission);
   }
 
+  public function paper($id) {
+    $this->autoRender = false;
+    $this->Submission->id = $id;
+    $submission = $this->Submission->read();
+    $paper = $submission['Paper'];
+
+    $this->response->type($paper['type']);
+    $this->response->body($paper['content']);
+  }
+
   public function create() {
     $options = array('condition'=>array('Collection.accepting_submissions' => true));
     $collections = $this->Submission->Collection->find('list', $options);

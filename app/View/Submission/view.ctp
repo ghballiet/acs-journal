@@ -25,8 +25,11 @@ foreach($data['Coauthor'] as $coauthor)
 
 <div class="page-header">
 <?
-$url = $this->Html->url(
-  array('controller'=>'submissions', 'action'=>'paper', $submission['id']));
+$url = $this->Html->url(array(
+  'controller'=>'submissions',
+  'action'=>'paper',
+  'ext'=>'pdf',
+  $submission['id']));
 printf('<a href="%s" class="btn btn-danger pull-right"><i class="icon-file"></i> PDF</a>',
        $url);
 ?>
