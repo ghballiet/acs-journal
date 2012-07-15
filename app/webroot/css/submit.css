@@ -4,4 +4,4 @@
 .input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 .left h3,.right h3{margin-bottom:20px;}
 .coauthor{margin-bottom:20px;}
-.coauthor:nth-child(2n){background:#eeeeee;}
+.coauthor:nth-child(2n - 1){border-bottom:solid 1px #e1e1e1;}
