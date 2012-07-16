@@ -60,7 +60,7 @@ class User extends AppModel {
     $email->emailFormat('html');
     $email->to($data['email']);
     $email->subject('Welcome!');
-    $email->from('ACS Mailer <donotreply@cogsys.org>');
+    $email->from('donotreply@cogsys.org');
     $email->viewVars($data);
     $email->send();
   }
