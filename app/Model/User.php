@@ -57,7 +57,7 @@ class User extends AppModel {
   public function sendWelcomeEmail($data) {
     $email = new CakeEmail();
     $email->template('welcome', 'default');
-    $email->emailFormat('text');
+    $email->emailFormat('html');
     $email->to($data['email']);
     $email->subject('Welcome!');
     $email->from('donotreply@cogsys.org');
