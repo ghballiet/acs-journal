@@ -5,7 +5,7 @@ Foundation. Your account information is given below:</p>
 
 <table>
   <tr><td><b>Email</b></td><td><? echo $email; ?></td></tr>
-  <tr><td><b>Password</b></td><? echo $password; ?></td></tr>
+  <tr><td><b>Password</b></td><td><? echo $password; ?></td></tr>
 </table>
 
 <p>Cheers,</p>
