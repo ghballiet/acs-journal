@@ -4,3 +4,9 @@
   </h1>
 </div>
 
+<?
+echo $this->BootstrapForm->create('Submission');
+echo $this->BootstrapForm->input('title', array('icon'=>'pencil'));
+echo $this->BootstrapForm->input('abstract', array('icon'=>'pencil'));
+echo $this->BootstrapForm->end('Save Changes');
+?>
