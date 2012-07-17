@@ -13,9 +13,7 @@ echo $this->BootstrapForm->input('abstract', array('icon'=>'pencil'));
 echo $this->Html->tag('hr');
 
 echo $this->Html->tag('h3', 'Coauthors');
-foreach($submission['Coauthor'] as $coauthor) {
-  pr($coauthor);
-}
+pr($submission['Coauthor']);
 
 echo $this->BootstrapForm->end('Save Changes');
 ?>
