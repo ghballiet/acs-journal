@@ -28,7 +28,7 @@ echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag'));
 
 // TODO: add keywords
 
-echo $this->BootstrapForm->input('Upload', array('type'=>'file', 'icon'=>'file'));
+echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
 ?>
     </div>
   </div>
