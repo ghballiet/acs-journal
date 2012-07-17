@@ -1,5 +1,6 @@
 <div class="page-header">
-  Edit Submission
-  <small><? echo $submission['Submission']['title']; ?></small>
+  <h1>Edit Submission
+    <small><? echo $submission['Submission']['title']; ?></small>
+    </h1>
 </div>
 
