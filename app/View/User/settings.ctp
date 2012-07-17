@@ -11,7 +11,9 @@
      <ul class="thumbnails">
        <li>
          <div class="thumbnail">
+           <a href="http://gravatar.com/emails/">
 <? echo $this->Profile->gravatar($user['email'], '160px'); ?>           
+           </a>
            <div class="caption">
              <h4>Profile Image</h4>
              <p>You can change your avatar on
