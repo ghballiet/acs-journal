@@ -1,3 +1,9 @@
+<?
+$this->start('css');
+echo $this->Html->css('settings');
+$this->end();
+?>
+
 <div class="page-header">
    <h1>Account Settings
      <small>
