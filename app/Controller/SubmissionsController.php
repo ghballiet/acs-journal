@@ -12,6 +12,12 @@ class SubmissionsController extends AppController {
     $this->set('data', $submission);
   }
 
+  public function edit($id) {
+    $this->Submission->id = $id;
+    $submission = $this->Submission->read();
+    $this->set('submission', $submission);
+  }
+
   public function paper($id) {
     $this->autoRender = false;
     $this->Submission->id = $id;
