@@ -11,7 +11,7 @@
      <ul class="thumbnails">
        <li>
          <div class="thumbnail">
-<? echo $this->Profile->gravatar($user, '260px'); ?>           
+<? echo $this->Profile->gravatar($user['email'], '260px'); ?>           
            <div class="caption">
              <h4>Profile Image</h4>
              <p>You can change your avatar on
