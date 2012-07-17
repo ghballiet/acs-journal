@@ -21,7 +21,7 @@ $this->end();
 <? echo $this->Profile->gravatar($user['email'], '160px'); ?>           
            </a>
            <div class="caption">
-             <h4>Profile Image</h4>
+             <h3>Profile Image</h3>
              <p>You can change your avatar on
                <a href="http://gravatar.com/emails/">gravatar.com</a>.</p>
            </div>

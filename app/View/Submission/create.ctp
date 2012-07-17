@@ -22,12 +22,13 @@ echo $this->BootstrapForm->create('Submission', array('type'=>'file'));
 <?
 echo $this->BootstrapForm->input('collection_id', 
                                  array('label'=>'Venue', 'autofocus'=>true));
-echo $this->BootstrapForm->input('title');
-echo $this->BootstrapForm->input('abstract');
+echo $this->BootstrapForm->input('title', array('icon'=>'pencil'));
+echo $this->BootstrapForm->input('abstract', array('icon'=>'align-justify'));
+echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag'));
 
 // TODO: add keywords
 
-echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
+echo $this->BootstrapForm->input('Upload', array('type'=>'file', 'icon'=>'file'));
 ?>
     </div>
   </div>
@@ -38,11 +39,13 @@ echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
 <?
 // TODO: add code here to rebuild the full list of coauthors (if sent in request data)
 echo $this->BootstrapForm->input(
-  'Coauthor.0.name', array('label'=>'Name', 'required'=>false));
+  'Coauthor.0.name', array('label'=>'Name', 'required'=>false, 'icon'=>'user'));
 echo $this->BootstrapForm->input(
-  'Coauthor.0.email', array('label'=>'Email', 'type'=>'email', 'required'=>false));
+  'Coauthor.0.email', array('label'=>'Email', 'type'=>'email', 'required'=>false,
+                            'icon'=>'envelope'));
 echo $this->BootstrapForm->input(
-  'Coauthor.0.institution', array('label'=>'Institution', 'required'=>false));
+  'Coauthor.0.institution', array('label'=>'Institution', 'required'=>false, 
+                                  'icon'=>'home'));
 ?>
       </div>
 <?
