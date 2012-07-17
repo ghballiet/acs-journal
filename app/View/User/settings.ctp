@@ -7,11 +7,11 @@
 </div>
 
 <div class="row">
-   <div class="span3">
+   <div class="span2">
      <ul class="thumbnails">
        <li>
          <div class="thumbnail">
-<? echo $this->Profile->gravatar($user['email'], '260px'); ?>           
+<? echo $this->Profile->gravatar($user['email'], '160px'); ?>           
            <div class="caption">
              <h4>Profile Image</h4>
              <p>You can change your avatar on
@@ -21,6 +21,6 @@
        </li>
      </ul>
    </div>
-   <div class="span8">
+   <div class="span10">
    </div>
 </div>
