@@ -7,15 +7,19 @@
 </div>
 
 <div class="row">
-   <div class="span4">
-     <div class="image well">
-       <h3>Profile Image</h3>
-<?
-// TODO: make this work with Bootstrap Thumbnails
-// http://twitter.github.com/bootstrap/components.html#thumbnails
-echo $this->Profile->gravatar($user['email'], '100px');
-?>
-     </div>
+   <div class="span3">
+     <ul class="thumbnails">
+       <li>
+         <div class="thumbnail">
+<? echo $this->Profile->gravatar($user, '260px'); ?>           
+           <div class="caption">
+             <h4>Profile Image</h4>
+             <p>You can change your avatar on
+               <a href="http://gravatar.com/emails/">gravatar.com</a>.</p>
+           </div>
+         </div>
+       </li>
+     </ul>
    </div>
    <div class="span8">
    </div>
