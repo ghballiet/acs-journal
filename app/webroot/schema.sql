@@ -20,12 +20,13 @@ create table if not exists users (
 
 create table if not exists submissions (
   id integer primary key auto_increment, 
-  title varchar(500), 
+  title varchar(500),
   abstract longtext,
   current_version integer,
   final_version integer,
   previous_submission integer,
   locked boolean default false,
+  slug varchar(500),
   category_id integer,
   collection_id integer, 
   user_id integer,

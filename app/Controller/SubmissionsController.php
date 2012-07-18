@@ -75,6 +75,16 @@ class SubmissionsController extends AppController {
       $this->Submission->create();
       $submission = $this->Submission->save($submission);
 
+      // now, create the slug and save
+      $title = $submission['Submission']['title'];
+      $id = $submission['Submission']['id'];
+      $title = strtolower(trim($title));
+      $slug = preg_replace('/\W+/', '', $title);
+      $slug = str_replace(' ', '-', $title);
+      $slug = sprintf('%d-%s', $id, $slug);
+      $submission['Submission']['slug'] = $slug;
+      $this->Submission->save($submission);
+
       // build the coauthors
       $ca = array();
       foreach($coauthors as $i=>$coauthor) {
