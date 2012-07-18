@@ -65,8 +65,8 @@ if(count($links) > 0) {
 <div class="row">
   <div class="span3 left">
     <div class="authors well">
-      <h3>Authors</h3>
       <ul class="nav nav-pills nav-stacked">
+        <li class="nav-header">Authors</li>
 <?
 // TODO: add user badges (using the profile helper)
 foreach($authors as $a) {
@@ -74,10 +74,8 @@ foreach($authors as $a) {
          $a['email'], $a['name']);
 }
 ?>
-      </ul>
-      <hr />
-      <h3>Keywords</h3>
-      <ul class="nav nav-pills nav-stacked">
+        <li class="divider"></li>
+        <li class="nav-header">Keywords</li>
 <?
 foreach($keywords as $keyword) {
   printf('<li><a href="#">%s</a></li>', $keyword['value']);
