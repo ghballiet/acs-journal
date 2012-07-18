@@ -256,7 +256,7 @@ echo $this->BootstrapForm->create('User');
 echo $this->BootstrapForm->input('surname',array('icon'=>'user',
                                                  'label'=>'Last Name'));
   echo $this->BootstrapForm->input('email', array('icon'=>'envelope',
-                                                  'type'=>'email');
+                                                  'type'=>'email'));
   echo $this->BootstrapForm->input('confirm_email', array('icon'=>'envelope',
     'type'=>'email'));
   echo $this->BootstrapForm->input('password', array('icon'=>'asterisk'));
