@@ -99,6 +99,9 @@ class SubmissionsController extends AppController {
       $ca = array();
       foreach($coauthors as $i=>$coauthor) {
         $coauthor['submission_id'] = $submission['Submission']['id'];
+        if(empty($coauthor['name']) && empty($coauthor['email']) &&
+           empty($coauthor['institution']))
+          continue;
         $coauthor = array('Coauthor' => $coauthor);
         $this->Submission->Coauthor->create();
         $this->Submission->Coauthor->save($coauthor);
