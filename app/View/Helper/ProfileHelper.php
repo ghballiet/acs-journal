@@ -19,6 +19,7 @@ class ProfileHelper extends AppHelper {
     // TODO: display user profile information in a popover; display
     // more information if the currently logged in user is an
     // administrator. 
+    return $this->name($user);
   }
 }
 ?>

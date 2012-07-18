@@ -12,8 +12,11 @@ echo $this->BootstrapForm->input('title', array('icon'=>'pencil'));
 echo $this->BootstrapForm->input('abstract', array('icon'=>'pencil'));
 echo $this->Html->tag('hr');
 
-echo $this->Html->tag('h3', 'Coauthors');
-pr($submission['Coauthor']);
+echo $this->Html->tag('h3', 'Authors');
+echo $this->Profile->badge($user);
+foreach($coauthors as $coauthor) {
+  echo $this->Profile->badge($coauthor);
+}
 
 echo $this->BootstrapForm->end('Save Changes');
 ?>
