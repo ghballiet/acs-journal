@@ -23,8 +23,8 @@ class SubmissionsController extends AppController {
   public function paper($slug) {
     $this->autoRender = false;
     $submission = $this->Submission->findBySlug($slug);
+    pr($slug);
     $paper = $submission['Paper'];
-    $this->set('title_for_layout', $submission['Submission']['title']);
 
     $this->response->type($paper['type']);
     $this->response->body($paper['content']);
