@@ -16,7 +16,8 @@ class SubmissionsController extends AppController {
     $this->set('submission', $submission);
     if($this->request->is('get')) {
       $this->request->data = $submission;
-    } else {
+    } else if($this->request->is('post')) {
+      
     }
   }
 
@@ -39,6 +40,7 @@ class SubmissionsController extends AppController {
       $data = $this->request->data;
       $submission = $data['Submission'];
       $upload = $submission['Upload'];
+      $keywords = $submission['Keyword'];
       $coauthors = $data['Coauthor'];
 
       // remove the upload from the submission data array
@@ -82,6 +84,17 @@ class SubmissionsController extends AppController {
       $submission['Submission']['slug'] = $slug;
       $this->Submission->save($submission);
 
+      // save the keywords
+      $words = explode(',', $keywords);
+      foreach($words as $word) {
+        $this->Keyword->create();
+        $arr = array(
+          'Keyword' => array(
+            'value' => trim($word),
+            'submission_id' => $submission['Submission']['id']));
+        $this->Keyword->save($arr);                             
+      }
+
       // build the coauthors
       $ca = array();
       foreach($coauthors as $i=>$coauthor) {
@@ -95,7 +108,7 @@ class SubmissionsController extends AppController {
       $this->alertSuccess(
         'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
                             $submission['Submission']['title']));
-      // $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
 }
