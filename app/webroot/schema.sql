@@ -98,3 +98,45 @@ create table if not exists role_types (
   modified timestamp,
   created timestamp
 );
+
+create table if not exists review_form (
+  id integer primary key auto_increment,
+  collection_id integer,
+  modified timestamp,
+  created timestamp
+);
+
+create table if not exists question (
+  id integer primary key auto_increment,
+  text longtext,
+  review_form_id integer,
+  modified timestamp,
+  created timestamp
+);
+
+create table if not exists choice (
+  id integer primary key auto_increment,
+  text longtext,
+  question_id integer,
+  modified timestamp,
+  created timestamp
+);
+
+create table if not exists review (
+  id integer primary key auto_increment,
+  user_id integer,
+  submission_id integer,
+  modified timestamp,
+  created timestamp
+);
+
+create table if not exists answer (
+  id integer primary key auto_increment,
+  question_id integer,
+  choice_id integer,
+  user_id integer,
+  review_id integer,
+  comments longtext,
+  modified timestamp,
+  created timestamp
+);
