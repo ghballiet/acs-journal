@@ -12,8 +12,7 @@ class SubmissionsController extends AppController {
   }
 
   public function edit($slug) {
-    $this->Submission->slug = $slug;
-    $submission = $this->Submission->read();
+    $submission = $this->Submission->findBySlug($slug);
     $this->set('submission', $submission);
     if($this->request->is('get')) {
       $this->request->data = $submission;
@@ -23,8 +22,7 @@ class SubmissionsController extends AppController {
 
   public function paper($slug) {
     $this->autoRender = false;
-    $this->Submission->slug = $slug;
-    $submission = $this->Submission->read();
+    $submission = $this->Submission->findBySlug($slug);
     $paper = $submission['Paper'];
     $this->set('title_for_layout', $submission['Submission']['title']);
 
