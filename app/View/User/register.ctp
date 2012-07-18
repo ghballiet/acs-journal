@@ -252,9 +252,11 @@ echo $this->BootstrapForm->create('User');
   <?
   echo $this->BootstrapForm->input('name', array('icon'=>'user', 
     'autofocus'=>'true'));
-  echo $this->BootstrapForm->input('surname', array('icon'=>'user'));
+echo $this->BootstrapForm->input('surname',array('icon'=>'user',
+                                                 'label'=>'First Name'));
   echo $this->BootstrapForm->input('email', array('icon'=>'envelope',
-    'type'=>'email'));
+                                                  'type'=>'email',
+                                                  'label'=>'Last Name'));
   echo $this->BootstrapForm->input('confirm_email', array('icon'=>'envelope',
     'type'=>'email'));
   echo $this->BootstrapForm->input('password', array('icon'=>'asterisk'));
