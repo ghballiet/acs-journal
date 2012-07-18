@@ -9,9 +9,11 @@ $this->end();
 </div>
 <div class="row">
   <div class="span4">
-    Please complete this review form offline and enter into
-    appropriate fields on the Web form. Give reasons that support your
-    answers rather than simply checking boxes.
+    <div class="well">
+      Please complete this review form offline and enter into
+      appropriate fields on the Web form. Give reasons that support
+      your answers rather than simply checking boxes.
+    </div>
   </div>
   <div class="span8">
 <ol>
