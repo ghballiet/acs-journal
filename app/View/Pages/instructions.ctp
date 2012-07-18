@@ -157,7 +157,7 @@ $this->end();
   evidence in support of those claims, and cogent presentation of its
   ideas to readers. We encourage authors to examine the review form at</p>
 
-<h3><a href="#">http://www.cogsys.org/review-form/</a></h3>
+<h3><a href="/conference/review-form">http://www.cogsys.org/conference/review-form/</a></h3>
 
 <p>before drafting their manuscripts to ensure that their submissions
   address all of the dimensions on which reviewers will evaluate them.</p>
