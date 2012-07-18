@@ -14,8 +14,10 @@ echo $this->Html->tag('hr');
 
 echo $this->Html->tag('h3', 'Authors');
 echo $this->Profile->badge($user);
-foreach($coauthors as $coauthor) {
-  echo $this->Profile->badge($coauthor);
+if(isset($coauthors)) {
+  foreach($coauthors as $coauthor) {
+    echo $this->Profile->badge($coauthor);
+  }
 }
 
 echo $this->BootstrapForm->end('Save Changes');
