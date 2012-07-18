@@ -7,9 +7,7 @@ class SubmissionsController extends AppController {
   }
 
   public function view($slug) {
-    $this->Submission->slug = $slug;
-    $submission = $this->Submission->read();
-    pr($submission);
+    $submission = $this->Submission->findBySlug($slug);
     $this->set('data', $submission);
   }
 
