@@ -10,6 +10,7 @@ $final = $data['Final'];
 $previous = $data['Previous'];
 $category = $data['Category'];
 $collection = $data['Collection'];
+$keywords = $data['Keyword'];
 $author = $data['User'];
 $modified = $this->Time->timeAgoInWords($submission['modified']);
 
@@ -71,6 +72,15 @@ if(count($links) > 0) {
 foreach($authors as $a) {
   printf('<li><a href="mailto:%s">%s</a></li>', 
          $a['email'], $a['name']);
+}
+?>
+      </ul>
+      <hr />
+      <h3>Keywords</h3>
+      <ul class="nav nav-pills nav-stacked">
+<?
+foreach($keywords as $keyword) {
+  printf('<li><a href="#">%s</a></li>', $keyword['value']);
 }
 ?>
       </ul>
