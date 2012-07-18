@@ -7,15 +7,11 @@ $this->end();
 <div class="page-header">
   <h1>Review Form</h1>
 </div>
-<div class="row">
-  <div class="span4">
-    <div class="well">
+<p class="alert alert-info">
       Please complete this review form offline and enter into
       appropriate fields on the Web form. Give reasons that support
       your answers rather than simply checking boxes.
-    </div>
-  </div>
-  <div class="span8">
+</p>
 <ol>
   <li>
     <p>
@@ -179,5 +175,4 @@ $this->end();
     </p>
   </li>
 </ol>
-</div>
-</div>
+
