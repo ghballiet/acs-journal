@@ -22,8 +22,8 @@ class SubmissionsController extends AppController {
 
   public function paper($slug) {
     $this->autoRender = false;
+    $slug = str_replace('.pdf', '', $slug);
     $submission = $this->Submission->findBySlug($slug);
-    pr($slug);
     $paper = $submission['Paper'];
 
     $this->response->type($paper['type']);
