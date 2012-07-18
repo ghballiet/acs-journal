@@ -87,12 +87,12 @@ class SubmissionsController extends AppController {
       // save the keywords
       $words = explode(',', $keywords);
       foreach($words as $word) {
-        $this->Keyword->create();
+        $this->Submission->Keyword->create();
         $arr = array(
           'Keyword' => array(
             'value' => trim($word),
             'submission_id' => $submission['Submission']['id']));
-        $this->Keyword->save($arr);                             
+        $this->Submission->Keyword->save($arr);                             
       }
 
       // build the coauthors
