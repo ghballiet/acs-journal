@@ -20,7 +20,6 @@ $authors[] = array(
   'email' => $author['email'],
   'institution' => $author['institution']
 );
-pr($data['Coauthor']);
 foreach($data['Coauthor'] as $coauthor)
   $authors[] = $coauthor;
 ?>
