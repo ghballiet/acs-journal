@@ -25,10 +25,11 @@ echo $this->Html->tableHeaders(array(
 foreach($submissions as $submission) {
   $title = $submission['Submission']['title'];
   $id = $submission['Submission']['id'];
+  $slug = $submission['Submission']['slug'];
 
   $title_link = $this->Html->link(
     $title,
-    array('controller'=>'submissions', 'action'=>'view', $id));
+    array('controller'=>'submissions', 'action'=>'view', $slug));
 
   $abstract = $submission['Submission']['abstract'];
   $venue = $submission['Collection']['title'];

@@ -6,14 +6,14 @@ class SubmissionsController extends AppController {
     $this->set('user', $this->Auth->user());
   }
 
-  public function view($id) {
-    $this->Submission->id = $id;
+  public function view($slug) {
+    $this->Submission->slug = $slug;
     $submission = $this->Submission->read();
     $this->set('data', $submission);
   }
 
-  public function edit($id) {
-    $this->Submission->id = $id;
+  public function edit($slug) {
+    $this->Submission->slug = $slug;
     $submission = $this->Submission->read();
     $this->set('submission', $submission);
     if($this->request->is('get')) {
@@ -22,9 +22,9 @@ class SubmissionsController extends AppController {
     }
   }
 
-  public function paper($id) {
+  public function paper($slug) {
     $this->autoRender = false;
-    $this->Submission->id = $id;
+    $this->Submission->slug = $slug;
     $submission = $this->Submission->read();
     $paper = $submission['Paper'];
     $this->set('title_for_layout', $submission['Submission']['title']);

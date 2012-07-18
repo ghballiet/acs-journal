@@ -30,7 +30,7 @@ $url = $this->Html->url(array(
   'controller'=>'submissions',
   'action'=>'paper',
   'ext'=>'pdf',
-  $submission['id']), true);
+  $submission['slug']), true);
 printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
        '<i class="icon-file"></i> PDF</a>',
        $url);
@@ -42,11 +42,11 @@ if($author['id'] == $user['id'] || $user['is_admin'] == 1) {
   // users or admins can edit and retract this submission
   $edit = array(
     'text' => 'Edit', 
-    'link' => array('action'=>'edit', $submission['id']),
+    'link' => array('action'=>'edit', $submission['slug']),
     'icon' => 'edit');
   $retract = array(
     'text' => 'Retract',
-    'link' => array('action'=>'retract', $submission['id']),
+    'link' => array('action'=>'retract', $submission['slug']),
     'icon' => 'remove');
   $links[] = $edit;
   $links[] = $retract;
