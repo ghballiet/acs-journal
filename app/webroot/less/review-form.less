@@ -3,9 +3,12 @@
 
 ol {
   margin: @gridGutterWidth;
-  label { display: inline; }
-  span {
-    float: left;
-    width: 200px;
+  p {
+    label { display: inline; }
+    span {
+      float: left;
+      width: 200px;
+      &:last-child { clear: both; }
+    }
   }
 }

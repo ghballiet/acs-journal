@@ -2,5 +2,5 @@
 .clearfix:after{clear:both;}
 .hide-text{overflow:hidden;text-indent:100%;white-space:nowrap;}
 .input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
-ol{margin:20px;}ol label{display:inline;}
-ol span{float:left;width:200px;}
+ol{margin:20px;}ol p label{display:inline;}
+ol p span{float:left;width:200px;}ol p span:last-child{clear:both;}
