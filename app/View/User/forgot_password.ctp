@@ -11,7 +11,8 @@
 <?
 echo $this->BootstrapForm->create('User');
 echo $this->BootstrapForm->input('email', array('type'=>'email',
-                                                'icon'=>'envelope'));
+                                                'icon'=>'envelope',
+                                                'autofocus'=>true));
 echo $this->BootstrapForm->input('surname', array('label'=>'Last Name',
                                                   'icon'=>'user'));
 echo $this->BootstrapForm->end('Reset Password');
