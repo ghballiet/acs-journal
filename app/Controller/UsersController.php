@@ -65,6 +65,7 @@ class UsersController extends AppController {
   public function test_email() {
     $user = $this->User->findById(1);
     $this->User->sendWelcomeEmail(array('user'=>$user['User']));    
+    $this->redirect(array('action'=>'login'));
   }
 
   public function settings() {

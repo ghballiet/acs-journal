@@ -2,7 +2,7 @@
 <html>
 <head>
 <?
-echo $this->Html->url($this->Html->css('email'), true);
+echo $this->Html->url('/css/email.css', true);
 echo $this->fetch('css');
 ?>
 </head>
