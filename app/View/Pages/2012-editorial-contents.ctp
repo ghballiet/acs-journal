@@ -3,8 +3,16 @@ $this->start('css');
 echo $this->Html->css('2012-toc');
 $this->end();
 
-$submission = ClassRegistry::init('Submission');
-pr($submission->findAllByCollectionId(2));
+$sub = ClassRegistry::init('Submission');
+$winston = $sub->findByTitle('The Right Way');
+$sammut = $sub->findByTitle('When Do Robots Have to Think?');
+$bello = $sub->findByTitle('Cognitive Foundations for a Computational' . 
+                           'Theory of Mindreading');
+
+$winston_url = $this->Html->url(array(
+  'controller'=>'submissions', 'action'=>'view', 
+  $winston['Submission']['slug']), true);
+
 
 $papers = array(
   array(
@@ -28,7 +36,7 @@ $papers = array(
   array(
     'title' => 'The Right Way',
     'author' => 'Patrick Henry Winston',
-    'url' => '#',
+    'url' => $winston_url,
     'pages' => 12
   ),
   array(
