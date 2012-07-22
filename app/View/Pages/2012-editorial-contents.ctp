@@ -9,58 +9,54 @@ $sammut = $sub->findByTitle('When Do Robots Have to Think?');
 $bello = $sub->findByTitle('Cognitive Foundations for a Computational' . 
                            'Theory of Mindreading');
 
-$winston_url = $this->Html->url(array(
-  'controller'=>'submissions', 'action'=>'view', 
-  $winston['Submission']['slug']), true);
-
 
 $papers = array(
   array(
     'title' => 'Advances in Cognitive Systems',
     'author' => 'Pat Langley', 
-    'url' => '#', 
+    'slug' => '',
     'pages' => 1,
   ),
   array(
     'title' => 'The Cognitive Systems Paradigm',
     'author' => 'Pat Langley',
-    'url' => '#',
+    'slug' => '',
     'pages' => 10,
   ),
   array(
     'title' => 'Beyond Idiot-Savant AI',
     'author' => 'Scott E. Fahlman',
-    'url' => '#',
+    'slug' => '',
     'pages' => 7,
   ),
   array(
     'title' => 'The Right Way',
     'author' => 'Patrick Henry Winston',
-    'url' => $winston_url,
+    'slug' => $winston['Submission']['slug'],
     'pages' => 12
   ),
   array(
     'title' => 'Human-Level Artificial Intelligence Must be an Extraordinary Science',
     'author' => 'Nicholas L. Cassimatis',
-    'url' => '#',
+    'slug' => '',
     'pages' => 10,
   ),
   array(
     'title' => 'How Minds Will Be Built',
     'author' => 'Kenneth D. Forbus',
-    'url' => '#',
+    'slug' => '',
     'pages' => 12, 
   ),
   array(
     'title' => 'When Do Robots Have to Think?',
     'author' => 'Claude Sammut',
-    'url' => '#',
+    'slug' => '', 
     'pages' => 10,
   ),
   array(
     'title' => 'Practical Evaluation of Integrated Cognitive Systems', 
     'author' => 'Randolph M. Jones, Robert E. Wray, and Michael van Lent',
-    'url' => '#',
+    'slug' => '',
     'pages' => 0
   )
 );
@@ -81,10 +77,22 @@ $page = 1;
 
 foreach($papers as $i=>$paper) {
   $buttons = '';
-  $buttons .= $this->Html->link('PDF', $paper['url'],
-                                array('class'=>'btn btn-mini btn-danger'));
-  $buttons .= '&nbsp;';
-  $buttons .= $this->Html->link('Abstract', '#', array('class'=>'btn btn-mini'));
+
+  // get pdf and abstract links
+  if(empty($paper['slug'])) {
+    $buttons = '<a href="#" class="btn btn-mini btn-danger disabled">PDF</a>';
+    $buttons .= '&nbsp;';
+    $buttons .= '<a href="#" class="btn btn-mini disabled">Abstract</a>';
+  } else {
+    $pdf = $this->Html->link('PDF', array(
+      'controller'=>'submissions', 'action'=>'paper', 'ext'=>'pdf',
+      $paper['slug']), array('class'=>'btn btn-mini btn-danger'));
+    $abstract = $this->Html->link('Abstract', array(
+      'controller'=>'submissions', 'action'=>'view',
+      $paper['slug']), array('class'=>'btn btn-mini'));
+
+    $buttons = sprintf('%s&nbsp;%s', $pdf, $abstract);      
+  }
 
   echo $this->Html->tableCells(array(
     $paper['title'], $paper['author'], $page, $buttons
