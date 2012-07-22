@@ -32,8 +32,11 @@ class BootstrapFormHelper extends AppHelper {
   public function input($name, $opts = null) {
     $label = ucwords(str_replace('_', ' ', $name));
     // set the error stuff in the opts
-    $opts['error'] = array('attributes'=>array('wrap'=>'span', 'class'=>'help-inline error'));
-    
+    $opts['error'] = array('attributes'=>array('wrap'=>'span',
+                                               'class'=>'help-inline error'));
+    if(isset($opts['type']) && $opts['type'] == 'hidden')
+      $opts['label'] = false;
+
     if(isset($opts['label'])) {
       $label = $opts['label'];
       $opts['label'] = false;

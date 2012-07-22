@@ -6,7 +6,7 @@
 
 <?
 echo $this->BootstrapForm->create('Collection');
-echo $this->BootstrapForm->input('id', array('type'=>'hidden', 'label'=>false));
+echo $this->BootstrapForm->input('id', array('type'=>'hidden'));
 echo $this->BootstrapForm->input('title');
 echo $this->BootstrapForm->input('description', array('required'=>false));
 echo $this->BootstrapForm->input('accepting_submissions', 
