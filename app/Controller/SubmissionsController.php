@@ -86,7 +86,7 @@ class SubmissionsController extends AppController {
       $id = $submission['Submission']['id'];
       $title = strtolower(trim($title));
       $slug = preg_replace('/\W+/', '', $title);
-      $slug = str_replace(' ', '-', $title);
+      $slug = str_replace(' ', '-', $slug);
       $slug = sprintf('%d-%s', $id, $slug);
       $submission['Submission']['slug'] = $slug;
       $this->Submission->save($submission);
