@@ -66,7 +66,15 @@ class UsersController extends AppController {
 
   public function forgot_password() {
     if($this->request->is('post')) {
+      $data = $this->request->data;
+      $email = strtolower(trim($data['User']['email']));
+      $name = strtolower(trim($data['User']['surname']));
+      $hash = md5(sprintf('%s%s', $email, $name));
       
+      $conditions = array(
+        'md5(concat(lower(User.email), lower(User.surname)))' => $hash);
+      
+      pr(array($email, $name, $hash));
     }
   }
 }

@@ -49,6 +49,13 @@ class User extends AppModel {
   }
   
   public function beforeSave($options = array()) {
+    // sanitize the email and name data (important for password
+    // retrieval)
+    $this->data['User']['email'] = trim($this->data['User']['email']);
+    $this->data['User']['name'] = trim($this->data['User']['name']);
+    $this->data['User']['surname'] = trim($this->data['User']['surname']);
+
+    // hash the password
     $this->data['User']['password'] = AuthComponent::password(
       $this->data['User']['password']);
     return true;
