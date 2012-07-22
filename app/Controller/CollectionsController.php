@@ -42,7 +42,7 @@ class CollectionsController extends AppController {
     $id = $collection['Collection']['id'];
     $this->Collection->id = $id;
     $this->Collection->read();
-    $this->set('collection', $collection);
+    // $this->set('collection', $collection);
   }
 
   public function delete($slug = null) {
