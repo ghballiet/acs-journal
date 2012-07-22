@@ -42,7 +42,7 @@ foreach($collections as $collection) {
                               'This cannot be undone.');
 
   echo $this->Html->tableCells(
-    array($link, $num_submissions, $status, $modified, $edit . ' ' . $delete), 
+    array($link, $num_submissions, $status, $modified, $edit . '&nbsp;' . $delete), 
     array(), array(), true);
 }
 ?>
