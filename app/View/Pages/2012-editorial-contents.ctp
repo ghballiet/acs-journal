@@ -3,9 +3,8 @@ $this->start('css');
 echo $this->Html->css('2012-toc');
 $this->end();
 
-$data = $this->User->Submission->findAllByCollectionId(2);
-
-pr($data);
+$submission = ClassRegistry::init('Submission');
+pr($submission->findAllByCollectionId(2));
 
 $papers = array(
   array(
