@@ -40,7 +40,7 @@ class CollectionsController extends AppController {
   public function edit($slug = null) {
     $collection = $this->Collection->findBySlug($slug);
     $this->Collection->id = $collection['Collection']['id'];
-    $collection = $this->Collection->read($id);
+    $collection = $this->Collection->read();
     $this->set('collection', $collection);
 
     if($this->request->is('post') && 
