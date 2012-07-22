@@ -4,7 +4,7 @@ class UsersController extends AppController {
   
   public function beforeFilter() {
     $this->Auth->allow('login', 'register', 'forgot_password',
-                       'reset_password');
+                       'reset_password', 'test_email');
     $this->set('user', $this->Auth->user());
   }
   
@@ -14,11 +14,13 @@ class UsersController extends AppController {
       if($user = $this->User->save($this->request->data)) {
         $this->alertSuccess('Thank you!', 'You have ' .
           'succesfully registered with ACS.', true);
+        
         $this->User->sendWelcomeEmail(array(
-          'name' => $user['User']['name'],
-          'surname' => $user['User']['surname'],
-          'password' => $password,
-          'email' => $user['User']['email']
+          // 'name' => $user['User']['name'],
+          // 'surname' => $user['User']['surname'],
+          // 'password' => $password,
+          // 'email' => $user['User']['email'],
+          'user' => $user['User']
         ));
         
         return $this->redirect(array('action'=>'login'));
@@ -60,6 +62,11 @@ class UsersController extends AppController {
     $this->redirect($this->Auth->logout());
   }
 
+  public function test_email() {
+    $user = $this->User->findById(1);
+    $this->User->sendWelcomeEmail(array('user'=>$user['User']));    
+  }
+
   public function settings() {
     
   }
@@ -68,15 +75,49 @@ class UsersController extends AppController {
     if($this->request->is('post')) {
       $data = $this->request->data;
       $email = strtolower(trim($data['User']['email']));
-      $name = strtolower(trim($data['User']['surname']));
-      $hash = md5(sprintf('%s%s', $email, $name));
+      $surname = strtolower(trim($data['User']['surname']));
       
       $conditions = array(
-        'md5(concat(lower(User.email), lower(User.surname)))' => $hash);
+        'lower(User.email)' => $email,
+        'lower(User.surname)' => $surname
+      );
+        
       
       $user = $this->User->find('first', array('conditions'=>$conditions));
 
-      pr($user);
+      if($user == null) {
+        // we probably want to let them know that it didn't work out,
+        // so that they can double check for spelling errors and the
+        // like. 
+        $title = 'No users found.';
+        $msg = 'There are no registered users with that email and last name. ' .
+          'Please double-check your entries below and try again.';
+        $this->alertError($title, $msg);
+      } else {
+        // they're in the system, so we need to send them a link to
+        // reset their password, and then take them back to the login
+        // page. 
+        $view = new View($this);
+        $html = $view->loadHelper('Html');
+
+        $id = $user['User']['id'];
+        $name = sprintf('%s %s', $user['User']['name'], $user['User']['surname']);
+        $email = $user['User']['email'];
+
+
+        $hash = md5(sprintf('%s%s%s', $id, $name, $email));
+        $url = $html->url(array('action'=>'reset_password', $hash), true);
+
+        $arr = array(
+          'email' => $email,
+          'id' => $id,
+          'name' => $name,
+          'url' => $url
+        );
+
+        // actually send the message
+        $this->User->resetPasswordEmail($arr);
+      }
     }
   }
 }

@@ -66,9 +66,20 @@ class User extends AppModel {
     $email = new CakeEmail();
     $email->template('welcome', 'default');
     $email->emailFormat('html');
-    $email->to($data['email']);
+    $email->to($data['user']['email']);
     $email->subject('Welcome!');
     $email->from('donotreply@cogsys.org');
+    $email->viewVars($data);
+    $email->send();
+  }
+
+  public function resetPasswordEmail($data) {
+    $email = new CakeEmail();
+    $email->template('reset_password', 'default');
+    $email->emailFormat('html');
+    $email->to($data['email']);
+    $email->subject('Reset Your Password');
+    $email->from('acs@cogsys.org');
     $email->viewVars($data);
     $email->send();
   }
