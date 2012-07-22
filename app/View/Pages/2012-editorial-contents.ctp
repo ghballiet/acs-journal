@@ -6,7 +6,7 @@ $this->end();
 $sub = ClassRegistry::init('Submission');
 $winston = $sub->findByTitle('The Right Way');
 $sammut = $sub->findByTitle('When Do Robots Have to Think?');
-$bello = $sub->findByTitle('Cognitive Foundations for a Computational' . 
+$bello = $sub->findByTitle('Cognitive Foundations for a Computational ' . 
                            'Theory of Mindreading');
 
 
