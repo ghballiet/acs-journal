@@ -118,6 +118,11 @@ class UsersController extends AppController {
 
         // actually send the message
         $this->User->resetPasswordEmail($arr);
+        
+        $msg = 'An email has been sent to you with a link to ' . 
+          'reset your password.';
+
+        $this->alertSuccess('Success!', $msg, true);
       }
     }
   }
