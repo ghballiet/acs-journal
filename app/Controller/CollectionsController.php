@@ -42,7 +42,23 @@ class CollectionsController extends AppController {
     $id = $collection['Collection']['id'];
     $this->Collection->id = $id;
     $this->Collection->read();
-    // $this->set('collection', $collection);
+    $this->set('collection', $collection);
+
+    if($this->request->is('get')) {
+      $this->request->data = $collection;
+    } else if($this->request->is('post')) {
+      if($coll = $this->Collection->save($this->request->data)) {
+        $this->alertSuccess('Success!',
+                            sprintf('Collection <strong>%s</strong> ' . 
+                                    'successfully updated.',
+                                    $coll['Collection']['title']), 
+                            true);
+        $this->redirect(array('action'=>'manage'));
+      } else {
+        $this->alertError('Uh-oh.', 'Something went wrong - please ' .
+                          'try again.');
+      }
+    }
   }
 
   public function delete($slug = null) {
