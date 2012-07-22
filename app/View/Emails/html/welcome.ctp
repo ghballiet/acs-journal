@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Welcome!</h1>
+  <h3>Welcome!</h3x>
 </div>
 
 <p>Dear <? printf('%s %s', $user['name'], $user['surname']); ?>,</p>

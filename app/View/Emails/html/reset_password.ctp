@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Reset Your Password</h1>
+  <h3>Reset Your Password</h3>
 </div>
 
 <p>Dear <? echo $name; ?>,</p>
@@ -12,7 +12,10 @@
 </p>
 
 <p>
-  <a href="<? echo $url; ?>">Reset your password</a>
+  <center>
+    <a href="<? echo $url; ?>" class="btn btn-primary">Reset your
+    password</a>
+  </center>
 </p>
 
 <hr />
