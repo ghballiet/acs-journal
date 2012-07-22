@@ -59,6 +59,9 @@ class CollectionsController extends AppController {
     $this->Collection->id = $id;
     $collection = $this->Collection->findById($id);
     $this->set('collection', $collection);
+
+    $submissions = $this->Collection->Submission->findAllByCollectionId($id);
+    $this->set('submissions', $submissions);
   }
 }
 ?>
