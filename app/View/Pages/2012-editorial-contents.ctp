@@ -33,7 +33,7 @@ $papers = array(
     'title' => $winston['Submission']['title'],
     'author' => 'Patrick Henry Winston',
     'slug' => $winston['Submission']['slug'],
-    'pages' => 12
+    'pages' => $winston['Submission']['pages']
   ),
   array(
     'title' => 'Human-Level Artificial Intelligence Must be an Extraordinary Science',
@@ -51,13 +51,13 @@ $papers = array(
     'title' => $bello['Submission']['title'],
     'author' => 'Paul Bello',
     'slug' => $bello['Submission']['slug'],
-    'pages' => 14,
+    'pages' => $bello['Submission']['pages']
   ),
   array(
     'title' => $sammut['Submission']['title'],
     'author' => 'Claude Sammut',
     'slug' => $sammut['Submission']['slug'], 
-    'pages' => 10,
+    'pages' => $sammut['Submission']['pages']
   ),
   array(
     'title' => 'Practical Evaluation of Integrated Cognitive Systems', 

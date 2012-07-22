@@ -27,6 +27,7 @@ create table if not exists submissions (
   previous_submission integer,
   locked boolean default false,
   slug varchar(500),
+  pages integer,
   category_id integer,
   collection_id integer, 
   user_id integer,
