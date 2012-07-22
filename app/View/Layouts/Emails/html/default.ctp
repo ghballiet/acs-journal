@@ -2,6 +2,8 @@
 <html>
 <head>
 <?
+// TODO: this needs to read the file contents, and dump it here
+// between a couple of style tags.
 $css = $this->Html->url('/css/email.css', true);
 printf('<link type="text/css" rel="stylesheet" href="%s" />', $css);
 echo $this->fetch('css');
