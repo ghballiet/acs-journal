@@ -8,6 +8,8 @@ echo $this->fetch('css');
 ?>
 </head>
 <body>
-	<?php echo $content_for_layout;?>
+  <div class="container">
+<? echo $content_for_layout; ?>
+  </div>
 </body>
 </html>
