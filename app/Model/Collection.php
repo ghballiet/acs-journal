@@ -21,18 +21,10 @@ class Collection extends AppModel {
     $title = $this->data['Collection']['title'];
     $title = strtolower(trim($title));
     $slug = preg_replace('/\W+/', '', $title);
-
     $slug = str_replace(' ', '-', $slug);
-    $slug = sprintf('%d-%s', $id, $title);
+    $slug = sprintf('%d-%s', $id, $slug);
     $this->data['Collection']['slug'] = $slug;
-    
-    pr($slug);
-
-    pr($this->data);
-
-    die('');
-    
-    // return $this->save($this->data);
+    return $this->save($this->data);
   }
 }
 ?>
