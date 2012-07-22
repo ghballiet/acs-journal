@@ -41,6 +41,7 @@ class CollectionsController extends AppController {
     $collection = $this->Collection->findBySlug($slug);
     $this->Collection->id = $collection['Collection']['id'];
     $collection = $this->Collection->read();
+    $this->request->data = $collection;
     $this->set('collection', $collection);
 
     if($this->request->is('post')) {
