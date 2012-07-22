@@ -29,6 +29,8 @@ class Collection extends AppModel {
     pr($slug);
 
     pr($this->data);
+
+    die('');
     
     // return $this->save($this->data);
   }
