@@ -74,7 +74,9 @@ class UsersController extends AppController {
       $conditions = array(
         'md5(concat(lower(User.email), lower(User.surname)))' => $hash);
       
-      pr(array($email, $name, $hash));
+      $user = $this->User->find('first', array('conditions'=>$conditions));
+
+      pr($user);
     }
   }
 }
