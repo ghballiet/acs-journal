@@ -37,9 +37,6 @@ class SubmissionsController extends AppController {
     $this->set('collections', $collections);
 
     if($this->request->is('post')) {
-      pr($this->request->data);
-      die('');
-
       $data = $this->request->data;
       $submission = $data['Submission'];
       $upload = $submission['Upload'];
@@ -57,11 +54,16 @@ class SubmissionsController extends AppController {
                   'a PDF file. Please select a PDF and re-submit.', $upload['name']));
         return false;
       }
+
+      // get the date
+      $now = date('Y-m-d H:i:s');
       
       // build the upload data
       $upload['content'] = file_get_contents($upload['tmp_name']);
       $upload['extension'] = pathinfo($upload['tmp_name'], PATHINFO_EXTENSION);
       $upload['user_id'] = $this->Auth->user('id');
+      $upload['created'] = $now;
+      $upload['modified'] = $now;
       $upload = array('Paper' => $upload);
 
       // save the upload
@@ -71,6 +73,8 @@ class SubmissionsController extends AppController {
       // build the submission data
       $submission['user_id'] = $this->Auth->user('id');
       $submission['current_version'] = $upload['Paper']['id'];
+      $submission['created'] = $now;
+      $submission['modified'] = $now;
       $submission = array('Submission' => $submission);
 
       // save the submission
@@ -94,6 +98,8 @@ class SubmissionsController extends AppController {
         $arr = array(
           'Keyword' => array(
             'value' => trim($word),
+            'created' => $now,
+            'modified' => $now,
             'submission_id' => $submission['Submission']['id']));
         $this->Submission->Keyword->save($arr);                             
       }
@@ -102,6 +108,8 @@ class SubmissionsController extends AppController {
       $ca = array();
       foreach($coauthors as $i=>$coauthor) {
         $coauthor['submission_id'] = $submission['Submission']['id'];
+        $coauthor['created'] = $now;
+        $coauthor['modified'] = $now;
         if(empty($coauthor['name']) && empty($coauthor['email']) &&
            empty($coauthor['institution']))
           continue;
