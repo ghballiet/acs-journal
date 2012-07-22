@@ -13,8 +13,8 @@
 
 <p>
   <center>
-    <a href="<? echo $url; ?>" class="btn btn-primary">Reset your
-    password</a>
+    <a href="<? echo $url; ?>" class="btn btn-primary btn-large">Reset Your
+    Password &rarr;</a>
   </center>
 </p>
 
