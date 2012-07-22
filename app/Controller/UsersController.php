@@ -4,7 +4,7 @@ class UsersController extends AppController {
   
   public function beforeFilter() {
     $this->Auth->allow('login', 'register', 'forgot_password',
-                       'reset_password', 'test_email');
+                       'reset_password');
     $this->set('user', $this->Auth->user());
   }
   
@@ -60,12 +60,6 @@ class UsersController extends AppController {
   
   public function logout() {
     $this->redirect($this->Auth->logout());
-  }
-
-  public function test_email() {
-    $user = $this->User->findById(1);
-    $this->User->sendWelcomeEmail(array('user'=>$user['User']));    
-    $this->redirect(array('action'=>'login'));
   }
 
   public function settings() {
