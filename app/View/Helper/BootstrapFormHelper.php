@@ -34,18 +34,21 @@ class BootstrapFormHelper extends AppHelper {
     // set the error stuff in the opts
     $opts['error'] = array('attributes'=>array('wrap'=>'span',
                                                'class'=>'help-inline error'));
-    if(isset($opts['type']) && $opts['type'] == 'hidden')
-      $opts['label'] = false;
-
     if(isset($opts['label'])) {
       $label = $opts['label'];
       $opts['label'] = false;
     }
+
     $id = preg_replace('/[\W|_]/', ' ', $name);
     $id = sprintf('%s %s', $this->model, $id);
     $id = str_replace(' ', '', ucwords($id));
     $str = '';
-    $str .= '<div class="control-group">';
+
+    if(isset($opts['type']) && $opts['type'] == 'hidden')
+      $str .= '<div class="control-group hidden">';
+    else
+      $str .= '<div class="control-group">';
+
     $str .= sprintf('<label for="%s" class="control-label">%s</label>',
       $id, $label);
     $str .= '<div class="controls">';

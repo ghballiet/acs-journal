@@ -1,4 +1,4 @@
-<div class="page-heaer">
+<div class="page-header">
   <h1>Edit Collection
     <small><? echo $collection['Collection']['title']; ?></small>
   </h1>
