@@ -43,16 +43,18 @@ class CollectionsController extends AppController {
     $collection = $this->Collection->read();
     $this->set('collection', $collection);
 
-    if($this->request->is('post') && 
-       $coll = $this->Collection->save($this->request->data)) {
-      $this->alertSuccess('Success!', sprintf('Collection <strong>%s</strong> ' .
-                                              'was successfully updated.',
-                                              $coll['Collection']['title']),
-                          true);      
-      $this->redirect(array('action'=>'manage'));
-    } else {
-      $this->alertError('Uh-oh.', 'Something went wrong while updating your ' . 
-                        'collection. Please try again.');      
+    if($this->request->is('post')) {
+      if($coll = $this->Collection->save($this->request->data)) {
+        $this->alertSuccess('Success!',
+                            sprintf('Collection <strong>%s</strong> ' .
+                                    'was successfully updated.',
+                                    $coll['Collection']['title']),
+                            true);      
+        $this->redirect(array('action'=>'manage'));
+      } else {
+        $this->alertError('Uh-oh.', 'Something went wrong while updating your ' . 
+                          'collection. Please try again.');      
+      }
     }
   }
 
