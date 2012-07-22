@@ -13,6 +13,7 @@ foreach($submissions as $submission) {
   $slug = $submission['Submission']['slug'];
   $author = $this->Profile->name($submission['User']);
   $modified = $submission['Submission']['modified'];
+  $modified = $this->Time->timeAgoInWords($modified);
   $link = $this->Html->link('PDF', array(
     'controller'=>'submissions',
     'action'=>'view', 
