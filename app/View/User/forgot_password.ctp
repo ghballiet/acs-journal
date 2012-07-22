@@ -10,7 +10,9 @@
 
 <?
 echo $this->BootstrapForm->create('User');
-echo $this->BootstrapForm->input('email', array('type'=>'email', 'icon'=>'email'));
-echo $this->BootstrapForm->input('surname', array('label'=>'Last Name', 'icon'=>'user'));
+echo $this->BootstrapForm->input('email', array('type'=>'email',
+                                                'icon'=>'envelope'));
+echo $this->BootstrapForm->input('surname', array('label'=>'Last Name',
+                                                  'icon'=>'user'));
 echo $this->BootstrapForm->end('Reset Password');
 ?> 
