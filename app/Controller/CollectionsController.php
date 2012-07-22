@@ -47,6 +47,8 @@ class CollectionsController extends AppController {
     if($this->request->is('get')) {
       $this->request->data = $collection;
     } else {
+      $this->request->data['Collection']['modified'] = 
+        date('Y-m-h H:i:s');
       if($coll = $this->Collection->save($this->request->data)) {
         $this->alertSuccess('Success!',
                             sprintf('Collection <strong>%s</strong> ' . 
