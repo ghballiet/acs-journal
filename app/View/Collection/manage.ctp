@@ -9,7 +9,8 @@
 
 <table class="table table-condensed">
 <?
-echo $this->Html->tableHeaders(array('Title', 'Submissions', 'Accepting Submissions', 'Modified', ''));
+echo $this->Html->tableHeaders(array('Title', 'Submissions',
+                                     'Status', 'Modified', ''));
 
 foreach($collections as $collection) {
   $title = $collection['Collection']['title'];
@@ -20,6 +21,12 @@ foreach($collections as $collection) {
   ));
   $num_submissions = count($collection['Submission']);
   $accepting = $collection['Collection']['accepting_submissions'] == 1; 
+
+  if($accepting)
+    $status = '<span class="label label-success">Accepting Submissions</span>';    
+  else
+    $status = '<span class="label label-important">Closed</span>';
+
   $modified = $collection['Collection']['modified'];
   $modified = $this->Time->timeAgoInWords($modified);
   $edit = $this->Html->link('Edit',
@@ -35,7 +42,7 @@ foreach($collections as $collection) {
                               'This cannot be undone.');
 
   echo $this->Html->tableCells(
-    array($link, $num_submissions, $accepting, $modified, $edit . ' ' . $delete), 
+    array($link, $num_submissions, $status, $modified, $edit . ' ' . $delete), 
     array(), array(), true);
 }
 ?>
