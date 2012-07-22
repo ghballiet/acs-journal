@@ -36,9 +36,10 @@ class UsersController extends AppController {
       if($this->Auth->login()) {
         return $this->redirect(array('action'=>'dashboard'));
       } else {
-        $this->helpers = array('Html');
-        $forgot_link = $this->Html->link('reset your password', 
-                                         array('action'=>'forgot_password'));        
+        $view = new View($this);
+        $html = $view->loadHelper('Html');
+        $forgot_link = $html->link('reset your password', 
+                                   array('action'=>'forgot_password'));        
         $this->alertError('Login failed.',
                           sprintf('Something went wrong. If you have an account, ' .
                                   'you may wish to %s.', $forgot_link));        
