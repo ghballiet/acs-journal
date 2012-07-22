@@ -70,8 +70,9 @@ if(count($links) > 0) {
 <?
 // TODO: add user badges (using the profile helper)
 foreach($authors as $a) {
-  printf('<li><a href="mailto:%s">%s</a></li>', 
-         $a['email'], $a['name']);
+  //printf('<li><a href="mailto:%s">%s</a></li>', 
+  //       $a['email'], $a['name']);
+  printf('<li><a>%s</a></li>', $a['name']);
 }
 ?>
         <li class="divider"></li>
