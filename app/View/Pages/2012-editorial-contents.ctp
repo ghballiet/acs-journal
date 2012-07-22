@@ -21,7 +21,7 @@ $papers = array(
     'title' => 'The Cognitive Systems Paradigm',
     'author' => 'Pat Langley',
     'slug' => '',
-    'pages' => 10,
+    'pages' => 12,
   ),
   array(
     'title' => 'Beyond Idiot-Savant AI',
