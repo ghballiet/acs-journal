@@ -46,7 +46,7 @@ class CollectionsController extends AppController {
 
     if($this->request->is('get')) {
       $this->request->data = $collection;
-    } else if($this->request->is('post')) {
+    } else {
       if($coll = $this->Collection->save($this->request->data)) {
         $this->alertSuccess('Success!',
                             sprintf('Collection <strong>%s</strong> ' . 
