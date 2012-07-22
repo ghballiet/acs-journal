@@ -19,8 +19,8 @@ class UsersController extends AppController {
           'password' => $password,
           'email' => $user['User']['email']
         ));
-        if($this->Auth->login())
-          return $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+        
+        return $this->redirect(array('action'=>'login'));
       } else {
         $this->alertError('An error has occurred.',
           'There is something wrong with your submission. Please correct ' .
@@ -31,14 +31,17 @@ class UsersController extends AppController {
   
   public function login() {
     if($this->Auth->user() != null)
-      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+      $this->redirect(array('action'=>'dashboard'));
     if($this->request->is('post')) {
       if($this->Auth->login()) {
-        return $this->redirect(
-          array('controller'=>'users', 'action'=>'dashboard'));
+        return $this->redirect(array('action'=>'dashboard'));
       } else {
-        $this->alertError('An error has occurred.', 'Incorrect username ' .
-          'or password.');
+        $this->helpers = array('Html');
+        $forgot_link = $this->Html->link('reset your password', 
+                                         array('action'=>'forgot_password'));        
+        $this->alertError('Login failed.',
+                          sprintf('Something went wrong. If you have an account, ' .
+                                  'you may wish to %s.', $forgot_link));        
       }
     }
   }
@@ -57,6 +60,12 @@ class UsersController extends AppController {
 
   public function settings() {
     
+  }
+
+  public function forgot_password() {
+    if($this->request->is('post')) {
+      
+    }
   }
 }
 ?>
