@@ -14,8 +14,9 @@ echo $this->Html->tableHeaders(array('Title', 'Submissions', 'Accepting Submissi
 foreach($collections as $collection) {
   $title = $collection['Collection']['title'];
   $id = $collection['Collection']['id'];
+  $slug = $collection['Collection']['slug'];
   $link = $this->Html->link($title, array(
-    'controller'=>'collections', 'action'=>'view', $id
+    'controller'=>'collections', 'action'=>'view', $slug
   ));
   $num_submissions = count($collection['Submission']);
   $accepting = $collection['Collection']['accepting_submissions'] == 1; 
@@ -23,12 +24,12 @@ foreach($collections as $collection) {
   $modified = $this->Time->timeAgoInWords($modified);
   $edit = $this->Html->link('Edit',
                             array('controller'=>'collections', 
-                                  'action'=>'edit', $id),
+                                  'action'=>'edit', $slug),
                             array('class'=>'btn btn-mini'));
   $delete = $this->Html->link('Delete', 
                               array('controller'=>'collections',
                                     'action'=>'delete',
-                                    $collection['Collection']['id']),
+                                    $slug),
                               array('class'=>'btn btn-mini btn-danger'),
                               'Are you sure you want to delete this collection? ' . 
                               'This cannot be undone.');
