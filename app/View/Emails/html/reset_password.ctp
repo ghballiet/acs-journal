@@ -14,7 +14,7 @@
 <p>
   <center>
     <a href="<? echo $url; ?>" class="btn btn-primary btn-large">Reset Your
-    Password &rarr;</a>
+    Password</a>
   </center>
 </p>
 
