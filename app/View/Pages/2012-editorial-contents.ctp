@@ -3,6 +3,10 @@ $this->start('css');
 echo $this->Html->css('2012-toc');
 $this->end();
 
+$data = $this->User->Submission->findAllByCollectionId(2);
+
+pr($data);
+
 $papers = array(
   array(
     'title' => 'Advances in Cognitive Systems',
