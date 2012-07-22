@@ -8,7 +8,7 @@ echo $this->Html->tableHeaders(array(
   'Title', 'Author', 'Modified', ''
 ));
 
-foreach($submission as $submission) {
+foreach($submissions as $submission) {
   $title = $submission['Submission']['title'];
   $slug = $submission['Submission']['slug'];
   $author = $this->Profile->name($submission['User']);
