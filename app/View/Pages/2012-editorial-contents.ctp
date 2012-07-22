@@ -15,7 +15,7 @@ $papers = array(
     'title' => 'Advances in Cognitive Systems',
     'author' => 'Pat Langley', 
     'slug' => '',
-    'pages' => 1,
+    'pages' => 2,
   ),
   array(
     'title' => 'The Cognitive Systems Paradigm',
@@ -30,7 +30,7 @@ $papers = array(
     'pages' => 7,
   ),
   array(
-    'title' => 'The Right Way',
+    'title' => $winston['Submission']['title'],
     'author' => 'Patrick Henry Winston',
     'slug' => $winston['Submission']['slug'],
     'pages' => 12
@@ -48,9 +48,15 @@ $papers = array(
     'pages' => 12, 
   ),
   array(
-    'title' => 'When Do Robots Have to Think?',
+    'title' => $bello['Submission']['title'],
+    'author' => 'Paul Bello',
+    'slug' => $bello['Submission']['slug'],
+    'pages' => 14,
+  ),
+  array(
+    'title' => $sammut['Submission']['title'],
     'author' => 'Claude Sammut',
-    'slug' => '', 
+    'slug' => $sammut['Submission']['slug'], 
     'pages' => 10,
   ),
   array(
