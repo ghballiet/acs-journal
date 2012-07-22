@@ -13,7 +13,7 @@ class CollectionsController extends AppController {
   }
 
   public function add() {
-    if($this->request->is('post') &&
+    if($this->request->is('post') && 
        $collection = $this->Collection->save($this->request->data)) {
       $title = $collection['Collection']['title'];
 
@@ -32,8 +32,8 @@ class CollectionsController extends AppController {
                                               $title), true);
       $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
     } else if($this->request->is('post')) {
-      $this->alertError('Uh-oh.', 'Something went wrong. Please correct any errors below, and ' .
-                        'try again.');
+      $this->alertError('Uh-oh.', 'Something went wrong. Please correct ' . 
+                        'any errors below, and try again.');
     }
   }
 

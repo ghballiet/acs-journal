@@ -11,5 +11,21 @@ class Collection extends AppModel {
       'message' => 'This title is already in use.'
     )
   );
+
+  public function afterSave($created) {
+    if(!$created)
+      return true;
+
+    // create the slug
+    $id = $this->data['Collection']['id'];
+    $title = $this->data['Collection']['title'];
+    $title = strtolower(trim($title));
+    $slug = preg_replace('/\W+/', '', $title);
+    $slug = str_replace(' ', '-', $title);
+    $slug = sprintf('%d-%s', $id, $title);
+    $this->data['Collection']['slug'] = $slug;
+    
+    return $this->save($this->data);
+  }
 }
 ?>
