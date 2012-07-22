@@ -123,6 +123,7 @@ class UsersController extends AppController {
           'reset your password.';
 
         $this->alertSuccess('Success!', $msg, true);
+        $this->redirect(array('action'=>'login'));
       }
     }
   }
