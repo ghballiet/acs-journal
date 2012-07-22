@@ -43,10 +43,10 @@ class CollectionsController extends AppController {
     $this->set('collection', $collection);
 
     if($this->request->is('post') && 
-       $collection = $this->Collection->save($this->request->data)) {
+       $coll = $this->Collection->save($this->request->data)) {
       $this->alertSuccess('Success!', sprintf('Collection <strong>%s</strong> ' .
                                               'was successfully updated.',
-                                              $collection['Collection']['title']),
+                                              $coll['Collection']['title']),
                           true);      
       $this->redirect(array('action'=>'manage'));
     } else {
