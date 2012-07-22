@@ -5,7 +5,9 @@
 <?
 echo $this->BootstrapForm->create('Collection');
 echo $this->BootstrapForm->input('title', array('autofocus'=>true));
-echo $this->BootstrapForm->input('description');
-echo $this->BootstrapForm->input('accepting_submissions');
+echo $this->BootstrapForm->input('description', array(
+  'required'=>false));
+echo $this->BootstrapForm->input('accepting_submissions', array(
+  'required'=>false));
 echo $this->BootstrapForm->end('Create Collection');
 ?>
