@@ -39,24 +39,10 @@ class CollectionsController extends AppController {
 
   public function edit($slug = null) {
     $collection = $this->Collection->findBySlug($slug);
-    $this->Collection->id = $collection['Collection']['id'];
-    $collection = $this->Collection->read();
-    $this->request->data = $collection;
+    $id = $collection['Collection']['id'];
+    $this->Collection->id = $id;
+    $this->Collection->read();
     $this->set('collection', $collection);
-
-    if($this->request->is('post')) {
-      if($coll = $this->Collection->save($this->request->data)) {
-        $this->alertSuccess('Success!',
-                            sprintf('Collection <strong>%s</strong> ' .
-                                    'was successfully updated.',
-                                    $coll['Collection']['title']),
-                            true);      
-        $this->redirect(array('action'=>'manage'));
-      } else {
-        $this->alertError('Uh-oh.', 'Something went wrong while updating your ' . 
-                          'collection. Please try again.');      
-      }
-    }
   }
 
   public function delete($slug = null) {
