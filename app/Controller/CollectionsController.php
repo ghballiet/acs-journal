@@ -40,6 +40,7 @@ class CollectionsController extends AppController {
   public function edit($slug = null) {
     $collection = $this->Collection->findBySlug($slug);
     $this->request->data = $collection;
+    $this->set('collection', $collection);
   }
 
   public function delete($slug = null) {
