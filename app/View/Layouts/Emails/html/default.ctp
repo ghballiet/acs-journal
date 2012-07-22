@@ -2,7 +2,8 @@
 <html>
 <head>
 <?
-echo $this->Html->url('/css/email.css', true);
+$css = $this->Html->url('/css/email.css', true);
+printf('<link type="text/css" rel="stylesheet" href="%s" />', $css);
 echo $this->fetch('css');
 ?>
 </head>
