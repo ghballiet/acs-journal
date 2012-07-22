@@ -37,6 +37,9 @@ class SubmissionsController extends AppController {
     $this->set('collections', $collections);
 
     if($this->request->is('post')) {
+      pr($this->request->data);
+      die('');
+
       $data = $this->request->data;
       $submission = $data['Submission'];
       $upload = $submission['Upload'];

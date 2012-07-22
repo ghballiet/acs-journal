@@ -21,10 +21,12 @@ echo $this->BootstrapForm->create('Submission', array('type'=>'file'));
      <h3>Submission Information</h3>
 <?
 echo $this->BootstrapForm->input('collection_id', 
-                                 array('label'=>'Venue', 'autofocus'=>true));
+                                 array('label'=>'Venue', 'autofocus'=>true,
+                                       'icon'=>'book'));
 echo $this->BootstrapForm->input('title', array('icon'=>'pencil'));
 echo $this->BootstrapForm->input('abstract', array('icon'=>'align-justify'));
-echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag'));
+echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag',
+                                                  'required'=>false));
 
 // TODO: add keywords
 
