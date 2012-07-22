@@ -27,7 +27,7 @@ $papers = array(
     'title' => 'Beyond Idiot-Savant AI',
     'author' => 'Scott E. Fahlman',
     'slug' => '',
-    'pages' => 7,
+    'pages' => 8,
   ),
   array(
     'title' => $winston['Submission']['title'],
