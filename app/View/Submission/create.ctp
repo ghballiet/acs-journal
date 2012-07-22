@@ -31,6 +31,7 @@ echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag',
 // TODO: add keywords
 
 echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
+echo $this->BootstrapForm->input('pages', array('icon'=>'paper-clip'));
 ?>
     </div>
   </div>

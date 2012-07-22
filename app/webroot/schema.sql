@@ -70,6 +70,7 @@ create table if not exists collections (
   title varchar(500),
   description longtext, 
   accepting_submissions boolean,
+  slug varchar(500),
   modified timestamp,
   created timestamp
 );
