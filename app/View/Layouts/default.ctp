@@ -80,7 +80,7 @@ if(!isset($user) || $user == null) {
   $settings = array(
     'text' => 'Account Settings',
     'link' => array('controller'=>'users', 'action'=>'settings'),
-    'icon' => 'cogs'
+    'icon' => 'cog'
   );
   $logout = array(
     'text' => 'Log Out', 
