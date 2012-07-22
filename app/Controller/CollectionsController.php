@@ -37,14 +37,14 @@ class CollectionsController extends AppController {
     }
   }
 
-  public function edit($id = null) {
-    $this->Collection->id = $id;
-    $collection = $this->Collection->read();
+  public function edit($slug = null) {
+    $collection = $this->Collection->findBySlug($slug);
+    $this->request->data = $collection;
   }
 
-  public function delete($id = null) {
-    $this->Collection->id = $id;
-    $collection = $this->Collection->read();
+  public function delete($slug = null) {
+    $collection = $this->Collection->findBySlug($slug);
+    $id = $collection['Collection']['id'];
     $this->Collection->delete($id);
     $title = $collection['Collection']['title'];
     $this->alertSuccess('Success!', sprintf('Succesfully deleted <strong>%s</strong>.',
@@ -52,12 +52,12 @@ class CollectionsController extends AppController {
     $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
   }
 
-  public function view($id = null) {
-    if($id == null)
+  public function view($slug = null) {
+    if($slug == null)
       $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
     
-    $this->Collection->id = $id;
-    $collection = $this->Collection->findById($id);
+    $collection = $this->Collection->findBySlug($slug);
+    $id = $collection['Collection']['id'];
     $this->set('collection', $collection);
 
     $submissions = $this->Collection->Submission->findAllByCollectionId($id);
