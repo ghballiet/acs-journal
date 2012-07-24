@@ -21,6 +21,14 @@ class SubmissionsController extends AppController {
     }
   }
 
+  public function retract($slug) {
+    $submission = $this->Submission->findBySlug($slug);
+    $this->set('submission', $submission);
+    $submission['Submission']['retracted'] = true;
+    $this->Submission->save($submission);
+    $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+  }
+
   public function paper($slug) {
     $this->autoRender = false;
     $slug = str_replace('.pdf', '', $slug);

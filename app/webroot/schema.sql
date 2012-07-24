@@ -28,6 +28,7 @@ create table if not exists submissions (
   locked boolean default false,
   slug varchar(500),
   pages integer,
+  retracted boolean default false,
   category_id integer,
   collection_id integer, 
   user_id integer,
