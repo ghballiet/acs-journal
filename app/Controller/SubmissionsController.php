@@ -4,6 +4,7 @@ class SubmissionsController extends AppController {
 
   public function beforeFilter() {
     $this->set('user', $this->Auth->user());
+    $this->Auth->allow('view', 'paper');
   }
 
   public function view($slug) {
