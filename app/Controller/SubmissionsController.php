@@ -40,7 +40,7 @@ class SubmissionsController extends AppController {
   }
 
   public function create() {
-    $options = array('condition'=>array('Collection.accepting_submissions' => true));
+    $options = array('conditions'=>array('Collection.accepting_submissions' => 1));
     $collections = $this->Submission->Collection->find('list', $options);
     $this->set('collections', $collections);
 
