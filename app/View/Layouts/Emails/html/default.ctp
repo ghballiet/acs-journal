@@ -4,8 +4,12 @@
 <?
 // TODO: this needs to read the file contents, and dump it here
 // between a couple of style tags.
-$css = $this->Html->url('/css/email.css', true);
-printf('<link type="text/css" rel="stylesheet" href="%s" />', $css);
+$url = $this->Html->url('/css/email.css', true);
+$css = file_get_contents($css);
+echo "<style type=\"text/css\">\n";
+echo $css;
+echo "</style>\n";
+
 echo $this->fetch('css');
 ?>
 </head>
