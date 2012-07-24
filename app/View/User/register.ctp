@@ -244,37 +244,41 @@ $countries = array(
 ?>
 <div class="page-header">
   <h1>Create an Account</h1>
-</div>
+  </div>
 <?
-echo $this->BootstrapForm->create('User');
+  echo $this->BootstrapForm->create('User');
 ?>
 <fieldset>
-  <?
-  echo $this->BootstrapForm->input('name', array('icon'=>'user', 
-                                                 'autofocus'=>'true',
-                                                 'label'=>'First Name'));
+<?
+echo $this->BootstrapForm->input('name', array('icon'=>'user', 
+                                               'autofocus'=>'true',
+                                               'label'=>'First Name'));
 echo $this->BootstrapForm->input('surname',array('icon'=>'user',
                                                  'label'=>'Last Name'));
-  echo $this->BootstrapForm->input('email', array('icon'=>'envelope',
-                                                  'type'=>'email'));
-  echo $this->BootstrapForm->input('confirm_email', array('icon'=>'envelope',
-    'type'=>'email'));
-  echo $this->BootstrapForm->input('password', array('icon'=>'asterisk'));
-  echo $this->BootstrapForm->input('confirm_password', array('icon'=>'asterisk',
-    'type'=>'password'));
-  echo $this->BootstrapForm->input('address', array('icon'=>'map-marker'));
-  echo $this->BootstrapForm->input('adddress2', array('icon'=>'map-marker',
-                                                      'label'=>'Address 2 (optional)',
-                                                      'required' => false));
-  echo $this->BootstrapForm->input('city', array('icon'=>'map-marker'));
-  echo $this->BootstrapForm->input('state', array('icon'=>'map-marker',
-    'label'=>'State/Province'));
-  echo $this->BootstrapForm->input('country', array('icon'=>'map-marker',
-    'options'=>$countries, 'default'=>'US'));
-  echo $this->BootstrapForm->input('postal', array('icon'=>'map-marker'));
-  echo $this->BootstrapForm->input('phone', array('icon'=>'phone',
-    'type'=>'tel'));
+echo $this->BootstrapForm->input('email', array('icon'=>'envelope',
+                                                'type'=>'email'));
+echo $this->BootstrapForm->input('confirm_email', array('icon'=>'envelope',
+                                                        'type'=>'email'));
+echo $this->BootstrapForm->input('password', array('icon'=>'asterisk'));
+echo $this->BootstrapForm->input('confirm_password', array('icon'=>'asterisk',
+                                                           'type'=>'password'));
+echo $this->BootstrapForm->input('address', array('icon'=>'map-marker'));
+echo $this->BootstrapForm->input('adddress2', array('icon'=>'map-marker',
+                                                    'label'=>'Address 2 (optional)',
+                                                    'required' => false));
+echo $this->BootstrapForm->input('city', array('icon'=>'map-marker'));
+echo $this->BootstrapForm->input('state', array('icon'=>'map-marker',
+                                                'label'=>'State/Province',
+                                                'required'=>false));
+echo $this->BootstrapForm->input('country', array('icon'=>'map-marker',
+                                                  'options'=>$countries,
+                                                  'default'=>'US'));
+echo $this->BootstrapForm->input('postal', array('icon'=>'map-marker', 
+                                                 'required'=>false));
+echo $this->BootstrapForm->input('phone', array('icon'=>'phone',
+                                                'type'=>'tel',
+                                                'required'=>false));
   
-  echo $this->BootstrapForm->end('Register');
-  ?>
+echo $this->BootstrapForm->end('Register');
+?>
 </fieldset>

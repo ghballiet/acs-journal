@@ -5,7 +5,7 @@
 // TODO: this needs to read the file contents, and dump it here
 // between a couple of style tags.
 $url = $this->Html->url('/css/email.css', true);
-$css = file_get_contents($css);
+$css = file_get_contents($url);
 echo "<style type=\"text/css\">\n";
 echo $css;
 echo "</style>\n";
