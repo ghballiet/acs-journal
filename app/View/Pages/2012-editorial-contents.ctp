@@ -89,6 +89,9 @@ foreach($papers as $i=>$paper) {
   ), array(), array(), true);
 
   $page += $pages;
+  
+  if($page % 2 == 0)
+    $page++;
 }
 ?>
 </table>
