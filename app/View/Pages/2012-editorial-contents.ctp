@@ -4,10 +4,6 @@ echo $this->Html->css('2012-toc');
 $this->end();
 
 $sub = ClassRegistry::init('Submission');
-$winston = $sub->findByTitle('The Right Way');
-$sammut = $sub->findByTitle('When Do Robots Have to Think?');
-$bello = $sub->findByTitle('Cognitive Foundations for a Computational ' . 
-                           'Theory of Mindreading');
 
 
 $papers = array(
@@ -18,52 +14,28 @@ $papers = array(
     'pages' => 2,
   ),
   array(
-    'title' => 'The Cognitive Systems Paradigm',
-    'author' => 'Pat Langley',
-    'slug' => '',
-    'pages' => 12,
+    'id' => 11,
   ),
   array(
-    'title' => 'Beyond Idiot-Savant AI',
-    'author' => 'Scott E. Fahlman',
-    'slug' => '',
-    'pages' => 8,
+    'id' => 8,
   ),
   array(
-    'title' => $winston['Submission']['title'],
-    'author' => 'Patrick Henry Winston',
-    'slug' => $winston['Submission']['slug'],
-    'pages' => $winston['Submission']['pages']
+    'id' => 13,
   ),
   array(
-    'title' => 'Human-Level Artificial Intelligence Must be an Extraordinary Science',
-    'author' => 'Nicholas L. Cassimatis',
-    'slug' => '',
-    'pages' => 10,
+    'id' => 7,
   ),
   array(
-    'title' => 'How Minds Will Be Built',
-    'author' => 'Kenneth D. Forbus',
-    'slug' => '',
-    'pages' => 12, 
+    'id' => 9,
   ),
   array(
-    'title' => $bello['Submission']['title'],
-    'author' => 'Paul Bello',
-    'slug' => $bello['Submission']['slug'],
-    'pages' => $bello['Submission']['pages']
+    'id' => 6,
   ),
   array(
-    'title' => $sammut['Submission']['title'],
-    'author' => 'Claude Sammut',
-    'slug' => $sammut['Submission']['slug'], 
-    'pages' => $sammut['Submission']['pages']
+    'id' => 12,
   ),
   array(
-    'title' => 'Practical Evaluation of Integrated Cognitive Systems', 
-    'author' => 'Randolph M. Jones, Robert E. Wray, and Michael van Lent',
-    'slug' => '',
-    'pages' => 0
+    'id' => 10, 
   )
 );
 ?>
@@ -83,28 +55,40 @@ $page = 1;
 
 foreach($papers as $i=>$paper) {
   $buttons = '';
+  $title = '';
+  $author = '';
+  $pages = 0;
 
   // get pdf and abstract links
-  if(empty($paper['slug'])) {
+  if(!isset($paper['id'])) {
     $buttons = '<a href="#" class="btn btn-mini btn-danger disabled">PDF</a>';
     $buttons .= '&nbsp;';
     $buttons .= '<a href="#" class="btn btn-mini disabled">Abstract</a>';
+    $title = $paper['title'];
+    $author = $paper['author'];
+    $pages = $paper['pages'];
   } else {
+    $item = $sub->findById($paper['id']);
+    $title = $item['Submission']['title'];
+    $author = sprintf('%s %s', $item['User']['name'], $item['User']['surname']);
+    $pages = $item['Submission']['pages'];
+    $slug = $item['Submission']['slug'];
+    
     $pdf = $this->Html->link('PDF', array(
       'controller'=>'submissions', 'action'=>'paper', 'ext'=>'pdf',
-      $paper['slug']), array('class'=>'btn btn-mini btn-danger'));
+      $slug), array('class'=>'btn btn-mini btn-danger'));
     $abstract = $this->Html->link('Abstract', array(
       'controller'=>'submissions', 'action'=>'view',
-      $paper['slug']), array('class'=>'btn btn-mini'));
+      $slug), array('class'=>'btn btn-mini'));
 
     $buttons = sprintf('%s&nbsp;%s', $pdf, $abstract);      
   }
 
   echo $this->Html->tableCells(array(
-    $paper['title'], $paper['author'], $page, $buttons
+    $title, $author, $page, $buttons
   ), array(), array(), true);
 
-  $page += $paper['pages'];
+  $page += $pages;
 }
 ?>
 </table>
