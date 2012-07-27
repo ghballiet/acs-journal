@@ -8,10 +8,7 @@ $sub = ClassRegistry::init('Submission');
 
 $papers = array(
   array(
-    'title' => 'Advances in Cognitive Systems',
-    'author' => 'Pat Langley', 
-    'slug' => '',
-    'pages' => 2,
+    'id' => 14,
   ),
   array(
     'id' => 11,
