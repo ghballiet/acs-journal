@@ -59,11 +59,9 @@ foreach($papers as $i=>$paper) {
   $author = '';
   $pages = 0;
 
-  pr($i);
-
   if($i == 0)
     echo $this->Html->tableHeaders(array('Editorial', 'Authors', 'Page', ''));
-  else if ($i == 0)
+  else if ($i == 1)
     echo $this->Html->tableHeaders(array('Invited Essays', '', '', ''));
 
   // get pdf and abstract links
