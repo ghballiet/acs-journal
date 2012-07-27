@@ -50,7 +50,10 @@ $papers = array(
 
 <table class="table">
 <?
-echo $this->Html->tableHeaders(array('Title', 'Authors', 'Page', ''));
+echo $this->Html->tableHeaders(array('Editorial', 'Authors', 'Page', ''));
+
+
+echo $this->Html->tableHeaders(array('Invited Essays', 'Authors', 'Page', ''));
 
 $page = 1;
 
