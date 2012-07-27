@@ -59,6 +59,8 @@ foreach($papers as $i=>$paper) {
   $author = '';
   $pages = 0;
 
+  pr($i);
+
   if($i == 0)
     echo $this->Html->tableHeaders(array('Editorial', 'Authors', 'Page', ''));
   else if ($i == 0)
