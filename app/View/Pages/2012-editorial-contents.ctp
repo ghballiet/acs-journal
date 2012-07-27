@@ -50,10 +50,6 @@ $papers = array(
 
 <table class="table">
 <?
-echo $this->Html->tableHeaders(array('Editorial', 'Authors', 'Page', ''));
-
-
-echo $this->Html->tableHeaders(array('Invited Essays', 'Authors', 'Page', ''));
 
 $page = 1;
 
@@ -62,6 +58,11 @@ foreach($papers as $i=>$paper) {
   $title = '';
   $author = '';
   $pages = 0;
+
+  if($i == 0)
+    echo $this->Html->tableHeaders(array('Editorial', 'Authors', 'Page', ''));
+  else if ($i == 0)
+    echo $this->Html->tableHeaders(array('Invited Essays', '', '', ''));
 
   // get pdf and abstract links
   if(!isset($paper['id'])) {
