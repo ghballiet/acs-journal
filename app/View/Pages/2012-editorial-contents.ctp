@@ -57,7 +57,7 @@ foreach($papers as $i=>$paper) {
   $pages = 0;
 
   if($i == 0)
-    echo $this->Html->tableHeaders(array('Editorial', 'Authors', 'Page', ''));
+    echo $this->Html->tableHeaders(array('Editorial', '', '', ''));
   else if ($i == 1)
     echo $this->Html->tableHeaders(array('Invited Essays', '', '', ''));
 
