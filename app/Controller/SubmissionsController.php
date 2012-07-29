@@ -129,7 +129,12 @@ class SubmissionsController extends AppController {
       }
       
       // success! send the email
-      $this->Submission->createEmail($submission['Submission']['id']);
+      $view = new View($this);
+      $html = $view->loadHelper('Html');
+      $url = $html->url(array(
+        'action'=>'view', $submission['Submission']['slug']), true);      
+
+      $this->Submission->createEmail($submission['Submission']['id'], $url);
 
       $this->alertSuccess(
         'Success!', sprintf('<strong>%s</strong> was successfully submitted.',

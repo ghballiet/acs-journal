@@ -19,8 +19,9 @@ class Submission extends AppModel {
 
   public $hasMany = array('Keyword', 'Coauthor');
 
-  public function createEmail($id) {
+  public function createEmail($id, $url) {
     $submission = $this->findById($id);
+    $submission['url'] = $url;
     $email = new CakeEmail();
     $email->template('submission', 'default');
     $email->emailFormat('html');
