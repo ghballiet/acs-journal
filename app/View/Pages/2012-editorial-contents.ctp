@@ -42,7 +42,6 @@ $papers = array(
     <div class="volume">Volume 1, July 2012 to present</div>
   </div>
   <h2>Table of Contents</h2>
-  <h3>Invited Essays</h3>
 </div>
 
 <table class="table">
