@@ -10,7 +10,7 @@
     <!-- Le styles -->
     <? echo $this->Html->css(array('base', 'home')); ?>
     <style type="text/css">
-    body { padding-top: 60px; }
+    body { padding-top: 40px; }
     </style>
     <? echo $this->Html->css(array('http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css')); ?>
     <? echo $this->fetch('css'); ?>
@@ -98,7 +98,7 @@ echo $this->Bootstrap->dropdown($title, $links);
       </div>
     </div>
 
-    <div class="container">
+    <div class="container main">
       <? echo $this->Session->flash(); ?>
       <? echo $this->fetch('content'); ?>
 
