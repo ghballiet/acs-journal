@@ -784,8 +784,8 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .show{display:block;}
 .invisible{visibility:hidden;}
 a.brand img{height:16px;}
-body{background-image:url('/journal/img/bright_squares.png');}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5){body{background-image:url('/journal/img/bright_squares_@2X.png');background-size:50%;}}.main{padding:20px;background:#ffffff;margin-bottom:20px;-webkit-box-shadow:0px 3px 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0px 3px 5px rgba(0, 0, 0, 0.4);box-shadow:0px 3px 5px rgba(0, 0, 0, 0.4);}
+body{background-image:url('/img/bright_squares.png');}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5){body{background-image:url('/img/bright_squares_@2X.png');background-size:50%;}}.main{padding:20px;background:#ffffff;margin-bottom:20px;-webkit-box-shadow:0px 3px 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0px 3px 5px rgba(0, 0, 0, 0.4);box-shadow:0px 3px 5px rgba(0, 0, 0, 0.4);}
 .navbar-fixed-top img.gravatar{max-height:28px;margin-top:-5px;margin-bottom:-5px;margin-right:5px;}
 footer{padding-top:20px;margin-top:60px;text-align:center;font-size:.9em;color:#999999;border-top:solid 1px #eeeeee;}footer p{margin:0px;line-height:1em;}
 input,textarea,select,.uneditable-input{width:440px;}
