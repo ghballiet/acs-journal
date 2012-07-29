@@ -3,6 +3,7 @@ class CollectionsController extends AppController {
   public $name = 'Collection';
   
   public function beforeFilter() {
+    $this->Auth->allow(array('contents'));
     $this->set('user', $this->Auth->user());
   }
 
