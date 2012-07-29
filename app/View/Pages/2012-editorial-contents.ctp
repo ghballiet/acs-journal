@@ -75,6 +75,13 @@ foreach($papers as $i=>$paper) {
     $author = sprintf('%s %s', $item['User']['name'], $item['User']['surname']);
     $pages = $item['Submission']['pages'];
     $slug = $item['Submission']['slug'];
+
+    $authors = array($author);
+
+    foreach($item['Coauthor'] as $coauthor)
+      $authors[] = $coauthor['name'];
+
+    $author_str = implode(', ', $authors);
     
     $pdf = $this->Html->link('PDF', array(
       'controller'=>'submissions', 'action'=>'paper', 'ext'=>'pdf',
@@ -87,7 +94,7 @@ foreach($papers as $i=>$paper) {
   }
 
   echo $this->Html->tableCells(array(
-    $title, $author, $page, $buttons
+    $title, $author_str, $page, $buttons
   ), array(), array(), true);
 
   $page += $pages;
