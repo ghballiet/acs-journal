@@ -138,7 +138,7 @@ class SubmissionsController extends AppController {
 
       $this->alertSuccess(
         'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
-                            $submission['Submission']['title']));
+                            $submission['Submission']['title']), true);
       $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
