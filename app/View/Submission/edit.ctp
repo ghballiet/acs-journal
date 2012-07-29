@@ -20,7 +20,8 @@ echo $this->Html->tag('h3', 'Submission Information');
 echo $this->BootstrapForm->input('title', array('icon'=>'pencil'));
 echo $this->BootstrapForm->input('abstract', array('icon'=>'pencil'));
 echo $this->BootstrapForm->input('Keyword', array('value'=>$keywords, 
-                                                  'icon'=>'tag'));
+                                                  'icon'=>'tag',
+                                                  'required'=>false));
 echo $this->Html->tag('hr');
 
 echo $this->Html->tag('h3', 'Authors');
