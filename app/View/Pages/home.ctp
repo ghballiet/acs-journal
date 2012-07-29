@@ -14,5 +14,3 @@
   months and publishes accepted papers on the journal Web site
   immediately upon receipt of final versions. Articles are distributed
   freely over the internet by the Cognitive Systems Foundation.</p>
-<p><? echo $this->Html->link('Learn More', '/instructions',
-  array('class'=>'btn btn-primary btn-large')); ?></p>
