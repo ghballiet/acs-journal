@@ -784,5 +784,6 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .show{display:block;}
 .invisible{visibility:hidden;}
 a.brand img{height:16px;}
+body{background-image:url('/journal/img/extra_clean_paper.png');}
 .navbar-fixed-top img.gravatar{max-height:28px;margin-top:-5px;margin-bottom:-5px;margin-right:5px;}
 footer{padding-top:18px;}
