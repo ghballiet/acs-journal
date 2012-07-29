@@ -99,7 +99,7 @@ class CollectionsController extends AppController {
       'Submission.id'
     );
     
-    $submissions = $this->Collection->Submission->findAllByCollectionId($id, array(), $order);
+    $submissions = $this->Collection->Submission->findAllByCollectionIdAndRetracted($id, 0, array(), $order);
     $this->set('submissions', $submissions);
   }
 }
