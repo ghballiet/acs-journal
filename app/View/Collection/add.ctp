@@ -1,3 +1,9 @@
+<?
+$this->start('script');
+echo $this->Html->script('add_collection');
+$this->end();
+?>
+
 <div class="page-header">
   <h1>Create New Collection</h1>
 </div>
