@@ -69,6 +69,7 @@ create table if not exists coauthors (
 create table if not exists collections (
   id integer primary key auto_increment,
   title varchar(500),
+  subtitle varchar(500),
   description longtext, 
   accepting_submissions boolean,
   slug varchar(500),
