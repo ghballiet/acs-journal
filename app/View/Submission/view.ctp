@@ -75,11 +75,15 @@ foreach($authors as $a) {
   printf('<li><a>%s</a></li>', $a['name']);
 }
 ?>
+<?
+if(!empty($keywords)) {
+?>
         <li class="divider"></li>
         <li class="nav-header">Keywords</li>
 <?
-foreach($keywords as $keyword) {
-  printf('<li><a href="#">%s</a></li>', $keyword['value']);
+  foreach($keywords as $keyword) {
+    printf('<li><a href="#">%s</a></li>', $keyword['value']);
+  }
 }
 ?>
       </ul>

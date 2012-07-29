@@ -41,7 +41,13 @@ class SubmissionsController extends AppController {
   }
 
   public function create() {
-    $options = array('conditions'=>array('Collection.accepting_submissions' => 1));
+    $options = array(
+      'conditions'=>array('Collection.accepting_submissions' => 1),
+      'fields' => array('Collection.id',
+                        'Collection.subtitle', 'Collection.title'),
+      'order' => array('Collection.title', 'Collection.subtitle',
+                       'Collection.volume')
+    );
     $collections = $this->Submission->Collection->find('list', $options);
     $this->set('collections', $collections);
 
@@ -84,6 +90,7 @@ class SubmissionsController extends AppController {
       $submission['current_version'] = $upload['Paper']['id'];
       $submission['created'] = $now;
       $submission['modified'] = $now;
+      $submission['order'] = $this->Submission->nextOrder($submission['collection_id']);
       $submission = array('Submission' => $submission);
 
       // save the submission
@@ -91,15 +98,15 @@ class SubmissionsController extends AppController {
       $submission = $this->Submission->save($submission);
 
       // now, create the slug and save
-      $title = $submission['Submission']['title'];
-      $id = $submission['Submission']['id'];
-      $title = strtolower(trim($title));
-      $slug = str_replace(' ', '-', $title);
-      $slug = preg_replace('/\W+/', '', $slug);
-      $slug = str_replace('_', '-', $slug);
-      $slug = sprintf('%d-%s', $id, $slug);
-      $submission['Submission']['slug'] = $slug;
-      $this->Submission->save($submission);
+      /* $title = $submission['Submission']['title']; */
+      /* $id = $submission['Submission']['id']; */
+      /* $title = strtolower(trim($title)); */
+      /* $slug = str_replace(' ', '-', $title); */
+      /* $slug = preg_replace('/\W+/', '', $slug); */
+      /* $slug = str_replace('_', '-', $slug); */
+      /* $slug = sprintf('%d-%s', $id, $slug); */
+      /* $submission['Submission']['slug'] = $slug; */
+      /* $this->Submission->save($submission); */
 
       // save the keywords
       $words = explode(',', $keywords);

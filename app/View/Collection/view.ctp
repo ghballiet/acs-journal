@@ -1,17 +1,23 @@
 <div class="page-header">
-  <h1><? echo $collection['Collection']['title']; ?></h1>
+  <h1>
+<? echo $collection['Collection']['title']; ?>
+    <small>
+<? echo $collection['Collection']['subtitle']; ?>
+    </small>
+  </h1>
 </div>
 
 <table class="table condensed">
 <?
 echo $this->Html->tableHeaders(array(
-  'Title', 'Author', 'Modified', ''
+  'Order', 'Title', 'Author', 'Modified', ''
 ));
 
 foreach($submissions as $submission) {
   $title = $submission['Submission']['title'];
   $slug = $submission['Submission']['slug'];
   $author = $this->Profile->name($submission['User']);
+  $order = $submission['Submission']['order'];
   $modified = $submission['Submission']['modified'];
   $modified = $this->Time->timeAgoInWords($modified);
   $pdf = $this->Html->link('PDF', array(
@@ -29,7 +35,7 @@ foreach($submissions as $submission) {
   $buttons = array($pdf, $abstract);
   $buttons = implode('&nbsp;', $buttons);
 
-  echo $this->Html->tableCells(array($title, $author, $modified, $buttons));
+  echo $this->Html->tableCells(array($order, $title, $author, $modified, $buttons));
 }
 ?>
 </table>

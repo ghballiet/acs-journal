@@ -25,12 +25,20 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
+Router::parseExtensions('pdf');
+
+
 Router::connect('/', array('controller'=>'pages', 'action'=>'display', 'home'));
 Router::connect('/login', array('controller'=>'users', 'action'=>'login'));
 Router::connect('/logout', array('controller'=>'users', 'action'=>'logout'));
 Router::connect('/submit', array('controller'=>'users', 'action'=>'submit'));
 Router::connect('/register', array('controller'=>'users', 'action'=>'register'));
 Router::connect('/dashboard', array('controller'=>'users', 'action'=>'dashboard'));
+Router::connect('/journal/volume-1', array('controller'=>'pages', 'action'=>'display', '2012-editorial-contents'));
+Router::connect('/conference/2012', array('controller'=>'pages', 'action'=>'display', '2012'));
+Router::connect('/paper/*', array('controller'=>'submissions', 'action'=>'view'));
+Router::connect('/pdf/*', array('controller'=>'submissions', 'action'=>'paper'));
+Router::connect('/journal/*', array('controller'=>'collections', 'action'=>'contents'));
 
 // catchall for controller/action
 Router::connect('/:controller/:action/*');

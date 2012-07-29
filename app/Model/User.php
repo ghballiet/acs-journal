@@ -62,15 +62,33 @@ class User extends AppModel {
   }
 
   // email functions
+  public function adminNewUserEmail($data) {
+    $admins = $this->findAllByIsAdmin(1);
+    foreach($admins as $admin) {
+      $data['admin'] = $admin['User'];
+      $email = new CakeEmail();
+      $email->template('new_user', 'default');
+      $email->emailFormat('html');
+      $email->to($admin['User']['email']);
+      $email->subject(sprintf('New User: %s', $data['user']['email']));
+      $email->from('acs@cogsys.org');
+      $email->viewVars($data);
+      $email->send();
+    }
+  }
+
+
   public function sendWelcomeEmail($data) {
     $email = new CakeEmail();
     $email->template('welcome', 'default');
     $email->emailFormat('html');
     $email->to($data['user']['email']);
     $email->subject('Welcome!');
-    $email->from('donotreply@cogsys.org');
+    $email->from('acs@cogsys.org');
     $email->viewVars($data);
     $email->send();
+
+    $this->adminNewUserEmail($data);
   }
 
   public function resetPasswordEmail($data) {

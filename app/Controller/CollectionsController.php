@@ -81,7 +81,24 @@ class CollectionsController extends AppController {
     $id = $collection['Collection']['id'];
     $this->set('collection', $collection);
 
-    $submissions = $this->Collection->Submission->findAllByCollectionId($id);
+    $submissions = $this->Collection->Submission->findAllByCollectionId($id, array(), array('Submission.order'));
+    $this->set('submissions', $submissions);
+  }
+
+  public function contents($slug = null) {
+    if($slug == null)
+      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+
+    $collection = $this->Collection->findBySlug($slug);
+    $id = $collection['Collection']['id'];
+    $this->set('collection', $collection);
+
+    $order = array(
+      'Submission.order',
+      'Submission.id'
+    );
+    
+    $submissions = $this->Collection->Submission->findAllByCollectionId($id, array(), $order);
     $this->set('submissions', $submissions);
   }
 }

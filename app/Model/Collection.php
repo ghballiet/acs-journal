@@ -5,10 +5,10 @@ class Collection extends AppModel {
 
   // validation rules
   public $validate = array(
-    'title' => array(
+    'slug' => array(
       'rule' => 'isUnique',
       'required' => 'true',
-      'message' => 'This title is already in use.'
+      'message' => 'This URL slug is already in use.'
     )
   );
 

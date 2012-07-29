@@ -31,5 +31,33 @@ class Submission extends AppModel {
     $email->viewVars($submission);
     $email->send();
   }
+
+
+  public function nextOrder($id) {
+    $options = array(
+      'fields' => array('MAX(Submission.order) AS `order`'),
+      'group' => 'Submission.collection_id',
+      'conditions' => array('Submission.collection_id'=>$id)
+    );
+
+    $data = $this->find('first', $options);
+    if(empty($data))
+      return 1;
+    else
+      return intval($data[0]['order']) + 1;
+  }
+
+  public function afterSave($created) {
+    $coll_id = $this->data['Submission']['collection_id'];
+    $coll = $this->Collection->findById($coll_id);
+    $order = $this->data['Submission']['order'];
+
+    // update the slug
+    $volume = $coll['Collection']['volume'];
+    $slug = sprintf('paper-%d-%d', $volume, $order);
+    $this->data['Submission']['slug'] = $slug;
+
+    return $this->save($this->data);
+  }
 }
 ?>
