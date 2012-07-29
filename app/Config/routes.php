@@ -34,6 +34,7 @@ Router::connect('/logout', array('controller'=>'users', 'action'=>'logout'));
 Router::connect('/submit', array('controller'=>'users', 'action'=>'submit'));
 Router::connect('/register', array('controller'=>'users', 'action'=>'register'));
 Router::connect('/dashboard', array('controller'=>'users', 'action'=>'dashboard'));
+Router::connect('/submit', array('controller'=>'submissions', 'action'=>'create'));
 Router::connect('/journal/volume-1', array('controller'=>'pages', 'action'=>'display', '2012-editorial-contents'));
 Router::connect('/conference/2012', array('controller'=>'pages', 'action'=>'display', '2012'));
 Router::connect('/paper/*', array('controller'=>'submissions', 'action'=>'view'));

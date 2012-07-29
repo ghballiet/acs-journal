@@ -2,6 +2,12 @@
 $this->start('css');
 echo $this->Html->css('acs_2012');
 $this->end();
+
+// build the urls and links
+$instructions = $this->Html->url('/instructions', true);
+$submit = $this->Html->url(
+  array('controller'=>'submissions','action'=>'create'), true);
+$review_form = $this->Html->url('/review-form', true);
 ?>
 <!-- <div class="row">
   <div class="span3">
@@ -74,8 +80,9 @@ and related topics.
 We also invite researchers to submit papers for presentation at the
 conference. Submissions should follow the instructions provided at</p>
 
-<h4><a href="http://www.cogsys.org/conference/instructions/">
-http://www.cogsys.org/conference/instructions/</a> ,</h4>
+<h4>
+<? printf('<a href="%s">%s</a> ,', $instructions, $instructions); ?>
+</h4>
 
 <p>which gives detailed information about format and provides Latex and
 Word templates. Papers should be typeset in single column and should
@@ -83,8 +90,9 @@ be no more than sixteen (16) pages in length. Any papers that diverge
 from this format or that exceed this length will be returned without
 review. All papers must be submitted electronically at</p>
 
-<h4><a href="http://www.cogsys.org/acs/2012/submit/">
-http://www.cogsys.org/acs/2012/submit/</a></h4>
+<h4>
+<? printf('<a href="%s">%s</a>', $submit, $submit); ?>
+</h4>
 
 <p>In addition, each submission should state explicitly the problem or
 capability it addresses, describe its response to this problem, make
@@ -116,7 +124,7 @@ evaluate the paper for its contribution to understanding cognitive
 systems, clarity of claims about this contribution, convincing
 evidence in support of those claims, and cogent presentation of its
 ideas to readers. We encourage authors to examine the <a
-href="http://cogsys.org/acs/2011/review-form/">review form</a> before
+href="<? echo $review_form; ?>">review form</a> before
 drafting their manuscripts to ensure that their submissions address
 all of the dimensions on which reviewers will evaluate them. Accepted
 papers will appear in <i>Advances in Cognitive Systems</i>, an
