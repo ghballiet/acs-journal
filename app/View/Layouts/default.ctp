@@ -36,7 +36,7 @@
           <a class="brand" href="<? echo $this->Html->url('/2012'); ?>"><? echo $this->Html->image('acs_cropped_white.png'); ?></a>
           <div class="nav-collapse">
             <ul class="nav">
-              <!-- <li><? echo $this->Html->link('Content', '/content'); ?></li> -->
+              <li><? echo $this->Html->link('Contents', '/2012-editorial-contents'); ?></li>
               <!-- <li><? echo $this->Html->link('Masthead', '/masthead'); ?></li> -->
               <li><? echo $this->Html->link('FAQ', '/faq'); ?></li>
               <li><? echo $this->Html->link('Instructions', '/instructions'); ?></li>
