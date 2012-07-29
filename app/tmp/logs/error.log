@@ -1410,3 +1410,13 @@
 2012-07-29 19:17:30 Error: [MissingControllerException] Controller class JournalController could not be found.
 #0 /Users/glen/Dropbox/Code/cake/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2012-07-29 21:09:47 Error: [MissingViewException] View file "/Users/glen/Dropbox/Code/cake/journal/app/View/Pages/submissions.ctp" is missing.
+#0 /Users/glen/Dropbox/Code/cake/journal/lib/Cake/View/View.php(460): View->_getViewFileName('submissions')
+#1 /Users/glen/Dropbox/Code/cake/journal/lib/Cake/Controller/Controller.php(959): View->render('submissions', NULL)
+#2 /Users/glen/Dropbox/Code/cake/journal/app/Controller/PagesController.php(85): Controller->render('submissions')
+#3 [internal function]: PagesController->display('submissions')
+#4 /Users/glen/Dropbox/Code/cake/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Users/glen/Dropbox/Code/cake/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/glen/Dropbox/Code/cake/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/glen/Dropbox/Code/cake/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}

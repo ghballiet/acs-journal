@@ -14,7 +14,11 @@ class SubmissionsController extends AppController {
 
   public function edit($slug) {
     $submission = $this->Submission->findBySlug($slug);
+    $id = $submission['Submission']['id'];
+    $this->Submission->id = $id;
+    $this->Submission->read();
     $this->set('submission', $submission);
+
     if($this->request->is('get')) {
       $this->request->data = $submission;
     } else if($this->request->is('post')) {
