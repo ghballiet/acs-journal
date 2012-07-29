@@ -1,5 +1,7 @@
 @import "bootstrap.less";
 
+@inputWidth: 440px;
+
 a.brand img { height: 16px; }
 
 body {
@@ -44,3 +46,9 @@ footer {
     line-height: 1em;
   }
 }
+
+input, textarea, select, .uneditable-input {
+  width: @inputWidth;
+}
+
+select { width: @inputWidth + 10px; }

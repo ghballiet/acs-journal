@@ -29,6 +29,8 @@ echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag',
 
 echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
 echo $this->BootstrapForm->input('pages', array('icon'=>'paper-clip'));
+
+$add_btn = $this->Html->link('Add Coauthor', '#', array('class'=>'btn btn-mini add-coauthor'));
 ?>
 <h3>Coauthors</h3>
 <div class="coauthor base">
@@ -45,7 +47,6 @@ echo $this->BootstrapForm->input(
 ?>
 </div>
 <?
-echo $this->Html->link('Add Coauthor', '#', array('class'=>'btn btn-mini'));
-
+echo $add_btn;
 echo $this->BootstrapForm->end('Submit');
 ?>
