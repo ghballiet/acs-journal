@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-<? echo $this->Html->css('http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700'); ?>
+<? echo $this->Html->css('http://fonts.googleapis.com/css?family=PT+Sans:400,700'); ?>
     <? echo $this->Html->css(array('base', 'home')); ?>
     <style type="text/css">
     body { padding-top: 40px; }
