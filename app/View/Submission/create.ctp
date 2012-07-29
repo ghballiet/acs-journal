@@ -15,10 +15,7 @@ $this->end();
 <?
 echo $this->BootstrapForm->create('Submission', array('type'=>'file'));
 ?>
-<div class="row">
-  <div class="span7">
-   <div class="left">
-     <h3>Submission Information</h3>
+<h3>Submission Information</h3>
 <?
 echo $this->BootstrapForm->input('collection_id', 
                                  array('label'=>'Venue', 'autofocus'=>true,
@@ -33,12 +30,8 @@ echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag',
 echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
 echo $this->BootstrapForm->input('pages', array('icon'=>'paper-clip'));
 ?>
-    </div>
-  </div>
-  <div class="span5">
-    <div class="right">
-      <h3>Coauthors</h3>
-      <div class="coauthor base">
+<h3>Coauthors</h3>
+<div class="coauthor base">
 <?
 // TODO: add code here to rebuild the full list of coauthors (if sent in request data)
 echo $this->BootstrapForm->input(
@@ -50,13 +43,9 @@ echo $this->BootstrapForm->input(
   'Coauthor.0.institution', array('label'=>'Institution', 'required'=>false, 
                                   'icon'=>'home'));
 ?>
-      </div>
-<?
-echo $this->Html->link('Add Coauthor', '#', array('class'=>'btn btn-mini'));
-?>
-    </div>
-  </div>
 </div>
 <?
+echo $this->Html->link('Add Coauthor', '#', array('class'=>'btn btn-mini'));
+
 echo $this->BootstrapForm->end('Submit');
 ?>
