@@ -1,5 +1,5 @@
 <?
-$this->start('script');
+$this->start('scripts');
 echo $this->Html->script('add_collection');
 $this->end();
 ?>
