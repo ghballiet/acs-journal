@@ -47,7 +47,7 @@ class Submission extends AppModel {
       return intval($data[0]['order']) + 1;
   }
 
-  public function afterSave($created) {
+  public function beforeSave() {
     $coll_id = $this->data['Submission']['collection_id'];
     $coll = $this->Collection->findById($coll_id);
     $order = $this->data['Submission']['order'];
@@ -57,7 +57,7 @@ class Submission extends AppModel {
     $slug = sprintf('paper-%d-%d', $volume, $order);
     $this->data['Submission']['slug'] = $slug;
 
-    return $this->save($this->data);
+    return true; 
   }
 }
 ?>
