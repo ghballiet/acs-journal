@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.right a.btn').click(function(e) {
+  $('.coauthor.base').next('a.btn').click(function(e) {
     // add a new set of coauthor info
     e.preventDefault();
     var btn = $(this);
