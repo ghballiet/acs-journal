@@ -3,7 +3,7 @@ $(document).ready(function() {
     // add a new set of coauthor info
     e.preventDefault();
     var btn = $(this);
-    var coauthor = $('.right .coauthor:last').clone().removeClass('base');
+    var coauthor = $('.coauthor:last').clone().removeClass('base');
     coauthor.find('input').each(function() {
       $(this).val('');
       var name = $(this).attr('name');
