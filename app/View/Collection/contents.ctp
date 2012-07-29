@@ -30,7 +30,7 @@ if(empty($submissions)) {
     $slug = $paper['Submission']['slug'];
 
     foreach($paper['Coauthor'] as $coauthor)
-      $authors[] = $coauthors['name'];
+      $authors[] = $coauthor['name'];
 
     $author = implode(', ', $authors);
 
