@@ -24,7 +24,7 @@ class SubmissionsController extends AppController {
     } else {
       if($this->Submission->save($this->request->data)) {
         $this->alertSuccess('Success!', 'Submission saved.', true);
-        $this->redirect(array('action'=>'view', $slug));        
+        $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
       } else {
         $this->alertError('Uh-oh.', 'Something is wrong with your submission.');
       }
