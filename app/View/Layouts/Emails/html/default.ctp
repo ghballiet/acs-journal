@@ -16,6 +16,10 @@ echo $this->fetch('css');
 <body>
   <div class="main">
 <? echo $content_for_layout; ?>
+
+<hr />
+
+<p>The ACS Robot</p>
   </div>
 </body>
 </html>

@@ -128,7 +128,9 @@ class SubmissionsController extends AppController {
         $this->Submission->Coauthor->save($coauthor);
       }
       
-      // success!
+      // success! send the email
+      $this->Submission->createEmail($submission['Submission']['id']);
+
       $this->alertSuccess(
         'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
                             $submission['Submission']['title']));

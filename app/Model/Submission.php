@@ -18,5 +18,17 @@ class Submission extends AppModel {
   );
 
   public $hasMany = array('Keyword', 'Coauthor');
+
+  public function createEmail($id) {
+    $submission = $this->findById($id);
+    $email = new CakeEmail();
+    $email->template('submission', 'default');
+    $email->emailFormat('html');
+    $email->to($submission['User']['email']);
+    $email->subject('Your Submission Was Received');
+    $email->from('acs@cogsys.org');
+    $email->viewVars($submission);
+    $email->send();
+  }
 }
 ?>

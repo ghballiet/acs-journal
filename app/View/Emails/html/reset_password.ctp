@@ -17,7 +17,3 @@
     Password</a>
   </center>
 </p>
-
-<hr />
-
-<p>The ACS Robot</p>
