@@ -4,7 +4,7 @@
 
 <p>Dear <? printf('%s %s', $admin['name'], $admin['surname']); ?>,</p>
 
-<p>A new user has signed up on the site:</p>
+<p>A new user has created an account:</p>
 
 <?
 pr($user);

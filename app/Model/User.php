@@ -64,6 +64,7 @@ class User extends AppModel {
   // email functions
   public function adminNewUserEmail($data) {
     $admins = $this->findAllByIsAdmin(1);
+    unset($data['confirm_password']);
     foreach($admins as $admin) {
       $data['admin'] = $admin['User'];
       $email = new CakeEmail();
