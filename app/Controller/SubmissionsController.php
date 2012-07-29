@@ -49,14 +49,17 @@ class SubmissionsController extends AppController {
     $this->response->body($paper['content']);
   }
 
-  public function create() {
+  public function create($slug = null) {
     $options = array(
       'conditions'=>array('Collection.accepting_submissions' => 1),
-      'fields' => array('Collection.id',
-                        'Collection.subtitle', 'Collection.title'),
+      'fields' => array('Collection.id', 'Collection.name'),
       'order' => array('Collection.title', 'Collection.subtitle',
                        'Collection.volume')
     );
+
+    if(!empty($slug))
+      $options['conditions']['Collection.slug'] = $slug;
+
     $collections = $this->Submission->Collection->find('list', $options);
     $this->set('collections', $collections);
 

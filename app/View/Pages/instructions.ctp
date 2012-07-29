@@ -2,6 +2,14 @@
 $this->start('css');
 echo $this->Html->css('submission_info');
 $this->end();
+
+// links for things on the site
+$format_pdf = $this->Html->url('/formats/format.pdf', true);
+$formats = $this->Html->url('/formats', true);
+$submit = $this->Html->url('/conference/submit', true);
+$journal_submit = $this->Html->url('/journal/submit', true);
+$faq = $this->Html->url('/faq', true);
+$review_form = $this->Html->url('/review-form', true);
 ?>
 
 
@@ -58,10 +66,9 @@ $this->end();
   of 12 points. Please use Times Roman typeface throughout the text.
   Additional details about paper format are available at</p>
 
-<h3><? echo
-       $this->Html->link('http://www.cogsys.org/formats/format.pdf',
-  'http://www.cogsys.org/formats/format.pdf', array('target' =>
-  '_blank')); ?></h3>
+<h3>
+<? echo $this->Html->link($format_pdf, $format_pdf, array('target'=>'_blank'));?>
+</h3>
 
 <p>We assume that authors will have access to LaTeX or Word to format their 
   documents and can use a Web browser to download style files and upload
@@ -69,7 +76,9 @@ $this->end();
   are available for LaTeX and Microsoft Word. Templates are accessible
   on the Web at:</p>
 
-<h3><a href="http://www.cogsys.org/formats/">http://www.cogsys.org/formats/</a></h3>
+<h3>
+<? echo $this->Html->link($formats, $formats); ?>
+</h3>
 
 <p>Authors who have questions about these electronic templates should 
   send them to <a href="mailto:ACS <acs@cogsys.org>">acs@cogsys.org</a> by electronic mail.</p> 
@@ -95,7 +104,9 @@ $this->end();
   meeting. Authors who intend to submit a paper to the annual conference
   should upload their file to the submission repository at</p>
 
-<h3><a>http://www.cogsys.org/acs/<i>year</i>/submit/</a></h3>
+<h3>
+<? echo $this->Html->link($submit, $submit); ?>
+</h3>
 
 <p>where <i>year</i> refers to the year during which the meeting will
   occur. Submission should be completed no later that 11:59 PM Pacific
@@ -108,7 +119,9 @@ $this->end();
   to submit papers of this sort should upload their file to the submission 
   repository at</p>
 
-<h3><a href="#">http://www.cogsys.org/journal/submit/</a></h3>
+<h3>
+<? echo $this->Html->link($journal_submit, $journal_submit); ?>
+</h3>
 
 <p>Such submissions may occur at any time, unless they are related to
   special issues of the journal, which will have their own deadlines.</p>
@@ -146,7 +159,9 @@ $this->end();
   systems with broad functionality. The frequently asked questions 
   page at </p>
 
-<h3><a href="#">http://www.cogsys.org/faq/ </a></h3>
+<h3>
+<? echo $this->Html->link($faq, $faq); ?>
+</h3>
 
 <p>provides additional information about the types of research that are 
   appropriate for submission to <i>Advances in Cognitive Systems</i>. </p>
@@ -157,7 +172,9 @@ $this->end();
   evidence in support of those claims, and cogent presentation of its
   ideas to readers. We encourage authors to examine the review form at</p>
 
-<h3><a href="/conference/review-form">http://www.cogsys.org/conference/review-form/</a></h3>
+<h3>
+<? echo $this->Html->link($review_form, $review_form); ?>
+</h3>
 
 <p>before drafting their manuscripts to ensure that their submissions
   address all of the dimensions on which reviewers will evaluate them.</p>

@@ -12,6 +12,11 @@ class Collection extends AppModel {
     )
   );
 
+  // virtual fields!
+  public $virtualFields = array(
+    'name' => 'CONCAT(Collection.title, ": ", Collection.subtitle)'
+  );
+
   /* public function afterSave($created) { */
   /*   if(!$created) */
   /*     return true; */
