@@ -8,7 +8,7 @@ ul.clean b{vertical-align:top;display:inline-block;width:160px;margin-right:20px
 ul.clean.visible-phone b{display:inline;width:auto;margin-right:10px;}
 .page-header{text-align:center;}.page-header h1{font-size:26px;}
 .page-header .leading{font-size:.7em;margin-bottom:5px;display:block;letter-spacing:-0.04em;}
-.page-header small{display:block;margin-top:.5em;}
+.page-header small{display:block;margin-top:.5em;font-size:16px;}
 .dl-horizontal dt{width:200px;}
 .dl-horizontal dd{margin-left:210px;}
 h4{text-align:center;margin-bottom:18px;}

@@ -42,18 +42,16 @@ $review_form = $this->Html->url('/review-form', true);
   functional capabilities that arise in this context include:
 </p>
 
-<div class="well">
-  <ul>
-    <li>Conceptual Inference and Reasoning</li>
-    <li>Memory Storage and Retrieval</li>
-    <li>Language Processing</li>
-    <li>Social Cognition and Interaction</li>
-    <li>High-level Execution and Control</li>
-    <li>Problem Solving and Heuristic Search</li>
-    <li>Metacognition and Meta-level Reasoning</li>
-    <li>Structural Learning and Knowledge Capture</li>
-  </ul>
-</div>
+<ul class="columns clean">
+  <li>Conceptual Inference and Reasoning</li>
+  <li>Memory Storage and Retrieval</li>
+  <li>Language Processing</li>
+  <li>Social Cognition and Interaction</li>
+  <li>High-level Execution and Control</li>
+  <li>Problem Solving and Heuristic Search</li>
+  <li>Metacognition and Meta-level Reasoning</li>
+  <li>Structural Learning and Knowledge Capture</li>
+</ul>
 
 <p>
   Some research communities already address such issues, including those
