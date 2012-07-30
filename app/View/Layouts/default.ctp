@@ -41,7 +41,7 @@ echo $this->Html->css(array(
           <div class="nav-collapse">
             <ul class="nav">
               <li><? echo $this->Html->link('Contents', '/journal/volume-1'); ?></li>
-              <li><? echo $this->Html->link('Masthead', '/masthead'); ?></li>
+              <li><? echo $this->Html->link('Masthead', '/journal/masthead'); ?></li>
               <li><? echo $this->Html->link('FAQ', '/faq'); ?></li>
               <li><? echo $this->Html->link('Instructions', '/instructions'); ?></li>
             </ul>

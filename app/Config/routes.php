@@ -37,6 +37,7 @@ Router::connect('/submit', array('controller'=>'submissions', 'action'=>'create'
 Router::connect('/journal/submit', array('controller'=>'submissions', 'action'=>'create', 'volume-2'));
 Router::connect('/conference/submit', array('controller'=>'submissions', 'action'=>'create', 'acs-2012'));
 Router::connect('/journal/volume-1', array('controller'=>'pages', 'action'=>'display', '2012-editorial-contents'));
+Router::connect('/journal/masthead', array('controller'=>'pages', 'action'=>'display', 'masthead'));
 Router::connect('/journal', array('controller'=>'pages', 'action'=>'display', 'home'));
 Router::connect('/conference/2012', array('controller'=>'pages', 'action'=>'display', '2012'));
 Router::connect('/paper/*', array('controller'=>'submissions', 'action'=>'view'));
