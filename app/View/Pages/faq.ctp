@@ -196,5 +196,5 @@ contribute to the goals of the meeting.</p>
 
 <p>If you have any additional questions that are related to the
 relevance or appropriateness of certain topics, please send email to
-the Program Chair, Pat Langley (<a
+the Program Chair / Editor, Pat Langley (<a
 href="mailto:patrick.w.langley@gmail.com">mailto:patrick.w.langley@gmail.com</a>).</p>

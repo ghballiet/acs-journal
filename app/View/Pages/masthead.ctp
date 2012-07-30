@@ -49,3 +49,8 @@ $this->end();
   <li><b>Bill Swartout</b> University of Southern California</li>
   <li><b>R. Michael Young</b> North Carolina State University</li>
 </ul>
+
+<h3>Managing Editor</h3>
+<ul class="clean">
+  <li><b>Glen Hunt</b> Arizona State University</li>
+</ul>
