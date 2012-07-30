@@ -11,7 +11,7 @@ $this->end();
 </div>
 
 <h3>Editor</h3>
-<ul class="columns clean">
+<ul class="clean">
   <li><b>Pat Langley</b> Arizona State University / University of Auckland</li>
 </ul>
 
