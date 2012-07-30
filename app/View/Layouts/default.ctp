@@ -13,7 +13,10 @@
     <style type="text/css">
     body { padding-top: 40px; }
     </style>
-<? echo $this->Html->css(array('http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css')); ?>
+<?
+echo $this->Html->css(array(
+  'http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css'));
+?>
     <? echo $this->fetch('css'); ?>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -38,7 +41,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><? echo $this->Html->link('Contents', '/journal/volume-1'); ?></li>
-              <!-- <li><? echo $this->Html->link('Masthead', '/masthead'); ?></li> -->
+              <li><? echo $this->Html->link('Masthead', '/masthead'); ?></li>
               <li><? echo $this->Html->link('FAQ', '/faq'); ?></li>
               <li><? echo $this->Html->link('Instructions', '/instructions'); ?></li>
             </ul>

@@ -5,8 +5,48 @@
   .content-columns(2, @gridGutterWidth);
 }
 
+ul.clean {
+  margin: (.5 * @gridGutterWidth) 0px @gridGutterWidth; 
+  vertical-align: top;
+  list-style-type: none;
+
+  li {
+    border-bottom: solid 1px darken(@grayLighter, 8);
+    padding: 2px 0px; 
+  }
+
+  b {
+    vertical-align: top;
+    display: inline-block; 
+    width: 160px;
+    margin-right: @gridGutterWidth;
+  }
+
+  &.visible-phone {
+    b {
+      display: inline;
+      width: auto;
+      margin-right: .5 * @gridGutterWidth;
+    }
+  }
+}
+
 .page-header {
-  text-align: center;
+  text-align: center; 
+
+  h1 { font-size: 26px; }
+
+  .leading {
+    font-size: .7em;
+    margin-bottom: 5px;
+    display: block;
+    letter-spacing: -0.04em;
+  }
+
+  small {
+    display: block;
+    margin-top: .5em;
+  }
 }
 
 .dl-horizontal {

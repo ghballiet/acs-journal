@@ -3,7 +3,12 @@
 .hide-text{overflow:hidden;text-indent:100%;white-space:nowrap;}
 .input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 .columns{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;}
-.page-header{text-align:center;}
+ul.clean{margin:10px 0px 20px;vertical-align:top;list-style-type:none;}ul.clean li{border-bottom:solid 1px #dadada;padding:2px 0px;}
+ul.clean b{vertical-align:top;display:inline-block;width:160px;margin-right:20px;}
+ul.clean.visible-phone b{display:inline;width:auto;margin-right:10px;}
+.page-header{text-align:center;}.page-header h1{font-size:26px;}
+.page-header .leading{font-size:.7em;margin-bottom:5px;display:block;letter-spacing:-0.04em;}
+.page-header small{display:block;margin-top:.5em;}
 .dl-horizontal dt{width:200px;}
 .dl-horizontal dd{margin-left:210px;}
 h4{text-align:center;margin-bottom:18px;}

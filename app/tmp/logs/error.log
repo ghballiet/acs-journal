@@ -1420,3 +1420,12 @@
 #6 /Users/glen/Dropbox/Code/cake/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #7 /Users/glen/Dropbox/Code/cake/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2012-07-30 00:50:10 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /Users/glen/Dropbox/Code/cake/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-07-30 00:50:12 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /Users/glen/Dropbox/Code/cake/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-07-30 00:50:23 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /Users/glen/Dropbox/Code/cake/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

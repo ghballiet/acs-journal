@@ -790,3 +790,11 @@ body{background-image:url('/img/bright_squares.png');}
 footer{padding-top:20px;margin-top:60px;text-align:center;font-size:.9em;color:#999999;border-top:solid 1px #eeeeee;}footer p{margin:0px;line-height:1em;}
 input,textarea,select,.uneditable-input{width:440px;}
 select{width:450px;}
+.columns{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;}
+ul.clean{margin:10px 0px 20px;vertical-align:top;list-style-type:none;}ul.clean li{border-bottom:solid 1px #dadada;padding:2px 0px;}
+ul.clean b{vertical-align:top;display:inline-block;width:160px;margin-right:20px;}
+ul.clean.visible-phone b{display:inline;width:auto;margin-right:10px;}
+h1{font-size:22px;}
+h2{font-size:18px;}
+h3{font-size:16px;}
+h4{font-size:14px;}

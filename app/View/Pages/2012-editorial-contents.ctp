@@ -38,10 +38,8 @@ $papers = array(
 ?>
 <div class="page-header">
   <h1>Advances in Cognitive Systems</h1>
-  <div class="published_info">
-    <div class="volume">Volume 1, July 2012 to present</div>
-  </div>
-  <h2>Table of Contents</h2>
+  <h2>Volume 1, July 2012 to present</h2>
+  <h3>Table of Contents</h3>
 </div>
 
 <table class="table">
