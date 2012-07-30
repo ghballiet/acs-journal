@@ -10,12 +10,16 @@ $this->end();
   <h3>Editors and Staff</h3>
 </div>
 
+<h3>Editor</h3>
+<ul class="columns clean">
+  <li><b>Pat Langley</b> Arizona State University / University of Auckland</li>
+</ul>
+
 <h3>Associate Editors</h3>
 <ul class="columns clean">
   <li><b>Paul Bello</b> Office of Naval Research</li>
   <li><b>Kenneth Forbus</b> Northwestern University</li>
   <li><b>John Laird</b> University of Michigan, Ann Arbor</li>
-  <li><b>Pat Langley</b> Arizona State University / University of Auckland</li>
   <li><b>Patrick Winston</b> Massachusetts Institute of 
     Technology</li>
 </ul>
