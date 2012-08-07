@@ -42,7 +42,7 @@ $review_form = $this->Html->url('/review-form', true);
   functional capabilities that arise in this context include:
 </p>
 
-<ul class="columns clean">
+<ul>
   <li>Conceptual Inference and Reasoning</li>
   <li>Memory Storage and Retrieval</li>
   <li>Language Processing</li>
