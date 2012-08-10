@@ -28,6 +28,7 @@ $this->end();
 <ul class="columns clean">
   <li><b>David Aha</b> Naval Research Laboratory</li>
   <li><b>Mike Barley</b> University of Auckland</li>
+  <li><b>Michael Beetz</b> Technical University of Munich</li>
   <li><b>Balakrishnan Chandrasekaran</b> Ohio State University</li>
   <li><b>Gautam Biswas</b> Vanderbilt University</li>
   <li><b>Jim Blythe</b> University of Southern California</li>
@@ -43,11 +44,14 @@ $this->end();
   <li><b>David McDonald</b> Smart Information Flow Technologies</li>
   <li><b>Karen Myers</b> SRI International</li>
   <li><b>Sergei Nirenburg</b> University of Maryland, Baltimore County</li>
+  <li><b>Kanna Rajan</b> MBARI</li>
   <li><b>Paul Rosenbloom</b> University of Southern California</li>
+  <li><b>Erik Sandewall</b> Link&ouml;ping University</li>
   <li><b>Claude Sammut</b> University of New South Wales</li>
   <li><b>Candy Sidner</b> Worcester Polytechnic Institute</li>
   <li><b>Bill Swartout</b> University of Southern California</li>
-  <li><b>R. Michael Young</b> North Carolina State University</li>
+  <li><b>Gheorghe Tecuci</b> George Mason University</li>
+  <li><b>R. Michael Young</b> North Carolina State University</li>  
 </ul>
 
 <h3>Managing Editor</h3>
