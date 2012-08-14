@@ -33,7 +33,7 @@ Router::connect('/acs/2012', array('controller'=>'pages', 'action'=>'display', '
 Router::connect('/acs/2011', '/acs-old/');
 Router::connect('/login', array('controller'=>'users', 'action'=>'login'));
 Router::connect('/logout', array('controller'=>'users', 'action'=>'logout'));
-Router::connect('/register', array('controller'=>'users', 'action'=>'register'));
+// Router::connect('/register', array('controller'=>'users', 'action'=>'register'));
 Router::connect('/dashboard', array('controller'=>'users', 'action'=>'dashboard'));
 Router::connect('/submit', array('controller'=>'submissions', 'action'=>'create'));
 Router::connect('/journal/submit', array('controller'=>'submissions', 'action'=>'create', 'volume-2'));
