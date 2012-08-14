@@ -1,3 +1,5 @@
+Redirect 301 /acs/2011 /acs-2011
+
 <IfModule mod_rewrite.c>
     RewriteEngine on
     RewriteRule    ^$    webroot/    [L]
