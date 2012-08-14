@@ -19,6 +19,7 @@ $this->end();
 <ul class="columns clean">
   <li><b>Paul Bello</b> Office of Naval Research</li>
   <li><b>Kenneth Forbus</b> Northwestern University</li>
+  <li><b>Ashok Goel</b> Georgia Institute of Technology</li>
   <li><b>John Laird</b> University of Michigan, Ann Arbor</li>
   <li><b>Patrick Winston</b> Massachusetts Institute of 
     Technology</li>
@@ -29,16 +30,16 @@ $this->end();
   <li><b>David Aha</b> Naval Research Laboratory</li>
   <li><b>Mike Barley</b> University of Auckland</li>
   <li><b>Michael Beetz</b> Technical University of Munich</li>
-  <li><b>Balakrishnan Chandrasekaran</b> Ohio State University</li>
   <li><b>Gautam Biswas</b> Vanderbilt University</li>
   <li><b>Jim Blythe</b> University of Southern California</li>
-  <li><b>Mark Burstein</b> Smart Information Flow Technologies</li>
   <li><b>Ron Brachman</b> Yahoo!</li>
+  <li><b>Bert Bredeweg</b> University of Amsterdam</li>
+  <li><b>Mark Burstein</b> Smart Information Flow Technologies</li>
+  <li><b>Balakrishnan Chandrasekaran</b> Ohio State University</li>
   <li><b>Michael Cox</b> University of Maryland</li>
   <li><b>Randall Davis</b> Massachusetts Institute of Technology</li>
   <li><b>Susan Epstein</b> City University of New York</li>
   <li><b>Scott Fahlman</b> Carnegie Mellon University</li>
-  <li><b>Ashok Goel</b> Georgia Institute of Technology</li>
   <li><b>Nick Hawes</b> University of Birmingham</li>
   <li><b>Randolph Jones</b> Soar Technology</li>
   <li><b>David McDonald</b> Smart Information Flow Technologies</li>
