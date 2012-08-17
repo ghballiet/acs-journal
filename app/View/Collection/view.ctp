@@ -1,3 +1,12 @@
+<?
+echo $this->Breadcrumb->html(array(
+  array(
+    'link' => array('controller'=>'collections', 'action'=>'manage'),
+    'text' => 'Collections'
+  )
+), $collection['Collection']['title']);
+?>
+
 <div class="page-header">
   <h1>
 <? echo $collection['Collection']['title']; ?>
