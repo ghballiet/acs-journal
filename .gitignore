@@ -1,5 +1,5 @@
 /app/Config
-/app/tmp/
+/app/tmp/*
 /app/tmp/cache/
 /app/tmp/cache/persistent/
 /app/tmp/logs/
