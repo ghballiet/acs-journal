@@ -56,6 +56,16 @@ Router::connect(
   array('pass' => array('user', 'role', 'type'))
 );
 
+// named route for removing role
+Router::connect(
+  '/collections/remove_role/:id',
+  array(
+    'controller'=>'collections',
+    'action'=>'remove_role'
+  ),
+  array('pass'=>array('id'))
+);
+
 // catchall for controller/action
 Router::connect('/:controller/:action/*');
 

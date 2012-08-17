@@ -29,6 +29,14 @@ class CollectionsController extends AppController {
       $this->Collection->Role->create();
       $this->Collection->Role->save($role);
 
+      // create the review form
+      $review_form = array('ReviewForm'=>array(
+        'collection_id' => $collection['Collection']['id'],
+        'modified' => $collection['Collection']['modified']
+      ));
+      $this->Collection->ReviewForm->create();
+      $this->Collection->ReviewForm->save($review_form);
+
       $this->alertSuccess('Success!', sprintf('Succesfully created <strong>%s</strong>.', 
                                               $title), true);
       $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
@@ -110,6 +118,16 @@ class CollectionsController extends AppController {
     );
     $users = $this->Collection->Role->User->find('list', $options);
     $this->set('users', $users);
+
+    $review_form = $this->Collection->ReviewForm->findByCollectionId($id);    
+    $this->set('review_form', $review_form);
+
+    $questions = $this->Collection->ReviewForm->Question->findAllByReviewFormId($review_form['ReviewForm']['id']);
+    $this->set('questions', $questions);
+  }
+
+  public function add_question($id = null) {
+    // add a question to the review form
   }
 
   public function contents($slug = null) {
@@ -171,6 +189,20 @@ class CollectionsController extends AppController {
         $this->alertSuccess('Success!', 'Role successfully updated.', true);
         $this->redirect(array('action'=>'view', $role['Collection']['slug']));
       }         
+    }
+  }
+
+  public function remove_role($id = null) {
+    $this->autoRender = false;
+    $role = $this->Collection->Role->findById($id);
+    $collection_id = $role['Collection']['id'];
+    if($this->Collection->Role->delete($id)) {
+      $this->alertSuccess('Success!', 'Succesfully deleted role.', true);
+      $this->redirect(array('action'=>'view', $collection_id));      
+    } else {
+      $this->alertError('Error!', 'Something went wrong, and that role could ' .
+                        'not be deleted. Please try again.');
+      $this->redirect(array('action'=>'view', $collection_id));
     }
   }
 }

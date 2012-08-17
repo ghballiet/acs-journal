@@ -1512,3 +1512,27 @@
 #6 /Users/glen/Dropbox/Code/cake/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #7 /Users/glen/Dropbox/Code/cake/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2012-08-17 05:35:25 Error: [MissingTableException] Table review_forms for model ReviewForm was not found in datasource default.
+#0 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Model/Model.php(3398): Model->setSource('review_forms')
+#1 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Model/Datasource/DboSource.php(1044): Model->getDataSource()
+#2 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Model/Model.php(2653): DboSource->read(Object(Collection), Array)
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Model/Datasource/DboSource.php(576): Model->find('first', Array)
+#4 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Model/Model.php(775): DboSource->query('findBySlug', Array, Object(Collection))
+#5 [internal function]: Model->__call('findBySlug', Array)
+#6 /Users/glen/Dropbox/Code/git/journal/app/Controller/CollectionsController.php(89): Collection->findBySlug('acs-2012')
+#7 [internal function]: CollectionsController->view('acs-2012')
+#8 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(CollectionsController), Array)
+#9 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#10 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(CollectionsController), Object(CakeRequest), Object(CakeResponse))
+#11 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-08-17 05:57:44 Error: [MissingControllerException] Controller class QuestionController could not be found.
+#0 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-08-17 05:58:41 Error: [MissingViewException] View file "/Users/glen/Dropbox/Code/git/journal/app/View/Question/add.ctp" is missing.
+#0 /Users/glen/Dropbox/Code/git/journal/lib/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(QuestionsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
