@@ -2,6 +2,13 @@
 $this->start('scripts');
 echo $this->Html->script('add_collection');
 $this->end();
+
+echo $this->Breadcrumb->html(array(
+  array(
+    'link' => array('controller'=>'collections', 'action'=>'manage'),
+    'text' => 'Collections'
+  )
+), 'Edit Collection');
 ?>
 
 <div class="page-header">

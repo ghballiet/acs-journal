@@ -122,12 +122,9 @@ class CollectionsController extends AppController {
     $review_form = $this->Collection->ReviewForm->findByCollectionId($id);    
     $this->set('review_form', $review_form);
 
-    $questions = $this->Collection->ReviewForm->Question->findAllByReviewFormId($review_form['ReviewForm']['id']);
+    $questions = $this->Collection->ReviewForm->Question->findAllByReviewFormId(
+      $review_form['ReviewForm']['id'], array('Question.position', 'Question.text'));
     $this->set('questions', $questions);
-  }
-
-  public function add_question($id = null) {
-    // add a question to the review form
   }
 
   public function contents($slug = null) {

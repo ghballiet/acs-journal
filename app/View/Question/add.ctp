@@ -22,4 +22,9 @@ echo $this->Breadcrumb->html(array(
   </h1>
 </div>
 
-
+<?
+echo $this->BootstrapForm->create('Question');
+echo $this->BootstrapForm->input('text', array('autofocus'=>true));
+echo $this->BootstrapForm->input('position', array('value'=>1));
+echo $this->BootstrapForm->end('Add Question');
+?>

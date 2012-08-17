@@ -18,6 +18,20 @@ class QuestionsController extends AppController {
       // just viewing the page
     } else {
       // trying to add a question here
+      $data = $this->request->data;
+      $data['Question']['review_form_id'] = $review_form_id;
+      if($question = $this->Question->save($data)) {
+        $this->alertSuccess('Success!', 'Question succesfully added.', true);
+        $this->redirect(array(
+          'controller'=>'collections',
+          'action'=>'view',
+          $form['Collection']['slug'],
+          '#'=>'review-form'
+        ));
+      } else {
+        $this->alertError('Error!', 'Something went wrong. Please correct ' .
+                          'all errors below and resubmit.');
+      }
     }
   }
 }

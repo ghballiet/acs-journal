@@ -1,4 +1,8 @@
 <?
+echo $this->start('css');
+echo $this->Html->css('view-collection');
+echo $this->end();
+
 echo $this->Breadcrumb->html(array(
   array(
     'link' => array('controller'=>'collections', 'action'=>'manage'),
@@ -20,7 +24,13 @@ echo $this->Breadcrumb->html(array(
   <li class="active"><a href="#submissions" data-toggle="tab">Submissions</a></li>
   <li><a href="#roles" data-toggle="tab">Roles</a></li>
   <li><a href="#review-form" data-toggle="tab">Review Form</a></li>
+<?
+  if(count($submissions) > 0) {
+?>
   <li><a href="#assign-reviewers" data-toggle="tab">Assign Reviewers</a></li>
+<?
+  }
+?>
 </ul>
 
 <div class="tab-content">
@@ -152,9 +162,28 @@ echo $this->Html->link(
 ?>    
     <h2>Review Form</h2>
 <?
-if(count($questions == 0)) {
+if(count($questions) == 0) {
    echo '<p class="alert alert-info">No questions have been added to this review form.</p>';
 } else {
+  echo '<div class="questions">';
+
+  foreach($questions as $question) {
+    // choices should be managed here. 
+    $id = $question['Question']['id'];
+    $text = $question['Question']['text'];
+    $order = $question['Question']['position'];
+    
+    echo '<div class="question">';
+    printf('<div class="order">%s</div>', $order);
+    printf('<p class="text">%s<p>', $text);
+
+    // TODO: add in answers to questions
+
+    echo '<div class="clearfix"></div>';
+    echo '</div>';
+  }
+
+  echo '</div>';
 }
 ?>    
   </div>
