@@ -46,6 +46,16 @@ Router::connect('/paper/*', array('controller'=>'submissions', 'action'=>'view')
 Router::connect('/pdf/*', array('controller'=>'submissions', 'action'=>'paper'));
 Router::connect('/journal/*', array('controller'=>'collections', 'action'=>'contents'));
 
+// named route for assigning roles in collections
+Router::connect(
+  '/collections/assign_role/:user/:role/:type',
+  array(
+    'controller'=>'collections',
+    'action'=>'assign_role'
+  ),
+  array('pass' => array('user', 'role', 'type'))
+);
+
 // catchall for controller/action
 Router::connect('/:controller/:action/*');
 

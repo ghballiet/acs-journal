@@ -6,7 +6,8 @@ class User extends AppModel {
   public $hasMany = array('Submission', 'Role', 'Upload');
 
   public $virtualFields = array(
-    'full_name' => 'concat(User.name, " ", User.surname)'
+    'full_name' => 'concat(User.name, " ", User.surname)',
+    'name_email' => 'concat(User.name, " ", User.surname, " (", User.email, ")")'
   );
   
   public $validate = array(
