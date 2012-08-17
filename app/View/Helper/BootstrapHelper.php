@@ -48,7 +48,10 @@ class BootstrapHelper extends AppHelper {
       if($l === true) {
         $str .= '<li class="divider"></li>';
       } else {
-        $str .= '<li>';
+        if(isset($l['active']) && $l['active'] == true)
+          $str .= '<li class="active">';
+        else
+          $str .= '<li>';
         $url = $this->Html->url($l['link']);
         $str .= sprintf('<a href="%s">', $url);
         if(isset($l['icon']))

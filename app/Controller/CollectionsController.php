@@ -29,6 +29,14 @@ class CollectionsController extends AppController {
       $this->Collection->Role->create();
       $this->Collection->Role->save($role);
 
+      // create the review form
+      $review_form = array('ReviewForm'=>array(
+        'collection_id' => $collection['Collection']['id'],
+        'modified' => $collection['Collection']['modified']
+      ));
+      $this->Collection->ReviewForm->create();
+      $this->Collection->ReviewForm->save($review_form);
+
       $this->alertSuccess('Success!', sprintf('Succesfully created <strong>%s</strong>.', 
                                               $title), true);
       $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
@@ -85,6 +93,38 @@ class CollectionsController extends AppController {
     $submissions = $this->Collection->Submission->findAllByCollectionIdAndRetracted(
       $id, 0, array(), array('Submission.order'));
     $this->set('submissions', $submissions);
+
+    $roles = $this->Collection->Role->findAllByCollectionId($id);
+    $this->set('roles', $roles);
+
+    $role_types = $this->Collection->Role->RoleType->find('all', 'RoleType.name');
+    $this->set('role_types', $role_types);
+    
+    $role_type_list = $this->Collection->Role->RoleType->find('list', 'RoleType.name');
+    $this->set('role_type_list', $role_type_list);
+
+    $get_id = function($user) {
+      return $user['Role']['user_id'];
+    };
+    
+    $user_ids = array_map($get_id, $roles);
+
+    $options = array(
+      'conditions' => array(
+        'NOT' => array('User.id' => $user_ids)
+      ),
+      'fields' => array('User.name_email'),
+      'order' => array('User.name_email')
+    );
+    $users = $this->Collection->Role->User->find('list', $options);
+    $this->set('users', $users);
+
+    $review_form = $this->Collection->ReviewForm->findByCollectionId($id);    
+    $this->set('review_form', $review_form);
+
+    $questions = $this->Collection->ReviewForm->Question->findAllByReviewFormId(
+      $review_form['ReviewForm']['id'], array('Question.position', 'Question.text'));
+    $this->set('questions', $questions);
   }
 
   public function contents($slug = null) {
@@ -102,6 +142,65 @@ class CollectionsController extends AppController {
     
     $submissions = $this->Collection->Submission->findAllByCollectionIdAndRetracted($id, 0, array(), $order);
     $this->set('submissions', $submissions);
+  }
+
+  public function assign_role($user = null, $role = null, $type = null) {
+    $this->autoRender = false;
+    if($this->request->is('post')) {
+      $data = $this->request->data['Collection'];
+      $user = $this->Collection->Role->User->findByNameEmail($data['user']);
+      $collection = $this->Collection->findById($data['collection_id']);
+      $slug = $collection['Collection']['slug'];
+      $user_id = $user['User']['id'];
+      $collection_id = $collection['Collection']['id'];
+      $role_type_id = $data['role_type'];
+      
+      $arr = array(
+        'user_id' => $user_id,
+        'collection_id' => $collection_id,
+        'role_type_id' => $role_type_id
+      );
+      $arr = array('Role' => $arr);
+
+      $this->Collection->Role->create();
+      if($role = $this->Collection->Role->save($arr)) {
+        $this->alertSuccess('Success!', 'Role successfully added.', true);
+        $this->redirect(array('action'=>'view', $slug));
+      } else {
+        $this->alertError('Error!', 'Could not add role. Please correct any errors below and resubmit.');
+        $this->redirect(array('action'=>'view', $slug));
+      }
+    } else {
+      $user = $this->Collection->Role->User->findById($user);
+      $role = $this->Collection->Role->findById($role);
+      $type = $this->Collection->Role->RoleType->findById($type);
+      $arr = array(
+        'id' => $role['Role']['id'],
+        'user_id' => $user['User']['id'],
+        'role_type_id' => $type['RoleType']['id'],
+        'collection_id' => $role['Role']['collection_id'],
+        'skip_validation' => true
+      );
+      $arr = array('Role' => $arr);
+      if($saved = $this->Collection->Role->save($arr)) {
+        $this->alertSuccess('Success!', 'Role successfully updated.', true);
+        $this->redirect(array('action'=>'view', $role['Collection']['slug']));
+      }         
+    }
+  }
+
+  public function remove_role($id = null) {
+    $this->autoRender = false;
+    $role = $this->Collection->Role->findById($id);
+    $collection_id = $role['Collection']['id'];
+    if($this->Collection->Role->delete($id)) {
+      $this->alertSuccess('Success!', 'Succesfully deleted role.', true);
+      $this->redirect(array('action'=>'view', $collection_id));      
+    } else {
+      $this->alertError('Error!', 'Something went wrong, and that role could ' .
+                        'not be deleted. Please try again.');
+      $this->redirect(array('action'=>'view', $collection_id));
+    }
   }
 }
 ?>

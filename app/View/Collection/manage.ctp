@@ -1,3 +1,7 @@
+<?
+echo $this->Breadcrumb->html(array(), 'Collections');
+?>
+
 <div class="page-header">
 <?
    echo $this->Html->link('Create Collection',

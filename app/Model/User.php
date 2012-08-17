@@ -3,10 +3,11 @@ App::uses('CakeEmail', 'Network/Email');
 
 class User extends AppModel {
   public $name = 'User';
-  public $hasMany = array('Submission', 'Role', 'Upload');
+  public $hasMany = array('Submission', 'Role', 'Upload', 'Review', 'Answer');
 
   public $virtualFields = array(
-    'full_name' => 'concat(User.name, " ", User.surname)'
+    'full_name' => 'concat(User.name, " ", User.surname)',
+    'name_email' => 'concat(User.name, " ", User.surname, " (", User.email, ")")'
   );
   
   public $validate = array(

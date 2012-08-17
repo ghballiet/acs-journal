@@ -46,6 +46,26 @@ Router::connect('/paper/*', array('controller'=>'submissions', 'action'=>'view')
 Router::connect('/pdf/*', array('controller'=>'submissions', 'action'=>'paper'));
 Router::connect('/journal/*', array('controller'=>'collections', 'action'=>'contents'));
 
+// named route for assigning roles in collections
+Router::connect(
+  '/collections/assign_role/:user/:role/:type',
+  array(
+    'controller'=>'collections',
+    'action'=>'assign_role'
+  ),
+  array('pass' => array('user', 'role', 'type'))
+);
+
+// named route for removing role
+Router::connect(
+  '/collections/remove_role/:id',
+  array(
+    'controller'=>'collections',
+    'action'=>'remove_role'
+  ),
+  array('pass'=>array('id'))
+);
+
 // catchall for controller/action
 Router::connect('/:controller/:action/*');
 
