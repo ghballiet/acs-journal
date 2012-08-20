@@ -36,7 +36,8 @@ class AppController extends Controller {
     'authenticate'=>array('Form'=>array('fields'=>
       array('username' => 'email')))));
   public $helpers = array('Html', 'Form', 'Session', 'BootstrapForm', 
-                          'Bootstrap', 'Time', 'Profile', 'Breadcrumb');
+                          'Bootstrap', 'Time', 'Profile', 'Breadcrumb',
+                          'Submission');
 
   public function beforeFilter() {
   }

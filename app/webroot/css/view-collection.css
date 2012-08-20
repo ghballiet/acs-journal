@@ -2,4 +2,19 @@
 .clearfix:after{clear:both;}
 .hide-text{overflow:hidden;text-indent:100%;white-space:nowrap;}
 .input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
-div.question{margin-bottom:20px;}div.question .order{float:left;width:20px;padding-right:10px;margin-right:10px;border-right:solid 1px #049cdb;text-align:right;font-weight:bold;color:#049cdb;}
+div.question{margin-bottom:20px;}div.question.add-question{border-top:solid 1px #eeeeee;}
+div.question .btn-delete-question{position:absolute;}
+div.question .order{float:left;width:40px;margin-right:10px;padding-right:10px;border-right:solid 1px #049cdb;text-align:right;font-weight:bold;color:#049cdb;}div.question .order input{width:30px;margin-bottom:0px;}
+div.question .question-text{margin-left:60px;}
+div.question .question-text textarea{margin-bottom:0px;height:100px;}
+div.question .question-text .btn-add-question{margin-left:10px;}
+div.question .answers{list-style-type:none;margin:0px;padding:0px;}div.question .answers .answer{margin-bottom:5px;}div.question .answers .answer input,div.question .answers .answer span,div.question .answers .answer a{vertical-align:middle;margin-bottom:0px;}
+div.question .answers .answer .radio{margin-right:10px;}
+div.question .answers .answer .btn-add{margin-left:10px;}
+div.question .answers .answer .btn-delete{margin-left:-20px;margin-top:3px;position:absolute;}
+#assign-reviewers h4{margin-bottom:5px;}
+.user-badge,.submission-badge{cursor:pointer;-webkit-transition:opacity, border .2s ease-in-out;-moz-transition:opacity, border .2s ease-in-out;-ms-transition:opacity, border .2s ease-in-out;-o-transition:opacity, border .2s ease-in-out;transition:opacity, border .2s ease-in-out;}.user-badge.inactive,.submission-badge.inactive{opacity:0.4;}
+.user-badge.selected,.submission-badge.selected{opacity:1;border:solid 1px #555555;}.user-badge.selected .user-name,.submission-badge.selected .user-name,.user-badge.selected .submission-title,.submission-badge.selected .submission-title{-webkit-transition:color 0.2s ease-in-out;-moz-transition:color 0.2s ease-in-out;-ms-transition:color 0.2s ease-in-out;-o-transition:color 0.2s ease-in-out;transition:color 0.2s ease-in-out;color:#555555;}
+.user-badge.selected .user-info .user-tag,.submission-badge.selected .user-info .user-tag,.user-badge.selected .num-reviews,.submission-badge.selected .num-reviews{-webkit-transition:background, color .2s ease-in-out;-moz-transition:background, color .2s ease-in-out;-ms-transition:background, color .2s ease-in-out;-o-transition:background, color .2s ease-in-out;transition:background, color .2s ease-in-out;background:#555555;color:#ffffff;}
+.user-badge.active,.submission-badge.active{opacity:1;border:solid 1px #049cdb;}.user-badge.active .user-name,.submission-badge.active .user-name,.user-badge.active .submission-title,.submission-badge.active .submission-title{-webkit-transition:color 0.2s ease-in-out;-moz-transition:color 0.2s ease-in-out;-ms-transition:color 0.2s ease-in-out;-o-transition:color 0.2s ease-in-out;transition:color 0.2s ease-in-out;color:#049cdb;}
+.user-badge.active .user-info .user-tag,.submission-badge.active .user-info .user-tag,.user-badge.active .num-reviews,.submission-badge.active .num-reviews{-webkit-transition:background, color .2s ease-in-out;-moz-transition:background, color .2s ease-in-out;-ms-transition:background, color .2s ease-in-out;-o-transition:background, color .2s ease-in-out;transition:background, color .2s ease-in-out;background:#049cdb;color:#ffffff;}

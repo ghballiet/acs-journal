@@ -1,0 +1,39 @@
+@import "variables.less";
+@import "mixins.less";
+
+@badgeHeight: 40px; 
+
+.submission-badge {
+  .no-select;
+  line-height: 1em;
+
+  height: 40px; 
+  margin-bottom: 10px; 
+
+  border: solid 1px @grayLighter;
+
+  .num-reviews {
+    float: left;
+    width: @badgeHeight;
+    height: @badgeHeight;
+    color: @grayLight;
+    text-align: center;
+    background: @grayLighter;
+
+    span {
+      display: block;
+      margin-top: 15px;
+    }
+  }
+
+  .submission-info {
+    margin-left: @badgeHeight + 10px; 
+    
+    .submission-title {
+      font-weight: bold;
+      padding: 5px 0px; 
+    }
+
+    .submission-authors { color: @grayLight; }
+  }  
+}

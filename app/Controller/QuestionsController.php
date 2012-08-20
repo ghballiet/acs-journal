@@ -34,5 +34,30 @@ class QuestionsController extends AppController {
       }
     }
   }
+
+  public function addJson() {
+    // add a new question via json
+    $this->autoRender = false;
+    if($this->request->is('post')) {
+      if($question = $this->Question->save($this->request->data)) {
+        echo json_encode(array('data' => $question, 'ok' => true));
+      } else {
+        echo json_encode(array('ok' => false));
+      }
+    }
+  }
+
+  public function deleteJson() {
+    // delete a question via json
+    $this->autoRender = false;
+    if($this->request->is('post')) {
+      $id = $this->request->data['Question']['id'];
+      if($this->Question->delete($id)) {
+        echo json_encode(array('ok'=>true));
+      } else {
+        echo json_encode(array('ok'=>false));
+      }
+    }
+  }
 }
 ?>

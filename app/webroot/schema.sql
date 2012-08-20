@@ -101,6 +101,10 @@ create table if not exists role_types (
   id integer primary key auto_increment,
   name varchar(200),
   description longtext, 
+  can_review boolean default false,
+  can_edit boolean default false,
+  can_assign boolean default false,
+  can_manage boolean default false,
   modified timestamp,
   created timestamp
 );
@@ -144,6 +148,7 @@ create table if not exists answers (
   choice_id integer,
   user_id integer,
   review_id integer,
+  review_form_id integer,
   comments longtext,
   modified timestamp,
   created timestamp

@@ -1536,3 +1536,61 @@
 #3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(QuestionsController), Object(CakeRequest), Object(CakeResponse))
 #4 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2012-08-19 20:05:18 Error: [MissingControllerException] Controller class QuestionController could not be found.
+#0 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-08-19 20:05:48 Error: [MissingViewException] View file "/Users/glen/Dropbox/Code/git/journal/app/View/Question/add_json.ctp" is missing.
+#0 /Users/glen/Dropbox/Code/git/journal/lib/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(QuestionsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-08-19 20:05:52 Error: [MissingViewException] View file "/Users/glen/Dropbox/Code/git/journal/app/View/Question/add_json.ctp" is missing.
+#0 /Users/glen/Dropbox/Code/git/journal/lib/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(QuestionsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-08-19 20:07:06 Error: [MissingViewException] View file "/Users/glen/Dropbox/Code/git/journal/app/View/Question/add_json.ctp" is missing.
+#0 /Users/glen/Dropbox/Code/git/journal/lib/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(QuestionsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-08-19 20:07:44 Error: [MissingViewException] View file "/Users/glen/Dropbox/Code/git/journal/app/View/Question/add_json.ctp" is missing.
+#0 /Users/glen/Dropbox/Code/git/journal/lib/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(959): View->render(NULL, NULL)
+#2 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(QuestionsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-08-20 03:40:58 Error: [CakeException] Method save does not exist
+#0 [internal function]: CakeRequest->__call('save', Array)
+#1 /Users/glen/Dropbox/Code/git/journal/app/Controller/ReviewsController.php(8): CakeRequest->save(Array)
+#2 [internal function]: ReviewsController->createJson()
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(ReviewsController), Array)
+#4 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#5 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(ReviewsController), Object(CakeRequest), Object(CakeResponse))
+#6 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2012-08-20 03:41:25 Error: [CakeException] Method save does not exist
+#0 [internal function]: CakeRequest->__call('save', Array)
+#1 /Users/glen/Dropbox/Code/git/journal/app/Controller/ReviewsController.php(8): CakeRequest->save(Array)
+#2 [internal function]: ReviewsController->createJson()
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(ReviewsController), Array)
+#4 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#5 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(ReviewsController), Object(CakeRequest), Object(CakeResponse))
+#6 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2012-08-20 03:41:33 Error: [CakeException] Method save does not exist
+#0 [internal function]: CakeRequest->__call('save', Array)
+#1 /Users/glen/Dropbox/Code/git/journal/app/Controller/ReviewsController.php(8): CakeRequest->save(Array)
+#2 [internal function]: ReviewsController->createJson()
+#3 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(ReviewsController), Array)
+#4 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#5 /Users/glen/Dropbox/Code/git/journal/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(ReviewsController), Object(CakeRequest), Object(CakeResponse))
+#6 /Users/glen/Dropbox/Code/git/journal/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}

@@ -125,6 +125,29 @@ class CollectionsController extends AppController {
     $questions = $this->Collection->ReviewForm->Question->findAllByReviewFormId(
       $review_form['ReviewForm']['id'], array('Question.position', 'Question.text'));
     $this->set('questions', $questions);
+
+    // get a list of review form ids for this collection
+    $review_form_opts = array(
+      'conditions' => array('ReviewForm.collection_id' => $id),
+      'fields' => array('ReviewForm.id')
+    );
+    $review_form_ids = $this->Collection->ReviewForm->find('list', $review_form_opts);   
+    
+    // grab the number of reviews per user
+    $review_options = array(
+      'conditions' => array('Review.review_form_id' => $review_form_ids),
+      'fields' => array('Review.id', 'Review.submission_id', 'Review.user_id'),
+    );
+    $reviews = $this->Collection->ReviewForm->Review->find('list', $review_options);
+    $this->set('review_counts', $reviews);
+
+    // grab the number of reviewers per submission
+    $opts = array(
+      'conditions' => array('Review.review_form_id' => $review_form_ids),
+      'fields' => array('Review.id', 'Review.user_id', 'Review.submission_id'),
+    );
+    $submission_reviews = $this->Collection->ReviewForm->Review->find('list', $opts);
+    $this->set('submission_reviews', $submission_reviews);
   }
 
   public function contents($slug = null) {
@@ -140,7 +163,8 @@ class CollectionsController extends AppController {
       'Submission.id'
     );
     
-    $submissions = $this->Collection->Submission->findAllByCollectionIdAndRetracted($id, 0, array(), $order);
+    $submissions = $this->Collection->Submission->findAllByCollectionIdAndRetracted(
+      $id, 0, array(), $order);
     $this->set('submissions', $submissions);
   }
 
@@ -167,7 +191,8 @@ class CollectionsController extends AppController {
         $this->alertSuccess('Success!', 'Role successfully added.', true);
         $this->redirect(array('action'=>'view', $slug));
       } else {
-        $this->alertError('Error!', 'Could not add role. Please correct any errors below and resubmit.');
+        $this->alertError('Error!',
+                          'Could not add role. Please correct any errors below and resubmit.');
         $this->redirect(array('action'=>'view', $slug));
       }
     } else {

@@ -1,0 +1,47 @@
+@import "variables.less";
+@import "mixins.less";
+
+div.user-badge {
+  @imageWidth: 40px;
+  .no-select;
+  margin-bottom: 10px; 
+  border: solid 1px @grayLighter;
+
+  .image-wrapper {
+    float: left;
+    .square(@imageWidth);
+    img.gravatar { width: @imageWidth; }
+  }
+
+  .user-info {
+    margin-left: @imageWidth + 10px; 
+    line-height: 1em;
+
+    .user-name {
+      font-weight: bold;
+      padding: 5px 0px;
+    }
+
+    .user-email {
+      i { color: @grayLight; }
+      a {
+        margin-left: 5px;
+        color: @grayLight;
+      }
+    }
+
+    .user-tag {
+      float: right;
+      height: @imageWidth;
+      width: @imageWidth;
+      background: @grayLighter;
+      color: @grayLight;
+      text-align: center;
+
+      span {
+        display: block;
+        margin-top: 15px; 
+      }
+    }
+  }
+}

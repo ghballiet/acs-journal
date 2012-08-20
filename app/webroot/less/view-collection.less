@@ -2,16 +2,111 @@
 @import "mixins.less";
 
 div.question {
+  @orderWidth: 40px;
+  @orderSpacing: 10px; 
   margin-bottom: @gridGutterWidth;
+
+  &.add-question { 
+    border-top: solid 1px @grayLighter;
+  }
+
+  .btn-delete-question { 
+    position: absolute; 
+  }
 
   .order {
     float: left;
-    width: 20px;
-    padding-right: 10px;
-    margin-right: 10px; 
+    width: @orderWidth;
+    margin-right: @orderSpacing; 
+    padding-right: @orderSpacing; 
     border-right: solid 1px @blue;
     text-align: right;
     font-weight: bold;
     color: @blue;
+
+    input { 
+      width: @orderWidth - @orderSpacing; 
+      margin-bottom: 0px; 
+    }
+  }
+
+  .question-text { margin-left: @orderWidth + (2 * @orderSpacing); }
+
+  .question-text {    
+    textarea {
+      margin-bottom: 0px; 
+      height: 100px;
+    }
+    
+    .btn-add-question { margin-left: 10px; }
+  }
+
+  .answers {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px; 
+
+    .answer {
+      margin-bottom: .5 * @orderSpacing; 
+      input, span, a {
+        vertical-align: middle;
+        margin-bottom: 0px; 
+      }
+      .radio {
+        margin-right: @orderSpacing;
+      }
+      .btn-add {
+        margin-left: @orderSpacing;
+      }
+
+      .btn-delete {
+        margin-left: -20px;
+        margin-top: 3px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+#assign-reviewers {
+  h4 {
+    margin-bottom: 5px; 
+  }
+}
+
+.user-badge, .submission-badge {
+  cursor: pointer; 
+  @hiddenOpacity: .4;
+  .transition(~"opacity, border .2s ease-in-out");
+  &.inactive { opacity: @hiddenOpacity; }
+  &.selected {
+    opacity: 1;
+    border: solid 1px @gray;
+
+    .user-name, .submission-title {
+      .transition(color .2s ease-in-out);
+      color: @gray;
+    }
+
+    .user-info .user-tag, .num-reviews {
+      .transition(~"background, color .2s ease-in-out");
+      background: @gray;
+      color: @white;
+    }
+  }
+  &.active {
+    opacity: 1;
+    border: solid 1px @blue;
+    
+    .user-name, .submission-title {
+      .transition(color .2s ease-in-out);
+      color: @blue;
+    }
+
+    .user-info .user-tag, .num-reviews {
+      .transition(~"background, color .2s ease-in-out");
+      background: @blue;
+      color: @white;
+    }
   }
 }

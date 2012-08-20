@@ -3,6 +3,11 @@ echo $this->start('css');
 echo $this->Html->css('view-collection');
 echo $this->end();
 
+echo $this->start('scripts');
+echo $this->Html->script('view-collection');
+echo $this->Html->script('assign-reviewers');
+echo $this->end();
+
 echo $this->Breadcrumb->html(array(
   array(
     'link' => array('controller'=>'collections', 'action'=>'manage'),
@@ -148,6 +153,7 @@ echo $this->BootstrapForm->end('Assign Role');
 
   <div class="tab-pane" id="review-form">
 <?
+/*
 echo $this->Html->link(
   'Add Question',
   array(
@@ -158,14 +164,42 @@ echo $this->Html->link(
   array(
     'class' => 'btn btn-primary pull-right'
   )
-);
+  );
+*/
 ?>    
     <h2>Review Form</h2>
+    <div class="question hidden question-template">
+      <a href="#" data-id="" class="btn-delete btn-delete-question close">&times;</a>
+      <div class="order"></div>
+      <div class="question-text">
+        <p class="text"></p>
+        <ul class="answers">
+          <li class="answer">
+            <input type="radio" class="radio" disabled="disabled"/>
+            <input type="text" class="text" name="choice" data-id=""
+                   placeholder="Type answer here."/>
+            <a href="#" class="btn btn-add">Save</a>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
 <?
+$add_choice_url = $this->Html->url(array('controller'=>'choices', 'action'=>'addJson'));
+$delete_choice_url = $this->Html->url(array('controller'=>'choices', 'action'=>'deleteJson'));
+$add_question_url = $this->Html->url(array('controller'=>'questions', 'action'=>'addJson'));
+$delete_question_url= $this->Html->url(
+  array('controller'=>'questions', 'action'=>'deleteJson'));
+printf('<input type="hidden" class="add-choice-url" value="%s" />', $add_choice_url);
+printf('<input type="hidden" class="delete-choice-url" value="%s" />', $delete_choice_url);
+printf('<input type="hidden" class="add-question-url" value="%s" />', $add_question_url);
+printf('<input type="hidden" class="delete-question-url" value="%s" />',
+       $delete_question_url);
+echo '<div class="questions">';
+
 if(count($questions) == 0) {
    echo '<p class="alert alert-info">No questions have been added to this review form.</p>';
 } else {
-  echo '<div class="questions">';
 
   foreach($questions as $question) {
     // choices should be managed here. 
@@ -174,22 +208,114 @@ if(count($questions) == 0) {
     $order = $question['Question']['position'];
     
     echo '<div class="question">';
+    printf('<a href="#" data-id="%s" class="btn-delete btn-delete-question close">&times;</a>',
+           $id);
     printf('<div class="order">%s</div>', $order);
-    printf('<p class="text">%s<p>', $text);
+    
+    echo '<div class="question-text">';
+    printf('<p class="text">%s</p>', $text);
 
-    // TODO: add in answers to questions
+    echo '<ul class="answers">';
+    
+    // answer radio buttons
+    foreach($question['Choice'] as $choice) {
+      echo '<li class="answer">';
+      printf('<a href="#" data-id="%s" class="btn-delete btn-delete-choice close">&times;</a>',
+             $choice['id']);
+      echo '<input type="radio" class="radio" disabled="disabled"/>';
+      printf('<span>%s</span>', $choice['text']);
+      echo '</li>';
+    }
+
+    // add answer radio button
+    echo '<li class="answer">';
+    echo '<input type="radio" class="radio" disabled="disabled"/>';
+    printf('<input type="text" class="text" name="choice" data-id="%s" ' .
+           'placeholder="Type answer here."/>', $id);
+    echo $this->Html->link('Save', '#', array('class'=>'btn btn-add'));
+    echo '</li>';
+    
+    echo '</ul>'; // end of answers
+
+    echo '</div>'; // end of question-text
 
     echo '<div class="clearfix"></div>';
     echo '</div>';
   }
-
-  echo '</div>';
 }
+
+echo '</div>'; // end of questions
 ?>    
+    <div class="add-question question">
+      <h2>Add Question</h2>
+      <input type="hidden" class="review-form-id"
+             value="<? echo $review_form['ReviewForm']['id']; ?>" />
+      <div class="order">
+        <input name="order" type="number" min="1" placeholder="#" class="new-order"
+               value="<? echo count($questions) + 1; ?>"/>
+      </div>
+      <div class="question-text">
+        <textarea name="question" class="new-question"
+                  placeholder="Enter a question here."></textarea>
+        <a href="#" class="btn btn-primary btn-add-question">Add Question</a>
+      </div>
+    </div>
   </div>
+
+
+
+
 
   <div class="tab-pane" id="assign-reviewers">
     <h2>Assign Reviewers</h2>
+<?
+
+$assign_url = $this->Html->url(array('controller'=>'reviews', 'action'=>'createJson'));
+$unassign_url = $this->Html->url(array('controller'=>'reviews', 'action'=>'deleteJson'));
+printf('<input type="hidden" class="assign-url" value="%s" />', $assign_url);
+printf('<input type="hidden" class="unassign-url" value="%s" />', $unassign_url);
+?>
+    <div class="row">
+      <div class="span4 review-users">
+        <h4>Eligible Reviewers</h4>
+<?
+foreach($roles as $role) {
+  $type = $role['RoleType'];
+  if($type['can_review'] != 1)
+    continue;
+  
+  $id = $role['User']['id'];  
+  $reviews = array();
+  $num_reviews = '0';
+
+  if(isset($review_counts[$id])) {
+    $reviews = $review_counts[$id];
+    $num_reviews = count($reviews);  
+  }
+
+  echo $this->Profile->badge($role['User'], $num_reviews);
+}
+
+// create the javascript variable
+$this->start('scripts');
+?>
+<script type="text/javascript">
+  var user_reviews = <? echo json_encode($review_counts); ?>;
+  var submission_reviews = <? echo json_encode($submission_reviews); ?>;
+</script>
+<?
+$this->end();
+?>
+      </div>
+      <div class="span8 review-submissions">
+        <h4>Submissions</h4>
+<?
+foreach($submissions as $submission) {
+  echo $this->Submission->badge($submission);
+}
+?>
+      </div>
+    </div>
   </div>
 </div>
 
