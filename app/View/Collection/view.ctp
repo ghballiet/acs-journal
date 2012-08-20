@@ -276,7 +276,7 @@ printf('<input type="hidden" class="assign-url" value="%s" />', $assign_url);
 printf('<input type="hidden" class="unassign-url" value="%s" />', $unassign_url);
 ?>
     <div class="row">
-      <div class="span4 review-users">
+      <div class="span5 review-users">
         <h4>Eligible Reviewers</h4>
 <?
 foreach($roles as $role) {
@@ -307,7 +307,7 @@ $this->start('scripts');
 $this->end();
 ?>
       </div>
-      <div class="span8 review-submissions">
+      <div class="span7 review-submissions">
         <h4>Submissions</h4>
 <?
 foreach($submissions as $submission) {
