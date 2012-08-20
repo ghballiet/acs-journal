@@ -189,11 +189,11 @@ class CollectionsController extends AppController {
       $this->Collection->Role->create();
       if($role = $this->Collection->Role->save($arr)) {
         $this->alertSuccess('Success!', 'Role successfully added.', true);
-        $this->redirect(array('action'=>'view', $slug));
+        $this->redirect(array('action'=>'view', $slug, '#'=>'roles'));
       } else {
         $this->alertError('Error!',
                           'Could not add role. Please correct any errors below and resubmit.');
-        $this->redirect(array('action'=>'view', $slug));
+        $this->redirect(array('action'=>'view', $slug, '#'=>'roles'));
       }
     } else {
       $user = $this->Collection->Role->User->findById($user);
@@ -209,7 +209,7 @@ class CollectionsController extends AppController {
       $arr = array('Role' => $arr);
       if($saved = $this->Collection->Role->save($arr)) {
         $this->alertSuccess('Success!', 'Role successfully updated.', true);
-        $this->redirect(array('action'=>'view', $role['Collection']['slug']));
+        $this->redirect(array('action'=>'view', $role['Collection']['slug'], '#'=>'roles'));
       }         
     }
   }
@@ -220,11 +220,11 @@ class CollectionsController extends AppController {
     $collection_id = $role['Collection']['id'];
     if($this->Collection->Role->delete($id)) {
       $this->alertSuccess('Success!', 'Succesfully deleted role.', true);
-      $this->redirect(array('action'=>'view', $collection_id));      
+      $this->redirect(array('action'=>'view', $collection_id, '#'=>'roles'));      
     } else {
       $this->alertError('Error!', 'Something went wrong, and that role could ' .
                         'not be deleted. Please try again.');
-      $this->redirect(array('action'=>'view', $collection_id));
+      $this->redirect(array('action'=>'view', $collection_id, '#'=>'roles'));
     }
   }
 }
