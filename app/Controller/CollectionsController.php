@@ -3,8 +3,8 @@ class CollectionsController extends AppController {
   public $name = 'Collection';
   
   public function beforeFilter() {
+    parent::beforeFilter();
     $this->Auth->allow(array('contents'));
-    $this->set('user', $this->Auth->user());
   }
 
   public function manage() {

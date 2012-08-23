@@ -47,23 +47,35 @@ echo $this->Html->css(array(
             </ul>
             <ul class="nav pull-right">
 <?
-// dashboard
+// logged in menu
 if(isset($user)) {
+  // dashboard
   echo $this->Bootstrap->navLink(
     'Dashboard', array('controller'=>'users', 'action'=>'dashboard'));
-}
 
-// administration menu
-if(isset($user) && $user['is_admin'] == '1') {
-  $title = 'Administration';
-  $arr = array(array(
-    'text'=>'Collections',
-    'link'=>array(
-      'controller'=>'collections', 
-      'action'=>'manage'),
-    'icon'=>'book'),
-  );
-  echo $this->Bootstrap->dropdown($title, $arr);
+  // admin menu
+  if($user['is_admin'] == '1') {
+    $title = 'Administration';
+    $arr = array(array(
+      'text'=>'Collections',
+      'link'=>array(
+        'controller'=>'collections', 
+        'action'=>'manage'),
+      'icon'=>'book'),
+    );
+    echo $this->Bootstrap->dropdown($title, $arr);
+  }
+
+  // reviews menu
+  if(isset($user_reviews) && count($user_reviews) > 0) {
+    echo $this->Bootstrap->navLink(
+      'Reviews', 
+      array(
+        'controller'=>'reviews',
+        'action'=>'manage'
+      )
+    );
+  }
 }
 ?>
               <li class="divider-vertical"></li>

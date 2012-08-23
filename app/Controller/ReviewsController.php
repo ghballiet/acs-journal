@@ -2,6 +2,10 @@
 class ReviewsController extends AppController {
   public $name = 'Review';
 
+  public function beforeFilter() {
+    parent::beforeFilter();
+  }
+
   public function createJson() {
     $this->autoRender = false;
     if($this->request->is('post')) {
@@ -28,6 +32,10 @@ class ReviewsController extends AppController {
         echo json_encode(array('ok'=>false));
       }
     }
+  }
+
+  public function manage() {
+    
   }
 }
 ?>

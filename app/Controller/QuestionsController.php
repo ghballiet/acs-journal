@@ -3,7 +3,7 @@ class QuestionsController extends AppController {
   public $name = 'Question';
 
   public function beforeFilter() {
-    $this->set('user', $this->Auth->user());
+    parent::beforeFilter();
   }
 
   public function add($review_form_id = null) {

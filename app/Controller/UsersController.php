@@ -3,9 +3,9 @@ class UsersController extends AppController {
   public $name = 'User';
   
   public function beforeFilter() {
+    parent::beforeFilter();
     $this->Auth->allow('login', 'register', 'forgot_password',
                        'reset_password');
-    $this->set('user', $this->Auth->user());
   }
   
   public function register() {

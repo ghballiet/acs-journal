@@ -39,7 +39,9 @@ class AppController extends Controller {
                           'Bootstrap', 'Time', 'Profile', 'Breadcrumb',
                           'Submission');
 
-  public function beforeFilter() {
+  public function beforeFilter() {   
+    $this->set('user', $this->Auth->user());
+    $this->getReviews();
   }
   
   private function alert($title, $msg, $class, $closable = false) {
@@ -60,5 +62,15 @@ class AppController extends Controller {
   
   public function alertInfo($title, $msg, $closable = false) {
     $this->alert($title, $msg, 'info', $closable);
+  }
+
+  public function getReviews() {
+    if($this->Auth->user() == null)
+      return false;
+
+    $this->loadModel('Review');
+    $user_id = $this->Auth->user('id');
+    $reviews = $this->Review->findAllByUserId($user_id);
+    $this->set('user_reviews', $reviews);
   }
 }
