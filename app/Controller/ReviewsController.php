@@ -37,5 +37,31 @@ class ReviewsController extends AppController {
   public function manage() {
     
   }
+  
+  public function edit($id) {
+    $review = $this->Review->findById($id);
+    $review_form_id = $review['ReviewForm']['id'];
+    $opts = array(
+      'conditions' => array('Question.review_form_id' => $review_form_id),
+      'order' => array('Question.position')
+    );
+    $questions = $this->Review->ReviewForm->Question->find('all', $opts);
+    $question_list = $this->Review->ReviewForm->Question->find('list',
+      array('conditions'=>array('Question.review_form_id'=>$review_form_id)));
+  
+    $ans_opts = array(
+      'fields' => array('Answer.choice_id', 'Answer.comments', 'Answer.question_id'),
+      'conditions' => array(
+        'Answer.user_id' => $this->Auth->user('id'),
+        'Answer.question_id' => $question_list
+      )
+    );
+    
+    $answers = $this->Review->Answer->find('list', $ans_opts);
+
+    $this->set('review', $review);
+    $this->set('questions', $questions);
+    $this->set('answers', $answers);
+  }
 }
 ?>

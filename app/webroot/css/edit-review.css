@@ -1,0 +1,15 @@
+.clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";}
+.clearfix:after{clear:both;}
+.hide-text{overflow:hidden;text-indent:100%;white-space:nowrap;}
+.input-block-level{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+div.question{margin-bottom:20px;}div.question.add-question{border-top:solid 1px #eeeeee;}
+div.question .btn-delete-question{position:absolute;}
+div.question .order{float:left;width:40px;margin-right:10px;padding-right:10px;border-right:solid 1px #049cdb;text-align:right;font-weight:bold;color:#049cdb;}div.question .order input{width:30px;margin-bottom:0px;}
+div.question .question-text{margin-left:60px;}
+div.question .question-text textarea{margin-bottom:0px;height:150px;width:500px;}
+div.question .question-text .btn-add-question{margin-left:10px;}
+div.question .answers{list-style-type:none;margin:0px;padding:0px;float:left;width:200px;margin-right:20px;}div.question .answers .answer{margin-bottom:5px;}div.question .answers .answer input,div.question .answers .answer span,div.question .answers .answer a{vertical-align:middle;margin-bottom:0px;}
+div.question .answers .answer .radio{margin-right:10px;margin-top:0px;}
+div.question .answers .answer label{display:inline-block;line-height:1em;margin:0px;}
+div.question .answers .answer .btn-add{margin-left:10px;}
+div.question .answers .answer .btn-delete{margin-left:-20px;margin-top:3px;position:absolute;}
