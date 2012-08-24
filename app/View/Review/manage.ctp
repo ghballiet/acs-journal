@@ -16,7 +16,7 @@ foreach($user_reviews as $review) {
   $buttons = array();
 
   // edit review
-  $edit_btn = $this->Html->link('Edit Review', array(
+  $edit_btn = $this->Html->link('Review', array(
     'controller'=>'reviews',
     'action'=>'edit',
     $id
