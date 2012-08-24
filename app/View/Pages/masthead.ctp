@@ -28,12 +28,15 @@ $this->end();
 <h3>Editorial Board</h3>
 <ul class="columns clean">
   <li><b>David Aha</b> Naval Research Laboratory</li>
+  <li><b>Kevin Ashley</b> University of Pittsburgh</li>
+  <li><b>Chitta Baral</b> Arizona State University</li>
   <li><b>Mike Barley</b> University of Auckland</li>
   <li><b>Michael Beetz</b> Technical University of Munich</li>
   <li><b>Gautam Biswas</b> Vanderbilt University</li>
   <li><b>Jim Blythe</b> University of Southern California</li>
   <li><b>Ron Brachman</b> Yahoo!</li>
   <li><b>Bert Bredeweg</b> University of Amsterdam</li>
+  <li><b>Will Bridewell</b> Stanford University</li>
   <li><b>Mark Burstein</b> Smart Information Flow Technologies</li>
   <li><b>Balakrishnan Chandrasekaran</b> Ohio State University</li>
   <li><b>Michael Cox</b> University of Maryland</li>
@@ -46,10 +49,13 @@ $this->end();
   <li><b>Karen Myers</b> SRI International</li>
   <li><b>Sergei Nirenburg</b> University of Maryland, Baltimore County</li>
   <li><b>Kanna Rajan</b> MBARI</li>
+  <li><b>Ashwin Ram</b> Palo Alto Research Center</li>
   <li><b>Paul Rosenbloom</b> University of Southern California</li>
   <li><b>Erik Sandewall</b> Link&ouml;ping University</li>
   <li><b>Claude Sammut</b> University of New South Wales</li>
+  <li><b>Daniel Shapiro</b> University of California, Santa Cruz</li>
   <li><b>Candy Sidner</b> Worcester Polytechnic Institute</li>
+  <li><b>Jeffrey Siskind</b> Purdue University</li>
   <li><b>Bill Swartout</b> University of Southern California</li>
   <li><b>Gheorghe Tecuci</b> George Mason University</li>
   <li><b>R. Michael Young</b> North Carolina State University</li>  

@@ -15,8 +15,11 @@ $(function() {
       }
     };
 
+    var notify = new Notifier();
+    notify.pending('Saving...');
     $.post(url, data, function(response) {
       if(response.ok == true) {
+        notify.success('Saved!');
         var choice = response.data.Choice;
         var choice_id = choice.id;
         var li = $('<li />').addClass('answer');
@@ -61,8 +64,12 @@ $(function() {
       }
     };
 
+    var notify = new Notifier();
+    notify.pending('Saving...');
+
     $.post(url, data, function(response) {
       if(response.ok) {
+        notify.success('Saved!');
         var question = response.data.Question;
         console.log(question);
         var id = question.id;
@@ -86,8 +93,12 @@ $(function() {
     var url = $('.delete-choice-url').val();
     var data = { 'Choice': { 'id': id } };
     
+    var notify = new Notifier();
+    notify.pending('Deleting...');
+
     $.post(url, data, function(response) {
       if(response.ok) {
+        notify.success('Deleted!');
         element.remove();
       }
     }, 'json');
@@ -107,9 +118,14 @@ $(function() {
     var url = $('.delete-question-url').val();
     var data = { 'Question': { 'id': id } };
 
+    var notify = new Notifier();
+    notify.pending('Deleting question...');
+
     $.post(url, data, function(response) {
-      if(response.ok)
+      if(response.ok) {
+        notify.success('Deleted!');
         question.remove();
+      }
     }, 'json');
   });
 });
