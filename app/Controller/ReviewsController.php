@@ -53,7 +53,8 @@ class ReviewsController extends AppController {
       'fields' => array('Answer.choice_id', 'Answer.comments', 'Answer.question_id'),
       'conditions' => array(
         'Answer.user_id' => $this->Auth->user('id'),
-        'Answer.question_id' => $question_list
+        'Answer.question_id' => $question_list,
+        'Answer.review_id' => $id
       )
     );
     
