@@ -19,11 +19,20 @@ printf('<input type="hidden" class="save-url" value="%s"/>', $save_url);
 printf('<input type="hidden" class="review-id" value="%s" />', $review_id);
 printf('<input type="hidden" class="review-form-id" value="%s" />', $review_form_id);
 printf('<input type="hidden" class="user-id" value="%s" />', $user['id']);
+
+$title = $review['Submission']['title'];
 ?>
 
 <div class="page-header">
-  <h1>Edit Review</h1>
+  <h1>Review&nbsp;&nbsp;<small><? echo $title; ?></small></h1>
 </div>
+
+<p>
+  Give reasons that support your answers rather than simply checking
+  boxes. Your responses and comments will be saved automatically.
+</p>
+
+<hr />
 
 <?
 foreach($questions as $question) {
@@ -64,7 +73,7 @@ foreach($questions as $question) {
   echo '</ul>'; // end answers
   
   // show the comments textarea
-  printf('<textarea name="question-%s" placeholder="Type your comments here.">', $id);  
+  printf('<textarea name="question-%s" data-question-id="%d" placeholder="Type your comments here.">', $id, $id);  
   echo $comments;
   echo '</textarea>';
   echo '<div class="clearfix"></div>';

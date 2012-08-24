@@ -1,3 +1,5 @@
+var save_interval = null;
+
 $(function() {
   main();
   
@@ -17,6 +19,17 @@ $(function() {
     });
     
     // TODO: add the text edit event here
+    $('.question textarea').keyup(function() {
+      var notify = new Notifier();
+      notify.pending('Saving...');
+      var element = $(this);
+      clearTimeout(save_interval);
+      save_interval = setTimeout(function() {
+        var id = element.data('question-id');
+        var question = $('#question-' + id);
+        question.save();
+      }, 500);
+    });
   }
 });
 
@@ -40,10 +53,13 @@ $.fn.save = function() {
     }
   };
   
+  var notify = new Notifier();
+  notify.pending('Saving...');
+  
   $.post(url, data, function(response) {
     // do something if it's okay
     if(response.ok) {
-      
+      notify.success('Saved!');
     }
   }, 'json');
 }

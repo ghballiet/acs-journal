@@ -53,29 +53,34 @@ if(isset($user)) {
   echo $this->Bootstrap->navLink(
     'Dashboard', array('controller'=>'users', 'action'=>'dashboard'));
 
-  // admin menu
-  if($user['is_admin'] == '1') {
-    $title = 'Administration';
-    $arr = array(array(
-      'text'=>'Collections',
-      'link'=>array(
-        'controller'=>'collections', 
-        'action'=>'manage'),
-      'icon'=>'book'),
-    );
-    echo $this->Bootstrap->dropdown($title, $arr);
-  }
+  $links = array();
+  $title = 'Actions';
 
-  // reviews menu
-  if(isset($user_reviews) && count($user_reviews) > 0) {
-    echo $this->Bootstrap->navLink(
-      'Reviews', 
-      array(
-        'controller'=>'reviews',
-        'action'=>'manage'
-      )
-    );
-  }
+  $collection_link = array(
+    'text'=>'Collections',
+    'link'=>array(
+      'controller'=>'collections', 
+      'action'=>'manage'
+    ),
+    'icon'=>'book'
+  );
+
+  $review_link = array(
+    'text'=>'Reviews',
+    'link'=>array(
+      'controller'=>'reviews',
+      'action'=>'manage'
+    ),
+    'icon'=>'file'
+  );   
+
+  if($user['is_admin'] == '1')
+    $links[] = $collection_link;
+
+  if(isset($user_reviews) && count($user_reviews) > 0)
+    $links[] = $review_link;
+
+  echo $this->Bootstrap->dropdown($title, $links);
 }
 ?>
               <li class="divider-vertical"></li>
@@ -121,6 +126,12 @@ echo $this->Bootstrap->dropdown($title, $links);
       <footer>
         <p>Copyright &copy; 2012 Cognitive Systems Foundation. All Rights Reserved.</p>
       </footer>
+
+      <div class="notifications">
+        <div class="alert">
+          <strong class="text">Saving...</strong>
+        </div>
+      </div>
 
     </div> <!-- /container -->
 

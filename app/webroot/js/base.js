@@ -11,3 +11,22 @@ $(document).ready(function() {
     list.after(clone);
   });
 });
+
+function Notifier() {
+}
+
+Notifier.prototype.pending = function(msg) {
+  $('.notifications .text').html(msg);
+  $('.notifications').slideDown('fast');
+  $('.notifications > div').attr('class', 'alert');
+}
+
+Notifier.prototype.success = function(msg) {  
+  if(msg == null)
+    msg = 'Success!';
+  $('.notifications .text').html(msg);
+  $('.notifications > div').attr('class', 'alert alert-success');
+  setTimeout(function() {
+    $('.notifications').slideUp('fast');
+  }, 1000);
+}
