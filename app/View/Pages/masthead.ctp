@@ -12,7 +12,7 @@ $this->end();
 
 <h3>Editor</h3>
 <ul class="clean">
-  <li><b>Pat Langley</b> Arizona State University / University of Auckland</li>
+  <li><b>Pat Langley</b> University of Auckland / Carnegie Mellon University</li>
 </ul>
 
 <h3>Associate Editors</h3>

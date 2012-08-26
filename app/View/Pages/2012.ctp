@@ -164,7 +164,7 @@ $review_form = $this->Html->url('/review-form', true);
   <li><b>Kenneth Forbus</b> Northwestern University</li>
   <li><b>Ashok Goel</b> Georgia Institute of Technology</li>
   <li><b>John Laird</b> University of Michigan, Ann Arbor</li>
-  <li><b>Pat Langley</b> Arizona State University / University of Auckland</li>
+  <li><b>Pat Langley</b> University of Auckland / Carnegie Mellon University</li>
   <li><b>Patrick Winston</b> Massachusetts Institute of 
     Technology</li>
 </ul>
