@@ -7,5 +7,6 @@
 <p>A new user has created an account:</p>
 
 <?
+unset($user['confirm_password']);
 pr($user);
 ?>
