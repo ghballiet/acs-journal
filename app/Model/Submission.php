@@ -53,7 +53,7 @@ class Submission extends AppModel {
 
     // update the slug
     $volume = $coll['Collection']['volume'];
-    $slug = sprintf('paper-%d-%d', $volume, $order);
+    $slug = sprintf('paper-%d-%d-%d', $coll_id, $volume, $order);
     $this->data['Submission']['slug'] = $slug;
 
     return true; 
