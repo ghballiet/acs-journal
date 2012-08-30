@@ -37,6 +37,7 @@ $this->end();
   <li><b>Ron Brachman</b> Yahoo!</li>
   <li><b>Bert Bredeweg</b> University of Amsterdam</li>
   <li><b>Will Bridewell</b> Stanford University</li>
+  <li><b>Selmer Bringsjord</b> Rensselaer Polytechnic Institute</li>
   <li><b>Mark Burstein</b> Smart Information Flow Technologies</li>
   <li><b>Balakrishnan Chandrasekaran</b> Ohio State University</li>
   <li><b>Michael Cox</b> University of Maryland</li>
