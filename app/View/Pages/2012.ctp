@@ -49,6 +49,7 @@ $review_form = $this->Html->url('/review-form', true);
   <li>Social Cognition and Interaction</li>
   <li>High-level Execution and Control</li>
   <li>Problem Solving and Heuristic Search</li>
+  <li>Cognitive Aspects of Emotion and Personality</li>
   <li>Metacognition and Meta-level Reasoning</li>
   <li>Structural Learning and Knowledge Capture</li>
 </ul>
