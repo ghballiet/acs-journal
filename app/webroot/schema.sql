@@ -14,6 +14,7 @@ create table if not exists users (
   country varchar(250),
   phone varchar(250),
   is_admin boolean default false,
+  notify_of_new_users boolean default false,
   modified timestamp,
   created timestamp
 );
