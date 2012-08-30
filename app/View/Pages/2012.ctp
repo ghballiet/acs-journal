@@ -152,9 +152,9 @@ $review_form = $this->Html->url('/review-form', true);
 
 <h3>Important Dates</h3>
 <ul class="columns clean">
-  <li><b>September 1, 2012</b> Deadline for paper submission</li>
-  <li><b>October 12, 2012</b> Decisions about paper acceptance</li>
-  <li><b>November 9, 2012</b> Deadline for final papers</li>
+  <li><b>September 7, 2012</b> Deadline for paper submission</li>
+  <li><b>October 15, 2012</b> Decisions about paper acceptance</li>
+  <li><b>November 21, 2012</b> Deadline for final papers</li>
   <li><b>December 7-9, 2012</b> Conference</li>
 </ul>
 
