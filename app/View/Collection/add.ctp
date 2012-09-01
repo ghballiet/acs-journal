@@ -19,5 +19,9 @@ echo $this->BootstrapForm->input('description', array(
   'required'=>false));
 echo $this->BootstrapForm->input('accepting_submissions', array(
   'required'=>false));
+echo $this->BootstrapForm->input('max_submissions_per_reviewer', array(
+  'label' => 'Maximum # of review / reviewer'));
+echo $this->BootstrapForm->input('min_reviews_per_paper', array(
+  'label' => 'Minimum # of reviews / paper'));
 echo $this->BootstrapForm->end('Create Collection');
 ?>

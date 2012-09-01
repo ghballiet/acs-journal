@@ -168,13 +168,14 @@ class CollectionsController extends AppController {
     $this->set('submissions', $submissions);
   }
 
-  public function assign_role($user = null, $role = null, $type = null) {
+  public function assign_role($user = null, $role = null, $type = null, $max_reviews = null) {
     $this->autoRender = false;
     if($this->request->is('post')) {
       $data = $this->request->data['Collection'];
       $user = $this->Collection->Role->User->findByNameEmail($data['user']);
       $collection = $this->Collection->findById($data['collection_id']);
       $slug = $collection['Collection']['slug'];
+      $max_reviews = $collection['Collection']['max_reviews']);
       $user_id = $user['User']['id'];
       $collection_id = $collection['Collection']['id'];
       $role_type_id = $data['role_type'];
@@ -182,7 +183,8 @@ class CollectionsController extends AppController {
       $arr = array(
         'user_id' => $user_id,
         'collection_id' => $collection_id,
-        'role_type_id' => $role_type_id
+        'role_type_id' => $role_type_id,
+        'max_reviews' => $max_reviews
       );
       $arr = array('Role' => $arr);
 
@@ -204,6 +206,7 @@ class CollectionsController extends AppController {
         'user_id' => $user['User']['id'],
         'role_type_id' => $type['RoleType']['id'],
         'collection_id' => $role['Role']['collection_id'],
+        'max_reviews' => $max_reviews,
         'skip_validation' => true
       );
       $arr = array('Role' => $arr);
