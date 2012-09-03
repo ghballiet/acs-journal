@@ -256,10 +256,10 @@ class SubmissionsController extends AppController {
       $url = $html->url(array(
         'action'=>'view', $submission['Submission']['slug']), true);
 
-      // $this->Submission->createEmail($submission['Submission']['id'], $url);
+      $this->Submission->revisedEmail($submission['Submission']['id'], $url);
 
       $this->alertSuccess(
-        'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
+        'Success!', sprintf('<strong>%s</strong> was successfully revised.',
                             $submission['Submission']['title']), true);
       $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }

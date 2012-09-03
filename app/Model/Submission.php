@@ -35,6 +35,18 @@ class Submission extends AppModel {
     $email->send();
   }
 
+  public function revisedEmail($id, $url) {
+    $submission = $this->findById($id);
+    $submission['url'] = $url;
+    $email = new CakeEmail();
+    $email->template('revision', 'default');
+    $email->emailFormat('html');
+    $email->to($submission['User']['email']);
+    $email->subject('Your Revision Was Received');
+    $email->from('acs@cogsys.org');
+    $email->viewVars($submission);
+    $email->send();
+  }
 
   public function nextOrder($id) {
     $options = array(
