@@ -109,6 +109,10 @@ class SubmissionsController extends AppController {
       $this->Submission->create();
       $submission = $this->Submission->save($submission);
 
+      // update the next submission
+      $submission['Submission']['next_submission'] = $submission['Submission']['id'];
+      $submission = $this->Submission->save($submission);
+
       // now, create the slug and save
       /* $title = $submission['Submission']['title']; */
       /* $id = $submission['Submission']['id']; */
