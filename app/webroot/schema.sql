@@ -76,7 +76,7 @@ create table if not exists collections (
   description longtext, 
   accepting_submissions boolean,
   max_submissions_per_reviewer integer default 3, 
-  min_reviews_per_paper integer default 3, /* not sure what this was for -CM */
+  min_reviews_per_paper integer default 3,
   slug varchar(500),
   modified timestamp,
   created timestamp

@@ -175,7 +175,7 @@ class CollectionsController extends AppController {
       $user = $this->Collection->Role->User->findByNameEmail($data['user']);
       $collection = $this->Collection->findById($data['collection_id']);
       $slug = $collection['Collection']['slug'];
-      $max_reviews = $collection['Collection']['max_reviews']);
+      $max_reviews = $collection['Collection']['max_reviews'];
       $user_id = $user['User']['id'];
       $collection_id = $collection['Collection']['id'];
       $role_type_id = $data['role_type'];
