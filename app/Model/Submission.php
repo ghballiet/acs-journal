@@ -14,6 +14,10 @@ class Submission extends AppModel {
     'Previous' => array(
       'className' => 'Submission',
       'foreignKey' => 'previous_submission'
+    ),
+    'Next' => array(
+      'className' => 'Submission',
+      'foreignKey' => 'next_submission'
     )
   );
   public $hasMany = array('Keyword', 'Coauthor', 'Review');

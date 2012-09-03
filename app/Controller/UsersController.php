@@ -56,6 +56,7 @@ class UsersController extends AppController {
 
     $conditions = array(
       'Submission.user_id' => $this->Auth->user('id'),
+      'Submission.id = Submission.next_submission',
       'Submission.retracted' => 0
     );    
 

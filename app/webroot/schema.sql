@@ -26,6 +26,7 @@ create table if not exists submissions (
   current_version integer,
   final_version integer,
   previous_submission integer,
+  next_submission integer,
   locked boolean default false,
   slug varchar(500),
   pages integer,

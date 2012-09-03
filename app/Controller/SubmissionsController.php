@@ -213,6 +213,11 @@ class SubmissionsController extends AppController {
       $this->Submission->create();
       $submission = $this->Submission->save($submission);
 
+      // update the previous submission
+      $prev = $submission['Previous'];
+      $prev['next_submission'] = $submission['Submission']['id'];
+      $this->Submission->save($prev);      
+
       // save the keywords
       $words = explode(',', $keywords);
       foreach($words as $word) {
