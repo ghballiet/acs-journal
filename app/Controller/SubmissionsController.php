@@ -213,9 +213,14 @@ class SubmissionsController extends AppController {
       $this->Submission->create();
       $submission = $this->Submission->save($submission);
 
+      // update the next submission
+      $submission['Submission']['next_submission'] = $submission['Submission']['id'];
+      $submission = $this->Submission->save($submission);
+
       // update the previous submission
-      $prev = $submission['Previous'];
-      $prev['next_submission'] = $submission['Submission']['id'];
+      $prev_id = $submission['Submission']['previous_submission'];
+      $prev = $this->Submission->findById($prev_id);
+      $prev['Submission']['next_submission'] = $submission['Submission']['id'];
       $this->Submission->save($prev);      
 
       // save the keywords
