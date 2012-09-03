@@ -52,7 +52,7 @@ class SubmissionsController extends AppController {
   public function create($slug = null) {
     $options = array(
       'conditions'=>array('Collection.accepting_submissions' => 1),
-      'fields' => array('Collection.id', 'Collection.name'),
+      'fields' => array('Collection.id', 'Collection.title'),
       'order' => array('Collection.title', 'Collection.subtitle',
                        'Collection.volume')
     );
