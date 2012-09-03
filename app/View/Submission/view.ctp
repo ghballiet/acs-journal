@@ -68,6 +68,13 @@ if(count($links) > 0) {
   <h1><? echo $submission['title']; ?></h1>
 </div>
 
+<? if($author['id'] == $user['id']) { ?>
+<p class="alert alert-info">
+  <strong>Quick tip:</strong> You can submit a revised version of this
+  paper by clicking <strong>Actions > Submit Revision</strong>.
+</p>
+<? } ?>
+
 <div class="row">
   <div class="span3 left">
     <div class="authors well">

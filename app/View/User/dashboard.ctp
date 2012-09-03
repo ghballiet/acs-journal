@@ -17,6 +17,12 @@ echo $this->Html->link(
 ?>
 <h2>My Submissions</h2>
 
+<p class="alert alert-info">
+  <strong>Quick tip:</strong> You can submit a revised version of a
+  paper by clicking the submission title below, then
+  selecting <strong>Actions > Submit Revision</strong>.
+</p>
+
 <table class="table table-condensed">
 <?
 echo $this->Html->tableHeaders(array(
