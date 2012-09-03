@@ -7,7 +7,9 @@ class Role extends AppModel {
     'user_id' => array(
       'rule' => 'uniquePerCollection',
       'message' => 'That user already has a role in this collection.'
-    )
+    ),
+	// should include a check here to make sure max_reviews is not
+	// greater than max_submissions_per_reviewer
   );
 
   public function uniquePerCollection($check) {

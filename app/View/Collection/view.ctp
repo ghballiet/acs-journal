@@ -98,6 +98,7 @@ foreach($roles as $role) {
   $role_id = $role['Role']['id'];
   $role_type_id = $role['RoleType']['id'];
   $user_id = $role['User']['id'];
+  $max_reviews = $role['Role']['max_reviews'];
 
   $change_role_urls = array();
 
@@ -109,7 +110,9 @@ foreach($roles as $role) {
       'action'=>'assign_role',
       'user'=>$user_id,
       'role'=>$role_id,
-      'type'=>$id
+      'type'=>$id,
+      // not sure if there is a way to edit the max_reviews - CM
+      'max_reviews'=>$max_reviews 
     );
     $item = array(
       'text' => $role_name, 
@@ -145,8 +148,15 @@ foreach($roles as $role) {
 echo $this->BootstrapForm->create('Collection', array('action'=>'assign_role'));
 echo $this->BootstrapForm->input('user', array('type'=>'text'));
 echo $this->BootstrapForm->input('role_type', array('options'=>$role_type_list));
-echo $this->BootstrapForm->input('collection_id', array('type'=>'hidden', 
-                                                        'value'=>$collection['Collection']['id']));
+// Set the maximum number of reviews assignable for a given role. 
+// This shouldn't have to be filled out for all types but I wasn't
+// sure what the best way to disable the field would be. - CM
+// Also, should have a maximum value of the collections max_submissions_per
+// reviewer, which I couldn't remember how to add -CM
+echo $this->BootstrapForm->input('max_reviews', array(
+  'label'=>'Maximum number of reviews assignable', 
+  'default'=>3));
+echo $this->BootstrapForm->input('collection_id', array('type'=>'hidden',                                        'value'=>$collection['Collection']['id']));
 echo $this->BootstrapForm->end('Assign Role');
 ?>    
   </div>
@@ -292,6 +302,10 @@ foreach($roles as $role) {
     $reviews = $review_counts[$id];
     $num_reviews = count($reviews);  
   }
+  
+  // not eligible if the user has reached their max - CM
+  if($num_reviews >= $role['max_reviews'])
+    continue;
 
   echo $this->Profile->badge($role['User'], $num_reviews);
 }

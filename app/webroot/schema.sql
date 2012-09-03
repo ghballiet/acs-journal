@@ -75,6 +75,8 @@ create table if not exists collections (
   volume varchar(250),
   description longtext, 
   accepting_submissions boolean,
+  max_submissions_per_reviewer integer default 3, 
+  min_reviews_per_paper integer default 3, /* not sure what this was for -CM */
   slug varchar(500),
   modified timestamp,
   created timestamp
@@ -94,6 +96,7 @@ create table if not exists roles (
   role_type_id integer,
   user_id integer,
   collection_id integer,
+  max_reviews integer default 3,
   modified timestamp,
   created timestamp  
 );
