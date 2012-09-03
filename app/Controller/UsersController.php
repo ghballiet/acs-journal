@@ -56,8 +56,9 @@ class UsersController extends AppController {
 
     $conditions = array(
       'Submission.user_id' => $this->Auth->user('id'),
+      'Submission.id = Submission.current_version',
       'Submission.retracted' => 0
-    );
+    );    
 
     $submissions = $this->User->Submission->find('all', array('conditions'=>$conditions));
     $this->set('submissions', $submissions);

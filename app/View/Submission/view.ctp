@@ -41,15 +41,21 @@ $links = array();
 
 if($author['id'] == $user['id'] || $user['is_admin'] == 1) {
   // users or admins can edit and retract this submission
+  $slug = $submission['slug'];
   $edit = array(
-    'text' => 'Edit', 
-    'link' => array('action'=>'edit', $submission['slug']),
+    'text' => 'Edit Submission Details', 
+    'link' => array('action'=>'edit', $slug),
     'icon' => 'edit');
   $retract = array(
     'text' => 'Retract',
-    'link' => array('action'=>'retract', $submission['slug']),
+    'link' => array('action'=>'retract', $slug),
     'icon' => 'remove');
+  $revise = array(
+    'text' => 'Submit Revision',
+    'link' => array('action'=>'revise', $slug),
+    'icon' => 'share');
   $links[] = $edit;
+  $links[] = $revise;
   $links[] = $retract;
 }
 

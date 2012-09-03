@@ -161,5 +161,104 @@ class SubmissionsController extends AppController {
       $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
+
+  public function revise($slug) {
+    if($this->request->is('get')) {
+      $submission = $this->Submission->findBySlug($slug);
+      $this->set('submission', $submission);
+      $this->request->data = $submission;
+    } else {
+      $data = $this->request->data;
+      $submission = $data['Submission'];
+      $upload = $submission['Upload'];
+      $keywords = $submission['Keyword'];
+      $coauthors = $data['Coauthor'];
+
+      // remove the upload from the submission data array
+      unset($submission['Upload']);
+
+      // first, make sure a PDF file was uploaded
+      if($upload['type'] != 'application/pdf') {
+        $this->alertError(
+          'Error!',
+          sprintf('The file you uploaded - <strong>%s</strong> - was not ' . 
+                  'a PDF file. Please select a PDF and re-submit.', $upload['name']));
+        return false;
+      }
+
+      // get the date
+      $now = date('Y-m-d H:i:s');
+      
+      // build the upload data
+      $upload['content'] = file_get_contents($upload['tmp_name']);
+      $upload['extension'] = pathinfo($upload['tmp_name'], PATHINFO_EXTENSION);
+      $upload['user_id'] = $this->Auth->user('id');
+      $upload['created'] = $now;
+      $upload['modified'] = $now;
+      $upload = array('Paper' => $upload);
+
+      // save the upload
+      $this->Submission->Paper->create();
+      $upload = $this->Submission->Paper->save($upload);
+
+      // build the submission data
+      $submission['user_id'] = $this->Auth->user('id');
+      $submission['current_version'] = $upload['Paper']['id'];
+      $submission['created'] = $now;
+      $submission['modified'] = $now;
+      $submission['order'] = $this->Submission->nextOrder($submission['collection_id']);
+      $submission = array('Submission' => $submission);
+
+      // save the submission
+      $this->Submission->create();
+      $submission = $this->Submission->save($submission);
+
+      // update the previous submission
+      $prev_id = $submission['Submission']['previous_submission'];
+      $prev = $this->Submission->findById($prev_id);
+      $prev['Submission']['current_version'] = $submission['Submission']['id'];
+      $this->Submission->save($prev);      
+
+      // save the keywords
+      $words = explode(',', $keywords);
+      foreach($words as $word) {
+        $this->Submission->Keyword->create();
+        $arr = array(
+          'Keyword' => array(
+            'value' => trim($word),
+            'created' => $now,
+            'modified' => $now,
+            'submission_id' => $submission['Submission']['id']));
+        $this->Submission->Keyword->save($arr);                             
+      }
+
+      // build the coauthors
+      $ca = array();
+      foreach($coauthors as $i=>$coauthor) {
+        $coauthor['submission_id'] = $submission['Submission']['id'];
+        $coauthor['created'] = $now;
+        $coauthor['modified'] = $now;
+        if(empty($coauthor['name']) && empty($coauthor['email']) &&
+           empty($coauthor['institution']))
+          continue;
+        $coauthor = array('Coauthor' => $coauthor);
+        $this->Submission->Coauthor->create();
+        $this->Submission->Coauthor->save($coauthor);
+      }
+      
+      // success! send the email
+      $view = new View($this);
+      $html = $view->loadHelper('Html');
+      $url = $html->url(array(
+        'action'=>'view', $submission['Submission']['slug']), true);
+
+      // $this->Submission->createEmail($submission['Submission']['id'], $url);
+
+      $this->alertSuccess(
+        'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
+                            $submission['Submission']['title']), true);
+      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+    }
+  }
 }
 ?>
