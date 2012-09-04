@@ -224,13 +224,14 @@ class CollectionsController extends AppController {
     $this->autoRender = false;
     $role = $this->Collection->Role->findById($id);
     $collection_id = $role['Collection']['id'];
+    $slug = $role['Collection']['slug'];
     if($this->Collection->Role->delete($id)) {
       $this->alertSuccess('Success!', 'Succesfully deleted role.', true);
-      $this->redirect(array('action'=>'view', $collection_id, '#'=>'roles'));      
+      $this->redirect(array('action'=>'view', $slug, '#'=>'roles'));      
     } else {
       $this->alertError('Error!', 'Something went wrong, and that role could ' .
                         'not be deleted. Please try again.');
-      $this->redirect(array('action'=>'view', $collection_id, '#'=>'roles'));
+      $this->redirect(array('action'=>'view', $slug, '#'=>'roles'));
     }
   }
 }
