@@ -296,7 +296,7 @@ foreach($roles as $role) {
   
   $id = $role['User']['id'];  
   $reviews = array();
-  $num_reviews = '0';
+  $num_reviews = 0;
 
   if(isset($review_counts[$id])) {
     $reviews = $review_counts[$id];
