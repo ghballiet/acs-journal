@@ -304,8 +304,10 @@ foreach($roles as $role) {
   }
   
   // not eligible if the user has reached their max - CM
-  if($num_reviews >= $role['Role']['max_reviews'])
-    continue;
+  // this should be fixed so that the user simply cannot be assigned
+  // additional reviews. 
+  // if($num_reviews >= $role['Role']['max_reviews'])
+  //   continue;
 
   echo $this->Profile->badge($role['User'], $num_reviews);
 }
