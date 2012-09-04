@@ -93,8 +93,6 @@ class CollectionsController extends AppController {
 
     $submissions = $this->Collection->Submission->getCurrent(array(
       'collection_id'=>$id));
-    // $submissions = $this->Collection->Submission->findAllByCollectionIdAndRetracted(
-    //  $id, 0, array(), array('Submission.order'));
     $this->set('submissions', $submissions);
 
     $roles = $this->Collection->Role->findAllByCollectionId($id);
@@ -121,6 +119,8 @@ class CollectionsController extends AppController {
     );
     $users = $this->Collection->Role->User->find('list', $options);
     $this->set('users', $users);
+
+    pr($users);
 
     $review_form = $this->Collection->ReviewForm->findByCollectionId($id);    
     $this->set('review_form', $review_form);
