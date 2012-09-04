@@ -15,9 +15,15 @@ $(document).ready(function() {
 function Notifier() {
 }
 
-Notifier.prototype.pending = function(msg) {
+Notifier.prototype.pending = function(msg, blocking) {
   $('.notifications .text').html(msg);
-  $('.notifications').slideDown('fast');
+
+  $('.notifications').removeClass('blocking');
+
+  if(blocking === true)
+    $('.notifications').addClass('blocking');
+
+  $('.notifications').addClass('active');
   $('.notifications > div').attr('class', 'alert');
 }
 
@@ -27,6 +33,6 @@ Notifier.prototype.success = function(msg) {
   $('.notifications .text').html(msg);
   $('.notifications > div').attr('class', 'alert alert-success');
   setTimeout(function() {
-    $('.notifications').slideUp('fast');
-  }, 1000);
+    $('.notifications').removeClass('active');
+  }, 400);
 }

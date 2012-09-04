@@ -115,8 +115,11 @@ function assign(user_id, submission_id) {
       'review_form_id': review_form_id
     }
   };
+  var n = new Notifier();
+  n.pending('Saving...', true);
   $.post(url, data, function(response) {
     if(response.ok) {
+      n.success('Saved!');
       var review = response.data.Review;
 
       // update the user badge
@@ -132,6 +135,12 @@ function assign(user_id, submission_id) {
       sub_badge.find('.num-reviews span').html(num);
 
       // add to the review arrays
+      if(!user_reviews[user_id])
+        user_reviews[user_id] = {};
+
+      if(!submission_reviews[submission_id])
+        submission_reviews[submission_id] = {};
+
       user_reviews[user_id][review.id] = submission_id;
       submission_reviews[submission_id][review.id] = user_id;
     }
@@ -148,7 +157,10 @@ function unassign(user_id, submission_id) {
       'review_form_id': review_form_id
     }
   };
+  var n = new Notifier();
+  n.pending('Saving...', true);
   $.post(url, data, function(response) {
+    n.success('Saved!');
     // update the user badge
     var user_badge = $('.user-badge[data-id="' + user_id + '"]');
     var tag = parseInt(user_badge.data('tag')) - 1;
@@ -167,7 +179,7 @@ function unassign(user_id, submission_id) {
         delete user_reviews[user_id][i];
     }      
     for(var i in submission_reviews[submission_id]) {
-      if(subission_reviews[submission_id][i] == user_id)
+      if(submission_reviews[submission_id][i] == user_id)
         delete submission_reviews[submission_id][i];
     }
   }, 'json');

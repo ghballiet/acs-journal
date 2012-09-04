@@ -312,10 +312,18 @@ foreach($roles as $role) {
 
 // create the javascript variable
 $this->start('scripts');
+$js_user_reviews = json_encode($review_counts, true);
+$js_sub_reviews = json_encode($review_counts, true);
+
+if($js_user_reviews = '[]')
+  $js_user_reviews = '{}';
+
+if($js_sub_reviews = '[]')
+  $js_sub_reviews = '{}';
 ?>
 <script type="text/javascript">
-  var user_reviews = <? echo json_encode($review_counts); ?>;
-  var submission_reviews = <? echo json_encode($submission_reviews); ?>;
+  var user_reviews = <? echo $js_user_reviews; ?>;
+  var submission_reviews = <? echo $js_sub_reviews; ?>;
 </script>
 <?
 $this->end();
