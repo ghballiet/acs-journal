@@ -120,8 +120,6 @@ class CollectionsController extends AppController {
     $users = $this->Collection->Role->User->find('list', $options);
     $this->set('users', $users);
 
-    pr($users);
-
     $review_form = $this->Collection->ReviewForm->findByCollectionId($id);    
     $this->set('review_form', $review_form);
 
