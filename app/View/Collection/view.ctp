@@ -302,8 +302,6 @@ foreach($roles as $role) {
     $reviews = $review_counts[$id];
     $num_reviews = count($reviews);
   }
-
-  pr($review_counts);
   
   // not eligible if the user has reached their max - CM
   // this should be fixed so that the user simply cannot be assigned
@@ -311,7 +309,7 @@ foreach($roles as $role) {
   // if($num_reviews >= $role['Role']['max_reviews'])
   //   continue;
 
-  echo $this->Profile->badge($role['User'], $num_reviews);
+  echo $this->Profile->badge($role['User'], (string)$num_reviews);
 }
 
 // create the javascript variable
