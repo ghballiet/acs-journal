@@ -113,16 +113,6 @@ class SubmissionsController extends AppController {
       $submission['Submission']['next_submission'] = $submission['Submission']['id'];
       $submission = $this->Submission->save($submission);
 
-      // now, create the slug and save
-      /* $title = $submission['Submission']['title']; */
-      /* $id = $submission['Submission']['id']; */
-      /* $title = strtolower(trim($title)); */
-      /* $slug = str_replace(' ', '-', $title); */
-      /* $slug = preg_replace('/\W+/', '', $slug); */
-      /* $slug = str_replace('_', '-', $slug); */
-      /* $slug = sprintf('%d-%s', $id, $slug); */
-      /* $submission['Submission']['slug'] = $slug; */
-      /* $this->Submission->save($submission); */
 
       // save the keywords
       $words = explode(',', $keywords);
@@ -152,16 +142,19 @@ class SubmissionsController extends AppController {
       }
       
       // success! send the email
-      $view = new View($this);
-      $html = $view->loadHelper('Html');
-      $url = $html->url(array(
-        'action'=>'view', $submission['Submission']['slug']), true);      
+      try {
+        $view = new View($this);
+        $html = $view->loadHelper('Html');
+        $url = $html->url(array(
+          'action'=>'view', $submission['Submission']['slug']), true);      
 
-      $this->Submission->createEmail($submission['Submission']['id'], $url);
+        $this->Submission->createEmail($submission['Submission']['id'], $url);
+        $this->alertSuccess(
+          'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
+                              $submission['Submission']['title']), true);
+      } catch(Exception $e) {
+      }
 
-      $this->alertSuccess(
-        'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
-                            $submission['Submission']['title']), true);
       $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
@@ -255,16 +248,19 @@ class SubmissionsController extends AppController {
       }
       
       // success! send the email
-      $view = new View($this);
-      $html = $view->loadHelper('Html');
-      $url = $html->url(array(
-        'action'=>'view', $submission['Submission']['slug']), true);
+      try {
+        $view = new View($this);
+        $html = $view->loadHelper('Html');
+        $url = $html->url(array(
+          'action'=>'view', $submission['Submission']['slug']), true);
 
-      $this->Submission->revisedEmail($submission['Submission']['id'], $url);
+        $this->Submission->revisedEmail($submission['Submission']['id'], $url);
 
-      $this->alertSuccess(
-        'Success!', sprintf('<strong>%s</strong> was successfully revised.',
-                            $submission['Submission']['title']), true);
+        $this->alertSuccess(
+          'Success!', sprintf('<strong>%s</strong> was successfully revised.',
+                              $submission['Submission']['title']), true);
+      } catch(Exception $e) {
+      }
       $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }

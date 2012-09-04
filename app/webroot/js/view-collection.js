@@ -16,7 +16,7 @@ $(function() {
     };
 
     var notify = new Notifier();
-    notify.pending('Saving...');
+    notify.pending('Saving...', true);
     $.post(url, data, function(response) {
       if(response.ok == true) {
         notify.success('Saved!');
@@ -65,7 +65,7 @@ $(function() {
     };
 
     var notify = new Notifier();
-    notify.pending('Saving...');
+    notify.pending('Saving...', true);
 
     $.post(url, data, function(response) {
       if(response.ok) {
@@ -119,7 +119,7 @@ $(function() {
     var data = { 'Question': { 'id': id } };
 
     var notify = new Notifier();
-    notify.pending('Deleting question...');
+    notify.pending('Deleting question...', true);
 
     $.post(url, data, function(response) {
       if(response.ok) {
