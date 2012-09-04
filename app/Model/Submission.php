@@ -63,6 +63,16 @@ class Submission extends AppModel {
     return $this->find('all', $opts);
   }
 
+  public function updateReviews($old_id, $new_id) {
+    // update submission numbers for reviews
+    $reviews = $this->Review->findAllBySubmissionId($old_id);
+    
+    foreach($reviews as $item) {
+      $item['Review']['submission_id'] = $new_id;
+      $this->Review->save($item);
+    }
+  }
+
   public function nextOrder($id) {
     $options = array(
       'fields' => array('MAX(Submission.order) AS `order`'),

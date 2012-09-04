@@ -218,7 +218,10 @@ class SubmissionsController extends AppController {
       $prev_id = $submission['Submission']['previous_submission'];
       $prev = $this->Submission->findById($prev_id);
       $prev['Submission']['next_submission'] = $submission['Submission']['id'];
-      $this->Submission->save($prev);      
+      $this->Submission->save($prev);
+
+      // update all the reviews
+      $this->Submission->updateReviews($prev_id, $submission['Submission']['id']);
 
       // save the keywords
       $words = explode(',', $keywords);
