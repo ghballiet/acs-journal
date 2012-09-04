@@ -55,7 +55,7 @@ class UsersController extends AppController {
     $this->set('collections', $collections);
 
     $submissions = $this->User->Submission->getCurrent(array(
-      'user_id'=>$this->Auth->user('id')));
+      'Submission.user_id'=>$this->Auth->user('id')));
     $this->set('submissions', $submissions);
   }
   

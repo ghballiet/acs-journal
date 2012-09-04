@@ -9,7 +9,7 @@ class CollectionsController extends AppController {
 
   public function manage() {
     $collections = $this->Collection->find('all', array('order'=>
-                                                       array('Collection.title')));
+                                                        array('Collection.title')));
     $this->set('collections', $collections);
   }
 
@@ -92,7 +92,9 @@ class CollectionsController extends AppController {
 
 
     $submissions = $this->Collection->Submission->getCurrent(array(
-      'collection_id'=>$id));
+      'Submission.collection_id'=>$id,
+      'NOT' => array('Submission.user_id' => $this->Auth->user('id'))
+    ));
     $this->set('submissions', $submissions);
 
     $roles = $this->Collection->Role->findAllByCollectionId($id);

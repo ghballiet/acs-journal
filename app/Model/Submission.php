@@ -58,7 +58,7 @@ class Submission extends AppModel {
     );
 
     foreach($conditions as $key=>$value)
-      $opts['conditions']['Submission.' . $key] = $value;
+      $opts['conditions'][$key] = $value;
     
     return $this->find('all', $opts);
   }
