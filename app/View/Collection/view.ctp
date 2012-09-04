@@ -300,8 +300,10 @@ foreach($roles as $role) {
 
   if(isset($review_counts[$id])) {
     $reviews = $review_counts[$id];
-    $num_reviews = count($reviews);  
+    $num_reviews = count($reviews);
   }
+
+  pr($review_counts);
   
   // not eligible if the user has reached their max - CM
   // this should be fixed so that the user simply cannot be assigned
