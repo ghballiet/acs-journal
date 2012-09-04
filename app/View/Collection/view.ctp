@@ -112,7 +112,7 @@ foreach($roles as $role) {
       'role'=>$role_id,
       'type'=>$id,
       // not sure if there is a way to edit the max_reviews - CM
-      'max_reviews'=>$max_reviews 
+      // 'max_reviews'=>$max_reviews 
     );
     $item = array(
       'text' => $role_name, 
@@ -304,7 +304,7 @@ foreach($roles as $role) {
   }
   
   // not eligible if the user has reached their max - CM
-  if($num_reviews >= $role['max_reviews'])
+  if($num_reviews >= $role['Role']['max_reviews'])
     continue;
 
   echo $this->Profile->badge($role['User'], $num_reviews);
