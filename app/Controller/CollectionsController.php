@@ -90,8 +90,11 @@ class CollectionsController extends AppController {
     $id = $collection['Collection']['id'];
     $this->set('collection', $collection);
 
-    $submissions = $this->Collection->Submission->findAllByCollectionIdAndRetracted(
-      $id, 0, array(), array('Submission.order'));
+
+    $submissions = $this->Collection->Submission->getCurrent(array(
+      'collection_id'=>$id));
+    // $submissions = $this->Collection->Submission->findAllByCollectionIdAndRetracted(
+    //  $id, 0, array(), array('Submission.order'));
     $this->set('submissions', $submissions);
 
     $roles = $this->Collection->Role->findAllByCollectionId($id);

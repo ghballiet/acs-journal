@@ -48,6 +48,21 @@ class Submission extends AppModel {
     $email->send();
   }
 
+  public function getCurrent($conditions = array()) {
+    $opts = array(
+      'conditions' => array(
+        'Submission.id = Submission.next_submission',
+        'Submission.retracted' => 0
+      ),
+      'order' => array('Submission.title')
+    );
+
+    foreach($conditions as $key=>$value)
+      $opts['conditions']['Submission.' . $key] = $value;
+    
+    return $this->find('all', $opts);
+  }
+
   public function nextOrder($id) {
     $options = array(
       'fields' => array('MAX(Submission.order) AS `order`'),

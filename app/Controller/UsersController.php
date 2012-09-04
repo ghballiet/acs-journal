@@ -54,13 +54,8 @@ class UsersController extends AppController {
     $collections = $this->User->Role->Collection->findAllByAcceptingSubmissions(1);
     $this->set('collections', $collections);
 
-    $conditions = array(
-      'Submission.user_id' => $this->Auth->user('id'),
-      'Submission.id = Submission.next_submission',
-      'Submission.retracted' => 0
-    );    
-
-    $submissions = $this->User->Submission->find('all', array('conditions'=>$conditions));
+    $submissions = $this->User->Submission->getCurrent(array(
+      'user_id'=>$this->Auth->user('id')));
     $this->set('submissions', $submissions);
   }
   
