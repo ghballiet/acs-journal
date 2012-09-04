@@ -175,10 +175,10 @@ class CollectionsController extends AppController {
     $this->autoRender = false;
     if($this->request->is('post')) {
       $data = $this->request->data['Collection'];
+      $max_reviews = $data['max_reviews'];
       $user = $this->Collection->Role->User->findByNameEmail($data['user']);
       $collection = $this->Collection->findById($data['collection_id']);
       $slug = $collection['Collection']['slug'];
-      $max_reviews = $collection['Collection']['max_reviews'];
       $user_id = $user['User']['id'];
       $collection_id = $collection['Collection']['id'];
       $role_type_id = $data['role_type'];
