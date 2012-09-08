@@ -12,6 +12,31 @@ class SubmissionsController extends AppController {
     $this->set('data', $submission);
   }
 
+  private function bytesToSize($bytes, $precision = 2) {  
+    $kilobyte = 1024;
+    $megabyte = $kilobyte * 1024;
+    $gigabyte = $megabyte * 1024;
+    $terabyte = $gigabyte * 1024;
+   
+    if (($bytes >= 0) && ($bytes < $kilobyte)) {
+      return $bytes . ' B';
+ 
+    } elseif (($bytes >= $kilobyte) && ($bytes < $megabyte)) {
+      return round($bytes / $kilobyte, $precision) . ' KB';
+ 
+    } elseif (($bytes >= $megabyte) && ($bytes < $gigabyte)) {
+      return round($bytes / $megabyte, $precision) . ' MB';
+ 
+    } elseif (($bytes >= $gigabyte) && ($bytes < $terabyte)) {
+      return round($bytes / $gigabyte, $precision) . ' GB';
+ 
+    } elseif ($bytes >= $terabyte) {
+      return round($bytes / $terabyte, $precision) . ' TB';
+    } else {
+      return $bytes . ' B';
+    }
+  }
+
   public function edit($slug) {
     $submission = $this->Submission->findBySlug($slug);
     $id = $submission['Submission']['id'];
@@ -94,8 +119,22 @@ class SubmissionsController extends AppController {
       $upload = array('Paper' => $upload);
 
       // save the upload
-      $this->Submission->Paper->create();
-      $upload = $this->Submission->Paper->save($upload);
+      try {
+        $this->Submission->Paper->create();
+        $upload = $this->Submission->Paper->save($upload);
+      } catch(Exception $e) {
+        if(strpos($e->getMessage(), 'max_allowed_packet')) {
+          $this->alertError('PDF file was too large.',
+                            sprintf('The file you uploaded was %s - the max allowed file ' . 
+                                    'size is currently 2 MB. We are working to resolve ' . 
+                                    'this issue as soon as possible, and will notify ' .
+                                    'you when it has been fixed.',
+                                    $this->bytesToSize($upload['Paper']['size'])));
+        } else {
+          $this->alertError('Something went wrong.', $e->getMessage());
+        }
+        $this->redirect(array('action'=>'create'));
+      }
 
       // build the submission data
       $submission['user_id'] = $this->Auth->user('id');
@@ -148,7 +187,7 @@ class SubmissionsController extends AppController {
         $url = $html->url(array(
           'action'=>'view', $submission['Submission']['slug']), true);      
 
-        $this->Submission->createEmail($submission['Submission']['id'], $url);
+        // $this->Submission->createEmail($submission['Submission']['id'], $url);
         $this->alertSuccess(
           'Success!', sprintf('<strong>%s</strong> was successfully submitted.',
                               $submission['Submission']['title']), true);

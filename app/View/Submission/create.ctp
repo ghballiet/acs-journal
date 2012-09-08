@@ -12,6 +12,17 @@ $this->end();
   <h1>Submit Paper</h1>
 </div>
 
+<div class="alert alert-block">
+  <h4>Submission Issues</h4>
+  <p>
+    As of 2012-09-08 04:15 GMT, papers larger than <strong>2
+    MB</strong> are automatically being rejected. We are aware of this
+    issue and are working quickly to resolve it. We will send a
+    message to all registered users once this issue has been
+    resolved. 
+  </p>
+</div>
+
 <?
 echo $this->BootstrapForm->create('Submission', array('type'=>'file'));
 ?>
@@ -28,7 +39,7 @@ echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag',
 // TODO: add keywords
 
 echo $this->BootstrapForm->input('Upload', array('type'=>'file'));
-echo $this->BootstrapForm->input('pages', array('icon'=>'paper-clip'));
+echo $this->BootstrapForm->input('pages', array('icon'=>'paper-clip', 'min'=>'1'));
 
 $add_btn = $this->Html->link('Add Coauthor', '#', array('class'=>'btn btn-mini add-coauthor'));
 ?>
