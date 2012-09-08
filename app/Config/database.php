@@ -72,7 +72,7 @@ class DATABASE_CONFIG {
   public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-    'host' => 'localhost'
+    'host' => 'localhost',
 		'login' => 'cogsysor_journal',
 		'password' => 'aCs2k11',
 		'database' => 'cogsysor_journal_2011',
