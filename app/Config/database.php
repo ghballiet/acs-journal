@@ -58,10 +58,21 @@
  * For MySQL to connect via socket specify the `unix_socket` parameter instead of `host` and `port`
  */
 class DATABASE_CONFIG {
+  /* public $default = array( */
+	/* 	'datasource' => 'Database/Mysql', */
+	/* 	'persistent' => false, */
+  /*   'host' => 'cogsys.cutz3fdpurax.us-east-1.rds.amazonaws.com', */
+	/* 	'login' => 'cogsysor_journal', */
+	/* 	'password' => 'aCs2k11', */
+	/* 	'database' => 'cogsysor_journal_2011', */
+	/* 	'prefix' => '', */
+	/* 	//'encoding' => 'utf8', */
+	/* ); */
+
   public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
+    'host' => 'localhost'
 		'login' => 'cogsysor_journal',
 		'password' => 'aCs2k11',
 		'database' => 'cogsysor_journal_2011',
