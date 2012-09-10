@@ -283,7 +283,7 @@ printf('<input type="hidden" class="unassign-url" value="%s" />', $unassign_url)
 
   <div class="tab-pane" id="assign-reviewers">
     <h2>Assign Reviewers</h2>
-    <div class="navbar navbar-fixed-top fade">
+    <div class="navbar navbar-fixed-top hidden fade navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
           <p class="navbar-text">This is some text.</p>
