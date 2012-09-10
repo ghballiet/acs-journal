@@ -11,7 +11,8 @@ p {
 }
 .lead {
   margin-bottom: @baseLineHeight;
-  font-size: @baseFontSize * 1.5;
+  font-size: 20px;
+  /* font-size: @baseFontSize * 1.5; */
   font-weight: 200;
   line-height: @baseLineHeight * 1.5;
 }
@@ -55,7 +56,8 @@ cite {
 // -------------------------
 
 h1, h2, h3, h4, h5, h6 {
-  margin: (@baseLineHeight / 2) 0;
+  /* margin: (@baseLineHeight / 2) 0; */
+  margin: 0px;
   font-family: @headingsFontFamily;
   font-weight: @headingsFontWeight;
   line-height: 1;
@@ -67,12 +69,12 @@ h1, h2, h3, h4, h5, h6 {
     color: @grayLight;
   }
 }
-h1 { font-size: 36px; line-height: 40px; }
-h2 { font-size: 30px; line-height: 40px; }
-h3 { font-size: 24px; line-height: 40px; }
-h4 { font-size: 18px; line-height: 20px; }
-h5 { font-size: 14px; line-height: 20px; }
-h6 { font-size: 12px; line-height: 20px; }
+h1 { font-size: 30px; line-height: @baseLineHeight * 2; }
+h2 { font-size: 24px; line-height: @baseLineHeight * 2; }
+h3 { font-size: 18px; line-height: @baseLineHeight * 1.5; }
+h4 { font-size: 14px; line-height: @baseLineHeight; }
+h5 { font-size: 12px; line-height: @baseLineHeight; }
+h6 { font-size: 11px; line-height: @baseLineHeight; }
 
 h1 small { font-size: 24px; }
 h2 small { font-size: 18px; }

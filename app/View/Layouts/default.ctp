@@ -8,7 +8,8 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-<? echo $this->Html->css('http://fonts.googleapis.com/css?family=PT+Sans:400,700'); ?>
+    <? echo $this->Html->css('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic'); ?>
+    <? // echo $this->Html->css('http://fonts.googleapis.com/css?family=PT+Sans:400,700'); ?>
     <? echo $this->Html->css(array('base', 'home')); ?>
     <style type="text/css">
     body { padding-top: 40px; }
@@ -29,7 +30,7 @@ echo $this->Html->css(array(
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
