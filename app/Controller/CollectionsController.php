@@ -98,6 +98,9 @@ class CollectionsController extends AppController {
     $this->set('submissions', $submissions);
 
     $roles = $this->Collection->Role->findAllByCollectionId($id);
+
+    $roles = Set::sort($roles, '{n}.User.surname', 'asc');
+
     $this->set('roles', $roles);
 
     $role_types = $this->Collection->Role->RoleType->find('all', 'RoleType.name');

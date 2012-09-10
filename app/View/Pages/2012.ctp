@@ -197,8 +197,8 @@ $review_form = $this->Html->url('/review-form', true);
   <li><b>Kanna Rajan</b> MBARI</li>
   <li><b>Ashwin Ram</b> Palo Alto Research Center</li>
   <li><b>Paul Rosenbloom</b> University of Southern California</li>
-  <li><b>Erik Sandewall</b> Link&ouml;ping University</li>
   <li><b>Claude Sammut</b> University of New South Wales</li>
+  <li><b>Erik Sandewall</b> Link&ouml;ping University</li>
   <li><b>Ute Schmid</b> University of Bamberg</li>
   <li><b>Daniel Shapiro</b> University of California, Santa Cruz</li>
   <li><b>Candy Sidner</b> Worcester Polytechnic Institute</li>

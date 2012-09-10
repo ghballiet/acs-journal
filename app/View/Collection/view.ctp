@@ -273,11 +273,6 @@ echo '</div>'; // end of questions
   </div>
 
 
-
-
-
-  <div class="tab-pane" id="assign-reviewers">
-    <h2>Assign Reviewers</h2>
 <?
 
 $assign_url = $this->Html->url(array('controller'=>'reviews', 'action'=>'createJson'));
@@ -285,15 +280,26 @@ $unassign_url = $this->Html->url(array('controller'=>'reviews', 'action'=>'delet
 printf('<input type="hidden" class="assign-url" value="%s" />', $assign_url);
 printf('<input type="hidden" class="unassign-url" value="%s" />', $unassign_url);
 ?>
+
+  <div class="tab-pane" id="assign-reviewers">
+    <h2>Assign Reviewers</h2>
+    <div class="navbar navbar-fixed-top fade">
+      <div class="navbar-inner">
+        <div class="container">
+          <p class="navbar-text">This is some text.</p>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="span5 review-users">
         <h4>Eligible Reviewers</h4>
+        <div class="active-users"></div>
 <?
 foreach($roles as $role) {
   $type = $role['RoleType'];
   if($type['can_review'] != 1)
     continue;
-  
+
   $id = $role['User']['id'];  
   $reviews = array();
   $num_reviews = 0;
@@ -315,12 +321,12 @@ foreach($roles as $role) {
 // create the javascript variable
 $this->start('scripts');
 $js_user_reviews = json_encode($review_counts, true);
-$js_sub_reviews = json_encode($review_counts, true);
+$js_sub_reviews = json_encode($submission_reviews, true);
 
-if($js_user_reviews = '[]')
+if($js_user_reviews == '[]')
   $js_user_reviews = '{}';
 
-if($js_sub_reviews = '[]')
+if($js_sub_reviews == '[]')
   $js_sub_reviews = '{}';
 ?>
 <script type="text/javascript">
@@ -333,6 +339,7 @@ $this->end();
       </div>
       <div class="span7 review-submissions">
         <h4>Submissions</h4>
+        <div class="active-submissions"></div>
 <?
 foreach($submissions as $submission) {
   echo $this->Submission->badge($submission);

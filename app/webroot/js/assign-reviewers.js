@@ -126,7 +126,7 @@ function assign(user_id, submission_id) {
       var user_badge = $('.user-badge[data-id="' + user_id + '"]');
       var tag = parseInt(user_badge.data('tag')) + 1;
       user_badge.data('tag', tag);
-      user_badge.find('.user-tag span').html(tag);
+      user_badge.find('.user-tag span').html(tag);      
 
       // update the submission badge
       var sub_badge = $('.submission-badge[data-id="' + submission_id + '"]');
@@ -211,7 +211,7 @@ jQuery.fn.toggleUser = function() {
   var user_id = $(this).data('id');
   var submission_id = $('.submission-badge.active').data('id');
   if($(this).hasClass('selected'))
-    assign(user_id, submission_id);
+    assign(user_id, submission_id);    
   else
     unassign(user_id, submission_id);
 }
