@@ -90,18 +90,48 @@ class CollectionsController extends AppController {
 
   public function view($slug = null) {
     if($slug == null)
-      $this->redirect(array('controller'=>'collections', 'action'=>'manage'));
+      $this->redirect(array('controller'=>'collections', 'action'=>'manage'));   
+      
     
     $collection = $this->Collection->findBySlug($slug);
     $id = $collection['Collection']['id'];
     $this->set('collection', $collection);
 
+    // set the user role
+
+    $user_role = '';
+    $user_id = $this->Auth->user('id');
+
+    if($this->Auth->user('is_admin') == '1')
+      $user_role = 'site_admin';  
+
+    $role = $this->Collection->Role->findByCollectionIdAndUserId($id, $user_id);
+    if($role != null)
+      $user_role = $role['RoleType']['name'];
+    
+    $this->set('user_role', $user_role);
 
     $submissions = $this->Collection->Submission->getCurrent(array(
       'Submission.collection_id'=>$id,
       'NOT' => array('Submission.user_id' => $this->Auth->user('id'))
     ));
+
     $this->set('submissions', $submissions);
+
+    // if this user is an editor, only include those submissions
+    if($user_role == 'editor') {
+      $reviews = parent::getReviews();
+      $sub_ids = array();
+      foreach($reviews as $rev)
+        $sub_ids[] = $rev['Submission']['id'];
+      $actual_submissions = $this->Collection->Submission->getCurrent(
+        array(
+          'Submission.collection_id'=>$id,
+          'Submission.id' => $sub_ids
+        )
+      );
+      $this->set('submissions', $actual_submissions);
+    }
 
     $roles = $this->Collection->Role->findAllByCollectionId($id);
 

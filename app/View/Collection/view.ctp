@@ -1,6 +1,6 @@
 <?
 echo $this->start('css');
-echo $this->Html->css('view-lection');
+echo $this->Html->css('view-collection');
 echo $this->end();
 
 echo $this->start('scripts');
@@ -27,9 +27,11 @@ echo $this->Breadcrumb->html(array(
 
 <ul id="tab-headers" class="nav nav-tabs">
   <li class="active"><a href="#submissions" data-toggle="tab">Submissions</a></li>
+<? if($user_role == 'site_admin' || $user_role == 'admin'): ?>
   <li><a href="#roles" data-toggle="tab">Roles</a></li>
   <li><a href="#review-form" data-toggle="tab">Review Form</a></li>
 <?
+  endif;
   if(count($submissions) > 0) {
 ?>
   <li><a href="#assign-reviewers" data-toggle="tab">Assign Reviewers</a></li>

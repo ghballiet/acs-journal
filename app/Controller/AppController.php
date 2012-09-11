@@ -73,6 +73,7 @@ class AppController extends Controller {
     $user_id = $this->Auth->user('id');
     $reviews = $this->Review->findAllByUserId($user_id);
     $this->set('user_reviews', $reviews);
+    return $reviews;
   }
 
   public function getRoles() {
@@ -96,7 +97,7 @@ class AppController extends Controller {
     $roles = $this->Role->findAllByUserId($this->Auth->user('id'));
     $coll_ids = array();
     foreach($roles as $role) {
-      if($role['RoleType']['name'] == 'admin')
+      if($role['RoleType']['name'] == 'admin' || $role['RoleType']['name'] == 'editor')
         $coll_ids[] = $role['Collection']['id'];
     }
 
