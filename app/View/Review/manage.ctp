@@ -12,6 +12,31 @@
 foreach($user_reviews as $review) {
   $paper = $review['Submission'];
   $id = $review['Review']['id'];
+  $slug = $review['Submission']['slug'];
+
+  $abstract = $this->Html->link(
+      'Abstract',
+      array(
+          'controller' => 'submissions',
+          'action' => 'view',
+          $slug
+      ),
+      array(
+          'class' => 'btn btn-mini'
+      )
+  );
+
+  $pdf = $this->Html->link(
+      'PDF',
+      array(
+          'controller' => 'submissions',
+          'action' => 'paper',
+          $slug
+      ),
+      array(
+          'class' => 'btn btn-mini btn-danger'
+      )
+  );
 
   $buttons = array();
 
@@ -21,6 +46,9 @@ foreach($user_reviews as $review) {
     'action'=>'edit',
     $id
   ), array('class'=>'btn btn-mini btn-primary'));
+
+  $buttons[] = $pdf;
+  $buttons[] = $abstract;
   $buttons[] = $edit_btn;
 
   $buttons = implode('&nbsp;', $buttons);

@@ -8,8 +8,14 @@ class CollectionsController extends AppController {
   }
 
   public function manage() {
-    $collections = $this->Collection->find('all', array('order'=>
-                                                        array('Collection.title')));
+    if($this->Auth->user('is_admin') == '1') {
+      $collections = $this->Collection->find('all', array('order'=>
+                       array('Collection.title')));
+    } else {
+      // find collections for the logged in user
+      $collections = parent::getCollections();
+    }
+
     $this->set('collections', $collections);
   }
 

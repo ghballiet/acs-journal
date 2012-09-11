@@ -1,6 +1,6 @@
 <?
 echo $this->start('css');
-echo $this->Html->css('view-collection');
+echo $this->Html->css('view-lection');
 echo $this->end();
 
 echo $this->start('scripts');
@@ -154,9 +154,15 @@ echo $this->BootstrapForm->input('role_type', array('options'=>$role_type_list))
 // Also, should have a maximum value of the collections max_submissions_per
 // reviewer, which I couldn't remember how to add -CM
 echo $this->BootstrapForm->input('max_reviews', array(
-  'label'=>'Maximum number of reviews assignable', 
-  'default'=>3));
-echo $this->BootstrapForm->input('collection_id', array('type'=>'hidden',                                        'value'=>$collection['Collection']['id']));
+    'label'=>'Maximum number of reviews assignable', 
+    'default'=>3));
+echo $this->BootstrapForm->input(
+  'collection_id',
+  array(
+    'type'=>'hidden',
+    'value'=>$collection['Collection']['id']
+  )
+);
 echo $this->BootstrapForm->end('Assign Role');
 ?>    
   </div>

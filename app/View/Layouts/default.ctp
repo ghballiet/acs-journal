@@ -73,9 +73,9 @@ if(isset($user)) {
       'action'=>'manage'
     ),
     'icon'=>'file'
-  );   
+  );
 
-  if($user['is_admin'] == '1')
+  if($user['is_admin'] == '1' || count($user_roles) > 0)
     $links[] = $collection_link;
 
   if(isset($user_reviews) && count($user_reviews) > 0)
@@ -141,7 +141,7 @@ echo $this->Bootstrap->dropdown($title, $links);
     <!-- Placed at the end of the document so the pages load faster -->
     <?
     echo $this->Html->script(array(
-      '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', 'bootstrap-transition', 'bootstrap-alert', 'bootstrap-modal', 'bootstrap-dropdown',
+      'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', 'bootstrap-transition', 'bootstrap-alert', 'bootstrap-modal', 'bootstrap-dropdown',
       'bootstrap-scrollspy', 'bootstrap-tab', 'bootstrap-tooltip', 'bootstrap-popover',
       'bootstrap-button', 'bootstrap-collapse', 'bootstrap-carousel', 'bootstrap-typeahead',
       'base'

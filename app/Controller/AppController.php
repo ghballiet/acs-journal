@@ -42,6 +42,7 @@ class AppController extends Controller {
   public function beforeFilter() {   
     $this->set('user', $this->Auth->user());
     $this->getReviews();
+    $this->getRoles();
   }
   
   private function alert($title, $msg, $class, $closable = false) {
@@ -72,5 +73,34 @@ class AppController extends Controller {
     $user_id = $this->Auth->user('id');
     $reviews = $this->Review->findAllByUserId($user_id);
     $this->set('user_reviews', $reviews);
+  }
+
+  public function getRoles() {
+    // get the roles (if any) that are assigned to this user
+    if($this->Auth->user() == null)
+      return false;
+
+    $this->loadModel('Role');
+    $user_id = $this->Auth->user('id');
+    $roles = $this->Role->findAllByUserId($user_id);
+    $this->set('user_roles', $roles);
+  }
+
+  public function getCollections() {
+    // return collections for the currently logged in user
+    if($this->Auth->user() == null)
+      return false;
+
+    $this->loadModel('Role');
+    $this->loadModel('Collection');
+    $roles = $this->Role->findAllByUserId($this->Auth->user('id'));
+    $coll_ids = array();
+    foreach($roles as $role) {
+      if($role['RoleType']['name'] == 'admin')
+        $coll_ids[] = $role['Collection']['id'];
+    }
+
+    $collections = $this->Collection->findAllById($coll_ids);
+    return $collections;
   }
 }
