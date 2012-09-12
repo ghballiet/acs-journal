@@ -51,9 +51,22 @@ foreach($user_reviews as $review) {
   $buttons[] = $abstract;
   $buttons[] = $edit_btn;
 
+  $user_id = $review['Submission']['user_id'];
+  $name = $user_list[$user_id];
+  $sub_id = $review['Submission']['id'];
+
+  $authors = array($name);
+
+  if(isset($coauthors[$sub_id])) {
+    foreach($coauthors[$sub_id] as $k=>$v)
+      $authors[] = $v;
+  }
+
+  $author_str = implode(', ', $authors);
+
   $buttons = implode('&nbsp;', $buttons);
   
-  $cells = array($paper['title'], $review['User']['full_name'], $buttons);
+  $cells = array($paper['title'], $author_str, $buttons);
   echo $this->Html->tableCells($cells);
 }
 ?>
