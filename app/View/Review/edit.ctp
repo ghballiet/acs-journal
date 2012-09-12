@@ -88,7 +88,15 @@ foreach($questions as $question) {
   echo '</ul>'; // end answers
   
   // show the comments textarea
-  printf('<textarea name="question-%s" data-question-id="%d" placeholder="Type your comments here.">', $id, $id);  
+
+  printf('<textarea name="question-%s" data-question-id="%d" placeholder="Type your comments here."', $id, $id);
+
+  if(count($choices) == 0) {
+    echo 'class="full">';
+  } else {
+    echo '>';
+  }
+
   echo $comments;
   echo '</textarea>';
   echo '<div class="clearfix"></div>';

@@ -7,7 +7,7 @@ div.question{margin-bottom:20px;}div.question.add-question{border-top:solid 1px 
 div.question .btn-delete-question{position:absolute;}
 div.question .order{float:left;width:40px;margin-right:10px;padding-right:10px;border-right:solid 1px #049cdb;text-align:right;font-weight:bold;color:#049cdb;}div.question .order input{width:30px;margin-bottom:0px;}
 div.question .question-text{margin-left:60px;}
-div.question .question-text textarea{margin-bottom:0px;height:150px;width:500px;}
+div.question .question-text textarea{margin-bottom:0px;height:150px;width:500px;}div.question .question-text textarea.full{width:720px;}
 div.question .question-text .btn-add-question{margin-left:10px;}
 div.question .answers{list-style-type:none;margin:0px;padding:0px;float:left;width:200px;margin-right:20px;}div.question .answers .answer{margin-bottom:5px;}div.question .answers .answer input,div.question .answers .answer span,div.question .answers .answer a{vertical-align:middle;margin-bottom:0px;}
 div.question .answers .answer .radio{margin-right:10px;margin-top:0px;}
