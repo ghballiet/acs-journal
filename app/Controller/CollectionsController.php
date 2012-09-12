@@ -102,12 +102,12 @@ class CollectionsController extends AppController {
     $user_role = '';
     $user_id = $this->Auth->user('id');
 
-    if($this->Auth->user('is_admin') == '1')
-      $user_role = 'site_admin';  
-
     $role = $this->Collection->Role->findByCollectionIdAndUserId($id, $user_id);
     if($role != null)
       $user_role = $role['RoleType']['name'];
+
+    if($this->Auth->user('is_admin') == '1')
+      $user_role = 'site_admin';  
     
     $this->set('user_role', $user_role);
 

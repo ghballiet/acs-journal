@@ -12,6 +12,20 @@ $save_url = $this->Html->url(array(
   'action'=>'saveJson'
 ));
 
+
+$user_id = $review['Submission']['user_id'];
+$sub_id = $review['Submission']['id'];
+$user_name = $user_list[$user_id];
+$authors = array($user_name);
+
+// grab the coauthors
+if(isset($coauthors[$sub_id])) {
+  foreach($coauthors[$sub_id] as $k=>$v)
+    $authors[] = $v;
+}
+
+$auth_str = implode(', ', $authors);
+
 $review_id = $review['Review']['id'];
 $review_form_id = $review['ReviewForm']['id'];
 
@@ -25,6 +39,7 @@ $title = $review['Submission']['title'];
 
 <div class="page-header">
   <h1>Review&nbsp;&nbsp;<small><? echo $title; ?></small></h1>
+  <h4 class="authors"><? echo $auth_str; ?></h4>
 </div>
 
 <p>

@@ -77,6 +77,21 @@ class ReviewsController extends AppController {
     $this->set('questions', $questions);
     $this->set('answers', $answers);
 
+    // set users
+    $user_list = $this->Review->User->find('list', array(
+      'fields' => array('User.id', 'User.full_name')
+    ));
+    $this->set('user_list', $user_list);
+
+    $coauthors = $this->Review->Submission->Coauthor->find('list', array(
+      'fields' => array(
+        'Coauthor.id',
+        'Coauthor.name',
+        'Coauthor.submission_id',        
+      )
+    ));
+    
+    $this->set('coauthors', $coauthors);
   }
 }
 ?>

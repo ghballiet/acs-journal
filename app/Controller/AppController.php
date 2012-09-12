@@ -83,7 +83,12 @@ class AppController extends Controller {
 
     $this->loadModel('Role');
     $user_id = $this->Auth->user('id');
-    $roles = $this->Role->findAllByUserId($user_id);
+    $roles = $this->Role->find('all', array(
+      'conditions' => array(
+        'Role.user_id' => $user_id,
+        'NOT' => array('Role.role_type_id' => 3)
+      )
+    ));
     $this->set('user_roles', $roles);
   }
 

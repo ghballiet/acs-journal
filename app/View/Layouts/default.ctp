@@ -81,7 +81,8 @@ if(isset($user)) {
   if(isset($user_reviews) && count($user_reviews) > 0)
     $links[] = $review_link;
 
-  echo $this->Bootstrap->dropdown($title, $links);
+  if(count($links) > 0)
+    echo $this->Bootstrap->dropdown($title, $links);
 }
 ?>
               <li class="divider-vertical"></li>
