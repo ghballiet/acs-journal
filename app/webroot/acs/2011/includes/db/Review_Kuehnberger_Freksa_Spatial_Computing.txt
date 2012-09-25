@@ -1,0 +1,77 @@
+user: 19
+paper: 60
+
+Review on "Spatial Computing: Towards Designing a Right-Brain Type Architecture" (Freksa)
+
+(1) Does the paper address issues related to aspects of human-level intelligence, complex cognition, or similar topics? Does it discuss these issues from a cognitive systems perspective?
+
+Highly related
+
+Comment: 
+Issues of spatial computation and spatial reasoning are cognitively highly relevant. Although I think that the title seems to be quite metaphorical, 
+the approach relates spatial computation to a broad range of abilities ranging from perception to representation and reasoning. Furthermore, the idea
+of a cognitive substrate clearly puts the paper in the center of human-level intelligence and complex cognition. 
+
+
+(2) Do the authors present a problem or approach that extends or clarifies the capabilities of cognitive systems, or increase our understanding of their 
+operation, in substantial ways?
+
+Substantial extension
+
+Comment: 
+The paper is more an overview paper and does not primarily present new  insights. 
+It draws some interesting and cognitively highly relevant conclusions from prior research of the author. In particular, 
+with respect to spatial computations the paper clarifies many issues that range from frameworks for qualitative spatial reasoning via
+conceptual neighbourhood relations to spatial configurations and concrete vs. abstract computation. 
+
+
+(3) Does the paper make clear claims about the approach to cognitive systems? Such claims can take many forms, but they should be stated unambiguously in accessible language.
+
+Vague claims
+
+Comment: 
+The paper makes claims about cognitive systems, in particular, one should mention the idea of a spatio-temporal substrate of cognitive representations in this
+context. Nevertheless, this claim should be more clearly argued for and elaborated. It is, for example, not clear to me how this substrate can be precisely 
+used for facilitating other representations. Furthermore it should be related to other approaches of "cognitive substrate". 
+For example, Nick Cassimatis' work on cognitive substrate could be mentioned in this context or (taken from the field of computational linguistics) 
+Jerry Hobbs' idea of core abstract theories.
+
+
+(4) Do the authors present convincing evidence that supports their claims? Such evidence can take different forms, but it should lead a reasonable person to 
+conclude the claims are correct or plausible.
+
+Somewhat convincing
+
+Comment: 
+I think that, in particular, for the general claims about cognition the paper should provide a more careful and clearer support. 
+Furthermore, an interesting point to elaborate on would be the sketched evaluation scenario sketched in the section "Conclusion and Outlook".
+
+
+(5) Does the paper's writing and organization present its ideas to readers effectively? Can moderately informed readers understand the main 
+contributions and reconstruct the results if desired?
+
+Very effective
+
+Comment: 
+The overall structure seems to be reasonable. I think that a moderately informed reader can understand the various approaches towards
+spatial cognition. Nevertheless, some tables (e.g. Fig. 2, Fig. 6 and 7) should be re-designed and similarly 
+formatted.
+
+
+(6) Do you have other comments that support your overall evaluation or do you have detailed suggestions for improving the paper?
+
+
+(7) Do you think the paper should be presented at the symposium as a talk, as a poster, or not at all? Both talks and posters will appear in the AAAI technical report for the meeting.
+
+Accept as talk
+
+Comment: 
+
+(8) Do you think the authors should be invited to publish their paper in the journal Advances in Cognitive Systems? If you favor conditional acceptance, please itemize the 
+changes necessary for journal publication.
+
+Accept conditionally
+
+Comment: 
+I think that for Journal publication the paper needs some improvements along the lines of the remarks above. In particular, the consequences for general cognition 
+that the author draws from spatial computations should be elaborated on. 

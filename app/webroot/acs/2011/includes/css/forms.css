@@ -1,0 +1,68 @@
+.hidden { display: none; }
+.clearfix { clear: both; }
+form { font-family: helvetica, arial, verdana, sans-serif; }
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  font-family: helvetica, arial, verdana, sans-serif;
+  font-size: 1em;
+  padding: 0.25em;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4) inset;
+  border: solid 1px #cccccc;
+  color: #999999;
+}
+input[type="text"]:focus {
+  color: #444444;
+  border: solid 1px #555555;
+}
+input[type="email"]:focus {
+  color: #444444;
+  border: solid 1px #555555;
+}
+input[type="password"]:focus {
+  color: #444444;
+  border: solid 1px #555555;
+}
+textarea:focus {
+  color: #444444;
+  border: solid 1px #555555;
+}
+label {
+  display: block;
+  font-size: 0.9em;
+  color: #666666;
+  margin-bottom: 0.1em;
+  text-transform: uppercase;
+}
+label small {
+  text-transform: none;
+  font-size: 0.85em;
+  color: #777777;
+}
+label[for="intl"] { display: inline; }
+div.group { margin-bottom: 1.05em; }
+div.half, div.third { display: inline-block; }
+div.half input[type="text"] { width: 262px; }
+div.half:first-child { margin-right: 20px; }
+div.half, div.third, div.stretch { text-align: left; }
+select { margin-top: 6px; }
+#postal { width: 239px; }
+div.stretch { width: 549px; }
+div.stretch input { width: 549px; }
+div.stretch textarea { width: 549px; }
+textarea {
+  height: 250px;
+  line-height: 1.4em;
+}
+#submit { margin-top: 2em; }
+#error {
+  color: #cc0000;
+  font-family: helvetica, arial, verdana, sans-serif;
+}
+#error li {
+  list-style-type: disc;
+  margin-left: 1em;
+  line-height: 1.4em;
+}
+#error ul { margin-left: 0.5em; }
+#error { margin-bottom: 1.4em; }

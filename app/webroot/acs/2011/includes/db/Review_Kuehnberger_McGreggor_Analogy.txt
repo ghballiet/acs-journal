@@ -1,0 +1,65 @@
+user: 19
+paper: 25
+
+
+Review on "Fractally Finding the Odd One Out: An Analogy Strategy for Noticing Novelty" (McGreggor & Goel)
+
+(1) Does the paper address issues related to aspects of human-level intelligence, complex cognition, or similar topics? Does it discuss these issues from a cognitive systems perspective?
+
+Somewhat related
+
+Comment: 
+Solving geometric intelligence tests is an interesting task. 
+To which extent the present approach of fractal representations extends to cognition in general is unclear to me. 
+
+(2) Do the authors present a problem or approach that extends or clarifies the capabilities of cognitive systems, or increase our understanding of their operation, in substantial ways?
+
+Reasonable extension
+
+Comment: 
+The approach seems to be an alternative to e.g. Forbus & Usher (2007). The evaluation is extended to a larger sample of problems. Because the paper
+is not very clearly written, the degree of clarification of cognitive abilties is rather limited. Nevertheless, I like the overall idea of shifting 
+problems to finer levels of resolution. 
+
+(3) Does the paper make clear claims about the approach to cognitive systems? Such claims can take many forms, but they should be stated unambiguously in accessible language.
+
+Vague claims
+
+Comment: 
+To which extent the present fractal approach generalizes to other domains is unclear to me. Furthermore, the relation of fractal representations to analogy is 
+not very convincingly described. This is surprising, because the term analogy appears even in the title. 
+In any case, the authors need to relate their work much more explciti to this research tradition. 
+
+
+(4) Do the authors present convincing evidence that supports their claims? Such evidence can take different forms, but it should lead a reasonable person to conclude 
+the claims are correct or plausible.
+
+Somewhat convincing
+
+Comment: 
+The claims are insofar problematic, as due to formal deficiencies of the paper, the approach is sometimes hard to understand. Nevertheless, the evaluation seems to show 
+that for Odd One Out Problems in the geometric domain it works fine. 
+
+(5) Does the paper's writing and organization present its ideas to readers effectively? Can moderately informed readers understand the main contributions and reconstruct the results if desired?
+
+Not effective
+
+Comment: 
+The paper is sometimes hard to read and contains many typos and errors.
+Formalisms are inappropriately introduced (e.g. fractal codes). The formal presentation needs substantial improvement (e.g. the fractal encoding algorithm). 
+
+
+(6) Do you have other comments that support your overall evaluation or do you have detailed suggestions for improving the paper?
+
+(7) Do you think the paper should be presented at the symposium as a talk, as a poster, or not at all? Both talks and posters will appear in the AAAI technical report for the meeting.
+
+Reject paper
+
+Comment: 
+In the present form, I would not recommend to publish the paper.
+
+(8) Do you think the authors should be invited to publish their paper in the journal Advances in Cognitive Systems? If you favor conditional acceptance, please itemize the changes necessary for for journal publication.
+
+Reject paper
+
+Comment: 

@@ -1,0 +1,65 @@
+[manual]: http://circas.asu.edu/cogsys/papers/manual.pdf
+[code]: icarus.zip
+
+1. **Icarus** refers to both a cognitive architecture and its associated
+  programming langauge, which is implemented in Lisp. 
+
+  You can create an Icarus program in any text editor using the syntax
+  described in the [user's manual][manual].
+2. To run an Icarus program, you should first download the
+  [source code][code], start Lisp, and compile the source by typing:
+  
+  ~~~~
+  (compile-file "icarus")
+  ~~~~
+      
+  After this, you should load the compiled Icarus code by typing: 
+  
+  ~~~~
+  (load "icarus")
+  ~~~~
+  
+  The file extension for compiled files (in this case "sbin") may be
+  different depending on which Lisp program you are using, but Lisp
+  should guess the right extension.
+  
+  You need only compile the Icarus source code **once**; on future
+  uses, you can simply load the compiled code. 
+3. Next, you will need to load any Lisp file that define the
+   environment in which your program will operate. For example, if your
+   environment file were named `environmentfile.l`, you could type:
+   
+   ~~~~
+   (load "environmentfile.l")
+   ~~~~
+   
+   after which you should load the associated Icarus program. For
+   example, if your Icarus program were named `icarusfile.l`, you could
+   type: 
+   
+   ~~~~
+   (load "icarusfile.l")
+   ~~~~
+  
+   The Icarus [user's manual][manual] explains how to run programs,
+   print trace information, alter parameters, and other useful tasks. 
+4. When you are done and want to quit Lisp, you should type
+
+   ~~~~
+   (quit)
+   ~~~~  
+5. You may also create a script that does all of this for you. For
+   example, a file that you could load after opening Lisp, which
+   performs the above steps, might look like:
+  
+   ~~~~
+   (load "icarus")
+   (load "enviornmentfile.l")
+   (load "icarusfile.l")
+   ~~~~ 
+6. Many users find it convenient to run Lisp within Emacs, which lets
+   one open a shell that contains a history of all activity. This can
+   be useful for debugging your program.
+
+--------
+For more information, send electronic mail to [langley@asu.edu](mailto:langley@asu.edu).

@@ -1,0 +1,507 @@
+[ex2_submit]:
+http://circas.asu.edu/aicogsys/assignments/upload.php?ex=2&files=1&title=Exercise%202:%20Pattern%20Matching%20and%20Conceptual%20Inference&notes=For%20this%20assignment,%20you%20should%20only%20submit%20**one%20file**%20named%20`blockcon.lisp`.%20Please%20**do%20not**%20submit%20a%20PDF%20or%20Word%20Document,%20**only**%20a%20Lisp%20file.
+
+# Due date
+This assignment is due **Thursday, February 10, 2011, at 11:59:59 PM MST**.
+
+# Submission
+[Click here to submit this assignment.][ex2_submit]
+
+# Tools
+To complete this assignment, you will need:
+
+* a working Lisp environment of some sort;
+* the ability to load files and run scripts in a Lisp interpreter;
+* the
+  [combined Icarus architecture and starter code for this exercise](ex2_blocksworld.zip).
+  
+# Note for Windows Users
+To make it easier to compile and load the Icarus environment, we have
+provided the following batch files. Place both files **directly in the
+blocksworld directory** created by unzipping the attached ZIP file
+above. 
+
+* **[compile.bat](compile.bat)**: you only need to run this one time,
+    ever, in order to compile the architecture. 
+* **[run-icarus.bat](run-icarus.bat)**: double click this batch file
+    to load Icarus each time. After that, you simply need to test each
+    task as described in the README file. 
+    
+* **[run-icarus2.bat](run-icarus2.bat)**: run this file if you have
+    downloaded the new version of Icarus. 
+
+
+# Description
+
+The goal of this assignment is to introduce you to rule-based
+deductive reasoning. You will be using the inference module of Icarus,
+a cognitive architecture with an associated programming language. This
+exercise concerns the
+[blocks world domain](http://en.wikipedia.org/wiki/Blocks_world),
+which consists of several blocks on a table. These blocks may be
+stacked upon each other, and they may have different widths and
+heights. Additionally, the blocks may be painted different shades. For
+this task, you must define Icarus concepts for various block
+configurations.
+
+We will provide you with an initial set of "percepts" that describe
+the attributes of each block, and the attributes of the table. For
+example, imagine a scenario in which four blocks, all of width 2,
+height 2, and shade 1, are sitting side by side on a table with width
+6 and height 2. Each block has a symbolic identifier, in this case a
+letter, from A through D. Such a configuration might be drawn:
+
+~~~~~~~~~~
+|A| |B| |C| |D| 
+___ ___ ___ ___ ___ ___
+~~~~~~~~~~
+
+The Icarus framework encodes this information as a set of percepts:
+
+~~~~~~~~~
+(block A xpos 2 ypos 2 width 2 height 2 shade 1)
+(block B xpos 4 ypos 2 width 2 height 2 shade 1)
+(block C xpos 6 ypos 2 width 2 height 2 shade 1)
+(block D xpos 8 ypos 2 width 2 height 2 shade 1)
+(table T xpos 0 ypos 0 width 14 height 2 shade 1)
+~~~~~~~~~
+
+
+Represented another way, this configuration could be given as: 
+
+| Kind     | Name       | X Position   | Y Position  | Width   | Height    | Shade    |
+| -------- | ---------- | ------------ | ----------- | ------- | --------- | -------- |
+| Block    | A          | 2            | 2           | 2       | 2         | 1        |
+| Block    | B          | 4            | 2           | 2       | 2         | 1        |
+| Block    | C          | 6            | 2           | 2       | 2         | 1        |
+| Block    | D          | 8            | 2           | 2       | 2         | 1        |
+| Table    | T          | 0            | 0           | 14      | 2         | 1        |
+
+
+# Task
+## Download and Compile Icarus
+First, download and unzip the
+[necessary files for the assignment](ex2_blocksworld.zip). This will create
+the directory `blocksworld`, with the following contents:
+
+* **README.txt**: explains how to compile and run the Icarus architecture for
+    use in this assignment. 
+* **blockcon.lisp**: this is the **only file** you need to edit for this
+    assignment. It should show up as a linked file (or a shortcut on
+    Windows). If you find that editing this file does not appear to have any
+    effect, instead edit `icarus-rewrite-factored/Blocks/blockcon.lisp`.
+* **compile.lisp**: **<span style="color:#c00">run this first</span>** to
+    compile Icarus on your machine.
+* **icarus-3.0/**: contains the Icarus architecture. 
+
+## Define Icarus Concepts
+
+Define the following concepts in the file **blockcon.lisp**. Instructions for
+testing your concept definitions are given in the `README.txt` file. **Do not
+edit any other files.**
+
+1. `(on-top ?block1 ?block2)` describes a situation in which `?block1` is on
+top of `?block2`.
+1. `(on-left ?block1 ?block2)` describes a situation in which `?block1` is on
+the left of `?block2` (without any space between them).
+1. `(on-table ?block ?table)` descriibes a situation in which `?block` is
+sitting on the table; specifically, when `?block` is sitting on `?table`.
+1. `(wider-than ?block1 ?block2)` describes a situation in which `?block1` is
+wider than `?block2`.
+1. `(darker-than ?block1 ?block2)` describes a situation in which `?block1`
+is darker than `?block2`.
+1. `(tower ?block1 ?block2)` describes a situation in which there exists a
+tower of at least two blocks, with `?block1` at the top and `?block2` at the
+bottom.
+1. `(pyramid ?block1 ?block2)` describes a situation in which there exists a
+pyramid of at least two blocks, with `?block1` at the top and `?block2` at the
+bottom. For the purposes of this exercise, a pyramid is a structure in which
+blocks are stacked from bottom to top in order of ascending width.
+1. `(stair ?block1 ?block2)` describes a situation in which `?block1` and
+`?block2` are arranged in order of ascending height (from left to right), with
+other blocks possibly between them. The blocks must be adjacent (i.e., there
+is no space between the blocks).
+1. `(alternating_pyramid ?block1 ?block2)` describes a situation in which
+`?block1` and `?block2` are arranged in a pyramid, with `?block1` at the top
+and `?block2` at the bottom, where the shade of each block alternates between
+two values.
+
+You may use Lisp functions like `+` and `=` when necessary in a conceptual
+clause, but you should rely entirely on pattern matching to ensure values are
+the same.
+
+# What to Turn In
+The completed Icarus concepts file, **blockcon.lisp**. **Any changes to the
+file name or format will result in a deduction of points.** Use the
+[provided starter code](ex2_blocksworld.zip), and maintain the original names of the concepts.
+
+**Note:** you may add *additional* concepts if you like, but you must retain,
+  at minimum, the concept definitions in the sample file.
+
+# Expected Output
+## Test 1
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 2 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK B XPOS 6 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK C XPOS 10 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK D XPOS 14 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 3)
+Beliefs:
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (ON-TABLE D T1)
+     (ON-TABLE C T1)
+     (ON-TABLE B T1)
+     (ON-TABLE A T1)
+     (TABLE T1)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .  [A]  .  [B]  .  [C]  .  [D] 
+--- --- --- --- --- --- --- --- 
+~~~~~~~~
+
+## Test 2
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 10 YPOS 6 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK B XPOS 10 YPOS 4 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK C XPOS 10 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK D XPOS 14 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 3)
+Beliefs:
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (ON-TABLE C T1)
+     (ON-TABLE D T1)
+     (ON-TOP A B)
+     (ON-TOP B C)
+     (TABLE T1)
+     (TOWER B C)
+     (TOWER A C)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .   .   .   .   .  [A]  .   .  
+ .   .   .   .   .  [B]  .   .  
+ .   .   .   .   .  [C]  .  [D] 
+--- --- --- --- --- --- --- --- 
+~~~~~~~~
+
+
+## Test 3
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 10 YPOS 6 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK B XPOS 10 YPOS 4 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK C XPOS 10 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK D XPOS 14 YPOS 4 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK E XPOS 14 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 3)
+Beliefs:
+     (BLOCK E)
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (ON-TABLE C T1)
+     (ON-TABLE E T1)
+     (ON-TOP A B)
+     (ON-TOP B C)
+     (ON-TOP D E)
+     (TABLE T1)
+     (TOWER B C)
+     (TOWER D E)
+     (TOWER A C)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .   .   .   .   .  [A]  .   .  
+ .   .   .   .   .  [B]  .  [D] 
+ .   .   .   .   .  [C]  .  [E] 
+--- --- --- --- --- --- --- ---
+~~~~~~~~
+
+## Test 4
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 4 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK B XPOS 6 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK C XPOS 8 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK D XPOS 10 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 3)
+Beliefs:
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (ON-LEFT C D)
+     (ON-LEFT B C)
+     (ON-LEFT A B)
+     (ON-RIGHT B A)
+     (ON-RIGHT C B)
+     (ON-RIGHT D C)
+     (ON-TABLE D T1)
+     (ON-TABLE C T1)
+     (ON-TABLE B T1)
+     (ON-TABLE A T1)
+     (TABLE T1)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .   .  [A] [B] [C] [D] 
+--- --- --- --- --- ---
+~~~~~~~~
+
+## Test 5
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 4 YPOS 2 WIDTH 2 HEIGHT 1 SHADE 3)
+      (BLOCK B XPOS 6 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 1)
+      (BLOCK C XPOS 8 YPOS 2 WIDTH 2 HEIGHT 3 SHADE 1)
+      (BLOCK D XPOS 10 YPOS 2 WIDTH 2 HEIGHT 4 SHADE 3)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 3)
+Beliefs:
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (DARKER-THAN A B)
+     (DARKER-THAN A C)
+     (DARKER-THAN D B)
+     (DARKER-THAN D C)
+     (ON-LEFT C D)
+     (ON-LEFT B C)
+     (ON-LEFT A B)
+     (ON-RIGHT B A)
+     (ON-RIGHT C B)
+     (ON-RIGHT D C)
+     (ON-TABLE A T1)
+     (ON-TABLE B T1)
+     (ON-TABLE C T1)
+     (ON-TABLE D T1)
+     (STAIR A B)
+     (STAIR B C)
+     (STAIR C D)
+     (STAIR A C)
+     (STAIR B D)
+     (STAIR A D)
+     (TABLE T1)
+     (TALLER-THAN B A)
+     (TALLER-THAN C A)
+     (TALLER-THAN C B)
+     (TALLER-THAN D A)
+     (TALLER-THAN D B)
+     (TALLER-THAN D C)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .   .  [A] [B] [C] [D] 
+--- --- --- --- --- ---
+~~~~~~~~
+
+## Test 6
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 4 YPOS 2 WIDTH 2 HEIGHT 1 SHADE 1)
+      (BLOCK B XPOS 6 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK C XPOS 8 YPOS 2 WIDTH 2 HEIGHT 3 SHADE 1)
+      (BLOCK D XPOS 10 YPOS 2 WIDTH 2 HEIGHT 4 SHADE 3)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 3)
+Beliefs:
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (DARKER-THAN B A)
+     (DARKER-THAN B C)
+     (DARKER-THAN D A)
+     (DARKER-THAN D C)
+     (ON-LEFT C D)
+     (ON-LEFT B C)
+     (ON-LEFT A B)
+     (ON-RIGHT B A)
+     (ON-RIGHT C B)
+     (ON-RIGHT D C)
+     (ON-TABLE A T1)
+     (ON-TABLE B T1)
+     (ON-TABLE C T1)
+     (ON-TABLE D T1)
+     (STAIR A B)
+     (STAIR B C)
+     (STAIR C D)
+     (STAIR A C)
+     (STAIR B D)
+     (STAIR A D)
+     (TABLE T1)
+     (TALLER-THAN B A)
+     (TALLER-THAN C A)
+     (TALLER-THAN C B)
+     (TALLER-THAN D A)
+     (TALLER-THAN D B)
+     (TALLER-THAN D C)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .   .  [A] [B] [C] [D] 
+--- --- --- --- --- --- 
+~~~~~~~~
+
+## Test 7
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 10 YPOS 8 WIDTH 1 HEIGHT 2 SHADE 3)
+      (BLOCK B XPOS 10 YPOS 6 WIDTH 2 HEIGHT 2 SHADE 3)
+      (BLOCK C XPOS 10 YPOS 4 WIDTH 3 HEIGHT 2 SHADE 3)
+      (BLOCK D XPOS 10 YPOS 2 WIDTH 4 HEIGHT 2 SHADE 3)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 3)
+Beliefs:
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (ON-TABLE D T1)
+     (ON-TOP C D)
+     (ON-TOP B C)
+     (ON-TOP A B)
+     (PYRAMID C D)
+     (PYRAMID B D)
+     (PYRAMID A D)
+     (TABLE T1)
+     (TOWER C D)
+     (TOWER B D)
+     (TOWER A D)
+     (WIDER-THAN B A)
+     (WIDER-THAN C A)
+     (WIDER-THAN C B)
+     (WIDER-THAN D A)
+     (WIDER-THAN D B)
+     (WIDER-THAN D C)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .   .   .   .   .  [A] 
+ .   .   .   .   .  [B] 
+ .   .   .   .   .  [C] 
+ .   .   .   .   .  [D] 
+--- --- --- --- --- ---
+~~~~~~~~
+
+## Test 8
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 10 YPOS 8 WIDTH 1 HEIGHT 2 SHADE 3)
+      (BLOCK B XPOS 10 YPOS 6 WIDTH 2 HEIGHT 2 SHADE 1)
+      (BLOCK C XPOS 10 YPOS 4 WIDTH 3 HEIGHT 2 SHADE 3)
+      (BLOCK D XPOS 10 YPOS 2 WIDTH 4 HEIGHT 2 SHADE 1)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 3)
+Beliefs:
+     (ALTERNATING-PYRAMID C D)
+     (ALTERNATING-PYRAMID A D)
+     (ALTERNATING-PYRAMID B D)
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (DARKER-THAN A B)
+     (DARKER-THAN A D)
+     (DARKER-THAN C B)
+     (DARKER-THAN C D)
+     (ON-TABLE D T1)
+     (ON-TOP C D)
+     (ON-TOP B C)
+     (ON-TOP A B)
+     (PYRAMID C D)
+     (PYRAMID B D)
+     (PYRAMID A D)
+     (TABLE T1)
+     (TOWER C D)
+     (TOWER B D)
+     (TOWER A D)
+     (WIDER-THAN B A)
+     (WIDER-THAN C A)
+     (WIDER-THAN C B)
+     (WIDER-THAN D A)
+     (WIDER-THAN D B)
+     (WIDER-THAN D C)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .   .   .   .   .  [A] 
+ .   .   .   .   .  [B] 
+ .   .   .   .   .  [C] 
+ .   .   .   .   .  [D] 
+--- --- --- --- --- --- 
+~~~~~~~~
+
+## Test 9
+~~~~~~~~
+Percepts:
+      (BLOCK A XPOS 2 YPOS 10 WIDTH 2 HEIGHT 2 SHADE 1)
+      (BLOCK B XPOS 2 YPOS 8 WIDTH 2 HEIGHT 2 SHADE 1)
+      (BLOCK C XPOS 2 YPOS 6 WIDTH 2 HEIGHT 2 SHADE 1)
+      (BLOCK D XPOS 2 YPOS 4 WIDTH 2 HEIGHT 2 SHADE 1)
+      (BLOCK E XPOS 2 YPOS 2 WIDTH 2 HEIGHT 2 SHADE 1)
+      (TABLE T1 XPOS 0 YPOS 0 WIDTH 20 HEIGHT 2 SHADE 1)
+Beliefs:
+     (BLOCK E)
+     (BLOCK D)
+     (BLOCK C)
+     (BLOCK B)
+     (BLOCK A)
+     (ON-TABLE E T1)
+     (ON-TOP A B)
+     (ON-TOP B C)
+     (ON-TOP C D)
+     (ON-TOP D E)
+     (TABLE T1)
+     (TOWER D E)
+     (TOWER C E)
+     (TOWER B E)
+     (TOWER A E)
+Call to SOLVE:
+  Active Problem: NIL
+  Executing Intention: NIL
+"No active problem and no executing intention" 
+STATE:
+Holding: [NIL]
+ .  [A] 
+ .  [B] 
+ .  [C] 
+ .  [D] 
+ .  [E] 
+--- --- 
+~~~~~~~~
+
+--------------------------
+[Click here to submit your concepts file][ex2_submit] no later than
+**Thursday, February 10, 2011, 11:59:59 PM MST.**

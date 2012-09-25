@@ -9,7 +9,7 @@
 % Original Author:  Jeff Schlimmer
 % Edited by: Pat Langley, Kevin Thompson, Martha Del Alto, Helen Stewart, 
 %            Steve Minton and Pandu Nayak.
-% Last edited: December 12 by Pat Langley
+% Last edited: August 26, 2012 by Pat Langley
 
 \typeout{Document Style `cogsys' -- December 2011.}
 
@@ -282,7 +282,7 @@
 %        \hbox to\hsize{\hfil\box\@tempboxa\hfil}  
 %    \fi}
 
-\newsavebox\captionbox\newdimen\captionboxwid
+\newsavebox\diffcaptionbox\newdimen\captionboxwid
 
 \long\def\@makecaption#1#2{
 % \vskip 10pt 
@@ -290,12 +290,20 @@
 	\baselineskip 11pt
 	\setbox\@tempboxa\hbox{#1. #2}
 	\ifdim \wd\@tempboxa >6.8in
-        \sbox{\captionbox}{\small\sl #1.~}
-        \captionboxwid=\wd\captionbox
-        \usebox\captionbox {\small #2}
+        \sbox{\diffcaptionbox}{\small\sl #1.~}
+        \captionboxwid=\wd\diffcaptionbox
+        \usebox\diffcaptionbox {\small #2}
 	\else 
           \centerline{{\small\sl #1.} {\small #2}} 
 	\fi}
+
+% Various personal itemization commands. 
+\def\citem#1{\par\noindent\hangindent 0.25in
+               \hbox to 0.25in {\hss #1 ~}\ignorespaces}
+\def\ccitem#1{\par\noindent\hangindent 0.5in
+                \hbox to 0.5in {\hss #1 ~}\ignorespaces}
+\def\cbullet{\citem{$\bullet$}}
+\def\ccbullet{\ccitem{$\circ$}}
 
 % Define strut macros for skipping spaces above and below text in a
 % tabular environment.

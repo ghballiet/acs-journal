@@ -1,0 +1,8 @@
+# Paper Submission
+
+Please fill out the form below to submit your paper to the symposium 
+for review. Make sure that your submission conforms to the 
+[AAAI two-column format](http://www.aaai.org/Publications/Author/) 
+and is no more than eight (8) pages in length. We will return without
+review any paper that diverges from this format or that exceeds this 
+length. 

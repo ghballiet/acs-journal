@@ -1,0 +1,8 @@
+insert into review values (25, 52, 'related', 'Highly related', "Although this paper does not discuss, or even mention, an integrated cognitive system, it does discuss a very interesting approach to deep natural language understanding, and so fits the criterion for this conference according to the FAQ comment, 'methods for deep understanding of language are appropriate topics for the meeting.'");
+insert into review values (25, 52, 'extension', 'Substantial extension', 'They provide evidence for the effectiveness of their approach to NL-like representations of world and lexical knowledge, and for their techniques of acquiring such knowledge from texts.');
+insert into review values (25, 52, 'claims', 'Clear claims', 'They make clear claims about an approach to parts of a cognitive system, namely the understanding of natural language, and the reasoning about information expressed in NL.  According to the FAQ page, this is sufficient.');
+insert into review values (25, 52, 'convincing', 'Very convincing', '');
+insert into review values (25, 52, 'effective', 'Very effective', '');
+insert into review values (25, 52, 'comment', '', 'Please provide references for natural logic (Nlog).');
+insert into review values (25, 52, 'meeting', 'Accept as talk', '');
+insert into review values (25, 52, 'journal', 'Accept paper', '');

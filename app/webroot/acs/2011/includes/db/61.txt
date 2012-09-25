@@ -1,0 +1,8 @@
+insert into review values (25, 61, 'related', 'Highly related', "It discusses dialog understanding in the context of task-related dialogs.  It discusses this capability as designed to be incorporated in the Icarus cognitive architecture, though it doesn't discuss an actual incorporation in the architecture.");
+insert into review values (25, 61, 'extension', 'Reasonable extension', "It extends the understanding of task-related dialogs.");
+insert into review values (25, 61, 'claims', 'Clear claims', '');
+insert into review values (25, 61, 'convincing', 'Very convincing', '');
+insert into review values (25, 61, 'effective', 'Very effective', 'Though the paper could use editing to improve the English grammar.');
+insert into review values (25, 61, 'comment', '', "Besides improving the English, there should be modifications to better coordinate the early motivations with the actual results.  In the introduction, the author states, 'We want to ... extract higher-level inferences about the mental state of the participants of the dialog.' The only 'mental state' discussed in the paper as being inferred is belief, though there's a bit about goals and intentions.  However, in the evaluation section, including the subsection on demonstration, only common beliefs are shown, and even then simplified to eliminate ascription to the dialog participants.");
+insert into review values (25, 61, 'meeting', 'Accept as talk', '');
+insert into review values (25, 61, 'journal', 'Accept conditionally', 'Conditionally  upon the modifications indicated above.');

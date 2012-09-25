@@ -1,0 +1,56 @@
+@import "bootstrap";
+
+p.info {
+  margin-bottom: 1em;
+  
+  strong {
+    font-weight: bold;
+    color: darken(@blue, 10);
+  }
+}
+
+ol {
+  list-style-type: decimal;
+  
+  li {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+    
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+.options {
+  #flexbox > .display-box;
+  margin-top: 1em;
+  
+  textarea {
+    #font > .sans-serif;
+    #flexbox > .box-flex(1);
+    display: block;
+    margin-right: 1.5em;
+    padding: .5em;
+    color: @gray;
+    .border-radius(4px);
+    height: 100px;
+    font-size: .9em;
+    border: solid 1px lighten(@grayLight, 15);    
+    .box-shadow(0px 2px 4px rgba(0,0,0,.4) inset);
+  }  
+  
+  .opt {
+    #flexbox > .box-flex(1);
+    
+    input {
+      margin-right: .5em;
+      font-size: 1em;
+    }
+  }
+}
+
+#btn {
+  .no-select;
+  cursor: pointer;
+}

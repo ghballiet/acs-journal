@@ -1,0 +1,87 @@
+# Course Project: Social Interactions Among Twig Agents
+
+This project is due **Wednesday, May 4, 2011, at 11:59:59 PM MST**.
+
+For this project, you must develop a number of Icarus agents that
+operate in the Twig environment. These agents should interact to
+support a simple economy that revolves around collecting, buying, and
+selling dolls. This setting involves four types of entities that you
+have handled in previous exercises: adults, children, dolls, and
+balls. The percepts for these entities have the same attributes as
+before, except that adults and children also have a `worth` attribute
+that specifies their financial worth. There will also be a new object
+type, chairs, that have `x`, `y`, and `z` locations but no other
+attributes.
+
+The project requires you to write Icarus programs for controlling
+three distinct types of agents:
+
+ - An **innocent** is a child who walks to some ball that he is not at
+   currently and that he has not just visited. The child halts when
+   another child is near and in front of him, and if he sees a doll
+   within five units of his current location, he makes a detour to
+   pick up the doll before returning to his rounds. An innocent may
+   hold up to two dolls at a time.
+ - A **collector** is an adult who stands near a chair and who will
+   buy dolls from other agents who approach him with a negotiated
+   price. Upon buying a doll, the collector picks it up, transfers
+   money to the seller, and puts the doll in his safe, causing it to
+   vanish from view. When this occurs, a new doll appears elsewhere in
+   the environment.
+ - A **capitalist** is a child who obtains dolls and sells them to
+   collectors in an effort to make as much money as possible. He uses
+   a number of strategies to this end. He picks up any dolls he finds
+   and takes them to the nearest collector. A capitalist may also
+   block the path of an innocent holding a doll and attempt to buy it,
+   negotiating the price if necessary. Once he has obtained a doll, by
+   whatever means, he takes it to a collector and attempts to sell it.
+
+For a capitalist to buy a doll from an innocent or sell one to
+a collector, he must negotiate the exchange at a price that both
+parties find acceptable. To this end, the agents can execute 
+four actions: 
+
+ - `(*offer-buy object-id seller-id buyer-id price until-time)`, which
+   produces a percept of the form `(offer-buy offer-id object
+   object-id seller seller-id buyer buyer-id price price until
+   until-time)`, where `price` and `until-time` are both positive
+   integers.
+ - `(*offer-sell object-id seller-id buyer-id price until-time)`,
+   which produces a percept of the form `(offer-sell offer-id object
+   object-id seller seller-id buyer buyer-id price price until
+   until-time)`.
+ - `(*reject-offer offer-id agent-id)`, which produces a percept of
+   the form `(reject-offer rejection-id offer offer-id agent
+   agent-id)`, where `agent-id` is the agent rejecting the offer.
+ - `(*accept-offer offer-id agent-id)`, which produces a percept of
+   the form `(accept-offer acceptance-id offer offer-id agent
+   agent-id)`, where `agent-id` is the agent accepting the offer. This
+   action also transfer the price in `offer-id` from the buyer to the
+   seller, altering the worth attribute of both agents.
+
+Offers to buy and sell appear in the perceptual buffers of the
+negotiating agents until the cycle count exceed the integer in the
+until attribute. We have provided a complete set of the
+[percepts, actions and concepts][percepts] which will be included with
+the environment.
+
+You will need to download a <del>zip file</del> (not yet available)
+which contains an environment file that defines these actions, along
+with others for moving and manipulating dolls, in the near future. The
+environment file also specifies a set of agents and initial objects,
+along with their locations. The zip file also contains a version of
+Twig that supports connections to multiple Icarus agents.
+
+This project will be a team effort, with the class dividing into 
+five groups, each with a least one graduate student. Each team will
+construct three Icarus programs that control innocents, collectors,
+and capitalists to produce the behaviors described above. The 
+resulting sets of agents will be run in a competition that determines
+which of the team's capitalists earns the most money in a given 
+amount of time. 
+
+Submit the Icarus programs that you develop for this project, along
+with the names of your team members, no later than 11:59 PM of the day
+that the exercise is due.
+
+[percepts]: http://bit.ly/eGW4rO 

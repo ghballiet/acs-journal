@@ -1,0 +1,37 @@
+<div class="review">
+  <h1>Review %n</h1>
+  <ol>
+
+    <li><p>Does the paper address issues related to aspects of
+    human-level intelligence, complex cognition, or similar topics?
+    Does it discuss these issues from a cognitive systems
+    perspective?</p>
+    
+    </li>
+
+    <li><p>Do the authors present a problem or approach that extends
+    or clarifies the capabilities of cognitive systems, or increase
+    our understanding of their operation, in substantial
+    ways?</p></li>
+    
+     <li><p>Does the paper make clear claims about the approach to
+    cognitive systems? Such claims can take many forms, but they
+    should be stated unambiguously in accessible language.</p></li>
+
+
+    <li><p>Do the authors present convincing evidence that supports
+    their claims? Such evidence can take different forms, but it
+    should lead a reasonable person to conclude the claims are correct
+    or plausible.</p></li>
+
+    <li><p>Does the paper's writing and organization present its ideas
+    to readers effectively? Can moderately informed readers understand
+    the main contributions and reconstruct the results if
+    desired?</p></li>
+    
+     <li><p>Do you have other comments that support your overall
+    evaluation or do you have detailed suggestions for improving the
+    paper?</p></li>
+
+  </ol>
+</div>

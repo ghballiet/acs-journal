@@ -1,0 +1,8 @@
+insert into review values (17, 35, 'related', 'Highly related', "This is exactly the sort of paper that should be in the workshop.  S describes a framework for a broad range of defeasible and nondefeasible inferrence patterns.");
+insert into review values (17, 35, 'extension', 'Reasonable extension', "The strength of the paper is in the modelling of several kinds of inference in a uniform framework.");
+insert into review values (17, 35, 'claims', 'Clear claims', "The paper seeks to be responsible to current psychological theories.");
+insert into review values (17, 35, 'convincing', 'Somewhat convincing', "");
+insert into review values (17, 35, 'effective', 'Very effective', "The paper is well-written.");
+insert into review values (17, 35, 'comment', '', "There is a need for the right formulation of a scheme combining the expressivity of first-order logic and the ability of probabilistic models to handle uncertainty.  This is a valiant attempt to do just that, and for this reason I believe the paper should be accepted. Standard rules of inference for deduction and abduction are translated into rules for increasing or decreasing one's beliefs in propositions.  This is good, but would be more compelling if it had a solid probabilistic semantics.  The author claims his formalism has the expressivity of first-order logic, but there are no arguments or examples to that effect.  He rejects Markov logic as inadequate; I agree, but didn't find his arguments against it compelling.  It is a definite strength of his formalism that it is natural to model primacy and recency biases and coherence in it. ");
+insert into review values (17, 35, 'meeting', 'Accept as talk', "");
+insert into review values (17, 35, 'journal', 'Accept paper', "");

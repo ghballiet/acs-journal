@@ -1,0 +1,215 @@
+@import "macros";
+
+@wrapper-width: 800px;
+@serif: georgia, times, serif;
+@sans: helvetica, arial, verdana, sans-serif;
+@line-height: 1.4em;
+
+body {
+  font-size: 14px;
+  font-family: @serif;
+  line-height: @line-height;
+  text-rendering: optimizeLegibility;
+  color: #333;
+  text-shadow: 0px 0px .25px rgba(255,255,255,.25);
+}
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+#top {
+  margin-bottom: 1em;
+  font-family: 'PT Serif', @serif;
+  vertical-align: middle;
+}
+
+#top img {
+  max-height: 80px;
+  vertical-align: middle;
+  margin-top: -7px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+#top h1 {
+  font-weight: normal;
+  font-size: 2.5em;
+  letter-spacing: -0.04em;
+  text-align: left;
+  margin-top: 5px;
+}
+
+#top h2 {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.5em;
+  letter-spacing: -0.04em;
+  line-height: normal;
+  text-align: left;
+}
+
+#wrapper {
+  width: @wrapper-width;
+  margin: 3em auto;
+}
+
+#content h1 {
+  font-size: 1.4em;
+  letter-spacing: -0.06em;
+  margin: .75em 0px;
+  font-family: @sans;
+}
+
+#content h1 span {
+  font-style: italic;
+  font-family: baskerville, @serif;
+  font-weight: normal;
+}
+
+#content p {
+  margin-bottom: @line-height;
+}
+
+#content a {
+  border-bottom: dotted 1px #900;
+  color: #900;
+}
+
+#nav {
+  background: #666;
+  .gradient(#666,#333);
+  .shadow(0px,2px,3px,rgba(0,0,0,.4));
+  .round(.3em);
+  border: solid 1px rgba(0,0,0,.25);
+}
+
+#nav ul {
+  margin: 0px;
+}
+
+#nav li, #nav li a {
+  display: inline-block;
+}
+
+#nav a {
+  font-family: @sans;
+  padding: .5em 1.5em;
+  color: #fff;
+  text-shadow: 0px 1px 1px rgba(0,0,0,.4);
+}
+
+table.dates {
+  margin: 1em auto;
+  font-family: @sans;
+}
+
+table.dates th, td {
+  padding: .25em 1em;
+}
+
+table.dates th {
+  text-align: left;
+}
+
+table.dates td {
+  text-align: right;
+  padding-left: 4em;
+}
+
+#research_areas {
+  margin: 0px auto;
+  margin-top: -.5*@line-height;
+  margin-bottom: .5*@line-height;
+}
+
+#research_areas td {
+  padding-right: 6em;
+}
+
+#org_committee li {
+  padding-left: 2em;
+}
+
+#org_committee li strong {
+  font-family: @sans;
+}
+
+#banner {
+  max-width: @wrapper-width;
+  margin-top: @line-height;
+  .shadow(0px, 3px, 4px, rgba(0,0,0,.4));
+  .round(.25em);
+}
+
+ol {
+  margin: @line-height;
+}
+
+ol li {
+  list-style-type: decimal;
+  margin-left: 2em;
+}
+
+ol li span {
+  display: block;
+  margin-left: 2em;
+}
+
+ol p.right label {
+  display: block;
+  font-family: @sans;
+  font-size: .8em;
+  color: #666;
+  text-transform: uppercase;
+  margin-top: -1em;
+}
+
+ol p textarea {
+  font-family: @sans;
+  padding: 1em;
+  font-size: inherit;
+  border: solid 1px #ccc;
+  .shadow_inset(0px,2px,4px,rgba(0,0,0,.4));
+  line-height: @line-height;
+  height: 200px;
+  color: #444;
+  width: 100%;
+}
+
+#footer {
+  margin-top: @line-height;
+  padding-top: @line-height;
+  border-top: solid 1px #999;
+  font-size: .9em;
+}
+
+#contact {
+  margin: @line-height 0px;
+}
+
+#footer .name {
+  font-family: @sans;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1em;
+}
+
+#footer .chair {
+  font-style: italic;
+  display: block;
+}
+
+#footer .email {
+  color: #900;
+  border-bottom: dotted 1px #900;
+}
+

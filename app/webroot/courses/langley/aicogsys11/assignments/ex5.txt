@@ -1,0 +1,98 @@
+[ex5_submit]:
+http://circas.asu.edu/aicogsys/assignments/upload.php?ex=5&files=1&title=Exercise%205:%20Executing%20Complex%20Skills%20Revisted&notes=For%20this%20assignment,%20you%20should%20only%20submit%20**one%20file**%20named%20`twig-skills.lisp`.%20Please%20**do%20not**%20submit%20a%20Word%20document%20or%20PDF%20file,%20**only**%20a%20Lisp%20file.
+
+This assignment is due **Monay, March 21, 2011, at 11:59:59PM MST.** 
+
+# Files for this Assignment
+
+You will need to [download the sample code](ex5.zip) to complete this
+assignment.
+
+As we have seen, an intelligent agent must do more than make
+inferences about its environment; it must also carry out complex
+procedures that alter the world in desired ways. For this exercise,
+you must define Icarus skills for the Twig simulator and demonstrate
+that they operate as intended. Recall that Horswill's (2008) Twig
+provides a low-fidelity physics simulator that supports humanoid
+characters and a variety of other object types.
+
+The percepts for this assignment are the same as those we saw in
+Exercise 3. These include TWIG.ADULT, TWIG.CHILD, TWIG.BALL,
+TWIG.DOLL, and TWIG.TREE. Each has attributes for DISTANCE and ANGLE
+(measured in polar coordinates from the Icarus agent's perspective),
+as well as three color attributes, CR, CG, and CB. The Icarus agent
+does not perceive its own body as an object.
+
+# Task A: Primitive Skills for the Twig Environment
+
+For the first part of the exercise, you should define primitive Icarus
+skills that carry out three basic activities in the Twig environment.
+Each should call on a separate Lisp action that passes control to a
+Twig behavior, with Icarus halting while the latter executes. The
+skills are:
+
+- `move`, whose action `*goto-object` takes two arguments, an agent
+  and another object that may be a doll, a ball, a tree, a child, or
+  an adult. Calling this action causes the agent to move toward the
+  target object and halt when it is near.
+- `lift`, whose action `*hold-object` takes two arguments, an
+  agent and a doll. Invoking this action leads the agent to pick 
+  up the doll, which it holds until further notice. 
+- `drop`, whose action `*drop-object` takes two arguments, an
+  agent and a doll. Invoking this action leads the agent to let
+  go of the doll, which drops to the ground. 
+
+We will provide scenarios that test whether your skills, when called
+with the appropriate arguments, match against the inferred beliefs and
+produce the desired effects. You will need to write your own concepts
+to denote conditions and effects. The structure of percepts is the
+same as that in Exercise 3, so you may be able to reuse some of
+concepts from there.
+
+# Task B: Complex Skills for the Twig Environment
+
+For the second part of the exercise, you should specify nonprimitive
+Icarus skills that carry out five complex activities in the Twig 
+environment:
+
+- `transport-doll`, which takes an agent, a doll, and another object 
+  (a tree, doll, ball, child, or adult) as its arguments. When invoked, 
+  the agent goes to the doll, picks it up, carries it to the other 
+  object, and drops it there. 
+- `store-dolls-at`, which takes an agent and another object `O` as its 
+  arguments. When this skill is called, the agent transports each 
+  doll that is not near the object `O` to that object's immediate 
+  vicinity and drops it there, where near is defined as within one unit. 
+- `distribute-dolls-from`, which takes an agent and another object `O`
+  as its arguments. If any dolls are near `O`, the agent transports 
+  each doll to a separate ball that has no doll near it, unless 
+  there are not enough balls, in which case it leaves extra dolls by 
+  the object `O`. 
+- `visit-balls`, which takes an agent as its argument. This skill 
+  causes the agent to approach the nearest ball in front of it 
+  (between -179 and 179 degrees) that it is not currently near, 
+  then approach the next ball, and so on, until there are no balls 
+  ahead of it, in which case it halts. 
+- `redistribute-dolls`, which takes an agent as its argument. When
+  invoked, this skill leads the agent to repeatedly approach and take 
+  a doll from some rich child (who possesses two or more dolls) and 
+  give it to some poor child (who possesses zero dolls). This should 
+  continue until there are either no rich children OR no poor children
+  remaining. You can use concepts from the third exercise for this task. 
+
+Again, we will provide scenarios that test whether your skills operate
+in the desired manner. You will need to write your own concepts to
+specify the various skills' conditions and effects.
+
+# References
+
+Horswill, I. (2008). 
+[Lightweight procedural animation with believable physical interaction](http://www.cs.northwestern.edu/~ian/AIIDE%20Twig%20paper.pdf). 
+*Proceedings of the Fourth Conference on Artificial Intelligence and
+Interactive Digital Entertainment*. Stanford CA: AAAI Press.
+
+--------------------
+Submit the Icarus programs that you develop to solve this inference
+task no later than 11:59 PM of the day that the exercise is due.
+
+Please [click here][ex5_submit] to submit this assignment. 

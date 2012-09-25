@@ -1,0 +1,77 @@
+# Course Project: Social Interactions Among Twig Agents
+
+This project is due **Wednesday, May 4, 2011, at 11:59:59 PM MST**.
+
+For this project, you must develop a number of Icarus agents that
+operate in the Twig environment. These agents should interact to
+support a simple economy that revolves around collecting, buying, and
+selling dolls. This setting involves four types of entities that you
+have handled in previous exercises: adults, children, dolls, and
+balls. There will also be a new object type, chairs, that have `x`,
+`y`, and `z` locations but no other attributes.
+
+The project requires you to write Icarus programs for controlling
+three distinct types of agents:
+
+ - An **innocent** is a child who walks to some ball that he is not at
+   currently and that he has not just visited. When the innocent
+   reaches a ball, he does one of three things:
+    - If the innocent sees a doll which is nearer than the next ball,
+      the innocent walks to the doll and picks it up. The innocent
+      then walks to the next ball, and continues walking among
+      them. **Note:** an innocent may only hold two dolls at once.
+    - If the innocent is holding a doll, and a capitalist is standing
+      near the ball (and, therefore, near the innocent), the innocent
+      will negotiate with the capitalist to sell the doll. The
+      capitalist should initiate this negotiation. Once negotiation is
+      complete, the innocent resumes walking among the balls.
+    - Otherwise, the innocent walks to the next nearest visible ball.
+ - A **collector** is an adult who stands near a chair and who will
+   buy dolls from other agents who approach him with a negotiated
+   price. Upon buying a doll, the collector picks it up, transfers
+   money to the seller, and puts the doll in his safe, causing it to
+   vanish from view. When this occurs, a new doll appears elsewhere in
+   the environment.
+ - A **capitalist** is a child who obtains dolls and sells them to
+   collectors in an effort to make as much money as possible. He uses
+   a number of strategies to this end. He picks up any dolls he finds
+   and takes them to the nearest collector. Upon perceiving an
+   innocent with a doll, a capitalist may walk to the nearest ball,
+   and wait for the innocent to walk to that ball. The capitalist may
+   then attempt to buy the doll from the innocent, negotiating the
+   price if necessary. Once he has obtained a doll, by whatever means,
+   he takes it to a collector and attempts to sell it.
+
+For a capitalist to buy a doll from an innocent or sell one to a
+collector, he must negotiate the exchange at a price that both parties
+find acceptable. To this end, agents execute actions to make offers to
+sell or buy a doll, and communicate acceptance or rejection of such
+offers.
+
+Offers to buy and sell appear in the perceptual buffers of the
+negotiating agents until the cycle count exceed the integer in the
+until attribute. We have provided a complete set of the
+[percepts, actions and concepts][percepts] which will be included with
+the environment.
+
+You will need to download a [zip file][env] which
+contains an environment file that defines these actions, along with
+others for moving and manipulating dolls, in the near future. The
+environment file also specifies a set of agents and initial objects,
+along with their locations. The zip file also contains a version of
+Twig that supports connections to multiple Icarus agents.
+
+This project will be a team effort, with the class dividing into 
+five groups, each with a least one graduate student. Each team will
+construct three Icarus programs that control innocents, collectors,
+and capitalists to produce the behaviors described above. The 
+resulting sets of agents will be run in a competition that determines
+which of the team's capitalists earns the most money in a given 
+amount of time. 
+
+Submit the Icarus programs that you develop for this project, along
+with the names of your team members, no later than 11:59 PM of the day
+that the exercise is due.
+
+[percepts]: http://bit.ly/eGW4rO 
+[env]: http://bit.ly/gDFipe

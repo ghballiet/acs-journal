@@ -1,0 +1,45 @@
+[ex5]: http://circas.asu.edu/aicogsys/assignments/render.php?f=ex5&title=Exercise%205:%20Executing%20Complex%20Skills%20Revisited
+
+# State-Driven Problem Solving **March 2**
+* ***Fourth exercise due.***
+* Epstein, S. L. (1999). [Game playing: the next moves](http://www.cs.hunter.cuny.edu/~epstein/papers/AAAI99.pdf). Proceedings of the Sixteenth National Conference on Artificial Intelligence (pp. 987-993). Orlando, FL: AAAI Press.
+* Tella, J. (1997). [Planning in games](http://www.cs.hut.fi/~sto/planning-seminaari/tella/planning-in-games.htm). Course report, Seminar on Knowledge Engineering, Computer Science Department, Helsinki University of Technology, Helsinki, Finland. *[optional]*
+<!-- REMOVED: 1/18 * Laird, J. E., &amp; Rosenbloom, P.S. (1990). [Integrating execution, planning, and learning in soar for external environments](http://www.aaai.org/Papers/AAAI/1990/AAAI90-153.pdf). Proceedings of the Eighth National Conference on Artificial Intelligence (pp. 1022-1029). -->
+* VanLehn, K. (1989). Problem solving and cognitive skill acquisition. In M. I. Posner (Ed.), Foundations of cognitive science. Cambridge, MA: MIT Press. *[optional]*
+
+# Goal-Driven Problem Solving **March 7**
+* Langley, P., & Choi, D. (2011). 
+  [Icarus user's manual](http://circas.asu.edu/aicogsys/papers/manual.pdf) 
+  (Technical Report). Institute for the Study of Learning and Expertise, 
+  Palo Alto, CA. (Read Section 4)
+* Newell, A., &amp; Simon, H. A. (1961). [GPS, a program that simulates human thought](http://circas.asu.edu/cogsys/papers/newell-simon.GPS.pdf). In H. Billing (Ed.), Lernede automaten. Munich: Oldenbourg KG. Reprinted in E.A. Feigenbaum & J. Feldman (Eds.), Computers and thought. New York: McGraw-Hill, 1963. (Read Sections 1 and 4)
+* Minton, S., &amp; Carbonell, J. G. (1987). [Strategies for learning search control rules: An explanation-based approach](http://ijcai.org/Past%20Proceedings/IJCAI-87-VOL1/PDF/046.pdf). Proceedings of the Tenth International Joint Conference on Artificial Intelligence (pp. 228-235). Milan, Italy: Morgan Kaufmann. *[optional]*
+
+# Design and Creative Problem Solving **March 9**
+* Goel, A. (1997). [Design, analogy, and creativity](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=590078). IEEE Expert, 12, 62-70.
+
+# Review Meeting **March 21**
+* ***Practice mid-term exam***
+* ***[Fifth exercise due.][ex5]***
+* Review of Icarus programming
+
+# Structural Learning **March 23**
+* Laird, J. E., Rosenbloom, P. S., & Newell, A. (1984). [Towards chunking as a general learning mechanism](http://www.aaai.org/Papers/AAAI/1984/AAAI84-049.pdf). 
+Proceedings of the Fourth National Conference on Artificial Intelligence
+(pp. 188-192). Austin, TX: Morgan Kaufmann.
+
+* Li, N., Stracuzzi, D. J., Langley, P., & Nejati, N. (2009). [Learning hierarchical skills from problem solutions using means-ends analysis](http://64.81.72.29/~langley/papers/icarus.cogsci09.pdf). 
+Proceedings of the Thirty-First Annual Meeting of the Cognitive Science 
+Society. Amsterdam.
+
+# Spatial Cognition **March 28**
+* Forbus, K. D., Usher, J., &amp; Chapman, V. (2004). [Qualitative spatial reasoning about sketch maps](http://www.aaai.org/ojs/index.php/aimagazine/article/viewArticle/1777). AI Magazine, 25, 61-72.
+* Kuipers, B. (2008). [An intellectual history of the spatial semantic heirarchy](http://www.cs.utexas.edu/~qr/papers/Kuipers-NZ-08.html). In M. Jefferies &amp; W. K. Yeap (Eds.), Robot and cognitive approaches to spatial mapping. Berling: Springer-Verlag. *[optional]*
+* Gunzelmann, G., &amp; Lyon, D. R. (2007). [Mechanisms for human spatial competence](http://act-r.psy.cmu.edu/papers/701/2007-gunzelmann_lyon.pdf). In T. Barkowsky, M. Knauff, G. Ligozat, &amp; D. Montello (Eds.), Spatial Cognition V: Reasoning, action, interaction. Berlin: Springer-Verlag. *[optional]*
+
+# Language Understanding and Generation **March 30**
+* ***Sixth exercise due.***
+* Charniak, E. (1981). [Six topics in search of a parser: An overview of AI language research](http://ijcai.org/Past%20Proceedings/IJCAI-81-VOL-2/PDF/105.pdf). Proceedings of the Seventh Joint Conference on Artificial Intelligence (pp. 1079-1087). Vancouver: Morgan Kaufmann. 
+* Hovy, E. (1988). [Planning coherent multisentential text](http://portal.acm.org/citation.cfm?id=982043). Proceedings of the 26th Annual Meeting of the Association for Computational Linguistics (pp. 163-169). *[optional]*
+
+

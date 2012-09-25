@@ -1,0 +1,32 @@
+63
+
+insert into review values (12, 63, 'related', 'Highly related', "The paper presents a mixed-initiative approach to building complex
+arguments, multi-step cognition and acquisition of complex structures
+from experience and instruction.");
+
+insert into review values (12, 63, 'extension', 'Reasonable extension', "Not many systems have used explicit reasoning about evidence to guide
+inference, and this approach may therefore form an interesting
+contribution. There are others, though, particularly tools for
+intelligence analysis, and it is notable that this paper has no
+discussion of related work. This would make the contribution clearer.");
+
+insert into review values (12, 63, 'claims', 'Vague claims', "It is noted that the approach is not limited to intelligence or legal
+analysis but is widely applicable. However there are no specific
+claims about new or enhanced capabilities that should be expected in
+cognitive systems adopting this approach, for example.");
+
+insert into review values (12, 63, 'convincing', 'Not convincing', "The paper includes no evaluation of the approach.");
+
+insert into review values (12, 63, 'effective', 'Somewhat effective', "The writing is clear, however because the work is presented at a high
+level it is hard for the reader to understand the impact of various
+components, for example the evidence ontology, use of different
+methods of combining evidence, or the specific acquisition approach.");
+
+insert into review values (12, 63, 'comment', '');
+
+insert into review values (12, 63, 'meeting', 'Accept as talk', '');
+
+insert into review values (12, 63, 'journal', 'Accept conditionally', "This is potentially quite interesting work, but the advantages of the
+reasoning approach and impact of the ontology of evidence should be
+made clear with some evaluation that shows there contribution and
+compares the performance with more standard cognitive systems.");

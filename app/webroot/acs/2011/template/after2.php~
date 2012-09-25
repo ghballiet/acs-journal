@@ -1,0 +1,34 @@
+        </div>
+      </div>
+      <div id="push"></div>
+    </div>
+
+    <div id="footer">
+      <div class="wrapper">
+	<div class="col">
+	  <h3>Navigation</h3>
+	  <ul class="bot">
+	    <li><a href="../">Home</li>
+	    <li><a href="../apply">Application</li>
+	  </ul>
+	</div>
+	<div class="col">
+	  <h3>Sponsors</h3>
+	  <ul class="bot">
+	    <li><a target="_blank"
+		   href="http://www.ida.liu.se/ext/aijd/">Artificial
+		Intelligence Journal</a></li>
+	  </ul>
+	</div>
+	<div class="col">
+	  <h3>Contact</h3>
+	  <p>
+	    Please direct all questions and comments to the Program
+	    Chair, Pat Langley
+	    (<a href="mailto:langley@asu.edu">langley@asu.edu</a>).
+	  </p>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

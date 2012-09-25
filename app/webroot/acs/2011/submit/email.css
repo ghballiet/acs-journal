@@ -1,0 +1,38 @@
+* {
+  font-family: helvetica, arial, sans-serif;
+  color: #444;
+  line-height: 1.4em;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2 {
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #222;
+  margin: .5em 0px;
+  line-height: 1em;
+}
+
+p {
+  line-height: 1.4em;
+  margin-bottom: 1.4em;
+}
+
+ul {
+  margin-bottom: 1.4em;
+  margin-left: 1em;
+}
+
+strong {
+  font-weight: bold;
+  color: #222;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: #c00;
+  border-bottom: dashed 1px #c00;
+}

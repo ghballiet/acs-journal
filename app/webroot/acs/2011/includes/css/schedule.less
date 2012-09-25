@@ -1,0 +1,68 @@
+@import "bootstrap";
+
+@dark-bg: #002b36;
+@dark-bg-highlight: #073642;
+@dark-secondary: #586e75;
+@dark-body: #839496;
+@dark-highlight: #93a1a1;
+@light-bg: #fdf6e3;
+@light-bg-highlight: #eee8d5;
+@light-secondary: #93a1a1;
+@light-body: #657b83;
+@light-highlight: #586e75;
+@yellow: #b58900;
+@orange: #cb4b16;
+@red: #dc322f;
+@magenta: #d33682;
+@violet: #6c71c4;
+@blue: #268bd2;
+@cyan: #2aa198;
+@green: #859900;
+
+h2 {
+  padding-top: 1em;
+}
+
+hr {
+  height: 1px;
+  color: @light-body;
+  background-color: @light-body;
+  border: none;
+}
+
+table {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 1em;
+  
+  th {
+    text-align: left;
+    border-bottom: solid 1px @light-body;
+  }
+  
+  th, td {
+    padding: .15em 0px;
+    line-height: 1.4em;    
+  }
+  
+  td:nth-child(2) {
+    width: 325px;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  td:first-child {
+    width: 75px;
+  }
+}
+
+tr.lineBelow td {
+  border-bottom: solid 1px lighten(@light-highlight, 20);
+}
+
+tr.lineAbove td {
+  border-top: solid 1px lighten(@light-highlight, 20);
+}

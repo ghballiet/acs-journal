@@ -1,0 +1,6 @@
+-- USE WITH CAUTION
+DROP TABLE IF EXISTS paper;
+DROP TABLE IF EXISTS coauthor;
+DROP TABLE IF EXISTS keyword;
+DROP TRIGGER submit_timestamp;
+DROP TABLE IF EXISTS submission;

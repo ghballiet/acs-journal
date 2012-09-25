@@ -1,0 +1,29 @@
+# Introduction and Background **January 19**
+
+* Langley, P. (2006). 
+  [Artificial intelligence and cognitive systems](http://www.isle.org/~langley/papers/aics.100.pdf) 
+  (Technical Report). Computational Learning Laboratory, CSLI, Stanford 
+  University, CA.
+* Langley, P. (2006). [Intelligent behavior in humans and machines](http://www.isle.org/~langley/papers/ai50.dart.pdf) (Technical Report). Computational Learning Laboratory, CSLI, Stanford University, CA.
+
+# Frameworks and Metaphors for Intelligent Systems **January 24**
+* Newell, A., & Simon, H. A. (1976). [Computer science as empirical enquiry: Symbols and search](http://circas.asu.edu/cogsys/papers/newell-simon.turing.pdf). Communications of the ACM, 19, 113-126.
+
+# Symbolic Processing and Lisp **January 26**
+* Hall, M. (1994). 
+ [Basic Lisp overview](http://circas.asu.edu/cogsys/papers/lisp-overview.pdf)
+  (Course notes). Computer Science Department, Johns Hopkins University, 
+  Baltimore, MD.
+* Nau, D. (2008). 
+  [Introduction to Lisp](http://www.cs.umd.edu/~nau/cmsc421/lisp-intro.pdf)
+  (Course notes). Computer Science Department, University of Maryland, 
+  College Park.
+
+# Rules, Pattern Matching, and Unification **January 31**
+* ***[First exercise][ex1] due.***
+* Langley, P., & Choi, D. (2011). 
+  [Icarus user's manual](http://circas.asu.edu/aicogsys/papers/manual.pdf) 
+  (Technical Report). Institute for the Study of Learning and Expertise, 
+  Palo Alto, CA. (Read Section 1.)
+
+[ex1]: ../assignments/render.php?f=ex1&title=Exercise%201:%20Introduction%20to%20Lisp%20

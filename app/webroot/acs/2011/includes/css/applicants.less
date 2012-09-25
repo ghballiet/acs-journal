@@ -1,0 +1,79 @@
+@import "macros";
+
+@dark-bg: #002b36;
+@dark-bg-highlight: #073642;
+@dark-secondary: #586e75;
+@dark-body: #839496;
+@dark-highlight: #93a1a1;
+@light-bg: #fdf6e3;
+@light-bg-highlight: #eee8d5;
+@light-secondary: #93a1a1;
+@light-body: #657b83;
+@light-highlight: #586e75;
+@yellow: #b58900;
+@orange: #cb4b16;
+@red: #dc322f;
+@magenta: #d33682;
+@violet: #6c71c4;
+@blue: #268bd2;
+@cyan: #2aa198;
+@green: #859900;
+
+table {
+  margin: 1em 0px;
+  margin-bottom: 3em;
+  font-size: .85em;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  text-align: left;
+  color: @light-highlight;
+  border-bottom: solid 1px @light-secondary;
+}
+
+table th, table td {
+  padding: .25em .5em;
+}
+
+table tr:nth-child(2n-1) td {
+  background: @light-bg-highlight;
+}
+
+table tr td:first-child {
+  min-width: 100px;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+  padding-right: 0px;
+}
+
+div.info {
+  padding: 1em;
+  display: inline-block;
+  margin: 1em;
+  background: @light-bg-highlight;
+  vertical-align: top;
+  max-width: 400px;
+  text-align: left;
+}
+
+div.info h2 {
+  margin: 0px !important;
+  margin-bottom: .5em !important;
+}
+
+div.info p {
+  margin: 0px !important;
+}
+
+#summary {
+  width: 600px !important;
+}
+
+#summary p{
+  .column-count(2);
+  .column-gap(1em);
+}

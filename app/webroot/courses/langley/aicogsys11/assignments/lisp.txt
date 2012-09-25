@@ -1,0 +1,30 @@
+As with any programming language, there are many tools available which you can use to write code in Lisp. You're welcome to select what you feels works best for you, including anything which is not listed on this page. However, keep in mind the following:
+
+1. Your code should be easy to read and easy to execute. Any software which helps you keep your code neat and organized will make this (and, consequently, grading your assignments) much easier.
+1. It is generally a good idea to have some kind of environment in which you can test your code. Lisp environments tend to be interactive, which can also help you debug your code. 
+
+# Windows Users
+* [Steel Bank Common Lisp (SBCL)](http://prdownloads.sourceforge.net/sbcl/sbcl-1.0.37-x86-windows-binary.msi)
+* [Lispbox (Emacs, SLIME, and Common Lisp)](http://common-lisp.net/project/lispbox/test_builds/lispbox-0.7-ccl-1.5-windowsx86.zip)
+* [GNU Common Lisp](ftp://ftp.cs.utexas.edu/pub/novak/gcl/gcl-2.6.1.exe)
+
+#  Mac OS X Users
+* [Lispbox (Emacs, SLIME, and Common Lisp)](http://common-lisp.net/project/lispbox/test_builds/Lispbox-0.7-with-ccl-1.5-darwinx86.dmg) **Note:** this release only works on Macs with Intel processors.
+* [Steel Bank Common Lisp (SBCL)](http://prdownloads.sourceforge.net/sbcl/sbcl-1.0.29-x86-darwin-binary-r2.tar.bz2)
+* **Common Lisp** Requires [MacPorts](http://www.macports.org/). To install Common Lisp, open Terminal.app and enter the following command:
+~~~~~~
+sudo port install clisp
+~~~~~~
+
+# Linux Users
+## Any Architecture
+* [Common Lisp](http://clisp.sourceforge.net/) There are packages on this page for the most common Linux distributions. However, it is probably easiest to use your distribution's package manager (i.e. yum, rpm, aptitude) to install the `clisp` package. 
+
+## i386 (32-bit)
+* [32-bit Lispbox (Emacs, SLIME, and Common Lisp)](http://common-lisp.net/project/lispbox/test_builds/lispbox-0.7-sbcl-1.0.38.tar.gz)
+* [32-bit Steel Bank Common Lisp (SBCL)](http://prdownloads.sourceforge.net/sbcl/sbcl-1.0.45-x86-linux-binary.tar.bz2)
+
+## AMD64 (64-bit)
+* [64-bit Lispbox (Emacs, SLIME, and Common Lisp)](http://common-lisp.net/project/lispbox/test_builds/lispbox-0.7-x64-sbcl-1.0.38.tar.gz)
+* [64-bit Steel Bank Common Lisp (SBCL)](http://prdownloads.sourceforge.net/sbcl/sbcl-1.0.45-x86-64-linux-binary.tar.bz2)
+

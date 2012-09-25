@@ -1,0 +1,246 @@
+@import "macros";
+@import "fonts";
+
+@dark-bg: #002b36;
+@dark-bg-highlight: #073642;
+@dark-secondary: #586e75;
+@dark-body: #839496;
+@dark-highlight: #93a1a1;
+@light-bg: #fdf6e3;
+@light-bg-highlight: #eee8d5;
+@light-secondary: #93a1a1;
+@light-body: #657b83;
+@light-highlight: #586e75;
+@yellow: #b58900;
+@orange: #cb4b16;
+@red: #dc322f;
+@magenta: #d33682;
+@violet: #6c71c4;
+@blue: #268bd2;
+@cyan: #2aa198;
+@green: #859900;
+
+@wrapper-width: 900px;
+@font-size: 14px;
+@line-height: 1.5*@font-size;
+@top-height: 200px;
+@font-stack: 'PTSans-Regular', lucida grande, helvetica, arial, sans-serif;
+@font-stack-alt: 'PTSans-Narrow', @font-stack;
+
+body {
+  background: @light-bg;
+  color: @light-body;
+  font-size: @font-size;
+  font-family: @font-stack;
+  text-rendering: optimizeLegibility;
+  margin: 0px;
+}
+
+div.wrapper {
+  width: @wrapper-width;
+  margin: 0px auto;
+}
+
+#print_logo {
+  display: none;
+}
+
+#dates {
+  color: @dark-secondary;
+  font-family: @font-stack-alt;
+  text-transform: uppercase;
+  padding: 1em 0px;
+  font-weight: bold;
+}
+
+#apply {
+  float: right;
+  margin-top: 1em;
+  font-family: @font-stack-alt;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: .5em;
+  background: @dark-highlight;
+  color: @dark-bg;
+  .round(.4em);
+}
+
+#top {
+  height: @top-height;
+  background: @dark-bg;
+  background-image: url(../img/acs_cropped.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#nav {
+  margin-top: 120px;
+  color: @dark-body;
+  font-family: @font-stack-alt;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+#nav ul {
+  text-align: center;
+}
+
+#nav ul li {
+  display: inline-block;
+  margin: 0px 2em;
+}
+
+#nav ul li a {
+  display: inline-block;
+}
+
+#nav ul li a:hover {
+  color: @light-bg-highlight;
+  border-bottom: solid 3px @orange;
+  padding-bottom: 1px;
+}
+
+#content {
+  margin-top: 3em;
+}
+
+.columns {
+  .column-count(2);
+  .column-gap(1em);
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+#content h1, #content h2, #content h3 {
+  font-family: @font-stack-alt;
+  text-transform: uppercase;
+  font-weight: bold;  
+  color: @light-highlight;
+  text-align: center;
+  margin: 1em 0px;
+}
+
+#content h1 {
+  font-size: 1.75em;
+}
+
+#content h2 {
+  font-size: 1.35em;
+}
+
+#content p {
+  line-height: @line-height;
+  margin-bottom: @line-height;
+}
+
+#content em {
+  color: @light-highlight;
+  font-style: italic;
+}
+
+#content strong {
+  color: @light-highlight;
+  font-weight: bold;
+}
+
+#content ul {
+  margin: @line-height;
+  line-height: @line-height;
+  background: @light-bg-highlight;
+  padding: @line-height;
+}
+
+#content ul.columns {
+  .column-gap(.5em);
+}
+
+#content ul li {
+  list-style-type: disc;
+  margin-left: @line-height;
+}
+
+#content ul.simple li {
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+#content a {
+  color: @orange;
+}
+
+#content a:hover {
+  border-bottom: dashed 1px @orange;
+}
+
+/* footer hack */
+@footer-height: 85px;
+@footer-padding: 10px;
+@footer-theight: @footer-height + 2*@footer-padding;
+
+html, body, #wrap {
+  height: 100%;
+}
+
+body > #wrap {
+  height: auto;
+  min-height: 100%;
+}
+
+#push {
+  padding-bottom: @footer-theight;
+  display: inline-block;
+}
+
+#push:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#footer {
+  background: @light-highlight;
+  color: @light-bg;
+  margin-top: -1 * @footer-theight;
+  height: @footer-height;
+  clear: both;
+  padding: @footer-padding 0px;
+}
+
+#footer div.wrapper {
+  text-align: center;
+}
+
+#footer div.col {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  color: @light-bg-highlight;
+  font-family: @font-stack-alt;
+  font-size: 1.1em;
+  line-height: 1.5em;  
+}
+
+#footer div.col h3 {
+  font-family: @font-stack-alt;
+  text-transform: uppercase;
+  color: @dark-bg-highlight;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: .4em;
+}
+
+#footer ul.bot {
+  text-align: center;
+}
+
+#footer ul.bot li a {
+  font-family: @font-stack-alt;
+}

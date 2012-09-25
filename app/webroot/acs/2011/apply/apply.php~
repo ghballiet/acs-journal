@@ -1,0 +1,75 @@
+<?
+include_once('../includes/php/functions.php');
+init();
+
+$fn = $_POST['first_name'];
+$ln = $_POST['last_name'];
+$email = $_POST['email'];
+$org = $_POST['organization'];
+$addr = $_POST['address'];
+$city = $_POST['city'];
+$state = $_POST['state'];
+$postal = $_POST['postal'];
+$country = intval($_POST['country']);
+$summary = $_POST['summary'];
+
+$paper = $_FILES['paper'];
+$fname = $paper['name'];
+$ftype = $paper['type'];
+$ftname = $paper['tmp_name'];
+$ferror = $paper['error'];
+$fsize = $paper['size'];
+
+$dest = '../uploads/' . basename($ftname) . '.pdf';
+move_uploaded_file($ftname, $dest);
+
+$query = "insert into application values (NULL,?,?,?,?,?,?,?,?,?,?,?,'')";
+$q = $db->prepare($query);
+$q->bindParam(1, $fn);
+$q->bindParam(2, $ln);
+$q->bindParam(3, $email);
+$q->bindParam(4, $org);
+$q->bindParam(5, $addr);
+$q->bindParam(6, $city);
+$q->bindParam(7, $state);
+$q->bindParam(8, $postal);
+$q->bindParam(9, $country);
+$q->bindParam(10, $summary);
+$q->bindParam(11, $dest);
+$success = $q->execute();
+
+cleanup();
+
+if($success) {
+  $to = "$fn $ln <$email>";
+  $subject = "ACS 2011 Application Confirmation";
+  $body = '<style type="text/css">';
+  $body .= '* { font-family:helvetica,arial,sans-serif; }';
+  $body .= '</style>';
+  $body .= "\n\n";
+  $body .= "<p>$fn $ln,</p>";
+  $body .= "<p>Thank you for your interest in the AAAI Fall 2011 ";
+  $body .= "Symposium on Advances in Cognitive Systems. Your ";
+  $body .= "application has been submitted and will be processed in ";
+  $body .= "the order it was received.</p>";
+
+  $headers = "From: ACS Mailer <donotreply@cogsys.org>\r\n";
+  $headers .= "Reply-To: Pat Langley <langley@asu.edu>\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+  if(mail($to, $subject, $body, $headers)) {
+    // do something if mailing works
+  } else {
+    // send an email letting us know that the message
+    // failed to send
+    $s = "ACS Email Failure";
+    $b = "Message delivery to $email failed during the application process.";
+    $t = "glenrhunt@gmail.com; langley@asu.edu";
+    $h = "From: ACS Mailer <donotreply@cogsys.org>\r\n";
+    mail($t,$s,$b,$h);    
+  } 
+  header('Location: success.php');
+}
+
+?>

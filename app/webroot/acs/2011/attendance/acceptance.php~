@@ -1,0 +1,15 @@
+<?
+include_once('../includes/php/functions.php');
+init();
+
+$fn = $_POST['first_name'];
+$ln = $_POST['last_name'];
+$attend = $_POST['attend'];
+$num_papers = $_POST['num_papers'];
+$titles = $_POST['titles'];
+
+$titles = explode("\n",$titles);
+
+var_dump($titles);
+
+?>

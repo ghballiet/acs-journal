@@ -1,0 +1,130 @@
+[twig]: http://circas.asu.edu/aicogsys/twig/
+[ex3_submit]: http://circas.asu.edu/aicogsys/assignments/upload.php?ex=3&files=1&title=Exercise%203:%20Pattern%20Matching%20and%20Conceptual%20Inference%20Revisited&notes=For%20this%20assignment,%20you%20should%20only%20submit%20**one%20file**%20named%20`robinhood-concepts.lisp`.%20Please%20**do%20not**%20submit%20a%20PDF%20or%20Word%20Document,%20**only**%20a%20Lisp%20file.
+
+# Submission
+Please [click here][ex3_submit] to submit this assignment. 
+
+# Due Date
+
+This exercise is due no later than **Monday, February 21, 2011,
+11:59:59 PM MST.**
+
+# Introduction to Twig
+
+An intelligent agent must be able to percieve entities around it and
+make inferences about spatial relationships among them. For this
+exercise, you must define Icarus concepts for a number of spatial
+and economic relationships, as well as demonstrate that they make 
+reasonable inferences.
+
+The assignment is based on a virtual environment in Twig (Horswill,
+2008). Briefly, Twig provides a low-fidelity physics simulator that
+supports humanoid characters and a variety of other object types.  We
+will use this framework for a number of later exercises, as well as
+for the class project.
+
+You can find instructions for setting up and using Twig [here][twig].
+This particular environment provides perceptual descriptions for five
+different types of objects:
+
+* `(TWIG.ADULT agent DISTANCE r ANGLE theta CR cr CG cg Cb cb)`
+   describes an adult agent with color `(cr, cg, cb)` that is `r`
+   units away from the perceiving agent at angle `theta`.
+* `(TWIG.CHILD agent DISTANCE r ANGLE theta CR cr CG cg Cb cb)`
+   describes a child agent with color `(cr, cg, cb)` that is `r` units
+   away from the perceiving agent at angle `theta`.
+* `(TWIG.BALL ball DISTANCE r ANGLE theta CR cr CG cg Cb cb)`
+   describes a ball with color `(cr, cg, cb)` that is `r` units away
+   from the perceiving agent at angle `theta`.
+* `(TWIG.DOLL doll DISTANCE r ANGLE theta CR cr CG cg Cb cb)`
+   describes a doll with color `(cr, cg, cb)` that is `r` units away
+   from the perceiving agent at angle `theta`.
+* `(TWIG.TREE tree DISTANCE r ANGLE theta CR cr CG cg Cb cb)`
+   describes a tree with color `(cr, cg, cb)` that is `r` units away
+   from the perceiving agent at angle `theta`.
+
+**Note**: Postions are represented using polar coordinates specified
+by distance and angle from the perspective of the agent that is
+perceiving the object. Color is encoded in terms of RGB (Red, Green,
+Blue) components.
+
+Here are some sample percepts from this Twig environment and their 
+meanings:
+
+* `(TWIG.ADULT agent01 DISTANCE 5 ANGLE 90 CR 255 CG 0 CB 0)` &mdash;
+   There exists an agent, `agent01`, some 5 units away at 90 degrees
+   with the color `(255, 0, 0)`, i.e., red.
+* `(TWIG.BALL ball01 DISTANCE 10 ANGLE 270 CR 0 CG 0 CB 255)` &mdash;
+   There exists a ball, `ball01`, some 10 units away at 270 degrees
+   with the color `(0, 0, 255)`, i.e., blue.
+* `(TWIG.TREE tree01 DISTANCE 18 ANGLE 10 CR 150 CG 70 CB 20)` &mdash;
+   There exists a tree, `tree01`, some 18 units away at 10 degrees
+   with the color `(150, 70, 20)`.
+
+Again, percepts describe objects from the perspective of the Icarus
+agent that is perceiving them. The Icarus agent does not perceive 
+its own body as an object. 
+
+# Task A: Inferring Spatial Relations
+
+For the first part of the exercise, you should define Icarus concepts
+for six distinct spatial relations:
+
+1. `(nearer-ball ?ball1 ?ball2)` &mdash; there are two balls, the
+   first of which is nearer to the perceiving agent than the second.
+2. `(nearest-ball ?ball)` &mdash; there is a ball for which there are
+   no other balls nearer to the perceiving agent.
+3. `(equidistant ?ball1 ?ball2)` &mdash; there are two balls at
+   approximately equal distances (within one unit) from the agent.
+4. `(circle ?ball1 ?ball2 ?ball3 ?ball4)` &mdash; four balls form an
+   approximate circle around the perceiving agent.
+5. `(uniform-colored-circle ?ball1 ?ball2 ?ball3 ?ball4)` &mdash; four
+   balls with approximately the same color (within ten units on each
+   color dimension) form an approximate circle around the perceiving
+   agent.
+6. `(distinct-colored-circle ?ball1 ?ball2 ?ball3 ?ball4)` &mdash;
+   four balls with distinct colors form an approximate circle around
+   the perceving agent.
+
+Each of your concepts must infer all and only true beliefs. We have
+arranged the concepts above in terms of increasing depth. You should
+make use of lower-level concepts, wherever applicable, in creating
+higher ones. You may use Lisp comparison functions like `>=` and `<`
+when needed, in the tests field, as well as basic arithmetic functions
+like `+` and `*`, but you may not define new Lisp functions.
+
+# Task B: Inferring Economic Relations
+
+For the second part of the exercise, you should define Icarus concepts
+for six relationships that concern the possession of dolls:
+
+1. `(doll-near-to-child ?doll ?child)` &mdash; the doll `?doll` is
+   within 2 units distance to the child `?child`.
+2. `(doll-nearer-to ?doll ?child1 ?child2)` &mdash; the doll `?doll`
+   is nearer to child `?child1` than to child `?child2`.
+3. `(nearest-child-to-doll ?child ?doll)` &mdash; the child `?child`
+   is the nearest child to doll `?doll`. 
+4. `(possesses ?child ?doll)` &mdash; the doll `?doll` is near to
+   child `?child` and `?child` is the nearest child to `?doll`.  
+5. `(poor ?child)` &mdash; the child `?child` does not possess any
+dolls.
+6. `(rich ?child)` &mdash; the child `?child` possesses two or more
+dolls.
+
+As before, each of your concepts must infer all and only true beliefs.
+We have arranged the concepts above in terms of increasing depth, and
+you should make use of lower-level concepts, wherever applicable, in
+creating higher ones.
+
+# References
+
+Horswill,
+I. (2008). [Lightweight procedural animation with believable physical interaction](http://www.cs.northwestern.edu/~ian/AIIDE%20Twig%20paper.pdf)
+. *Proceedings of the Fourth Conference on Artificial Intelligence and
+Interactive Digital Entertainment*. Stanford CA: AAAI Press.
+
+--------------------
+Submit the Icarus programs that you develop to solve this inference
+task no later than 11:59 PM of the day that the exercise is due.
+
+Please [click here][ex3_submit] to submit this assignment. 

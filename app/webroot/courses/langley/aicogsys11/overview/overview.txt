@@ -1,0 +1,112 @@
+# Course Instructor
+<!-- TODO: add instructor information -->
+<img src="http://cll.stanford.edu/people/images/Pat_Langley.JPG" class="float-left profile fancy"/>
+[Pat Langley](http://www.isle.org/~langley) ([langley@asu.edu](mailto:langley@asu.edu))  
+Computer Science and Enginnering / Psychology  
+Arizona State University  
+Tempe, AZ 85287  
+Office: BYENG 446  
+Telephone: 480-965-8850
+
+# Teaching Assistant
+<!-- <img src="http://glenrhunt.com/profile" class="float-left profile fancy"/> -->
+Glen Hunt ([glen.hunt@asu.edu](mailto:glen.hunt@asu.edu))  
+PhD Student, Computer Science and Enginnering  
+Arizona State University  
+Tempe, AZ 85287  
+Office: BYENG 443 AB
+
+# Course Summary
+
+Artificial intelligence (AI) attempts to answer one of the basic
+questions of science: What is the nature of the mind? It approaches
+this challenge from a computational perspective, examining the mental
+structures or representations that support intelligent behavior and
+the processes that operate over them to produce it.
+
+Historically, studies of human cognition have served as the
+inspiration for artificial intelligence in two ways. First, they
+suggests distinct capacities that an intelligent system should
+possess, such as the ability to draw inferences, execute complex
+procedures, solve novel problems, and use language, as well as pose
+challenge problems related to these capacities. Second, AI has often
+incorporated insights about human cognition into the representations
+and processes used to construct intelligent agents.
+
+Unfortunately, much of the recent research in artificial intelligence
+ignores cognitive science. The field has also become fragmented,
+devoting considerable attention to the components of intelligence but
+far less on how they fit together. In this course, we will review work
+that goes against these trends by making contact with results on human
+cognition and that AI's original dream of building complete
+intelligent agents.
+
+The notion of physical symbol systems will figure prominently in the
+course, along with list structures, pattern matching, and rule-based
+systems. These ideas go back to the shared origins of AI and cognitive
+science in the 1950s, but they are still central to constructing
+intelligent agents and to modeling high-level cognition in humans. We
+will also draw frequently on a more recent idea &mdash; cognitive
+architectures &mdash; that offers a powerful approach to building
+intelligent systems.
+
+Coursework will include reading and discussion of papers, combined
+with programming exercises in high-level languages that embody
+assumptions about the nature of intelligence. Participants will
+acquire expertise in designing, implementing, and running intelligent
+systems, along with understanding how the underlying technology draws
+on our knowledge of human and machine cognition.
+
+# Course Logistics
+* **Time:** Mondays and Wednesdays, 5:00PM &mdash; 6:15PM
+* **Location:** BYAC 270
+* **Office Hours:** BYENG 446, Mondays 6:15PM &mdash; 7:15PM or by appointment
+
+# Prerequisites
+
+Course prerequisites include a basic familiarity with concepts about
+data structures and processes from computer science. Students should
+have some programming experience, but exercises will use high-level
+languages for symbolic processing that should be easier to learn than
+traditional programming formalisms. However, participants should be
+able to think computationally in terms of symbolic or logical
+knowledge structures and the mechanisms that operate on them. Most
+important, they should be interested in the processes that underlie
+intelligence in humans and machines.
+
+# Assignments and Grading
+
+Most meetings will combine a brief lecture about key ideas on some
+aspects of cognitive systems with group discussion of papers from the
+literature on those topics. To ensure that graduate participants have 
+digested the material, they should bring one question that arose from
+their reading of each assigned paper, which we will use to direct
+discussion.
+
+Participants will also complete a number of exercises that involve
+building cognitive systems of increasing complexity, which they
+should turn in at the beginning of the meeting for which they are
+due. Each student will also have a total of four free late days to use
+as he sees fit on the assignments. Once these late days are exhausted,
+we will penalize any exercises turned after its due date at the rate
+of 20 percent per calendar day late (or fraction thereof).
+
+Undergraduate participants' grades will be based on correctness of
+their answers to exercises (50 percent), on the course project (25
+percent), and on the course final (25 percent).
+
+Graduate participants' grades will be based on correctness of their
+answers to exercises (40 percent), on the course project (20 percent),
+and on the course final (20 percent), along with contributions to
+class discussion (10 percent) and the quality of a written research
+proposal (10 percent).
+
+# Course Readings
+
+The recommended textbooks for this course appear below, but these are
+mainly to provide background material. The regular reading assignments
+will come from the broader literature in artificial intelligence and
+cognitive science. We will provide URLs for papers on the course Web site.
+
+* Nilsson, N. J. (1998). [Artificial intelligence: A new synthesis](http://www.amazon.com/Artificial-Intelligence-Synthesis-Nils-Nilsson/dp/1558604677/ref=sr_1_1?ie=UTF8&qid=1294177091&sr=8-1). San Francisco: Morgan Kaufmann.
+* Anderson, J. R. (2009). [Cognitive psychology and its implications](http://www.amazon.com/Cognitive-Psychology-Implications-John-Anderson/dp/1429219483/ref=sr_1_1?ie=UTF8&qid=1294177159&sr=8-1). New York: Worth Publishing.

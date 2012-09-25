@@ -1,0 +1,67 @@
+# Deductive Reasoning **February 2**
+* Genesereth, M. R., & Ginsberg, M. L. (1985). 
+  [Logic programming](http://portal.acm.org/citation.cfm?id=4287). 
+  Communications of the ACM, 28, 933-941.
+
+# Abductive Inference **February 7**
+* Leake, D. (1995).
+  [Abduction, experience and goals: A model of everyday abductive explanation](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.48.4972).
+  Journal of Experimental and Theoretical Artificial Intelligence, 7,
+  407-428. [Read pages 1 to 13]
+* Bridewell, W., & Langley, P. (2011).
+  [A computational account of everyday abductive inference.](http://www.isle.org/~langley/papers/abduction.cogsci11.pdf)
+  Technical report, Institute for the Study of Learning and Expertise,
+  Palo Alto, CA.
+* Ng, H. T., & Mooney, R. J. (1990). 
+  [On the role of coherence in abductive explanation](http://www.cs.utexas.edu/users/ml/papers/accel-aaai-90.pdf). 
+  Proceedings of the Eighth National Conference on Artificial
+  Intelligence (pp. 337-342). Boston: AAAI Press. *[optional]*
+
+# Analogical Reasoning **February 9**
+* ***[Second exercise][ex2] due.***
+* Falkenhainer, B., Forbus, K., & Gentner, D. (1986). 
+  [The Structure-Mapping Engine](http://www.qrg.northwestern.edu/papers/Files/QRG_Dist_Files/QRG_1986/Falkenhainer_1986_SME.pdf). 
+  Proceedings of the Fifth National Conference on Artificial Intelligence. 
+* Sowa, J. F., & Majumdar, A. K. (2003). 
+  [Analogical reasoning](http://www.jfsowa.com/pubs/analog.htm). 
+  In A. Aldo, W. Lex, & B. Gantner, (Eds.), Conceptual structures for 
+  knowledge creation and communication. Berlin: Springer-Verlag. 
+  *[optional]*
+* Gentner, D., & Forbus, K. (1991). 
+  [MAC/FAC: A model of similarity-based retrieval](http://circas.asu.edu/cogsys/papers/macfac91.pdf). 
+  proceedings of the Thirteenth Annual Conference of the Cognitive
+  Science Society (pp. 504-509). Chicago: Lawrence Erlbaum. *[optional]*
+
+# Qualitative Reasoning and Simulation **February 14**
+* Struss,
+  P. (1997). [Model-based and qualitative reasoning: an introduction](http://www.cs.ucc.ie/~gprovan/CS5205/Readings/struss97-QR-review.pdf). Annals
+  of Mathematics and Artificial Intelligence, 19, 355-381.
+* Iwasaki,
+  Y. (1997). [Real world applications of qualitative reasoning: Introduction to the special issue](http://ksl-web.stanford.edu/people/iwasaki/my-intro.ps). 
+  IEEE Expert: Intelligent Systems. *[optional]*
+
+# Decision Making and Choice **February 16**
+* Gigerenzer, G. (2008). [Why heuristics work](http://pps.sagepub.com/content/3/1/20.full). Perspectives on Psychological Science, 3, 20-29.
+* [Wikipedia entry on decision theory](http://en.wikipedia.org/wiki/Decision_theory).
+* [Tutorial on decision theory](http://philosophy.hku.hk/think/strategy/decision.php).
+
+# Reactive Control **February 21**
+* ***Third exercise due.***
+* Horswill, I. (2008). [Lightweight procedural animation with believable physical interaction](http://www.cs.northwestern.edu/~ian/AIIDE%20Twig%20paper.pdf). Proceedings of the Fourth Conference on Artificial Intelligence and Interactive Digital Entertainment. Stanford CA: AAAI Press.
+* Agre, P.E., & Chapman, D. (1987). [Pengi: An implementation of a theory of activity](http://www.aaai.org/Papers/AAAI/1987/AAAI87-048.pdf). Proceedings of the Sixth National Conference on Artificial Intelligence (pp. 268-272). Seattle: AAAI Press. *[optional]*
+
+# Hierarchical Control **February 23**
+* Georgeff, M. P. and Lansky, A. L. (1987). [Reactive reasoning and planning](http://www.aaai.org/Papers/AAAI/1987/AAAI87-121.pdf). Proceedings of the Sixth National Conference on Artificial Intelligence (pp. 677-682). Seattle, WA: AAAI Press.
+* Langley, P., & Choi, D. (2011). 
+  [Icarus user's manual](http://circas.asu.edu/aicogsys/papers/manual.pdf) 
+  (Technical Report). Institute for the Study of Learning and Expertise, 
+  Palo Alto, CA. (Read Section 3)
+
+# Production Systems and Cognitive Control **February 28**
+* Young, R. M. (in press). 
+  [Production systems in cognitive psychology](http://www.uclic.ucl.ac.uk/people/r.young/publications/00.PS-encyc-article.pdf). 
+  In N. J. Smelser & P.B. Baltes (eds.), International Encyclopedia of
+  the Social and Behavioral Sciences. Pergamon.
+* [Wikipedia entry on production systems](http://en.wikipedia.org/wiki/Production_system).
+
+[ex2]: ../assignments/render.php?f=ex2&title=Exercise%202:%20Pattern%20Matching%20and%20Conceptual%20Inference

@@ -1,0 +1,49 @@
+# Symposium Schedule
+
+## Friday, November 4, 2011
+
+Time | Presenters | Title
+-|-|-|-
+9:00 AM | *Pat Langley* | Opening Remarks
+9:30 AM | *Patrick Winston* | The Strong Story Hypothesis and the Dynamic Commonsense Hypothesis 
+10:00 AM | *Randolph Jones* | Evaluating Integrated, Knowledge-Rich Cognitive Systems
+10:30 AM | **Break** | 
+11:00 AM | *James Allen* | Acquiring Commonsense Knowledge for a Cognitive Agent 
+11:30 AM | *Scott Friedman* | Constructing and Revising Commonsense Science Explanations: A Metareasoning Approach
+12:00 PM | *Dongkyu Choi* | Interoperating Learning Mechanisms in a Cognitive Architecture
+12:30 PM | **Lunch** | 
+2:00 PM | *Claude Sammut* | Tool Use Learning in Robots
+2:30 PM | *Nan Li* | Improving Acquisition of Teleoreactive Logic Programs through Representation Change
+3:00 PM | *John Laird* | A Case Study in Integrating Probabilistic Reasoning and Learning in a Symbolic Cognitive Architecture: Soar Plays Dice
+3:30 PM | **Break** |
+4:00 PM | **Poster Presentations** | 
+
+## Saturday, November 5, 2011
+
+Time | Presenters | Title
+-|-|-|-
+9:00 AM | *Nick Hawes* | Representing and Reasoning About Spatial Regions Defined by Context
+9:30 AM | *Paul Schermerhorn* | Communicating, Interpreting, and Executing High-Level Instructions for Human-Robot Interaction
+10:00 AM | *George Ferguson* | A Cognitive Model for Collaborative Agents
+10:30 AM | **Break** | 
+11:00 AM | *Nick Cassimatis, Kenneth Forbus, John Laird, and Paul Rosenbloom* | Foundational Issues for Cognitive Systems
+12:30 PM | **Break** | 
+2:00 PM | *Yorick Wilks* | Protocols for Reference Sharing in a Belief Ascription Model of Communication
+2:30 PM | *Alex Djalali* | Modeling Expert Effects and Common Ground Using Questions Under Discussion
+3:00PM | *Will Bridewell* | Recognizing Deception: A Model of Dynamic Belief Attribution
+3:30 PM | **Break** | 
+4:00 PM | *J. R. Scally* | Worlds as a Unifying Element of Knowledge Representation
+4:30 PM | *Scott Fahlman* | Using Scone's Multiple-Context Mechanism to Emulate Human-Like Reasoning
+5:00 PM | **Open Discussion** | 
+
+## Sunday, November 6, 2011
+
+Time | Presenters | Title
+-|-|-|-
+9:00 AM | *Jerry Ball* | Explorations in ACT-R Based Cognitive Modeling &mdash; Chunks, Inheritance, Production Matching and Working Memory
+9:30 AM | *Marjorie McShane* | Reference-Related Memory Management in Intelligent Agents Emulating Humans
+10:00 AM | *Nate Derbinsky* | Effective and Efficient Management of Soar's Working Memory via Base-Level Activation
+10:30 AM | **Break**
+11:00 AM | *Susan Epstein* | The Role of Knowledge and Certainty in Understanding for Dialogue
+11:30 AM | *Lenhart Schubert* | Towards Adequate Knowledge and Natural Inference
+12:00 PM | **Closing Discussion** | 

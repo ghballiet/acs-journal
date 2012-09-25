@@ -1,0 +1,124 @@
+[ex4_submit]:
+http://circas.asu.edu/aicogsys/assignments/upload.php?ex=4&files=1&title=Exercise%204:%20Executing%20Complex%20Skills&notes=For%20this%20assignment,%20you%20should%20only%20submit%20**one%20file**%20named%20`blocks-concepts.lisp`.%20Please%20**do%20not**%20submit%20a%20Word%20document%20or%20PDF%20file,%20**only**%20a%20Lisp%20file.
+
+This assignment is due **Wednesday, March 2, 2010, at 11:59:59PM MST.** 
+
+An intelligent agent must do more than make inferences about its
+environment; it must also carry out complex procedures that alter it
+in desired ways. For this exercise, you must define Icarus skills for
+the Blocks World and demonstrate that they operate as intended.
+
+# Files for this Assignment
+You will need to [download the sample code](ex4.zip) to complete this
+assignment.
+
+# Task A: Primitive Skills for the Blocks World
+
+For the first part of the exercise, you should define primitive Icarus
+skills that carry out four basic activities in the Blocks World:
+
+- `unstack`, whose action `*grasp-and-raise` takes a block `?block` as
+  its argument. This structure is applicable only when `?block` is on
+  another block, when there is no other block on it, and when the hand
+  is not holding anything. Its two effects are that `?block` is no
+  longer on the other block and the hand is holding it.
+- `pickup`, whose action is also `*grasp-and-raise`.  This skill
+  matches only when `?block` is on the table, when there is no other
+  block on it, and when the hand is empty. The effects are that
+  `?block` is no longer on the table and the hand is holding it.
+- `stack`, whose action `*place-and-ungrasp` takes two arguments: a
+  block `?block` being held, and another block `?to`, to which it is
+  being moved..  This clause should match when the hand is holding
+  `?block` and when `?to` has nothing on it. Upon execution, the hand
+  is no longer holding `?block` and it is on `?to`, the other block.
+- `putdown`, which also has the action `*place-and-ungrasp`.  This
+  skill is applicable whenever the hand is holding `?block`, and its
+  effects are that the hand is no longer holding `?block` and this
+  object is on the table.
+
+We will provide scenarios that test whether your skills, when called
+with the appropriate arguments, match against the inferred beliefs and
+produce the desired effects. You will need to write your own concepts
+to denote conditions and effects. The structure of percepts is the
+same as that in Exercise 2, so you may be able to reuse some of
+concepts from there.
+
+# Task B: Complex Skills for the Blocks World
+
+For the second part of the exercise, you should specify nonprimitive
+Icarus skills that carry out four complex activities in the Blocks
+World:
+
+- `make-clear`, which takes a single block as its argument and, if
+  another block is on it, removes it and places it on the table.  This
+  skill should be recursive, since the block to be cleared may be at
+  the bottom of a tower composed of many blocks.
+- `put-on`, which takes two blocks as arguments, and places the first
+   on the second, after removing any obstructing blocks onto the
+   table.
+- `build-pyramid`, which takes two blocks as arguments and constructs
+  a pyramid in which the second block serves as the base (sitting on
+  the table), the first block is at the top, each block in the pyramid
+  has greater or equal width to the one above it, and the environment
+  does not contain any blocks intermediate in width between the top
+  and bottom that are not included in the pyramid.
+- `build-alternating-pyramid`, which takes two blocks as arguments and
+  constructs a pyramid of the sort just described, with the additional
+  constraint that its blocks should alternate in their shade. You can
+  assume that the environment contains blocks that make this possible.
+
+Again, we will provide scenarios that test whether your skills operate
+in the desired manner. You will need to write your own concepts to
+specify the skills' conditions and effects.
+
+<!--
+Task C. The Tower of Hanoi
+
+For the final part of the exercise, you must write Icarus skills that
+solve the Tower of Hanoi puzzle for an arbitrary number of disks. 
+This puzzle involves three pegs and N disks of increasing size. All
+disks start out on the leftmost peg, and the goal is to have all disks
+on the rightmost peg. You can move only one disk at a time, and you
+can only move a disk when there is no smaller disk on top of it and
+when there is no smaller disk on the peg to which you are moving it.
+
+The environment for this task involves two kinds of objects. Pegs have
+the form (peg name xpos number). For example, the leftmost peg might
+be described as (peg pegA xpos 10). Disks have the form (disk diskname
+xpos number1 ypos number2 width number3).  For instance, if there are
+three disks on the leftmost peg, we might have (disk disk1 xpos 10
+ypos 3 width 1) for the smallest disk and (disk disk3 xpos 10 ypos 1
+width 3) for the largest one.
+
+Your skills should refer to concepts that recognize certain
+configurations of disks and pegs. You may use the concept definitions
+available in the file http://circas.asu.edu/aicogsys/tohcon.lisp , 
+which includes predicates like `blocking-from` (a disk is 
+being blocked from movement by a smaller disk on the same peg)
+and `blocking-to` (a disk is being blocked from movement by 
+a smaller disk on the target peg). 
+
+You will need to write a primitive skill called `move` that, 
+when allowable, invokes the *move action to move a disk from its
+current peg to another peg. You will also need to write a high-level
+skill, and any necessary auxiliary skills, that solve the entire
+Tower of Hanoi puzzle with the minimum number of steps. These skills 
+should work for any number of disks, which means they must almost
+certainly be recursive. We will provide three different disk 
+configurations on which you should test your Tower of Hanoi program.
+-->
+
+# References
+
+* Simon, H. A. (1975). The functional equivalence of problem solving
+  skills. *Cognitive Psychology*, *7*, 268&mdash;288.
+* Fikes, R., Hart, P. E., & Nilsson, N. J. (1972). Learning and
+  executing generalized robot plans. *Artificial Intelligence*, *3*,
+  251&mdash;288.
+
+-------------
+
+Submit the Icarus programs that you develop to solve this inference
+task no later than 11:59 PM of the day that the exercise is due.
+
+Please [click here][ex4_submit] to submit this assignment.

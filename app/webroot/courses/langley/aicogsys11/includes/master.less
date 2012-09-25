@@ -1,0 +1,336 @@
+/* ===================== */
+/* = import statements = */
+/* ===================== */
+@import "macros";
+
+/* ==================== */
+/* = global variables = */
+/* ==================== */
+@font-stack: helvetica, droid sans, arial, verdana, tahoma, sans-serif;
+@font-size: 14px;
+@top-bg: #444;
+@top-border: #111;
+@fade-height: 8em;
+@wrapper-max-width: 900px;
+@wrapper-min-width: 900px;
+@nav-left-width: 120px;
+
+/* ============= */
+/* = main file = */
+/* ============= */
+body {
+    font-size: @font-size;
+    font-family: @font-stack;
+    color: #444;
+    color: rgba(0,0,0,.7);
+    text-rendering: optimizeLegibility;
+    -webkit-text-stroke: 1px transparent;
+    outline-style: inherit;
+    outline-width: 0.05px;
+    outline-color: rgba(255,255,255,0.025);
+    margin-bottom: @fade-height;
+    background: #efefef;
+    counter-reset: section;
+}
+
+.wrapper {
+    max-width: @wrapper-max-width;
+    min-width: @wrapper-min-width;
+    padding: 2 * @font-size;
+    margin: 0px auto;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    font-weight: bold;
+    color: #900;
+    color: rgba(200,0,0,.8);
+    border-bottom: dashed 1px #900;
+    border-bottom: dashed 1px rgba(200,0,0,.8);
+}
+
+h1, h2, h3, h4, h5 {
+    color: #222;
+    color: rgba(0,0,0,.8);
+}
+
+#top {
+    background-color: @top-bg;
+/*    border-top: solid 1px @top-border;*/
+    .shadow_inset(0px,0px,7px,rgba(0,0,0,.4));
+}
+
+#top h1 {
+    color: #fff;
+    letter-spacing: -0.06em;
+    font-size: 2em;
+    color: rgba(255,255,255,.9);
+}
+
+#top h1 span {
+    font-family: baskerville, palatino, hoefler text, palatino linotype, constantia, symbol, serif, @font-stack;
+    font-weight: normal;
+    color: rgba(255,255,255,.75);
+    font-style: italic;
+}
+
+#top h2 {
+    font-size: 1.25em;
+    padding-top: 1em;
+    color: rgba(255,255,255,.7);
+    letter-spacing: -0.06em;
+}
+
+#nav_left {
+    float: right;
+    width: @nav-left-width;
+    font-size: .9em;
+    padding: @font-size;
+    padding-right: 0px;
+    background: rgba(0,0,0,.07);
+    margin-top: -2 * @font-size - 1px;
+    .round-bl(1em);
+    .round-br(1em);
+}
+
+#nav_left strong {
+    font-size: 1.2em;
+    display: inline-block;
+    margin-bottom: .5em;
+}
+
+#nav_left a {
+    border-bottom: none;
+    color: inherit;
+    font-weight: normal;
+}
+
+#nav_left ul {
+    margin-bottom: 0px !important;
+}
+
+#nav_left ul li {
+    list-style-type: none !important;
+    margin-left: 0px !important;
+}
+
+#schedule {
+    float: left;
+    max-width: @wrapper-max-width - @nav-left-width - (3 * @font-size);
+}
+
+#schedule h1:before {
+    white-space: pre-wrap;
+    counter-increment: section;
+    content: counter(section) "  ";
+}
+
+#contents {
+    border-top: solid 1px #fff;
+}
+
+#contents p {
+    line-height: 1.4em;
+    margin: 0px;
+    margin-bottom: 1.4em;
+}
+
+#contents .wrapper h1 {
+    font-size: 1.7em;
+/*    text-transform: capitalize;*/
+    margin-top: 1em;
+    margin-bottom: .5em;
+    padding-top: .5em;
+/*    border-top: dotted 1px rgba(0,0,0,.4);*/
+}
+
+#contents .wrapper h1:first-child {
+    border-top: none;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#contents .wrapper h1 strong {
+    color: #666;
+    color: rgba(0,0,0,.5);
+    display: inline-block;
+    float: right;
+    font-size: 1.2 * @font-size;
+    margin-left: 1.9em;
+}
+
+#contents .wrapper h2 {
+    font-size: 1.5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+#contents ul, #contents ol {
+    margin-bottom: 1.4em;
+}
+
+#contents ul ul, #contents ul ol, #contents ol ul, #contents ol ol {
+    margin-bottom: 0px;
+}
+
+#contents ol ol li {
+    list-style-type: lower-alpha;
+}
+
+#contents ul li, #contents ol li {
+    font-size: 1em;
+    margin-left: 2em;
+    line-height: 1.4em;    
+}
+
+#contents ul li {
+    list-style-type: disc;
+}
+
+#contents ol li {
+    list-style-type: decimal;
+}
+
+#contents ul li strong em {
+    background-color: rgba(255,0,0,.2);
+    display: block;
+    font-style: normal;
+}
+
+#nav {
+    background-color: #900;
+    font-size: .9em;
+}
+
+#nav .wrapper {
+    padding: 0px;
+}
+
+#nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#nav ul li {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+
+#nav a {
+    color: #E5BFBF;
+    color: rgba(255,255,255,.75);
+    border: none;
+    font-weight: normal;
+    display: inline-block;    
+    padding: 1em;
+}
+
+#nav a:hover {
+    color: #fff;
+    background: #A21616;
+    background: rgba(255,255,255,.09);
+}
+
+#contents img.float-left {
+    float: left;
+    margin-right: 1em;
+}
+
+img.fancy {
+    border: solid 5px #fff;
+    .shadow(0px,2px,3px,rgba(0,0,0,.4));    
+}
+
+img.profile {
+    max-height: 8em;
+    max-width: 6em;
+}
+
+img.centered {
+    display: block;
+    margin: 0px auto;
+}
+
+img.inline {
+    max-width: 50em;
+    max-height: 50em;
+    .shadow(0px,3px,5px,rgba(0,0,0,.4));
+}
+
+code, kbd, pre {
+    font-family: monaco, menlo, bitstream vera sans mono, dejavu sans mono, consolas, courier new, monospace;
+    color: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.2);
+    font-size: .85em;
+}
+
+pre {
+    margin: 1.4em;
+    margin-top: 0px;
+    padding: 1.2em;
+    line-height: 1.2em;
+    color: #fff;    
+    background-color: rgba(0,0,0,.8);    
+}
+
+pre code {
+    background-color: transparent;
+    font-size: 1em;
+}
+
+form label {
+    display: inline-block;
+    width: 8em;
+}
+
+form input[type="text"], form input[type="password"] {
+    width: 15em;
+    font-family: @font-stack;
+    padding: .25em;
+    color: inherit;
+    .shadow_inset(0px, 1px, 2px, rgba(0,0,0,.4));
+    border: solid 1px #999;
+}
+
+form input[type="text"].big, form input[type="password"].big {
+    font-family: @font-stack;
+    font-size: 1.5em;
+    padding: .5em;
+    color: inherit;
+    width: 20em;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus {
+    border: solid 1px #c00;
+    color: rgba(0,0,0,.9);
+}
+
+table {
+/*    margin: 0px auto;*/
+    font-size: inherit;
+    margin-bottom: 1.4em;
+}
+
+table td, table th {
+    padding: .5em 0px;
+    padding-right: 2em;
+}
+
+table th {
+    text-align: left;
+    border-bottom: solid 1px #444;
+}
+
+table td {
+    border-bottom: solid 1px #999;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+.error {
+    color: #c00;
+}

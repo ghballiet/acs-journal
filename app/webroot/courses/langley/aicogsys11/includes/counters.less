@@ -1,0 +1,23 @@
+/* ================= */
+/* = counter stuff = */
+/* ================= */
+#contents { counter-reset: section; }
+#contents h1 { counter-reset: subsection; }
+#contents h2 { counter-reset: composite; }
+#contents h3 { counter-reset: detail; }
+#contents h1:before, #contents h2:before, 
+#contents h3:before, #contents h4:before {
+    counter-reset: pre-wrap;
+}
+#contents h1:before {
+    counter-increment: section;
+    content: counter(section) " ";
+}
+#contents h2:before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+}
+#contents h3:before {
+    counter-increment: composite;
+    content: counter(section) "." counter(subsection) "." counter(composite) " ";
+}

@@ -1,0 +1,102 @@
+<style type="text/css">
+  body {
+    font-family: helvetica, arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4em;
+    padding: 0px;
+    margin: 5px;
+  }
+  
+  p {
+    line-height: 1.4em;
+    margin-bottom: 1.4em;
+  }
+  
+  hr {
+    margin: 0px;
+    margin: 1.4em 0px;
+  }
+  
+  ol {
+    margin: 0px;
+    padding-left: 1.4em;
+  }
+  
+  ol li {
+    margin-left: 0px;
+  }
+  
+  p.question {
+    font-weight: bold;
+    margin: .75em 0px;
+  }
+
+  div.review {
+    margin: 1.4em 0px;
+    padding: 10px;
+    border: solid 1px #999;
+    -webkit-box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    -moz-box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    background-image: url(http://i.imgur.com/8Sbpw.png);
+    text-shadow: 0px -1px 0px rgba(255,255,255,.8);
+  }
+  
+  div.review h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: -0.04em;
+  }
+  
+  p.comments {
+    white-space: pre-wrap;
+    color: #656565;
+    margin: .75em 0px;
+  }
+  
+  p.title {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+</style>
+
+<p>Dear Author,</p>
+
+<p>I am writing to inform you that the organizing committee has
+decided to accept your submission</p>
+
+<p class="title">%s</p>
+
+<p>for POSTER presentation at the Fall Symposium on Advances in
+Cognitive Systems. You will find the reviews of your paper enclosed
+below. Please take the reviewers' feedback into account before you
+submit the final version for inclusion in the symposium report. AAAI
+will approach you separately with details about submission.</p>
+
+<p>We received 50 submissions to the symposium, the majority of them 
+reporting high-quality research on cognitive systems, making it 
+difficult to decide how to allocate the limited number of speaking
+slots. The committee's assignments took into account many factors, 
+so your acceptance for poster presentation does not reflect upon
+your paper's quality.</p> 
+
+<p>We are still planning to invite some authors to expand their papers
+for inclusion in Advances in Cognitive Systems, a new electronic
+journal that we will launch this fall. The review form includes
+recommendations about whether your submission is appropriate for the
+journal, but we will not make decisions about this issue for another
+one or two weeks, possibly after collecting additional reviews.</p>
+
+<p>I should also mention that we expect funding to offset presnters' 
+registration and/or travel expenses. Please stay tuned for an 
+update on this front next week. In the meantime, you may want to 
+delay registering for the symposium until we finalize details.</p>
+
+<p>Sincerely,</p>
+
+<p>Pat Langley<br>
+Program Chair<br>
+AAAI Fall Symposium on<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Advances in Cognitive Systems</p>

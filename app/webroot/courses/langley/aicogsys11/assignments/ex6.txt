@@ -1,0 +1,106 @@
+This assignment is due **Friday, April 1, 2011, at 11:59:59 PM MST.**
+
+As we have seen, an intelligent system can carry out heuristic search
+to solve unfamiliar tasks. The Icarus architecture includes a
+means-ends problem solver that supports this functionality. For this
+exercise, you must use the full Icarus software (conceptual inference,
+skill execution, and problem solving) to handle novel problems in the
+Blocks World and Twig. You must also demonstrate that the presence of
+nonprimitive skills can reduce the search required during problem
+solving.
+
+In order complete this exercise, you will need to
+[download the starter code](ex6.zip).
+
+# Task A: Problem Solving in the Blocks World
+
+For the first part of the exercise, you should define primitive Icarus
+skills that carry out four basic activities in the Blocks World:
+
+* `unstack`, whose action `*grasp-and-raise` takes a block `?block` as
+  its argument. This structure is applicable only when `?block` is on
+  another block, when there is no other block on it, and when the
+  hand is not holding anything. Its two effects are that `?block` is
+  no longer on the other block and the hand is holding it.
+* `pickup`, whose action is also `*grasp-and-raise`. This skill
+  matches only when `?block` is on the table, when there is no other
+  block on it, and when the hand is empty. The effects are that
+  `?block` is no longer on the table and the hand is holding it.
+* `stack`, whose action `*place-and-ungrasp` takes two arguments: a
+  block `?block` being held, and another block `?to`, to which it is
+  being moved. This clause should match when the hand is holding
+  `?block` and when `?to` has nothing on it. Upon execution, the hand
+  is no longer holding `?block` and it is on `?to`, the other block.
+* `putdown`, which also has the action `*place-and-ungrasp`. This
+  skill is applicable whenever the hand is holding `?block`, and its
+  effects are that the hand is no longer holding `?block` and this
+  object is on the table.
+
+These are the same skills you developed for Exercise 4. You will also
+need concepts to support their execution. You should provide Icarus
+with these structures and use the "solve" command, which takes a
+set of goals as its argument, on the test problem we will provide.
+Icarus should be able to solve the problem, but this may require
+considerable search.
+
+You should also define two nonprimitive skills for the Blocks Workd:
+
+* `make-clear`, which takes a single block as its argument and, if
+  another block is on it, removes it and places it on the table. This
+  skill should be recursive, since the block to be cleared may be at
+  the bottom of a tower composed of many blocks.
+* `make-three-tower`, which takes three blocks as its arguments and
+  constructs a tower from them.
+  
+You should provide Icarus with these skills and any concepts needed
+to gound them in perception, then run the system again to demonstrate
+that, with this additional knowledge, it can solve the problem with
+less search.
+
+# Task B: Problem Solving in Twig
+
+For the first part of the exercise, you should define primitive Icarus
+skills that carry out four basic activities in Twig:
+
+* `move`, whose action `*goto-object` takes two arguments, an agent
+  and another object that may be a doll, a ball, a child, or an adult. 
+  Calling this action causes the agent to move toward the target object 
+  and halt when it is near.
+* `lift`, whose action `*hold-object` takes two arguments, an agent
+  and a doll. Invoking this action leads the agent to pick up the
+  doll, which it holds until further notice.
+* `drop`, whose action `*drop-object` takes two arguments, an agent
+  and a doll. Invoking this action leads the agent to let go of the
+  doll, which drops to the ground.
+
+These are similar to the skills you developed for Exercise 5. You will
+also need concepts to support their execution. You should provide
+Icarus with these structures and use the "solve" command, which takes
+a set of goals as its argument, on the test problem we will provide.
+Icarus should be able to solve the problem, but this may require
+considerable search.
+
+You should also revise the `transport-doll` skill so that it can only
+move a doll `?doll` to a ball `?ball` if the following conditions
+hold: 
+
+* `?doll` is not "near" the ball (i.e., `(near ?doll ?ball)` is
+  false); and
+* `?doll` is the closest doll to the ball.
+
+This will impose constraints on the order in which Icarus achieves its
+goals, and thus introduce more search.
+
+# References
+
+* Langley, P., & Choi, D. (2011). Icarus user's manual (Technical
+Report). Institute for the Study of Learning and Expertise, Palo
+Alto, CA.
+* Newell, A., & Simon, H. A. (1961). GPS, a program that simulates
+human thought. In H. Billing (Ed.), Lernede automaten. Munich:
+Oldenbourg KG. Reprinted in E.A. Feigenbaum & J. Feldman (Eds.),
+Computers and thought. New York: McGraw-Hill, 1963.
+* Minton, S., & Carbonell, J. G. (1987). Strategies for learning
+search control rules: An explanation-based approach. Proceedings of
+the Tenth International Joint Conference on Artificial Intelligence
+(pp. 228-235). Milan, Italy: Morgan Kaufmann.

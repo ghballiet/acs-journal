@@ -1,0 +1,26 @@
+# ACS 2011 Submission Information
+
+Thank you for your submission to the AAAI Fall 2011 Symposium on Advances in Cognitive Systems. The details are of your submission are listed below:
+
+## Submission
+
+- **Title:** ?paperTitle
+- **Abstract:** ?paperAbstract
+- **Keywords:** ?paperKeywords
+- **Presenter Name:** ?paperPresenter
+- **Submission:** [Click here to view submission](http://cogsys.org/acs/2011/uploads/?paperFile)
+
+## First Author
+- **Name:** ?name ?surname
+- **Email:** [?email](mailto:?email)
+- **Address 1:** ?address1
+- **Address 2:** ?address2
+- **City:** ?city
+- **State:** ?state
+- **Postal:** ?postal
+- **Country:** ?countryName
+- **Primary Contact Number:** ?phone1
+- **Secondary Contact Number:** ?phone2
+
+## Co-authors
+?coauthors

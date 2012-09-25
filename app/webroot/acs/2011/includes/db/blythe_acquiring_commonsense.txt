@@ -1,0 +1,29 @@
+30
+
+insert into review values (12, 30, 'related', 'Somewhat related', "Although the authors point out that a large KB of common-sense
+information is important for cognitive agents, the paper concentrates
+on the details of a technique to derive a KB from wordNet glosses
+rather than aspects of its use in a cognitive system.");
+
+insert into review values (12, 30, 'extension', 'Reasonable extension', "Though I am not an expert in this area, the paper claims to go beyond
+other techniques in acquiring concepts from dictionaries, by defining
+concepts compositionally based on their definitions using description
+logic, and building an upper ontology and certain axioms about
+processes and intervals by hand.");
+
+insert into review values (12, 30, 'claims', 'Clear claims', "The claims that this approach can be more effective than earlier approaches is clearly stated.");
+
+insert into review values (12, 30, 'convincing', 'Somewhat convincing', "The authors describe an example of building a micro-theory of sleep
+from concepts in WordNet related to sleep. The system builds an
+interesting concept definition, however various axioms are added by
+hand in order to make inferences. This result is certainly
+interesting, but it is not clear how many more axioms may be required
+for a different domain or to make different kinds of inferences.");
+
+insert into review values (12, 30, 'effective', 'Very effective', "The paper is clear and well-written, although there are a few typos. The example is very helpful.");
+
+insert into review values (12, 30, 'comment', '', '');
+
+insert into review values (12, 30, 'meeting', 'Accept as poster', '');
+
+insert into review values (12, 30, 'journal', 'Accept paper', '');

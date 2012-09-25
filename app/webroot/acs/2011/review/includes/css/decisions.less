@@ -1,0 +1,25 @@
+// bootstrap it
+@import "bootstrap";
+
+fieldset {
+  h1 {    
+    span {
+      float: left;
+      margin-right: 2em;
+      color: @grayLight;
+    }
+  }
+  
+  h2 {
+    #font > .shorthand(lighter, 1.25em, 1em);
+    color: @grayLight;
+    margin-bottom: .5em;
+  }
+  
+  input#sub {
+    .button;
+    padding: .5em .75em;
+    #font > .sans-serif(normal, 14px, 1em);
+    margin: 1em;
+  }
+}

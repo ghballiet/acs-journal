@@ -1,0 +1,56 @@
+# Research Proposal
+
+This assignment is due **04/22/2011.**
+
+Graduate students taking this course must write a proposal for
+research in the area of integrated intelligent systems. The text
+should be at least six and no more than eight pages in single-spaced,
+one-column, 11-point font, not including references. This should be
+similar in form to the technical section of a proposal to the National
+Science Foundation or other funding agencies, but you will not need to
+include r&eacute;sum&eacute;s, a budget, or a management plan.
+
+The proposal should identify some open problem in the area, describe
+some functionality to be demonstrated and studied, or some important
+phenomena to be explained. In addition, it should outline a
+computational approach to addressing these problems that discusses the
+integration of two or more component abilities, including both the
+representation they assume and the mechanisms they utilize. You are
+welcome to propose extensions to an existing architecture like Soar,
+ACT-R, or Icarus, to propose a standalone integration of two distinct
+capabilities, or to describe some other scheme that combines different
+facets of intelligence.
+
+The proposal should also illustrate your ideas in the context of some
+domain, and it should describe your plans for evaluating the
+integrated system, whether this takes the form of experimental
+studies, comparisons to psychological data, or theoretical analyses.
+Finally, the text should discuss how the proposed approach differs
+from, and moves beyond, previous work in the area. Here is a sample
+outline you may want to follow:
+
+1. Statement of problem (including a motivating example)
+2. Previous research in area
+   1. Relevant work on topic
+   2. How previous work does not solve problem
+3. Proposed architecture/system/extension
+   1. Representational assumptions
+   2. Performance mechanisms
+   3. Learning processes (if these arise)
+   4. Interaction among modules
+4. Plans for evaluation
+   1. Claims and hypotheses
+   2. Experimental design (or other forms of evidence)
+5. Concluding remarks
+
+You need not present things in this order. For instance, you may want
+to review some related research first and other work toward the end.
+However, if you omit any major item, such as related work or explicit
+claims, I will decrease your grade accordingly.
+
+A good research proposal is very much like a good research paper,
+except that it has few results and spends more space on plans for
+future research. As in a research paper, one or more convincing
+examples are crucial. The proposal should convince readers that you
+understand the field, have good ideas about what still needs to be
+done, and have plans for how to implement and evaluate those ideas.

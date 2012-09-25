@@ -1,0 +1,100 @@
+.hidden { display: none; }
+.clearfix { clear: both; }
+label {
+  display: block;
+  text-transform: uppercase;
+  color: #657b83;
+  font-family: 'PTSans-Narrow', 'PTSans-Regular', lucida grande, helvetica, arial, sans-serif;
+  font-weight: bold;
+  padding-bottom: 0.25em;
+}
+label small {
+  font-size: 0.85em;
+  color: #93a1a1;
+  margin-left: 1em;
+  vertical-align: top;
+}
+form {
+  width: 614px;
+  text-align: center;
+  padding: 1em;
+  margin: 0px auto;
+}
+input[type="text"], input[type="email"], textarea, input[type="number"] {
+  border: solid 1px transparent;
+  background: #eee8d5;
+  padding: 0.4em;
+  font-size: 1em;
+  font-family: inherit;
+  margin: 0px;
+  color: #93a1a1;
+}
+input[type="text"]:focus {
+  color: #586e75;
+  border: solid 1px #93a1a1;
+}
+input[type="email"]:focus {
+  color: #586e75;
+  border: solid 1px #93a1a1;
+}
+textarea:focus {
+  color: #586e75;
+  border: solid 1px #93a1a1;
+}
+input[type="number"]:focus {
+  color: #586e75;
+  border: solid 1px #93a1a1;
+}
+input[type="file"] {
+  font-family: 'PTSans-Regular', lucida grande, helvetica, arial, sans-serif;
+  color: #586e75;
+  font-size: 1em;
+}
+div.half { display: inline-block; }
+div.half input[type="text"] { width: 288px; }
+div.half:first-child { margin-right: 20px; }
+div.group {
+  margin-bottom: 15.75px;
+  text-align: left;
+}
+div.stretch input { width: 600px; }
+div.stretch textarea { width: 600px; }
+textarea {
+  line-height: 21px;
+  height: 250px;
+}
+select { margin-top: 6px; }
+#subapp {
+  font-size: 1em;
+  font-family: 'PTSans-Narrow', 'PTSans-Regular', lucida grande, helvetica, arial, sans-serif;
+  color: #93a1a1;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border: solid 1px transparent;
+  background: #073642;
+  text-transform: uppercase;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+#error {
+  margin: 21px;
+  color: #dc322f;
+}
+#error strong { color: #dc322f; }
+#error p { margin: 0px; }
+#error ul {
+  background: transparent;
+  margin: 0px;
+  padding: 0px;
+}
+div.group div.stretch div label {
+  font-family: 'PTSans-Regular', lucida grande, helvetica, arial, sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  display: inline-block;
+}
+div.group div.stretch div input {
+  display: inline-block;
+  width: auto;
+}

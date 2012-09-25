@@ -1,0 +1,18 @@
+ol {
+  padding: 2em;
+  background: #eee8d5;
+  margin: 2em;
+}
+
+ol li p:first-child {
+  margin-bottom: 0px !important;
+  font-weight: bold;    
+}
+
+ol li p:first-child:before {
+  content: "Q: ";
+}
+
+ol li p:nth-child(2):before {
+  content: "A: ";
+}

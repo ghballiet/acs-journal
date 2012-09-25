@@ -1,0 +1,48 @@
+# How to install, run, and use Lisp
+
+The first exercise will be in the Lisp programming language. The
+following resources are available, should you need them:
+
+* [Downloading and Installing Lisp](http://goo.gl/jxeyh): a short
+  guide to various Lisp installation options.
+* [Practical Common Lisp](http://www.gigamonkeys.com/book/): a free
+  book on Lisp.
+
+# How to install, run, and use Icarus
+The remaining exercises and the project will use the Icarus
+programming language. You can find information about how to install
+and run Icarus on your computer [here](http://goo.gl/rxHah). You can
+also download the Icarus User's Manual [here](http://bit.ly/gpBEIb).
+
+# Exercises
+* [Exercise 1][ex1] (due 1/31) &mdash; [submission link][ex1_submit]
+* [Exercise 2][ex2] (due 2/10) &mdash; [submission link][ex2_submit]
+* [Exercise 3][ex3] (due 2/21) &mdash; [submission link][ex3_submit]
+* [Exercise 4][ex4] (due 3/2) &mdash; [submission link][ex4_submit]
+* [Exercise 5][ex5] (due 3/21) &mdash; [submission link][ex5_submit]
+* [Exercise 6][ex6] (due 4/1) &mdash; [submission link][ex6_submit]
+
+# Course Project
+[Course Project Description][project]
+
+# Research Proposal
+This assignment is for **CSE 598 students only,** and is due
+**04/22/2011.** [Click here](http://goo.gl/Q0xZs) to read the details
+of this assignment.
+
+
+[project]: http://bit.ly/hUlKql
+
+[ex1]: http://goo.gl/LtTBf
+[ex2]: http://goo.gl/bmB4F
+[ex3]: http://goo.gl/BqUMi
+[ex4]: http://goo.gl/ZqXQX
+[ex5]: http://goo.gl/idwMI
+[ex6]: http://goo.gl/s1JnW
+
+[ex1_submit]: http://bit.ly/gIjG5y
+[ex2_submit]: http://bit.ly/igpLB6
+[ex3_submit]: http://bit.ly/hasTJH
+[ex4_submit]: http://bit.ly/ihaKkI
+[ex5_submit]: http://bit.ly/fel4Eg
+[ex6_submit]: http://bit.ly/hWKav5

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/mathjax/!svn/ver/634/trunk/mathjax/unpacked/extensions
+END
+tex2jax.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/mathjax/!svn/ver/634/trunk/mathjax/unpacked/extensions/tex2jax.js
+END
+toMathML.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/mathjax/!svn/ver/570/trunk/mathjax/unpacked/extensions/toMathML.js
+END
+mml2jax.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/mathjax/!svn/ver/622/trunk/mathjax/unpacked/extensions/mml2jax.js
+END
+jsMath2jax.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/mathjax/!svn/ver/593/trunk/mathjax/unpacked/extensions/jsMath2jax.js
+END
+MathMenu.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/mathjax/!svn/ver/606/trunk/mathjax/unpacked/extensions/MathMenu.js
+END
+MathZoom.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/mathjax/!svn/ver/570/trunk/mathjax/unpacked/extensions/MathZoom.js
+END
+FontWarnings.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/mathjax/!svn/ver/572/trunk/mathjax/unpacked/extensions/FontWarnings.js
+END

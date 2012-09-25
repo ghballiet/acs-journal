@@ -1,0 +1,25 @@
+
+* Meeting 1. [Introduction and Background](./intro.pdf) [(small version)](./intro_small.pdf)
+* Meeting 2. [Frameworks and Metaphors for Intelligent Systems](./symsearch.pdf) [(small version)](./symsearch_small.pdf)
+* Meeting 3. Symbolic Processing and Lisp
+* Meeting 4. [Symbolic Patterns and Pattern Matching](./match.pdf) [(small version)](./match_small.pdf)
+* Meeting 5. [Rule-Based Deductive Reasoning](./deduct.pdf) [(small version)](./deduct_small.pdf)
+* Meeting 6. [Abductive Inference](./abduct.pdf) [(small version)](./abduct_small.pdf)
+* Meeting 7. [Analogical Reasoning](./analogy.pdf) [(small version)](./analogy_small.pdf)
+* Meeting 8. [Qualitative Modeling and Simulation](./qualmod.pdf) [(small version)](./qual_small.pdf)
+* Meeting 9. [Decision Making and Choice](./decide.pdf) [(small version)](./decide_small.pdf)
+* Meeting 10. [Reactive Control](./react.pdf) [(small version)](./react_small.pdf)
+* Meeting 11. [Hierarchical Task Networks](./htn.pdf) [(small version)](./htn_small.pdf)
+* Meeting 12. [Production Systems](./ps.pdf) [(small version)](./ps_small.pdf)
+* Meeting 13. [State-Driven Problem Solving](./fsearch.pdf) [(small version)](./fsearch_small.pdf)
+* Meeting 14. [Goal-Driven Problem Solving](./bsearch.pdf) [(small version)](./bsearch_small.pdf)
+* Meeting 15. [Creative Problem Solving](./create.pdf) [(small version)](./create_small.pdf)
+* Meeting 17. [Structural Learning](./learn.pdf) [(small version)](./learn_small.pdf)
+* Meeting 18. Spatial Cognition
+* Meeting 19. Language Understanding and Generation
+* Meeting 20. [Dialogue Processing](./dialog.pdf) [(small version)](./dialog_small.pdf)
+* Meeting 21. Dialogue and Joint Activity
+* Meeting 23. [Plan Understanding](./planund.pdf) [(small version)](./planund_small.pdf)
+* Meeting 24. [Cognition, Affect, and Emotion](./emotion.pdf) [(small version)](./emotion_small.pdf)
+* Meeting 25. [Cognition and Personality](./personality.pdf) [(small version)](./personality_small.pdf)
+* Meeting 25. [Metareasoning and Metacognition](./metacog.pdf) [(small version)](./metacog_small.pdf)

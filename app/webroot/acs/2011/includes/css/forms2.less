@@ -1,0 +1,151 @@
+@import "macros";
+
+@dark-bg: #002b36;
+@dark-bg-highlight: #073642;
+@dark-secondary: #586e75;
+@dark-body: #839496;
+@dark-highlight: #93a1a1;
+@light-bg: #fdf6e3;
+@light-bg-highlight: #eee8d5;
+@light-secondary: #93a1a1;
+@light-body: #657b83;
+@light-highlight: #586e75;
+@yellow: #b58900;
+@orange: #cb4b16;
+@red: #dc322f;
+@magenta: #d33682;
+@violet: #6c71c4;
+@blue: #268bd2;
+@cyan: #2aa198;
+@green: #859900;
+
+@wrapper-width: 900px;
+@font-size: 14px;
+@line-height: 1.5*@font-size;
+@stretch-width: 600px;
+@half-sep: 20px;
+@font-stack: 'PTSans-Regular', lucida grande, helvetica, arial, sans-serif;
+@font-stack-alt: 'PTSans-Narrow', @font-stack;
+
+
+label {
+  display: block;
+  text-transform: uppercase;
+  color: @light-body;
+  font-family: @font-stack-alt;
+  font-weight: bold;
+  padding-bottom: .25em;
+}
+
+label small {
+  font-size: .85em;
+  color: @light-secondary;
+  margin-left: 1em;
+  vertical-align: top;
+}
+
+form {
+  width: @stretch-width + @font-size;
+  text-align: center;
+  padding: 1em;
+  margin: 0px auto;
+}
+
+input[type="text"], input[type="email"], 
+textarea, input[type="number"] {
+  border: solid 1px transparent;
+  background: @light-bg-highlight;
+  padding: .4em;
+  font-size: 1em;
+  font-family: inherit;
+  margin: 0px;
+  color: @light-secondary;
+}
+
+input[type="text"]:focus, input[type="email"]:focus,
+textarea:focus, input[type="number"]:focus {
+  color: @light-highlight;
+  border: solid 1px @light-secondary;
+}
+
+input[type="file"] {
+  font-family: @font-stack;
+  color: @light-highlight;
+  font-size: 1em;
+}
+
+div.half {
+  display: inline-block;
+}
+
+div.half input[type="text"] {
+  width: (@stretch-width - @half-sep)/2 - 2px;
+}
+
+div.half:first-child {
+  margin-right: @half-sep;
+}
+
+div.group {
+  margin-bottom: .75*@line-height;
+  text-align: left;
+}
+
+div.stretch input, div.stretch textarea {
+  width: @stretch-width;
+}
+
+textarea {
+  line-height: @line-height;
+  height: 250px;
+}
+
+select {
+  margin-top: 6px;
+}
+
+#subapp {
+  font-size: 1em;
+  font-family: @font-stack-alt;
+  color: @dark-highlight;
+  font-weight: bold;
+  padding: .5em 1em;
+  border: solid 1px transparent;
+  background: @dark-bg-highlight;
+  text-transform: uppercase;
+  .round(.5em);
+}
+
+#error {
+  margin: @line-height;
+  color: @red;
+}
+
+#error strong {
+  color: @red;
+}
+
+#error p {
+  margin: 0px;
+}
+
+#error ul {
+  background: transparent;
+  margin: 0px;
+  padding: 0px;
+}
+
+div.group div.stretch div {
+
+  label {
+    font-family: @font-stack;
+    font-weight: normal;
+    text-transform: none;
+    display: inline-block;
+  }
+
+  input {
+    display: inline-block;
+    width: auto;
+  }
+}

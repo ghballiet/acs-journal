@@ -1,0 +1,98 @@
+// bootstrap it!
+@import "bootstrap";
+
+#reviewers {
+  padding-top: 2em;
+}
+
+#reviewers section.reviewer {
+  font-size: .9em;
+  text-align: left;
+  #flexbox > .display-box;
+  line-height: 1em;
+  .no-select;
+  
+  .action {
+    padding: .5em 5px;
+    display: block;
+    opacity: 0;    
+    color: @white;
+    text-shadow: 0px 0px 2px rgba(0,0,0,.8);    
+    @actcolor: darken(@purple, 5);        
+    .transition(opacity .25s ease-in-out);
+    #gradient > .vertical(lighten(@actcolor, 25), @actcolor);
+    border-right: darken(@actcolor, 2) solid 1px;
+    border-left: darken(@actcolor, 2) solid 1px;
+    border-top: lighten(@actcolor, 40) solid 1px;
+    border-bottom: darken(@actcolor, 15) solid 1px;
+  }
+  
+  .remove {
+    @actcolor: darken(@red, 5);    
+    #gradient > .vertical(lighten(@actcolor, 25), @actcolor);
+    border-right: darken(@actcolor, 2) solid 1px;
+    border-left: darken(@actcolor, 2) solid 1px;
+    border-top: lighten(@actcolor, 40) solid 1px;
+    border-bottom: darken(@actcolor, 15) solid 1px;
+  }
+  
+  .visible {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .num {
+    @numcolor: darken(@blue, 10);
+    color: @white;
+    #gradient > .vertical(lighten(@numcolor, 25), @numcolor);
+    text-shadow: 0px 0px 2px rgba(0,0,0,.8);
+    border-right: darken(@numcolor, 2) solid 1px;
+    border-left: darken(@numcolor, 2) solid 1px;
+    border-top: lighten(@numcolor, 40) solid 1px;
+    border-bottom: darken(@numcolor, 15) solid 1px;
+    display: block;
+    padding: .5em 5px;
+  }
+  
+  .name {
+    #flexbox > .box-flex(1);
+    padding: .5em 1em;
+    display: block;
+    #gradient > .vertical(lighten(@grayLighter, 12), lighten(@grayLighter, 3));
+    border-top: lighten(@grayLighter, 25) solid 1px;
+    border-bottom: darken(@grayLighter, 4) solid 1px;
+    border-left: darken(@grayLighter, 2) solid 1px;
+  }
+  
+  .papers {
+    text-align: right;
+    display: block;
+    //min-width: 92.5px;
+    #gradient > .vertical(lighten(@grayLighter, 12), lighten(@grayLighter, 3));    
+    border-top: lighten(@grayLighter, 25) solid 1px;
+    border-bottom: darken(@grayLighter, 4) solid 1px;    
+  }
+  
+  .paper {
+    display: inline-block;
+    padding: .5em 5px;
+    #gradient > .vertical(@grayLight, @gray);
+    color: @white;
+    text-shadow: 0px 0px 2px rgba(0,0,0,.4);
+    border-left: solid 1px darken(@gray, 4);
+    border-top: lighten(@grayLight, 10) solid 1px;
+    border-bottom: darken(@gray, 5) solid 1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+  
+  .paper:last-child {
+    border-right: solid 1px darken(@gray, 4);
+  }
+}
+
+#reviewers section.reviewer:last-child {
+  .name {
+    //border-bottom: darken(@grayLighter, 30) solid 1px;
+  }
+}

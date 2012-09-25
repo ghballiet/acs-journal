@@ -1,0 +1,58 @@
+[twig-video]: http://www.youtube.com/watch?v=wdDryRhEiy0
+
+**[Click here for a video demonstartion of Twig.][twig-video]**
+
+**Note:** at time of writing (2011-02-11), these files are <span
+  style="color:#c00">**WINDOWS ONLY**</span>. A Mac and Linux version
+  is in the works. 
+
+# Installing the Twig Environment
+You will need a number of files to set up and use the Twig simulator
+for Exercise 3.
+
+1. **Twig executables:** These files contain the Twig libraries and
+and an environment file built on top of them. You should download the
+executables from
+[twig-files.zip](http://circas.asu.edu/cogsys/Twig-files.zip) and
+unzip it to any location on your computer.
+2. **The .NET framework:** Twig is written using Microsoft Visual C#
+and Microsoft XNA Game Studio 3.0. You should have the .NET framework
+installed on your computer to run it. **This requires XNA 3.0. Do not
+download a newer version or it will not work.**
+3. **Interface file:** This is a Lisp file that contains functions for
+communication between Twig and Icarus. You should download
+[Twig-Icarus-Interface.lisp](http://circas.asu.edu/cogsys/Twig-Icarus-Interface.lisp)
+and place it in the directory from which you run Icarus.
+
+# Using the Twig Simluator
+Once you have installed the Twig-related files, you can run the
+simulator by following these steps:
+
+1. Execute the file `Twig-files\Debug\ServerTest.exe`. On the first
+   run, you may see a security alert like the following:
+
+   <a href="http://circas.asu.edu/cogsys/ex3_security_alert.jpg"><img
+   src="http://circas.asu.edu/cogsys/ex3_security_alert.jpg"
+   class="centered inline"/></a>
+
+   You should allow this by clicking on **Unblock**. If all goes well,
+   you should see the following screen:
+
+   <a href="http://circas.asu.edu/cogsys/ex3_screen.jpg"><img
+   src="http://circas.asu.edu/cogsys/ex3_screen.jpg" class="centered
+   inline"/></a>
+
+   You should not be surprised if you do not see things moving around
+   or exhibiting some behavior. All objects are stationary in this
+   particular Twig environment.
+2. Start the Lisp console and load Icarus, the Twig-Icarus-Interface
+   file, and your concept definition files.
+3. Call the `init()` function, which performs all background work
+   needed to provide perceptual information to Icarus from Twig. If
+   all goes well, the console should look like this:
+   
+   <a href="http://circas.asu.edu/cogsys/ex3_console.jpg"><img
+   src="http://circas.asu.edu/cogsys/ex3_console.jpg" class="centered
+   inline"/></a>
+   
+   You are now ready to test conceptual inference in Icarus.

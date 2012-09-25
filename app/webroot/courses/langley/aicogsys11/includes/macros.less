@@ -1,0 +1,60 @@
+.shadow(@x:0px, @y:0px, @z:0px, @color:transparent) {
+    -webkit-box-shadow: @x @y @z @color;
+    -moz-box-shadow: @x @y @z @color;
+    box-shadow: @x @y @z @color;
+}
+
+.shadow_inset(@x:0px, @y:0px, @z:0px, @color:transparent) {
+    -webkit-box-shadow: @x @y @z @color inset;
+    -moz-box-shadow: @x @y @z @color inset;
+    box-shadow: @x @y @z @color inset;
+}
+
+
+.round(@radius:0px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.round-bl(@radius: 0px) {
+    -webkit-bottom-left-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-bottom-left-radius: @radius;
+}
+
+.round-br(@radius: 0px) {
+    -webkit-bottom-right-radius: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+.round-tl(@radius: 0px) {
+    -webkit-top-left-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    border-top-left-radius: @radius;
+}
+
+.round-tr(@radius: 0px) {
+    -webkit-top-right-radius: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-right-radius: @radius;
+}
+
+.gradient(@from:transparent, @to:transparent) {
+    background-color: @from;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(@from),to(@to));
+}
+
+.hidden {
+    display: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.rotate(@deg: 0deg) {
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+}

@@ -1,0 +1,55 @@
+user: 19
+paper: 32
+
+Review on "Representing and Reasoning about Spatial Regions Defined by Context" (Klenk, Hawes & Lockwood)
+
+(1) Does the paper address issues related to aspects of human-level intelligence, complex cognition, or similar topics? Does it discuss these issues from a cognitive systems perspective?
+
+Highly related
+
+Comment: 
+I think that the generation of a relational spatial representation from sensor data is an unsolved and interesting cognitive problem. 
+The authors propose a framework to address this in a novel way. 
+Finally, the usage of analogy in order to transfer experienced regions to new situations is strongly related to human-level intelligence. 
+
+(2) Do the authors present a problem or approach that extends or clarifies the capabilities of cognitive systems, or increase our understanding of their operation, in substantial ways?
+
+Reasonable extension
+
+Comment: 
+In various respects, the paper combines approaches in order to address the (hard) problem 'from signals to symbols' (in their terminology 'from sensors to semantics'.)
+The integration of SLAM maps, anchor points, extraction procedures of spatial representations, analogy-making, context etc. can be considered as increasing our understanding of such operations. 
+Several limitations are also mentioned in the paper (page 6), but I like the overall idea. 
+
+(3) Does the paper make clear claims about the approach to cognitive systems? Such claims can take many forms, but they should be stated unambiguously in accessible language.
+Clear claims
+Comment: 
+Cognitive systems as uniform architectures covering the whole breadth of human cognitive abilities are not considered in the paper. 
+Nervertheless, with respect to the hard problem to generate structured representations from sensor information the paper makes clear claims.
+
+(4) Do the authors present convincing evidence that supports their claims? Such evidence can take different forms, but it should lead a reasonable person to conclude the claims are correct or plausible.
+Very convincing
+Comment: 
+There is no in breadth evaluation of the system available yet. Nevertheless, on a conceptual level the paper is convincingly supporting the claims of the authors.
+
+(5) Does the paper's writing and organization present its ideas to readers effectively? Can moderately informed readers understand the main contributions and reconstruct the results if desired?
+
+Very effective
+
+Comment: 
+
+(6) Do you have other comments that support your overall evaluation or do you have detailed suggestions for improving the paper?
+
+(7) Do you think the paper should be presented at the symposium as a talk, as a poster, or not at all? Both talks and posters will appear in the AAAI technical report for the meeting.
+
+Accept as talk
+
+Comment: 
+
+(8) Do you think the authors should be invited to publish their paper in the journal Advances in Cognitive Systems? If you favor conditional acceptance, please itemize the changes necessary for for journal publication.
+
+Accept conditionally
+
+Comment: 
+In the present form, I am not sure whether the paper can be already published in a journal. I think that at least the following two issues must be addressed in 
+a journal article: a more detailed description of the system's computation (including technical details) and an evaluation of the system that is not only based on one example.

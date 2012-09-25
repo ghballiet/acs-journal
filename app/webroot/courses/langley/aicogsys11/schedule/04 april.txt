@@ -1,0 +1,33 @@
+# Dialogue Processing **April 4**
+* Allen, J., Byron, D., Dzikovska, M,., Ferguson, G., Galescu, L., &amp; Stent, A. (2001). [Towards conversational human-computer interaction](http://www.aaai.org/ojs/index.php/aimagazine/article/viewArticle/1590). AI Magazine, 22, 27-38. 
+* [Wikipedia entry on Chatterbots](http://en.wikipedia.org/wiki/Chatterbot). 
+* [Extensive list of Chatterbots](http://www.chatbots.org/). 
+* Perrault, C. R., &amp; Allen, J. (1980). [A plan-based analysis of indirect speech acts](http://www.aclweb.org/anthology/J/J80/J80-3003.pdf). Computational Linguistics, 6. *[optional]*
+* Allen, J. F., Miller, B. W., Ringger, E. K., &amp; Sikorski, T. (1996). [A robust system for natural spoken dialogue](http://arxiv.org/abs/cmp-lg/9606023). Proceedings of the 1996 Annual Meeting of the Association for Computational Linguistics (pp. 62-70). *[optional]*
+
+# Dialogue and Joint Activity **April 6**
+* Rich, C., Sidner, C., &amp; Lesh, N. (2001). [Collagen: Applying collaborative discourse theory to human-computer interaction](http://www.aaai.org/ojs/index.php/aimagazine/article/viewArticle/1589). AI Magazine, 22, 15-25. 
+* Allen, J., Blaylock, N., &amp; Ferguson, G. (2002). [A problem solving model for collaborative agents](http://portal.acm.org/citation.cfm?id=544923&dl=). Proceedings of the Conference on Autonomous Agents and Multi-Agent Systems (pp. 774-781). Bologna, Italy: ACM Press. *[optional]*
+
+# Project Discussion **April 11**
+
+# Social Cognition **April 13**
+* Kautz, H. A., &amp; Allen, J. F. (1986). [Generalized plan recognition](http://www.aaai.org/Papers/AAAI/1986/AAAI86-006.pdf). Proceedings of the Fifth National Conference on Artificial Intelligence (pp. 32-37). Philadelphia: Morgan Kaufmann. 
+
+# Cognition, Affect, and Emotion **April 18**
+* Marsella, S., Gratch, J., &amp; Petta, P. (in press). [Computational models of emotion](http://people.ict.usc.edu/~gratch/papers/MarGraPet_Review.pdf). In Scherer, K. R., Bnziger, T., &amp; Roesch, E. (Eds.), A blueprint for an affectively competent agent: Cross-fertilization between emotion psychology, affective neuroscience, and affective computing. Oxford: Oxford University Press.
+* Simon, H. A. (1967). [Motivational and emotional controls of cognition](http://circas.asu.edu/cogsys/papers/simon.emotion.pdf). Psychological Review, 74, 29-39. *[optional]*
+* Marinier, R., &amp; Laird, J. (2004). [Towards a comprehensive computational model of emotions and feelings](http://sitemaker.umich.edu/marinier/files/Marinier_Laird_ICCM_2004_emotions.pdf). Proceedings of the Sixth International Conference on Cognitive Modeling. Pittsburgh, PA. *[optional]*
+
+# Cognition and Personality **April 20**
+* Rizzo, P., Veloso, M., Miceli, M., &amp; Cesta, A. (1997). [Personality-driven social behaviors in believable agents](http://www.aaai.org/Papers/Symposia/Fall/1997/FS-97-02/FS97-02-026.pdf). Proceedings of the AAAI Fall Symposium on Socially Intelligent Agents. Cambridge, MA: AAAI Press. 
+* Rousseau, D., &amp; Hayes-Roth, B. (1996). [Personality in synthetic agents](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.55.2608) (Report No. KSL 96-21). Knowledge Systems Laboratory, Department of Computer Science, Stanford University, Stanford, CA. *[optional]*
+
+# Metareasoning and Metacognition **April 25**
+* Cox, M. T. (2005). [Metacognition in computation: A selected history](http://www.aaai.org/Papers/Symposia/Spring/2005/SS-05-04/SS05-04-002.pdf). Proceedings of the AAAI Spring Symposium on Metacognition in Computation (pp. 1-17). Stanford, CA: AAAI Press.
+* Cox, M. T. (2007). [Perpetual self-aware cognitive agents](http://www.aaai.org/ojs/index.php/aimagazine/article/view/2027/1920). AI Magazine, 28, 32-45. *[optional]*
+
+# Integrated and Unified Approaches to Intelligence **April 27**
+* Langley, P., Laird, J. E., &amp; Rogers, S. (2009). [Cognitive architectures: Research issues and challenges](http://www.isle.org/~langley/papers/cogarch.cogsys08.pdf). Cognitive Systems Research, 10, 141-160. 
+* Lewis, R. (1999). [Cognitive theory, Soar](http://www-personal.umich.edu/~rickl/Documents/cognitive-theory-soar.pdf). *[optional]*
+* Anderson, J. R. et al. [About ACT-R](http://act-r.psy.cmu.edu/about/). *[optional]*

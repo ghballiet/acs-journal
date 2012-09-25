@@ -1,0 +1,84 @@
+// bootstrap it!
+@import "bootstrap";
+
+section.row {
+  padding: .5em 0px;
+  border-bottom: solid 1px lighten(@grayLighter, 10);
+  #flexbox > .display-box;
+  #flexbox > .box-orient(horizontal);
+  
+  .title {
+    #flexbox > .box-flex(1);
+  }
+  
+  .author, .user {
+    width: 150px;
+  }
+  
+  .author {
+    margin: 0px 1em;
+    text-align: right;
+    color: darken(@grayLighter, 8);
+  }
+  
+  .user {
+    margin-left: 1em;
+    text-align: right;
+  }
+}
+
+section.row:last-child {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+section.header {
+  font-weight: bold;
+  border-bottom: solid 1px @grayLight;
+  
+  .author {
+    color: @gray;
+  }
+}
+
+fieldset {
+  h2 {
+    color: darken(@grayLighter, 8);
+    font-size: 16px;
+  }
+  
+  h3 {
+    float: right;
+  }
+  
+  ol {
+    margin-top: 1em;
+    list-style-type: decimal;
+    
+    li {
+      margin-left: 1.5em;
+      margin-bottom: 2em;
+    }
+    
+    li:last-child {
+      margin-bottom: 0px;
+    }
+    
+    .question, .review {
+      margin-bottom: 1em;
+    }
+    
+    .review {
+      font-weight: bold;
+    }
+    
+    .comments {
+      background: lighten(@grayLighter, 10);
+      padding: .5em;
+    }
+    
+    .missing {
+      color: @red;
+    }
+  }
+}

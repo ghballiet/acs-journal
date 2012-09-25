@@ -1,0 +1,257 @@
+[Click here to submit this assignment.](http://circas.asu.edu/aicogsys/assignments/upload.php?ex=1&files=2&title=Exercise%201:%20Introduction%20to%20Lisp)
+
+# Task A: Walkthrough
+This assignment will give you basic familiarity with Lisp, a language designed for symbolic processing. Your task is to **install Lisp on your computer, type in the commands and definitions below, and save them in a file** to demonstrate that they produce the desired behavior.
+
+Typing "lisp" (or whatever it is called on your machine) in a Linux shell will invoke the Lisp environment. 
+
+    > lisp
+
+Lisp is an interpretive language, which means that you can enter commands and get an immediate response &mdash; you can specify an atom and the Lisp interpreter will return its value. Quoting an element keeps Lisp from evaluating it.
+
+    => 'a
+    a
+
+Lisp is a list processing language, so it provides straighforward ways to create lists and list structures. 
+
+    => '(b c d)
+    (b c d)
+
+    => (list 'b 'c 'd)
+    (b c d)
+
+In Lisp, the empty list has the special name `NIL`. 
+
+    => ()
+    NIL
+
+    => NIL
+    NIL
+
+Lisp also lets you create a variable and assign its value, which may be an atom, a list, or a list structure. 
+
+    => (setq x (list 'b 'c 'd))
+    (b c d)
+
+You can then perform operations like `CAR` and `CDR` on the variable.
+
+    => (car x)
+    b
+    
+    => (cdr x)
+    (c d)
+
+Of course, you can also combine these function calls to produce more complex behavior. 
+
+    => (cdr (cdr x))
+    (d)
+    
+    => (car (cdr x))
+    c
+
+The function `CONS` lets you combine two structures into a new list. 
+
+    => (cons 'a x)
+    (a b c d)
+
+Most functions in Lisp are nondestructive, in that they do not alter the structures passed to them as arguments. 
+
+    => x
+    (b c d)
+
+But you can introduce a variable, or change the value of an existing one, to store the results of structures they create. 
+
+    => (setq x (cons 'a x))
+    (a b c d)
+    
+    => (car x)
+    a
+
+    => (cdr x)
+    (b c d)
+
+The function `LIST` embeds its arguments in a new list. 
+
+    => (setq y (list (list 'e 'f) (list 'g 'h)))
+    ((e f) (g h))
+    
+    => (car y)
+    (e f)
+    
+    => (cdr y)
+    ((g h))
+
+The final portion of any list is always the empty list or `NIL`. 
+
+    => (cdr (cdr y))
+    NIL
+
+As we have seen, the function `CONS` creates a new list with its first argument as the `CAR` and its second argument as the `CDR`.
+
+    => (cons x y)
+    ((a b c d) (e f) (g h))
+
+In contrast, the function `LIST` embeds both arguments in a list. 
+
+    => (list x y)
+    ((a b c d) ((e f) (g h)))
+
+And the function `APPEND` creates a list that joins the end of its first argument to the beginning of its second. 
+
+    => (append x y)
+    (a b c d (e f) (g h))
+
+Lisp also lets you define new functions, which requires you to specify their name, arguments, and body. 
+
+    => (defun rev (l)
+        (rev-aux l nil))
+    rev
+
+You can define one function in terms of one or more other functions, including itself via recursive calls. The `COND` notation provides a way to produce conditional effects. 
+
+    => (defun rev-aux (from to)
+         (cond ((equal from nil) to)
+    	   (t (rev-aux (cdr from) (cons (car from) to)))))
+    rev-aux
+
+Once you have defined a function, you can invoke it in the Lisp interpreter. 
+
+    => (rev x)
+    (d c b a)
+
+Defined functions may also be nondestructive, in that they do not alter existing list structures but only create new ones. 
+
+    => x
+    (a b c d)
+    
+    => (setq z (rev x))
+    (d c b a)
+    
+    => z
+    (d c b a)
+
+Lisp makes an important distinction between two structures being `EQ`, which means they refer to the same pointer, and `EQUAL`, which means they are structurally identical. 
+
+    => (setq w '(d c b a))
+    (d c b a)
+    
+    => (equal z w)
+    T
+    
+    => (eq w w)
+    T
+    
+    => (eq z w)
+    NIL
+    
+    => (eq (car w) 'd)
+    T
+    
+    => (eq (cdr w) '(c b a))
+    NIL
+    
+    => (equal (cdr w) '(c b a))
+    T
+
+The language also includes boolean tests that return `T` when they are satisfied and `NIL` when they are not. 
+
+    => (and (eq (car w) 'd) (eq (car (cdr w)) 'c))
+    T
+    
+    => (or  (eq (car w) 'd) (eq (car (cdr w)) 'b))
+    T
+
+One way to achieve destructive modification in Lisp is to use the `SETF` function, but you should invoke it, as well as other destructive functions, with care. 
+
+    => x
+    (a b c d)
+    
+    => (setf (car x) '1)
+    1
+    
+    => (setf (car (cdr x)) '2)
+    2
+    
+    => x
+    (1 2 c d)
+
+You can exist the Lisp environment by typing `(QUIT)` or `(EXIT)`.
+
+    => (quit)
+    Bye. 
+
+# Task B: Sanity Check Exercises
+
+1. Write a Lisp expression that assigns the value 3 to the variable
+`A`.
+1. Write a Lisp expression that sets the variable `X` to a list that
+contains the atoms `A`, `B`, `C`, and `D`, in that order.
+1. Write a Lisp expression that replaces the atom `C` in the list from
+task 2 with the atom `X`.
+1. Write a Lisp expression that sets the variable `Y` to the list `(B
+C D)`, then inserts `A` at the beginning of the list, using
+destructive modification. This changes `Y` to `(A B C D)`.
+1. Write a Lisp function which takes a single parameter `NUM`, and
+returns `NUM` multiplied by two if `NUM` is odd, and returns `NUM` if
+it is even. Test the function on the numbers from zero to six.
+1. Write a Lisp function that takes as input a list of elements, such
+as `(A B C)`, and returns a list in which the position of each element
+follows it, such as `(A 1 B 2 C 3)`. Test the function on the lists:
+    1. `( )`
+    1. `(A)`
+    1. `(A B)`
+    1. `(A B C)`
+1. Write a Lisp function that takes as input a list of elements, such
+as `(A B C)`, and returns a list of dotted pairs in which each pair
+contains one of the original element (in the original order) and its
+position, such as `((A . 1) (B . 2) (C . 3))`. Test the function on
+the lists:
+    1. `( )`
+    1. `(A)`
+    1. `(A B)`
+    1. `(A B C)`
+1. Write a Lisp function that takes as input a list of numbers, such
+as `(4 7 3 2 1 8)`, and returns a list of two lists, the first
+containing all odd numbers from the input (in order of their
+occurrence) and the second containing all even numbers from the input
+(in reverse order of occurrence), for example, `((7 3 1) (8 2
+4))`. Test the function on the lists:
+    1. `( )`
+    1. `(1)`
+    1. `(2)`
+    1. `(2 1)`
+    1. `(1 2)`
+    1. `(4 7 3 2 1 8)`
+    1. `(4 7 3 2 1 8 17)`
+1. Write a Lisp function that takes a list of elements as input, such
+as `(A B C D)`, and returns a list structure that encodes a
+left-branching tree in which the original elements appear as terminal
+nodes, such as `(((A B) C) D)`. Test the function on the lists:
+    1. `( )`
+    1. `(A)`
+    1. `(A B)`
+    1. `(A B C)`
+    1. `(A B C D)`
+1. Write a Lisp function that takes a list of elements as input, such
+as `(A B C D)`, and returns a list structure that encodes a
+right-branching tree in which the original elements appear as terminal
+nodes, such as `(A (B (C D)))`. Test the function on the lists:
+    1. `( )`
+    1. `(A)`
+    1. `(A B)`
+    1. `(A B C)`
+    1. `(A B C D)`
+1. Set the global variable `G` to the list `(art noun verb art noun)`
+and variable `W` to `((art a) (art the) (noun cat) (noun mouse) (verb
+chased) (verb ate))`. Write a Lisp function that parses input lists
+that obey the grammar `G` and the word list `W`. For example, the
+input `(the cat chased a mouse)` should return the list `((art the)
+(noun cat) (verb chased) (art a) (noun mouse))`. If a sentence is
+ungrammatical, it should return `NIL`. Test the function on the lists:
+    1. `( )`
+    1. `(the cat chased a mouse)`
+    1. `(a cat ate the mouse)`
+    1. `(the cat chased a cricket)`
+    1. `(the cat ate)`
+
+[Click here to submit this assignment.](http://circas.asu.edu/aicogsys/assignments/upload.php?ex=1&files=2&title=Exercise%201:%20Introduction%20to%20Lisp)

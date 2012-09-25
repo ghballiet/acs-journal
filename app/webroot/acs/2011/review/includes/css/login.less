@@ -1,0 +1,50 @@
+// bootstrap it!
+@import "bootstrap";
+
+article {
+  padding: 2em 0px;
+  text-align: center;
+  
+  .wrap {
+    display: block;
+  }
+  
+  h1 {
+    #font > .shorthand(lighter, 20px, 1em);
+    margin-bottom: .5em;
+  }
+  
+  h2 {
+    #font > .shorthand(normal, 16px, 1em);
+    margin-bottom: 1em;
+  }
+  
+  @input-width: 300px;
+  
+  input {
+    display: block;
+    width: @input-width;
+    margin: 0px auto;
+    padding: .5em;
+    #font > .sans-serif(normal, 16px, 1em);
+    border: solid 1px @grayLighter;
+    color: @gray;
+    outline-color: lighten(@blue, 10);
+    .border-radius(6px);
+  }
+  
+  input[type="submit"] {
+    .button;
+    margin-top: 2em;
+    width: auto;
+  }
+  
+  label {
+    display: block;
+    text-align: left;
+    width: @input-width;
+    margin: 0px auto;
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
+}

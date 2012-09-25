@@ -1,0 +1,16 @@
+# Application for Participation
+
+Participation in the AAAI Fall 2011 Symposium on Advances in Cogntive
+Systems is by invitation only. To apply for an invitation, please
+complete the form on the this page. The initial deadline for
+applications, **May 20, 2011**, has passed. We will still consider 
+applications after this date, but we are limited in the number of 
+people who can attend, so we cannot guarantee a place at the meeting. 
+
+In addition to providing your name and contact information, you should
+include a brief description of your research in the area of cognitive
+systems. We also encourage applicants to upload one or two papers they
+have written in the area, which will help the organizers determine
+whether their work is relevant to the meeting's goals. Please do
+**not** provide a paper for publication on this form; those should be
+submitted by July 15, 2011, separately.

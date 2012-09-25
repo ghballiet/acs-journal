@@ -1,0 +1,79 @@
+@import "bootstrap";
+
+fieldset {
+  section.paper {
+    #flexbox > .display-box;
+    font-size: .9em;
+    padding: 1.4em 0px;
+    border-bottom: solid 1px lighten(@grayLighter, 8);
+    .no-select;
+    .transition(opacity .25s ease-in-out);
+    
+    .id {
+      margin-right: 14px;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+    
+    .title {
+      color: @grayDark;
+      #flexbox > .box-flex(1);
+      line-height: 1.4em;
+    }
+    
+    .by {
+      margin: 0px 1em;
+      color: @grayLight;
+      font-style: italic;
+      font-weight: lighter;
+    }
+    
+    .author {
+      color: darken(@grayLight, 8);
+      text-transform: capitalize;
+      width: 100px;
+      margin-right: 1em;
+      line-height: 1.4em;
+      
+      span {
+        color: darken(@grayLighter, 15);
+      }
+    }
+    
+    .assigned {
+      margin-right: 1.4em;
+      line-height: 1.4em;
+      color: darken(@grayLighter, 13);
+    }
+    
+    .btn span {
+      font-size: .9em;
+      padding: .5em;
+      border: solid 1px darken(@grayLighter, 8);
+      #gradient > .vertical(lighten(@grayLighter,13), lighten(@grayLighter,0));
+      text-shadow: 0px 1px 0px @white;
+      cursor: pointer;
+      line-height: 1em;
+      text-align: center;
+      .no-select;
+      display: inline-block;
+    }
+  }
+  
+  section.disabled {
+    opacity: .15;
+    
+    section, span, a {
+      cursor: default !important;
+    }
+  }
+  
+  section.paper:first-child {
+    padding-top: 0px;
+  }
+  
+  section.paper:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+}
