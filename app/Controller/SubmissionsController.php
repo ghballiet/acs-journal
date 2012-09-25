@@ -68,10 +68,21 @@ class SubmissionsController extends AppController {
     $this->autoRender = false;
     $slug = str_replace('.pdf', '', $slug);
     $submission = $this->Submission->findBySlug($slug);
-    $paper = $submission['Paper'];
 
-    $this->response->type($paper['type']);
-    $this->response->body($paper['content']);
+    // quick fix for bhatt-freska paper
+    if(trim($submission['User']['surname']) == 'Bhatt' &&
+       $submission['Collection']['title'] == 'First Annual Conference on Advances in Cognitive Systems') {
+      $file = sprintf('../webroot/papers/%s.pdf', $slug);
+      $content = file_get_contents($file);
+      $type = 'application/pdf';
+      $this->response->type($type);
+      $this->response->body($content);
+    } else {
+      $paper = $submission['Paper'];
+      
+      $this->response->type($paper['type']);
+      $this->response->body($paper['content']);
+    }
   }
 
   public function create($slug = null) {
