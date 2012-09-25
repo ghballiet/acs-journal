@@ -67,6 +67,50 @@ class UsersController extends AppController {
     
   }
 
+  public function reset_password($hash) {
+    $options = array(
+      'conditions' => array(
+        'md5(concat(User.id, User.name, " ", User.surname, User.email))' => $hash
+      )
+    );
+
+    $user = $this->User->find('first', $options);
+
+    if($user != null) {
+      $this->set('reset_for', $user);
+    } else {
+      $this->alertError('Error!', 'Invalid password reset request.');
+      $this->redirect(array('controller'=>'users', 'action'=>'login'));
+    }
+
+    if($this->request->is('post')) {
+      $data = $this->request->data;
+      $data = $data['User'];
+      if(strtolower(trim($data['email'])) == strtolower(trim($user['User']['email']))) {
+        $arr = array(
+          'User' => array(
+            'id' => $data['id'],
+            'password' => $data['password'],
+            'confirm_password' => $data['confirm_password'],
+            'name'=>$user['User']['name'],
+            'surname'=>$user['User']['surname'],
+            'email'=>$user['User']['email'],
+            'confirm_email' => $user['User']['email']
+          )
+        );
+        if($this->User->save($arr)) {
+          $this->alertSuccess('Success!', 'Your password has been reset.', true);
+          $this->redirect(array('controller'=>'users', 'action'=>'login'));
+        } else {
+          $this->alertError('Error!', 'Passwords do not match.');
+        }
+      } else {
+        $this->alertError('Error!', 'Invalid password reset request.');
+        $this->redirect(array('controller'=>'users', 'action'=>'login'));
+      }
+    }
+  }
+
   public function forgot_password() {
     if($this->request->is('post')) {
       $data = $this->request->data;
