@@ -35,20 +35,13 @@ class ReviewsController extends AppController {
   }
 
   public function manage() {
-    $user_list = $this->Review->User->find('list', array(
-      'fields' => array('User.id', 'User.full_name')
-    ));
-    $this->set('user_list', $user_list);
-
-    $coauthors = $this->Review->Submission->Coauthor->find('list', array(
-      'fields' => array(
-        'Coauthor.id',
-        'Coauthor.name',
-        'Coauthor.submission_id',        
-      )
-    ));
+    $this->render('manage-master');
     
-    $this->set('coauthors', $coauthors);
+    // find all reviews this user should see. this includes:
+    // - reviews assigned to this user, and
+    // - reviews in a collection where this user is an admin.
+    $my_reviews = $this->Review->findAllByUserId($this->Auth->User('id'));    
+    $this->set('mine', $my_reviews);
   }
   
   public function edit($id) {
