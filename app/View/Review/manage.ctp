@@ -68,13 +68,13 @@ foreach($user_reviews as $review) {
 
   $buttons = implode('&nbsp;', $buttons);
 
-  $num_answers = count($review['Answer']);
+  //$num_answers = count($review['Answer']);
   
   $cells = array(
     $paper['title'],
     $author_str,
     $review['User']['full_name'],
-    $num_answers,
+    // $num_answers,
     $buttons
   );
   echo $this->Html->tableCells($cells);
