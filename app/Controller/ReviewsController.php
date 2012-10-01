@@ -34,14 +34,38 @@ class ReviewsController extends AppController {
     }
   }
 
-  public function manage() {
-    $this->render('manage-master');
-    
-    // find all reviews this user should see. this includes:
-    // - reviews assigned to this user, and
-    // - reviews in a collection where this user is an admin.
-    $my_reviews = $this->Review->findAllByUserId($this->Auth->User('id'));    
-    $this->set('mine', $my_reviews);
+  public function manage() {   
+    $user_list = $this->Review->User->find('list', array('fields'=>array('User.id', 'User.full_name')));
+    $this->set('user_list', $user_list);
+
+    // 1. find collections where i am an editor or admin.
+    // 2. find submissions in that collection which have been assigned to me.
+    // 3. show links to the reviews of those submissions. 
+
+    $coll_ids = $this->Review->User->Role->find('all', array(
+      'conditions'=>array('Role.role_type_id'=>2),
+      'fields'=>array('DISTINCT Role.collection_id')));
+    $coll_ids = Set::extract('/Role/collection_id', $coll_ids);
+    $review_form_ids = $this->Review->ReviewForm->findAllByCollectionId($coll_ids);
+    $review_form_ids = Set::extract('/ReviewForm/id', $review_form_ids);
+    $submission_ids = $this->Review->find('all', array(
+      'conditions'=>
+      array(
+        'Review.review_form_id' => $review_form_ids,
+        'Review.user_id' => $this->Auth->user('id')
+      ),
+      array(
+        'fields' => array('Review.submission_id')
+      )));
+    $submission_ids = Set::extract('/Submission/id', $submission_ids);
+    $submissions = $this->Review->Submission->find('all', array(
+      'conditions'=>array('Submission.id'=>$submission_ids)));
+    $reviews = $this->Review->find('all', array(
+      'conditions'=>array(
+        'Review.submission_id' => $submission_ids,
+        'Review.user_id NOT' => $this->Auth->user('id')),
+      'order'=>array('Review.id', 'Review.user_id')));
+    $this->set('reviews', $reviews);
   }
   
   public function edit($id) {
@@ -85,6 +109,12 @@ class ReviewsController extends AppController {
     ));
     
     $this->set('coauthors', $coauthors);
+
+    $editable = false;
+    if($review['User']['id'] == $this->Auth->user('id'))
+      $editable = true;
+
+    $this->set('editable', $editable);
   }
 }
 ?>

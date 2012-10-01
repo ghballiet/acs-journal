@@ -2,29 +2,72 @@
   <h1>Manage Reviews</h1>
 </div>
 
-<div class="tabbable">
-  <ul class="nav nav-tabs">
-    <li class="active">
-      <a href="#mine" data-toggle="tab">My Reviews</a>
-    </li>
-    <? foreach($user_roles as $role): ?>
-    <li>
-      <a href="#<? echo $role['Collection']['slug']; ?>" data-toggle="tab">
-        <? echo $role['Collection']['title']; ?>
-      </a>
-    </li>
-    <? endforeach; ?>
-  </ul>
+<table class="table condensed">
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th></th>
+  </tr>
+<?
+foreach($user_reviews as $review) {
+  $paper = $review['Submission'];
+  $id = $review['Review']['id'];
+  $slug = $review['Submission']['slug'];
 
-  <div class="tab-content">
-    <div class="tab-pane active" id="mine">
-      <!-- reviews assigned to this user -->
-      <? pr($mine); ?>
-    </div>
-    <? foreach($user_roles as $role): ?>
-    <div class="tab-pane" id="<? echo $role['Collection']['slug'];?>">
-      
-    </div>
-    <? endforeach; ?>
-  </div>
-</div>
+  $abstract = $this->Html->link(
+      'Abstract',
+      array(
+          'controller' => 'submissions',
+          'action' => 'view',
+          $slug
+      ),
+      array(
+          'class' => 'btn btn-mini'
+      )
+  );
+
+  $pdf = $this->Html->link(
+      'PDF',
+      array(
+          'controller' => 'submissions',
+          'action' => 'paper',
+          $slug
+      ),
+      array(
+          'class' => 'btn btn-mini btn-danger'
+      )
+  );
+
+  $buttons = array();
+
+  // edit review
+  $edit_btn = $this->Html->link('Review', array(
+    'controller'=>'reviews',
+    'action'=>'edit',
+    $id
+  ), array('class'=>'btn btn-mini btn-primary'));
+
+  $buttons[] = $pdf;
+  $buttons[] = $abstract;
+  $buttons[] = $edit_btn;
+
+  $user_id = $review['Submission']['user_id'];
+  $name = $user_list[$user_id];
+  $sub_id = $review['Submission']['id'];
+
+  $authors = array($name);
+
+  if(isset($coauthors[$sub_id])) {
+    foreach($coauthors[$sub_id] as $k=>$v)
+      $authors[] = $v;
+  }
+
+  $author_str = implode(', ', $authors);
+
+  $buttons = implode('&nbsp;', $buttons);
+  
+  $cells = array($paper['title'], $author_str, $buttons);
+  echo $this->Html->tableCells($cells);
+}
+?>
+</table>

@@ -79,6 +79,9 @@ foreach($questions as $question) {
       
     if($choice_id == $choice['id'])
       echo ' checked="checked"';
+
+    if(!$editable)
+      echo ' disabled="disabled"';
               
     echo '/>'; // end input
     printf('<label for="choice-%d">%s</label>', $choice['id'], $choice['text']);
@@ -89,7 +92,8 @@ foreach($questions as $question) {
   
   // show the comments textarea
 
-  printf('<textarea name="question-%s" data-question-id="%d" placeholder="Type your comments here."', $id, $id);
+  printf('<textarea name="question-%s" data-question-id="%d" placeholder="Type your comments here." %s',
+         $id, $id, $editable ? null : 'disabled="disabled" ');
 
   if(count($choices) == 0) {
     echo 'class="full">';
