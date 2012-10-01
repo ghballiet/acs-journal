@@ -81,7 +81,7 @@ foreach($questions as $question) {
       echo ' checked="checked"';
 
     if(!$editable)
-      echo ' disabled="disabled"';
+      echo ' disabled';
               
     echo '/>'; // end input
     printf('<label for="choice-%d">%s</label>', $choice['id'], $choice['text']);

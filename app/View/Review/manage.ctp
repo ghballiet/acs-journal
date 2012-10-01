@@ -7,7 +7,7 @@
     <th>Title</th>
     <th>Author</th>
     <th>Assigned To</th>
-    <th>Answers</th>
+    <!-- <th>Answers</th>-->
     <th></th>
   </tr>
 <?
@@ -149,7 +149,7 @@ foreach($reviews as $review) {
     $paper['title'],
     $author_str,
     $review['User']['full_name'],
-    $num_answers,
+    //    $num_answers,
     $buttons
   );
   echo $this->Html->tableCells($cells);
