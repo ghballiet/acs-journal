@@ -6,7 +6,7 @@
   <tr>
     <th>Title</th>
     <th>Author</th>
-    <th>Reviewed By</th>
+    <th>Assigned To</th>
     <th>Answers</th>
     <th></th>
   </tr>
