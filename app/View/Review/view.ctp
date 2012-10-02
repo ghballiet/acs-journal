@@ -40,36 +40,29 @@ $slug = $review['Submission']['slug'];
   </ul>
   <h1>Review&nbsp;&nbsp;<small><? echo $title; ?></small></h1>
   <h4 class="authors"><? echo $auth_str; ?></h4>
+  <div class="reviewer">
+    <? echo $this->Profile->badge($review['User']); ?>
+  </div>
 </div>
 
-<div class="row">
-  <div class="span3" data-spy="affix">
-    <div class="reviewer">
-      <? echo $this->Profile->badge($review['User']); ?>
-    </div>
-    <!--   <h3>Metareview</h3> -->
+<? foreach($questions as $question): ?>
+<div class="question">
+  <div class="order"><? echo $question['Question']['position']; ?></div>
+  <div class="question-text">
+    <p class="text"><? echo $question['Question']['text']; ?></p>        
+    <? if(isset($answers[$question['Question']['id']])): ?>
+    <p class="answer">
+      <strong>Answer:</strong>
+      <? echo $answers[$question['Question']['id']]['Choice']['text']; ?>
+    </p>
+    <p class="comments">
+      <strong>Comments:</strong>
+      <? echo $answers[$question['Question']['id']]['Answer']['comments']; ?>
+    </p>
+    <? else: ?>
+    <!-- <p class="alert alert-error"><? echo $review['User']['full_name']; ?> has not answered this question.</p> -->
+    <? endif; ?>
   </div>
-  
-  <div class="span9">
-    <? foreach($questions as $question): ?>
-    <div class="question">
-      <div class="order"><? echo $question['Question']['position']; ?></div>
-      <div class="question-text">
-        <p class="text"><? echo $question['Question']['text']; ?></p>        
-        <? if(isset($answers[$question['Question']['id']])): ?>
-        <p class="answer">
-          <strong>Answer:</strong>
-          <? echo $answers[$question['Question']['id']]['Choice']['text']; ?>
-        </p>
-        <p class="comments">
-          <strong>Comments:</strong>
-          <? echo $answers[$question['Question']['id']]['Answer']['comments']; ?>
-        </p>
-        <? else: ?>
-        <!-- <p class="alert alert-error"><? echo $review['User']['full_name']; ?> has not answered this question.</p> -->
-        <? endif; ?>
-      </div>
-    </div>
-    <? endforeach; ?>
-  </div>
+</div>
+<? endforeach; ?>
 </div>
