@@ -43,12 +43,10 @@ $title = $review['Submission']['title'];
 
 <div class="row">
   <div class="span3" data-spy="affix">
-    <div class="well">
-      <div class="reviewer">
-        <? echo $this->Profile->badge($review['User']); ?>
-      </div>
-      <!--   <h3>Metareview</h3> -->
+    <div class="reviewer">
+      <? echo $this->Profile->badge($review['User']); ?>
     </div>
+    <!--   <h3>Metareview</h3> -->
   </div>
   
   <div class="span9">
