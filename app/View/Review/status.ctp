@@ -20,7 +20,7 @@
           <thead>
             <tr>
               <th>Reviewer</th>
-              <th>Questions Answered</th>
+              <!-- <th>Questions Answered</th> -->
               <!-- <th>Progress</th> -->
               <th></th>
             </tr>
@@ -33,7 +33,7 @@
             ?>
             <tr>
               <td><? echo $this->Profile->badge($review['User']); ?></td>
-              <td><? echo count($review['Answer'])?> / <? echo $questions; ?></td>
+              <!-- <td><? echo count($review['Answer'])?> / <? echo $questions; ?></td> -->
               <!--<td>
                 <div class="progress">
                   <div class="bar bar-success" style="width: <? echo $progress; ?>%"></div>
