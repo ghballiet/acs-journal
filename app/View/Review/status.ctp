@@ -54,3 +54,12 @@
   </div>
   <? endforeach; ?>
 </div>
+
+<? $this->start('scripts'); ?>
+<script type="text/javascript">
+$(document).ready(function() {
+  if(window.location.hash != null)
+    $(window.location.hash).collapse('show');
+});
+</script>
+<? $this->end(); ?>

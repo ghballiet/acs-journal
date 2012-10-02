@@ -27,12 +27,13 @@ if(isset($coauthors[$sub_id])) {
 $auth_str = implode(', ', $authors);
 
 $title = $review['Submission']['title'];
+$slug = $review['Submission']['slug'];
 ?>
 
 <div class="page-header">
   <ul class="nav nav-pills pull-right">
     <li>
-      <a href="<? echo $this->Html->url(array('action'=>'status')); ?>">
+      <a href="<? echo $this->Html->url(array('action'=>'status', '#'=>$slug)); ?>">
         <i class="icon-chevron-left" style="margin-right: 10px;"></i>Return to List
       </a>
     </li>
