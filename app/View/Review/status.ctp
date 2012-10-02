@@ -17,14 +17,14 @@
     <div class="accordion-body collapse" id="<? echo $slug; ?>">
       <div class="accordion-inner">
         <table class="table table-condensed">
-          <thead>
+          <!--<thead>
             <tr>
               <th>Reviewer</th>
-              <!-- <th>Questions Answered</th> -->
-              <!-- <th>Progress</th> -->
+              <th>Questions Answered</th>
+              <th>Progress</th>
               <th></th>
             </tr>
-          </thead>
+          </thead> -->
           <tbody>
             <? foreach($reviews as $id=>$review): ?>
             <?
