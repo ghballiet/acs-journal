@@ -66,7 +66,7 @@ $slug = $review['Submission']['slug'];
           <? echo $answers[$question['Question']['id']]['Answer']['comments']; ?>
         </p>
         <? else: ?>
-        <p class="alert alert-error"><? echo $review['User']['full_name']; ?> has not answered this question.</p>
+        <!-- <p class="alert alert-error"><? echo $review['User']['full_name']; ?> has not answered this question.</p> -->
         <? endif; ?>
       </div>
     </div>
