@@ -33,7 +33,7 @@ $title = $review['Submission']['title'];
   <ul class="nav nav-pills pull-right">
     <li>
       <a href="<? echo $this->Html->url(array('action'=>'status')); ?>">
-        &larr; Return to List
+        <i class="icon-chevron-left" style="margin-right: 10px;"></i>Return to List
       </a>
     </li>
   </ul>

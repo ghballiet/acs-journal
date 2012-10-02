@@ -21,7 +21,7 @@
             <tr>
               <th>Reviewer</th>
               <th>Questions Answered</th>
-              <th>Progress</th>
+              <!-- <th>Progress</th> -->
               <th></th>
             </tr>
           </thead>
@@ -34,14 +34,16 @@
             <tr>
               <td><? echo $this->Profile->badge($review['User']); ?></td>
               <td><? echo count($review['Answer'])?> / <? echo $questions; ?></td>
-              <td>
+              <!--<td>
                 <div class="progress">
                   <div class="bar bar-success" style="width: <? echo $progress; ?>%"></div>
                   <div class="bar bar-danger" style="width: <? echo $remaining; ?>%"></div>
                 </div>
-              </td>
+              </td> -->
               <td>
-                <a href="<? echo $this->Html->url(array('action'=>'view', $id), true);?>" class="btn btn-mini btn-primary">View</a>
+                <a href="<? echo $this->Html->url(array('action'=>'view', $id), true);?>" class="btn btn-primary pull-right">
+                  View Review<i class="icon-chevron-right" style="margin-left:10px"></i>
+                </a>
               </td>
             </tr>
             <? endforeach; ?>
