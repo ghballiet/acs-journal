@@ -41,9 +41,7 @@
                 </div>
               </td>
               <td>
-                <!--
-                    <a href="<? echo $this->Html->url(array('action'=>'view', $id), true);?>" class="btn btn-mini btn-primary">View</a>
-                    -->
+                <a href="<? echo $this->Html->url(array('action'=>'view', $id), true);?>" class="btn btn-mini btn-primary">View</a>
               </td>
             </tr>
             <? endforeach; ?>

@@ -138,13 +138,12 @@ class ReviewsController extends AppController {
 
     $ans_opts = array(
       'conditions' => array(
-        'Answer.user_id' => $review['Review']['user_id'],
-        'Answer.question_id' => $question_list,
         'Answer.review_id' => $id
       )
     );
     
-    $answers = $this->Review->Answer->find('all', $ans_opts);
+    $answers = $this->Review->Answer->find('all', $ans_opts);    
+    $answers = Set::combine($answers, '{n}.Question.id', '{n}');
    
     $this->set('review', $review);
     $this->set('questions', $questions);
