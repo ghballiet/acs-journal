@@ -20,7 +20,7 @@ class Submission extends AppModel {
       'foreignKey' => 'next_submission'
     )
   );
-  public $hasMany = array('Keyword', 'Coauthor', 'Review');
+  public $hasMany = array('Keyword', 'Coauthor', 'Review', 'Metareview');
 
   public function createEmail($id, $url) {
     $submission = $this->findById($id);

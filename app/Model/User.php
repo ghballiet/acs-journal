@@ -3,7 +3,8 @@ App::uses('CakeEmail', 'Network/Email');
 
 class User extends AppModel {
   public $name = 'User';
-  public $hasMany = array('Submission', 'Role', 'Upload', 'Review', 'Answer');
+  public $hasMany = array('Submission', 'Role', 'Upload', 'Review',
+                          'Answer', 'Metareview');
 
   public $virtualFields = array(
     'full_name' => 'concat(User.name, " ", User.surname)',

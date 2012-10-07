@@ -16,39 +16,51 @@
     </div>
     <div class="accordion-body collapse" id="<? echo $slug; ?>">
       <div class="accordion-inner">
-        <table class="table table-condensed">
-          <!--<thead>
-            <tr>
-              <th>Reviewer</th>
-              <th>Questions Answered</th>
-              <th>Progress</th>
-              <th></th>
-            </tr>
-          </thead> -->
-          <tbody>
-            <? foreach($reviews as $id=>$review): ?>
-            <?
-               $progress = count($review['Answer']) / $questions * 100;
-               $remaining = 100 - $progress;
-            ?>
-            <tr>
-              <td><? echo $this->Profile->badge($review['User']); ?></td>
-              <!-- <td><? echo count($review['Answer'])?> / <? echo $questions; ?></td> -->
-              <!--<td>
-                <div class="progress">
-                  <div class="bar bar-success" style="width: <? echo $progress; ?>%"></div>
-                  <div class="bar bar-danger" style="width: <? echo $remaining; ?>%"></div>
-                </div>
-              </td> -->
-              <td>
-                <a href="<? echo $this->Html->url(array('action'=>'view', $id), true);?>" class="btn btn-primary pull-right">
-                  View Review<i class="icon-chevron-right" style="margin-left:10px"></i>
-                </a>
-              </td>
-            </tr>
-            <? endforeach; ?>
-          </tbody>
-        </table>
+        <!-- metareview form -->
+        <?
+echo $this->BootstrapForm->create('Metareview', array(
+  'controller'=>'metareviews', 'action'=>'create'));
+$content = null;
+if(isset($metareviews[$slug])) {
+  echo $this->BootstrapForm->input(
+    'id',
+    array(
+      'value'=>$metareviews[$slug]['id'],
+      'type'=>'hidden'));
+  $content = $metareviews[$slug]['content'];
+}
+echo $this->BootstrapForm->input('user_id', array(
+  'value'=>$user['id'],
+  'type'=>'hidden'));
+$rev = array_values($reviews);
+$sub_id = $rev[0]['Submission']['id'];
+$coll_id = $rev[0]['Submission']['collection_id'];
+
+echo $this->BootstrapForm->input('submission_id', array(
+  'value'=>$sub_id,
+  'type'=>'hidden'));
+echo $this->BootstrapForm->input('collection_id', array(
+  'value'=>$coll_id,
+  'type'=>'hidden'));
+echo $this->BootstrapForm->input('content', array(
+  'label'=>'Metareview',
+  'placeholder'=>'Enter your overall impression of this paper here, based ' . 
+  'on the reviews given below.',
+  'value'=>$content));
+echo $this->BootstrapForm->end('Submit Metareview');
+        ?>
+        
+
+        <? foreach($reviews as $id=>$review): ?>
+        <?
+        $progress = count($review['Answer']) / $questions * 100;
+        $remaining = 100 - $progress;
+        ?>
+        <a href="<? echo $this->Html->url(array('action'=>'view', $id), true);?>" class="btn btn-primary pull-right">
+          View Review<i class="icon-chevron-right" style="margin-left:10px"></i>
+        </a>
+        <? echo $this->Profile->badge($review['User']); ?>       
+        <? endforeach; ?>
       </div>
     </div>
   </div>

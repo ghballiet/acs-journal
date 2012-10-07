@@ -158,3 +158,13 @@ create table if not exists answers (
   modified timestamp,
   created timestamp
 );
+
+create table if not exists metareviews (
+  id integer primary key auto_increment,
+  content longtext,
+  submission_id integer,
+  user_id integer,
+  collection_id integer,
+  modified timestamp,
+  created timestamp
+);

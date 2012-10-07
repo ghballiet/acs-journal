@@ -1,7 +1,7 @@
 <?
 class Collection extends AppModel {
   public $name = 'Collection';
-  public $hasMany = array('Submission', 'Category', 'Role');
+  public $hasMany = array('Submission', 'Category', 'Role', 'Metareview');
   public $hasOne = array('ReviewForm');
 
   // validation rules
