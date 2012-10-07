@@ -162,6 +162,8 @@ create table if not exists answers (
 create table if not exists metareviews (
   id integer primary key auto_increment,
   content longtext,
+  question_id integer,
+  choice_id integer,  
   submission_id integer,
   user_id integer,
   collection_id integer,

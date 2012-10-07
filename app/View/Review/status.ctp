@@ -42,6 +42,35 @@ echo $this->BootstrapForm->input('submission_id', array(
 echo $this->BootstrapForm->input('collection_id', array(
   'value'=>$coll_id,
   'type'=>'hidden'));
+
+echo '<p>';
+echo $question['Question']['text'];
+echo '</p>';
+
+$qid = $question['Question']['id'];
+
+if(!isset($metareviews[$slug]))
+  $metareviews[$slug] = array('choice_id'=>null);
+
+echo $this->BootstrapForm->input(
+  'question_id',
+  array(
+    'value' => $qid,
+    'type' => 'hidden'
+  ));
+  
+
+foreach($question['Choice'] as $i=>$choice) {
+  echo '<label class="radio">';
+  echo '<input type="radio" name="data[Metareview][choice_id]"';
+  printf('id="choice-%d" value="%d"', $choice['id'], $choice['id']);
+  if($choice['id'] == $metareviews[$slug]['choice_id'])
+    echo 'checked="checked"';
+  echo '>';
+  echo $choice['text'];
+  echo '</label>';
+}
+
 echo $this->BootstrapForm->input('content', array(
   'label'=>'Metareview',
   'placeholder'=>'Enter your overall impression of this paper here, based ' . 

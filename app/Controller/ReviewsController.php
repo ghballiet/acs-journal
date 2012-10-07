@@ -73,12 +73,14 @@ class ReviewsController extends AppController {
     $metareviews = Set::combine($metareviews, 
                                 '{n}.Submission.slug',
                                 '{n}.Metareview');
+    $question = $this->Review->ReviewForm->Question->findById(34);
     
     $this->set('questions', $questions);   
     $this->set('papers', $papers);
     $this->set('titles', $titles);
     $this->set('authors', $authors);
     $this->set('metareviews', $metareviews);
+    $this->set('question', $question);
   }
 
   public function manage() {
