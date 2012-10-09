@@ -87,7 +87,8 @@ class Submission extends AppModel {
       return intval($data[0]['order']) + 1;
   }
 
-  public function beforeSave() {
+	// added options = Array() so that it stopped throwing strict error.
+  public function beforeSave($options = Array()) {
     $coll_id = $this->data['Submission']['collection_id'];
     $coll = $this->Collection->findById($coll_id);
     $order = $this->data['Submission']['order'];
