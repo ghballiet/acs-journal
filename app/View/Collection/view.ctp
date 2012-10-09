@@ -79,7 +79,12 @@ if(count($submissions) == 0) {
 			$id
 		), array('class'=>'btn btn-mini'));
 
-    $buttons = array($pdf, $abstract, $review);
+		if ($user['is_admin'] == '1') {
+			$buttons = array($pdf, $abstract, $review);
+		}
+		else
+			$buttons = array($pdf, $abstract);
+
     $buttons = implode('&nbsp;', $buttons);
 
     echo $this->Html->tableCells(array($order, $title, $author, $modified, $buttons));
