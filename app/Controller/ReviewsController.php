@@ -180,13 +180,26 @@ class ReviewsController extends AppController {
 	// the $id is the submission id. 
   public function review_report($id) {
 		
+		// a bit heavy handed but probably fine for now.
 		$this->loadModel('Submission');
+		$this->loadModel('Role');
+		$this->loadModel('User');
+		$this->loadModel('Metareview');
 		
+		// get the submission
 		$submission = $this->Submission->findById($id);
+		$this->set('submission',$submission);
+
+		// get the metareviews
+		$metareviews = array();
+		foreach($submission['Metareview'] as $index => $metareview){
+			$metareviews[$index] = $this->Metareview->findById($metareview['id']);
+		}
+		$this->set('metareviews', $metareviews);
+		
+		// get the reviews and questions
 		$reviews = $this->Review->find('all', 
 			array('conditions' => array('submission_id' => $id)));
-		$this->set('submission',$submission);
-		$this->set('reviews',$reviews);
 		
     $review_form_id = $reviews[0]['ReviewForm']['id'];
     $opts = array(
@@ -211,6 +224,10 @@ class ReviewsController extends AppController {
 			$this->Review->id = $review['Review']['id'];
 	    $review['Answers'] = $this->Review->Answer->find('all', $ans_opts);    
 	    $review['Answers'] = Set::combine($review['Answers'], '{n}.Question.id', '{n}');
+			
+			$review['Role'] = $this->Role->find('first',
+				array('conditions' => array('user_id' => $review['Review']['user_id'],
+																		'collection_id' => $submission['Submission']['collection_id'])))['Role'];
 		}	
 	 
     $this->set('reviews', $reviews);
