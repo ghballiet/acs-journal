@@ -33,55 +33,6 @@ class ReviewsController extends AppController {
       }
     }
   }
-	
-	public function overview(){
-    $coll_ids = $this->Review->User->Role->find('all', array(
-      'conditions'=>array('Role.role_type_id'=>2),
-      'fields'=>array('DISTINCT Role.collection_id')));
-    $coll_ids = Set::extract('/Role/collection_id', $coll_ids);
-    $review_form_ids = $this->Review->ReviewForm->findAllByCollectionId($coll_ids);
-    $review_form_ids = Set::extract('/ReviewForm/id', $review_form_ids);
-    $submission_ids = $this->Review->find('all', array(
-      'conditions'=>
-      array(
-        'Review.review_form_id' => $review_form_ids,
-        'Review.user_id' => $this->Auth->user('id')
-      ),
-      array(
-        'fields' => array('Review.submission_id')
-      )));
-    $submission_ids = Set::extract('/Submission/id', $submission_ids);
-    $submissions = $this->Review->Submission->find('all', array(
-      'conditions'=>array('Submission.id'=>$submission_ids)));
-    $reviews = $this->Review->find('all', array(
-      'conditions'=>array(
-        'Review.submission_id' => $submission_ids,
-        'Review.user_id NOT' => $this->Auth->user('id')),
-      'order'=>array('Review.id', 'Review.user_id')));
-    $this->set('reviews', $reviews);    
-
-    $papers = Set::combine($reviews, '{n}.Review.id', '{n}', '{n}.Submission.slug');
-    $titles = Set::combine($reviews, '{n}.Submission.slug', '{n}.Submission.title');
-    $review_form_id = Set::extract('/ReviewForm/id', $reviews);
-
-    $questions = $this->Review->ReviewForm->Question->find('count', array(
-      'conditions' => array('Question.review_form_id' => $review_form_id)));
-
-    $authors = Set::combine($submissions, '{n}.Submission.slug', '{n}.User');
-
-    $metareviews = $this->Review->Submission->Metareview->find('all');
-    $metareviews = Set::combine($metareviews, 
-                                '{n}.Submission.slug',
-                                '{n}.Metareview');
-    $question = $this->Review->ReviewForm->Question->findById(34);
-    
-    $this->set('questions', $questions);   
-    $this->set('papers', $papers);
-    $this->set('titles', $titles);
-    $this->set('authors', $authors);
-    $this->set('metareviews', $metareviews);
-    $this->set('question', $question);
-	}
 
   public function status() {
     $coll_ids = $this->Review->User->Role->find('all', array(
@@ -175,81 +126,6 @@ class ReviewsController extends AppController {
         'Review.user_id NOT' => $this->Auth->user('id')),
       'order'=>array('Review.id', 'Review.user_id')));
     $this->set('reviews', $reviews);
-  }
-	
-	// the $id is the submission id. 
-  public function review_report($id) {
-		
-		// a bit heavy handed but probably fine for now.
-		$this->loadModel('Submission');
-		$this->loadModel('Role');
-		$this->loadModel('User');
-		$this->loadModel('Metareview');
-		
-		// get the submission
-		$submission = $this->Submission->findById($id);
-		$this->set('submission',$submission);
-
-		// get the metareviews
-		$metareviews = array();
-		foreach($submission['Metareview'] as $index => $metareview){
-			$metareviews[$index] = $this->Metareview->findById($metareview['id']);
-		}
-		$this->set('metareviews', $metareviews);
-		
-		// get the reviews and questions
-		$reviews = $this->Review->find('all', 
-			array('conditions' => array('submission_id' => $id)));
-		
-    $review_form_id = $reviews[0]['ReviewForm']['id'];
-    $opts = array(
-      'conditions' => array(
-        'Question.review_form_id' => $review_form_id
-      ),
-      'order' => array('Question.position')
-    );
-    $questions = $this->Review->ReviewForm->Question->find('all', $opts);
-    $question_list = $this->Review->ReviewForm->Question->find(
-      'list',
-      array('conditions'=>array('Question.review_form_id'=>$review_form_id)));
-		
-		foreach ($reviews as &$review){
-	    
-			$ans_opts = array(
-	      'conditions' => array(
-	        'Answer.review_id' => $review['Review']['id']
-	      )
-	    );
-			
-			$this->Review->id = $review['Review']['id'];
-	    $review['Answers'] = $this->Review->Answer->find('all', $ans_opts);    
-	    $review['Answers'] = Set::combine($review['Answers'], '{n}.Question.id', '{n}');
-			
-			$review['Role'] = $this->Role->find('first',
-				array('conditions' => array('user_id' => $review['Review']['user_id'],
-																		'collection_id' => $submission['Submission']['collection_id'])))['Role'];
-		}	
-	 
-    $this->set('reviews', $reviews);
-    $this->set('questions', $questions);
-    //$this->set('answers', $answers);
-		
-    // set users
-    $user_list = $this->Review->User->find('list', array(
-      'fields' => array('User.id', 'User.full_name')
-    ));
-    $this->set('user_list', $user_list);
-
-    $coauthors = $this->Submission->Coauthor->find('list', array(
-      'fields' => array(
-        'Coauthor.id',
-        'Coauthor.name',
-        'Coauthor.submission_id',        
-      )
-    ));
-    
-    $this->set('coauthors', $coauthors);
-		
   }
 
   public function view($id) {

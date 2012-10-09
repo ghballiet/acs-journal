@@ -55,6 +55,7 @@ if(count($submissions) == 0) {
   ));
 
   foreach($submissions as $submission) {
+		$id = $submission['Submission']['id'];
     $title = $submission['Submission']['title'];
     $slug = $submission['Submission']['slug'];
     $author = $this->Profile->name($submission['User']);
@@ -72,8 +73,13 @@ if(count($submissions) == 0) {
       'action'=>'view',
       $slug
     ), array('class'=>'btn btn-mini'));
+		$review = $this->Html->link('Reviews', array(
+			'controller'=>'submissions',
+			'action'=>'reviews',
+			$id
+		), array('class'=>'btn btn-mini'));
 
-    $buttons = array($pdf, $abstract);
+    $buttons = array($pdf, $abstract, $review);
     $buttons = implode('&nbsp;', $buttons);
 
     echo $this->Html->tableCells(array($order, $title, $author, $modified, $buttons));
