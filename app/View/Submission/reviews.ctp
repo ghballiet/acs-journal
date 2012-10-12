@@ -62,23 +62,27 @@ $slug = $submission['Submission']['slug'];
 <h3>Metareviews</h3>
 <div class="question"> 
 	<div class="question-text">
-		<? foreach ($metareviews as $metareview){ ?>
-			<p class="text"><? echo $metareview['Question']['text']; ?></p>
-			<p class="answer">
-				<? echo $this->Profile->badge($metareview['User']); ?>
-				<strong>Answer:</strong>
-				<? echo $metareview['Choice']['text']; ?>
-			</p>
-			<p class="comments">
-				<strong>Comments:</strong>
-				<? echo $metareview['Metareview']['content']; ?>
-			</p>
-		<? } ?>
-		<? if (empty($metareviews)) {?>
-	    <p class="alert alert-error">Metareview has not been completed.</p>
-			<? } ?>
-	</div>
+    <? foreach ($metareviews as $metareview): ?>
+    <div class="answer">
+      <h4>
+        <span style="margin-right: 15px;">
+          <? echo $metareview['Choice']['text']; ?>
+        </span>
+        <small>
+          <? echo $metareview['User']['full_name']; ?>
+        </small>
+      </h4>
+      <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;">
+        <? echo $metareview['Metareview']['content']; ?>
+      </pre>
+    </div>
+    <? endforeach; ?>
+    <? if(empty($metareviews)): ?>
+    <p class="alert alert-danger">Metareview has not been entered.</p>
+    <? endif; ?>
 </div>
+
+<hr />
 
 <h3>Reviews</h3>
 <? foreach($questions as $question): ?>
