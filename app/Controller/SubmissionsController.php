@@ -133,9 +133,17 @@ class SubmissionsController extends AppController {
 	    $review['Answers'] = $this->Review->Answer->find('all', $ans_opts);    
 	    $review['Answers'] = Set::combine($review['Answers'], '{n}.Question.id', '{n}');
 			
-			$review['Role'] = $this->Role->find('first',
-				array('conditions' => array('user_id' => $review['Review']['user_id'],
-																		'collection_id' => $submission['Submission']['collection_id'])))['Role'];
+			$role = $this->Role->find(
+        'first',
+        array(
+          'conditions' => array(
+            'user_id' => $review['Review']['user_id'],
+            'collection_id' => $submission['Submission']['collection_id']
+          )
+        )
+      );
+
+      $review['Role'] = $role['Role'];
 		}	
 	 
     $this->set('reviews', $reviews);

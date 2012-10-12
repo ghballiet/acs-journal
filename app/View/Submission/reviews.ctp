@@ -82,36 +82,35 @@ $slug = $submission['Submission']['slug'];
 
 <h3>Reviews</h3>
 <? foreach($questions as $question): ?>
+<? $question_id = $question['Question']['id']; ?>
 <div class="question">
   <div class="order"><? echo $question['Question']['position']; ?></div>
   <div class="question-text">
-    <p class="text"><? echo $question['Question']['text']; ?></p>        
-		<? foreach ($reviews as $review) {?>
-			<? if($review['Role']['role_type_id'] == 3) {?>
-				<? //print_r($review['Answers']); ?>
-				<? //print_r($question['Question']['id'])?>
-				<? echo $this->Profile->badge($review['User']); ?>
-				<div style="padding-left:25px">
-				<? if(isset($review['Answers'][$question['Question']['id']])): ?>
-		    <? //if(isset($answers[$question['Question']['id']])): ?>
-		    <p class="answer">
-		      <strong>Answer:</strong>
-
-					<? echo $review['Answers'][$question['Question']['id']]['Choice']['text'];?>
-		      <? //echo $answers[$question['Question']['id']]['Choice']['text']; ?>
-		    </p>
-		    <p class="comments">
-		      <strong>Comments:</strong>
-					<? echo $review['Answers'][$question['Question']['id']]['Answer']['comments']; ?>
-		      <? //echo $answers[$question['Question']['id']]['Answer']['comments']; ?>
-		    </p>
-		    <? else: ?>
-		    <p class="alert alert-error"><? echo $review['User']['full_name']; ?> has not answered this question.</p>
-				<? endif; ?>
-				</div> <!-- End text-indent div -->
-				<? } // ends if?>
-		<? } // ends foreach?>
-  </div>
+    <p class="text"><? echo $question['Question']['text']; ?></p>
+    <? foreach($reviews as $i=>$review): ?>
+    <? if($review['Role']['role_type_id'] == 3): ?>
+    <? if(isset($review['Answers'][$question_id])): ?>
+    <? $answer = $review['Answers'][$question_id]; ?>
+    <div class="answer">
+      <h4>
+        <span style="margin-right: 15px;">
+          <? echo $answer['Choice']['text']; ?>
+        </span>
+        <small><? echo $answer['User']['full_name']; ?></small>
+      </h4>
+      <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;">
+        <? echo $answer['Answer']['comments']; ?>
+      </pre>
+    </div>
+    <? else: ?>
+    <div class="alert alert-danger answer">
+      <strong><? echo $review['User']['full_name']; ?></strong> has
+      not answered this question.
+    </div>
+    <? endif; ?>
+    <? endif; ?>
+    <? endforeach; ?>
+  </div> <!-- end question-text -->
 </div>
 <? endforeach; ?>
 </div>

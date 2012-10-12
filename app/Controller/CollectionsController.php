@@ -119,19 +119,19 @@ class CollectionsController extends AppController {
     $this->set('submissions', $submissions);
 
     // if this user is an editor, only include those submissions
-    if($user_role == 'editor') {
-      $reviews = parent::getReviews();
-      $sub_ids = array();
-      foreach($reviews as $rev)
-        $sub_ids[] = $rev['Submission']['id'];
-      $actual_submissions = $this->Collection->Submission->getCurrent(
-        array(
-          'Submission.collection_id'=>$id,
-          'Submission.id' => $sub_ids
-        )
-      );
-      $this->set('submissions', $actual_submissions);
-    }
+    /* if($user_role == 'editor') { */
+    /*   $reviews = parent::getReviews(); */
+    /*   $sub_ids = array(); */
+    /*   foreach($reviews as $rev) */
+    /*     $sub_ids[] = $rev['Submission']['id']; */
+    /*   $actual_submissions = $this->Collection->Submission->getCurrent( */
+    /*     array( */
+    /*       'Submission.collection_id'=>$id, */
+    /*       'Submission.id' => $sub_ids */
+    /*     ) */
+    /*   ); */
+    /*   $this->set('submissions', $actual_submissions); */
+    /* } */
 
     $roles = $this->Collection->Role->findAllByCollectionId($id);
 

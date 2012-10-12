@@ -75,11 +75,20 @@ if(isset($user)) {
     'icon'=>'file'
   );
 
+  $acs_link = array(
+    'text' => 'Submissions',
+    'link' => '/collections/view/acs-2012',
+    'icon' => 'reorder'
+  );
+
   if($user['is_admin'] == '1' || count($user_roles) > 0)
     $links[] = $collection_link;
 
   if(isset($user_reviews) && count($user_reviews) > 0)
     $links[] = $review_link;
+
+  if($user['is_admin'] == '1' || count($user_roles) > 0)
+    $links[] = $acs_link;
 
   if(count($links) > 0)
     echo $this->Bootstrap->dropdown($title, $links);

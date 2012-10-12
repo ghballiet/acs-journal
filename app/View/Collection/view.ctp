@@ -34,7 +34,7 @@ echo $this->Breadcrumb->html(array(
   endif;
   if(count($submissions) > 0) {
 ?>
-  <li><a href="#assign-reviewers" data-toggle="tab">Assign Reviewers</a></li>
+  <!-- <li><a href="#assign-reviewers" data-toggle="tab">Assign Reviewers</a></li> -->
 <?
   }
 ?>
@@ -51,7 +51,7 @@ if(count($submissions) == 0) {
     <table class="table condensed">
 <?
   echo $this->Html->tableHeaders(array(
-    'Order', 'Title', 'Author', 'Modified', ''
+    'Order', 'Title', 'Author', ''
   ));
 
   foreach($submissions as $submission) {
@@ -73,21 +73,21 @@ if(count($submissions) == 0) {
       'action'=>'view',
       $slug
     ), array('class'=>'btn btn-mini'));
+
 		$review = $this->Html->link('Reviews', array(
 			'controller'=>'submissions',
 			'action'=>'reviews',
 			$id
-		), array('class'=>'btn btn-mini'));
+		), array('class'=>'btn btn-mini btn-inverse'));
 
-		if ($user['is_admin'] == '1') {
-			$buttons = array($pdf, $abstract, $review);
-		}
+    if($user_role == 'site_admin' || $user_role == 'admin' || $user_role == 'editor')
+      $buttons = array($pdf, $abstract, $review);
 		else
 			$buttons = array($pdf, $abstract);
 
     $buttons = implode('&nbsp;', $buttons);
 
-    echo $this->Html->tableCells(array($order, $title, $author, $modified, $buttons));
+    echo $this->Html->tableCells(array($order, $title, $author, $buttons));
   }
 ?>
     </table>
