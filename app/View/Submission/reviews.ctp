@@ -84,37 +84,34 @@ $slug = $submission['Submission']['slug'];
 
 <hr />
 
-<h3>Reviews</h3>
+<? foreach($reviews as $i=>$review): ?>
+<? if($review['Role']['role_type_id'] == 3): ?>
+
+<h3><span style="margin-right: 15px;">Review</span><small><? echo $review['User']['name'] . ' ' . $review['User']['surname']; ?></small></h3>
 <? foreach($questions as $question): ?>
 <? $question_id = $question['Question']['id']; ?>
 <div class="question">
   <div class="order"><? echo $question['Question']['position']; ?></div>
   <div class="question-text">
     <p class="text"><? echo $question['Question']['text']; ?></p>
-    <? foreach($reviews as $i=>$review): ?>
-    <? if($review['Role']['role_type_id'] == 3): ?>
     <? if(isset($review['Answers'][$question_id])): ?>
     <? $answer = $review['Answers'][$question_id]; ?>
     <div class="answer">
       <h4>
-        <span style="margin-right: 15px;">
           <? echo $answer['Choice']['text']; ?>
-        </span>
-        <small><? echo $answer['User']['full_name']; ?></small>
       </h4>
-      <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;">
-        <? echo $answer['Answer']['comments']; ?>
+      <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;"><? echo trim($answer['Answer']['comments']); ?>
       </pre>
     </div>
     <? else: ?>
     <div class="alert alert-danger answer">
-      <strong><? echo $review['User']['full_name']; ?></strong> has
-      not answered this question.
+      <!-- <strong><? //echo $review['User']['full_name']; ?></strong> -->
+			The reviewer has not answered this question.
     </div>
     <? endif; ?>
-    <? endif; ?>
-    <? endforeach; ?>
   </div> <!-- end question-text -->
 </div>
+<? endforeach; ?>
+<? endif; ?>
 <? endforeach; ?>
 </div>
