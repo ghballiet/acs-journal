@@ -34,7 +34,7 @@ echo $this->Breadcrumb->html(array(
   endif;
   if(count($submissions) > 0) {
 ?>
-  <!-- <li><a href="#assign-reviewers" data-toggle="tab">Assign Reviewers</a></li> -->
+  <li><a href="#assign-reviewers" data-toggle="tab">Assign Reviewers</a></li>
 <?
   }
 ?>
