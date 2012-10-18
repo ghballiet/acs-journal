@@ -72,9 +72,7 @@ $slug = $submission['Submission']['slug'];
           <? echo $metareview['User']['full_name']; ?>
         </small>
       </h4>
-      <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;">
-<? echo trim($metareview['Metareview']['content']); ?>
-      </pre>
+      <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;"><? echo trim($metareview['Metareview']['content']); ?></pre>
     </div>
     <? endforeach; ?>
     <? if(empty($metareviews)): ?>
@@ -100,8 +98,7 @@ $slug = $submission['Submission']['slug'];
       <h4>
           <? echo $answer['Choice']['text']; ?>
       </h4>
-      <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;"><? echo trim($answer['Answer']['comments']); ?>
-      </pre>
+      <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;"><? echo trim($answer['Answer']['comments']); ?></pre>
     </div>
     <? else: ?>
     <div class="alert alert-danger answer">
