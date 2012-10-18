@@ -76,7 +76,7 @@ if(count($submissions) == 0) {
 		$review = $this->Html->link('Reviews', array(
 			'controller'=>'submissions',
 			'action'=>'reviews',
-			$id
+			substr(md5($id),0,7)
 		), array('class'=>'btn btn-mini btn-inverse'));
 
     if($user_role == 'site_admin' || $user_role == 'admin' || $user_role == 'editor')
@@ -397,7 +397,7 @@ foreach($submissions as $submission) {
                 array(
                   'controller'=>'submissions',
                   'action'=>'reviews',
-                  $submission['Submission']['id']
+                  substr(md5($submission['Submission']['id']),0,7)
                 ));
               ?>
             </td>

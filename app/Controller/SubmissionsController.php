@@ -106,16 +106,22 @@ class SubmissionsController extends AppController {
   }
 
 	// the $id is the submission id. 
-  public function reviews($id) {
+  public function reviews($hash) {
 		
 		// a bit heavy handed but probably fine for now.
 		$this->loadModel('Review');
 		$this->loadModel('Role');
 		$this->loadModel('User');
 		$this->loadModel('Metareview');
+
+    $admin = $this->Auth->user('is_admin') == 1;
+    $this->set('admin', $admin);
 		
 		// get the submission
-		$submission = $this->Submission->findById($id);
+    $submission = $this->Submission->find('first', array(
+      'conditions'=>array('substr(md5(Submission.id),1,7)'=>$hash)
+    ));
+    $id = $submission['Submission']['id'];
 		$this->set('submission',$submission);
 
 		// get the metareviews

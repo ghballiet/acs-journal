@@ -31,6 +31,7 @@ $slug = $submission['Submission']['slug'];
 ?>
 
 <div class="page-header">
+  <? if($admin): ?>
   <ul class="nav nav-pills pull-right">
     <li>
       <a href="<? echo $this->Html->url(array('controller'=>'Collections',
@@ -39,8 +40,11 @@ $slug = $submission['Submission']['slug'];
       </a>
     </li>
   </ul>
+  <? endif; ?>
   <h1>Review&nbsp;&nbsp;<small><? echo $title; ?></small></h1>
   <h4 class="authors"><? echo $auth_str; ?></h4>
+
+  <? if($admin): ?>
 	<h3>Metareviewers:</h3>
   <div class="reviewer">
 		<? //print_r($reviews); ?>
@@ -58,6 +62,9 @@ $slug = $submission['Submission']['slug'];
 
   </div>
 </div>
+<? else: ?>
+<hr />
+<? endif; ?>
 
 <h3>Metareviews</h3>
 <div class="question"> 
@@ -68,9 +75,11 @@ $slug = $submission['Submission']['slug'];
         <span style="margin-right: 15px;">
           <? echo $metareview['Category']['name']; ?>
         </span>
+        <? if($admin): ?>
         <small>
           <? echo $metareview['User']['full_name']; ?>
         </small>
+        <? endif; ?>
       </h4>
       <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;"><? echo trim($metareview['Metareview']['content']); ?></pre>
     </div>
@@ -85,7 +94,11 @@ $slug = $submission['Submission']['slug'];
 <? foreach($reviews as $i=>$review): ?>
 <? if($review['Role']['role_type_id'] == 3): ?>
 
-<h3><span style="margin-right: 15px;">Review</span><small><? echo $review['User']['name'] . ' ' . $review['User']['surname']; ?></small></h3>
+<h3><span style="margin-right: 15px;">Review</span>
+  <? if($admin): ?>
+  <small><? echo $review['User']['full_name']; ?></small>
+  <? endif; ?>
+</h3>
 <? foreach($questions as $question): ?>
 <? $question_id = $question['Question']['id']; ?>
 <div class="question">
