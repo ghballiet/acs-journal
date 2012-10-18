@@ -190,6 +190,13 @@ class CollectionsController extends AppController {
     );
     $submission_reviews = $this->Collection->ReviewForm->Review->find('list', $opts);
     $this->set('submission_reviews', $submission_reviews);
+
+    $categories = $this->Collection->Submission->Category->find('list');
+    $this->set('categories', $categories);
+
+    $sorted = Set::sort($submissions, '{n}.Category.name', 'asc');
+    $categorized = Set::combine($sorted, '{n}.Submission.id', '{n}', '{n}.Category.id');
+    $this->set('categorized', $categorized);
   }
 
   public function contents($slug = null) {

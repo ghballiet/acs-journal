@@ -19,3 +19,5 @@ div.question .answers .answer .btn-delete{margin-left:-20px;margin-top:3px;posit
 .user-badge.active,.submission-badge.active{opacity:1;border:solid 1px #049cdb;}.user-badge.active .user-name,.submission-badge.active .user-name,.user-badge.active .submission-title,.submission-badge.active .submission-title{-webkit-transition:color 0.2s ease-in-out;-moz-transition:color 0.2s ease-in-out;-o-transition:color 0.2s ease-in-out;transition:color 0.2s ease-in-out;color:#049cdb;}
 .user-badge.active .user-info .user-tag,.submission-badge.active .user-info .user-tag,.user-badge.active .num-reviews,.submission-badge.active .num-reviews{-webkit-transition:background, color .2s ease-in-out;-moz-transition:background, color .2s ease-in-out;-o-transition:background, color .2s ease-in-out;transition:background, color .2s ease-in-out;background:#049cdb;color:#ffffff;}
 #assign-reviewers .navbar{margin-top:40px;}
+#categorize-papers table td.title{width:50%;}
+#categorize-papers table td.author{width:300px;}

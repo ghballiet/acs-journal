@@ -64,6 +64,23 @@ class SubmissionsController extends AppController {
     $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
   }
 
+  public function categorize($id, $category_id) {
+    $this->autoRender = false;
+    $submission = $this->Submission->findById($id);
+    $submission['Submission']['category_id'] = $category_id;
+    $collection = $submission['Collection']['id'];
+
+    if($this->Submission->save($submission)) {
+      $this->alertSuccess('Success!', 'Changed paper category.', true);
+      $this->redirect(array(
+        'controller'=>'collections',
+        'action'=>'view',
+        $submission['Collection']['slug'],
+        '#'=>'categorize-papers'
+      ));
+    }
+  }
+
   public function paper($slug) {
     $this->autoRender = false;
     $slug = str_replace('.pdf', '', $slug);

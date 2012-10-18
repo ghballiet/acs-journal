@@ -86,7 +86,6 @@ create table if not exists collections (
 create table if not exists categories (
   id integer primary key auto_increment,
   name varchar(500),
-  description longtext,
   collection_id integer,  
   modified timestamp,
   created timestamp

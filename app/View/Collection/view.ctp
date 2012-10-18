@@ -30,14 +30,13 @@ echo $this->Breadcrumb->html(array(
 <? if($user_role == 'site_admin' || $user_role == 'admin'): ?>
   <li><a href="#roles" data-toggle="tab">Roles</a></li>
   <li><a href="#review-form" data-toggle="tab">Review Form</a></li>
-<?
-  endif;
-  if(count($submissions) > 0) {
-?>
+<? endif; ?>
+<? if(count($submissions) > 0): ?>
   <li><a href="#assign-reviewers" data-toggle="tab">Assign Reviewers</a></li>
-<?
-  }
-?>
+<? endif; ?>
+<? if($user_role == 'site_admin' || $user_role == 'admin'): ?>
+  <li><a href="#categorize-papers" data-toggle="tab">Categorize Papers</a></li>
+<? endif; ?>
 </ul>
 
 <div class="tab-content">
@@ -366,8 +365,84 @@ foreach($submissions as $submission) {
 ?>
       </div>
     </div>
-  </div>
+  </div> <!-- end assign reviewers -->
+
+  <div class="tab-pane" id="categorize-papers">
+    <h2>Categorize Papers</h2>
+    <? foreach($categorized as $cat_id=>$submissions): ?>
+    <div class="category">
+      <?
+      $subs = array_values($submissions);
+      echo $this->Html->link('Send Decision Letters',
+        array(
+          'controller'=>'categories',
+          'action'=>'notify',
+          $cat_id,
+          $subs[0]['Collection']['id']
+        ), array(
+          'class'=>'btn btn-primary btn-mini pull-left',
+          'style'=>'margin-right: 10px;'
+        ),
+        'Are you sure? This will send decision letters to all authors of these submissions.'
+      );
+      ?>
+      <h3><? echo $categories[$cat_id]; ?>&nbsp;&nbsp;<small><? echo count($submissions); ?> paper(s)</small></h3>
+      <table class="table table-condensend">
+        <tbody>
+          <? foreach($submissions as $submission): ?>
+          <tr>
+            <td class="title">
+              <?
+              echo $this->Html->link($submission['Submission']['title'],
+                array(
+                  'controller'=>'submissions',
+                  'action'=>'reviews',
+                  $submission['Submission']['id']
+                ));
+              ?>
+            </td>
+            <td class="author"><? echo $submission['User']['full_name']; ?></td>
+            <td class="categorize">
+              <?
+              $links = array();
+              foreach($categories as $id=>$title) {
+                if($id != $cat_id)
+                  continue;
+                $links[] = array(
+                  'text'=>$title,
+                  'link'=>'#'
+                );
+                $links[] = true;
+              }
+              foreach($categories as $id=>$title) {
+                if($id == $cat_id)
+                  continue;
+                $url = array(
+                  'controller'=>'submissions',
+                  'action'=>'categorize',
+                  $submission['Submission']['id'],
+                  $id
+                );
+                $link = array(
+                  'link'=>$url,
+                  'text'=>$title
+                );
+                $links[] = $link;
+              }
+              echo $this->Bootstrap->dropdownBtn('Change Category&nbsp;', $links, 'btn-mini');
+              ?>
+            </td>
+          </tr>
+          <? endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+    <? endforeach; ?>
+  </div>  
 </div>
+
+
+
 
 <? echo $this->start('scripts'); ?>
 <script type="text/javascript">
