@@ -2,6 +2,6 @@
 class Question extends AppModel {
   public $name = 'Question';
   public $belongsTo = 'ReviewForm';
-  public $hasMany = array('Choice', 'Answer', 'Metareview');
+  public $hasMany = array('Choice', 'Answer');
 }
 ?>

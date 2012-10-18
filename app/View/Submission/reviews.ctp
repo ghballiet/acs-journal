@@ -66,7 +66,7 @@ $slug = $submission['Submission']['slug'];
     <div class="answer">
       <h4>
         <span style="margin-right: 15px;">
-          <? echo $metareview['Choice']['text']; ?>
+          <? echo $metareview['Category']['name']; ?>
         </span>
         <small>
           <? echo $metareview['User']['full_name']; ?>
