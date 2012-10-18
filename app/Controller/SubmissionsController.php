@@ -68,9 +68,12 @@ class SubmissionsController extends AppController {
     $this->autoRender = false;
     $submission = $this->Submission->findById($id);
     $submission['Submission']['category_id'] = $category_id;
+    foreach($submission['Metareview'] as &$metareview)
+      $metareview['category_id'] = $category_id;
     $collection = $submission['Collection']['id'];
 
     if($this->Submission->save($submission)) {
+      $this->Submission->Metareview->saveMany($submission['Metareview']);
       $this->alertSuccess('Success!', 'Changed paper category.', true);
       $this->redirect(array(
         'controller'=>'collections',
