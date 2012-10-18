@@ -73,7 +73,7 @@ $slug = $submission['Submission']['slug'];
         </small>
       </h4>
       <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;">
-        <? echo $metareview['Metareview']['content']; ?>
+        <? echo trim($metareview['Metareview']['content'];) ?>
       </pre>
     </div>
     <? endforeach; ?>
@@ -105,7 +105,6 @@ $slug = $submission['Submission']['slug'];
     </div>
     <? else: ?>
     <div class="alert alert-danger answer">
-      <!-- <strong><? //echo $review['User']['full_name']; ?></strong> -->
 			The reviewer has not answered this question.
     </div>
     <? endif; ?>
