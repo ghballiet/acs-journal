@@ -73,7 +73,7 @@ $slug = $submission['Submission']['slug'];
         </small>
       </h4>
       <pre style="font-size:11px;padding:7px;line-height:1.4em;margin-top:10px;margin-bottom:20px;">
-        <? echo trim($metareview['Metareview']['content']); ?>
+<? echo trim($metareview['Metareview']['content']); ?>
       </pre>
     </div>
     <? endforeach; ?>
