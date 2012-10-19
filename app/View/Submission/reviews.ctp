@@ -41,7 +41,7 @@ $slug = $submission['Submission']['slug'];
     </li>
   </ul>
   <? endif; ?>
-  <h1>Review&nbsp;&nbsp;<small><? echo $title; ?></small></h1>
+  <h1><? echo $title; ?></h1>
   <h4 class="authors"><? echo $auth_str; ?></h4>
 
   <? if($admin): ?>
@@ -94,7 +94,7 @@ $slug = $submission['Submission']['slug'];
 <? foreach($reviews as $i=>$review): ?>
 <? if($review['Role']['role_type_id'] == 3): ?>
 
-<h3><span style="margin-right: 15px;">Review</span>
+<h3><span style="margin-right: 15px;">Review <? echo $i; ?></span>
   <? if($admin): ?>
   <small><? echo $review['User']['full_name']; ?></small>
   <? endif; ?>
