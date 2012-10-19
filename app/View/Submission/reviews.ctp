@@ -91,10 +91,12 @@ $slug = $submission['Submission']['slug'];
 
 <hr />
 
+<? $count = 1; ?>
 <? foreach($reviews as $i=>$review): ?>
 <? if($review['Role']['role_type_id'] == 3): ?>
 
-<h3><span style="margin-right: 15px;">Review <? echo $i+1; ?></span>
+<h3><span style="margin-right: 15px;">Review <? echo $count; ?></span>
+<? $count++; ?>
   <? if($admin): ?>
   <small><? echo $review['User']['full_name']; ?></small>
   <? endif; ?>
