@@ -1036,9 +1036,6 @@ FUNCTION {chop.word}
   if$
 }
 
-
-% BM 17 October 2012 - Changed the following function so that 'et al.' is for four or more names
-
 %			There are three apalike cases: one person (Jones),
 %			two (Jones and de~Bruijn), and more (Jones et~al.).
 %			This function is much like format.crossref.editors.
@@ -1046,30 +1043,19 @@ FUNCTION {chop.word}
 FUNCTION {format.lab.in.names}
 { 's :=
   s #1 "{vv~}{ll}" format.name$
-  s num.names$ duplicate$ duplicate$
-
-  #3 > % Four or more names? -> et al
-    { pop$ pop$ " et~al.\/" * }
-
-    { #2 < % Exactly one name? -> do nothing
-
-	{ pop$ }
-
-        { #3 < % Exactly two names? -> et al for 'others', else give both
-    	    { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" = % #2
-    	        { " et~al.\/" * }
-	        { " \& " * s #2 "{vv~}{ll}" format.name$ * } % #2
-	      if$
-	    }
-		% Last possible case = exactly three names
-            { ", " * s #2  "{vv~}{ll}" format.name$ * ", \& " * s #3 "{vv~}{ll}" format.name$ * }
-          if$
+  s num.names$ duplicate$
+  #2 >
+    { pop$ " et~al.\/" * }
+    { #2 <
+	'skip$
+	{ s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
+	    { " et~al.\/" * }
+	    { " \& " * s #2 "{vv~}{ll}" format.name$ * }
+	  if$
 	}
       if$
-
     }
   if$
-
 }
 
 FUNCTION {author.key.in.label}

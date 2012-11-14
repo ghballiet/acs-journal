@@ -103,14 +103,6 @@ may be offset by its position on others that make it highly relevant.</p>
       less closely linked modules are also legitimate candidates.</dd>
     </p>
     <p>
-      <dt>Will you consider papers on integrated approaches to intelligence that
-      do not involve a cognitive architecture?</dt>
-      <dd>Definitely. Although cognitive architectures adopt a tightly
-      integrated approach to intelligence, frameworks that utilize less
-      closely linked modules are also legitimate candidates.
-      </dd>
-    </p>
-    <p>
       <dt>Will you publish papers that present theoretical analyses of problems
       that cognitive systems must address?</dt>
       <dd>Yes. Submissions that report theoretical analyses are just as welcome
@@ -198,3 +190,4 @@ contribute to the goals of the meeting.</p>
 relevance or appropriateness of certain topics, please send email to
 the Program Chair / Editor, Pat Langley (<a
 href="mailto:patrick.w.langley@gmail.com">mailto:patrick.w.langley@gmail.com</a>).</p>
+

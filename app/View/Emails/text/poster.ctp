@@ -43,5 +43,4 @@ Pat Langley, Program Chair
 First Annual Conference on 
     Advances in Cognitive Systems
 
-================
 

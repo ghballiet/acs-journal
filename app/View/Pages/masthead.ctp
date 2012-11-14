@@ -4,6 +4,10 @@ echo $this->Html->css('masthead');
 $this->end();
 ?>
 
+<ul class="clean">
+  <li>ISSN 2324-8416</li>
+</ul>
+
 <div class="page-header">
   <h1>Advances in Cognitive Systems</h1>
   <h2>Volume 1, July 2012 to present</h2>
@@ -63,7 +67,8 @@ $this->end();
   <li><b>R. Michael Young</b> North Carolina State University</li>  
 </ul>
 
-<h3>Managing Editor</h3>
+<h3>Managing Editors</h3>
 <ul class="clean">
   <li><b>Glen Hunt</b> Arizona State University</li>
+  <li><b>Ben Meadows</b> University of Auckland</li>
 </ul>

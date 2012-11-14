@@ -142,21 +142,19 @@ $faq_page = $this->Html->url('/faq', true);
   <patrick.w.langley@gmail.com>">patrick.w.langley@gmail.com</a>), 
   for additional information.
 
-<h3 id="info">Schedule, Logistics, and Registration</h3>
+<h3 id="info">Logistics and Registration</h3>
 
 <p>
 The First Annual Conference on Advances in Cognitive Systems will 
 run from 9:00 AM on Thursday, December 6, through 2:00 PM on 
 Saturday, December 8, 2012, at the <a href="http://www.paloaltojcc.org"> 
-Oshman Jewish Community Center</a> in Palo Alto, California. Details
-about the speakers and talks are available in the online conference 
-<a href="/schedule">schedule</a>. 
+Oshman Jewish Community Center</a> in Palo Alto, California.
 <p>
 The meeting will include extended technical presentations, leisurely
-breaks to encourage discussions, and evening poster receptions to foster 
-additional interactions among participants. Additional details about 
-<a href="/registration">registration</a>, lodging, and transportation
-is available at the meeting's <a href="/logistics">logistics</a> page.
+breaks to encourage discussions, and evening poster receptions to 
+foster additional interactions among participants. Additional details
+about registration, lodging, and transportation is available at the
+meeting's <a href="/logistics">logistics</a> page. 
 
 <h3>Important Dates</h3>
 <ul class="columns clean">

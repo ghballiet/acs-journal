@@ -1,0 +1,188 @@
+
+<div class="page-header">
+<center>
+  <h1>
+    <span class="leading">First Annual Conference on</span>
+    Advances in Cognitive Systems
+    <h2>Logistics and Registration Information</h2>
+  </h1>
+</center>
+</div>
+
+<h3>Dates, Times, and Location</h3>
+<p>
+The First Annual Conference on Advances in Cognitive Systems will run
+from on Thursday, December 6, through Saturday, December 8, 2012. The 
+meeting will start at 9:00 AM on the first day and end by 2:00 PM on 
+the third day. 
+<p>
+The event will take place in the 
+<a href="http://www.paloaltojcc.org/quick-links/rentals-freidenrich/">
+Freidenrich Room</a>
+at the 
+<a href="http://www.paloaltojcc.org"> 
+Oshman Jewish Community Center</a>
+in Palo Alto, California. The Center is located at 
+<a href="https://maps.google.com/maps?f=q&hl=en&q=Palo+Alto+JCC&">
+3921 Fabian Way</a>, Palo Alto, CA 94303, 
+just off US Highway 101 near the intersection of East Charleston 
+Road and San Antonio Road. The Center's general telephone number 
+is 650-223-8700 and additional directions are available 
+<a href="http://www.paloaltojcc.org/hours-location/hours-and-directions/">
+here</a>. 
+<p>
+<h3>Conference Registration</h3>
+<p>
+The registration fee for the conference is $200 before midnight on
+Thursday, November 22, and $250 after that date. The same fee applies 
+to students and nonstudents, although those in need can apply for
+financial assistance. To register, please complete the 
+<a href="/registration">online registration form</a> 
+and pay with a credit card or a PayPal account. 
+<p>
+<h3>Nearby Hotels</h3>
+<p>
+There are a number of hotels and motels within short driving distance 
+from the Oshman Center, but none that are within convenient walking 
+distance. We have reserved a block of rooms at the 
+<a href="http://www.cabanapaloalto.com">Crowne Plaza Cabana</a> on 
+El Camino Real, but only a few rooms are left and the discounted 
+price is over $200 per night, so you may want to consider some 
+other options listed <a href="/hotels">here</a>. 
+<p>
+<h3>Nearby Airports</h3>
+<p>
+If you are a non-local participant, you will probably fly into either
+the San Jose Airport or the San Francisco Airport. There are a number
+of options for getting from the airports to the Oshman Center and back
+again. 
+<p>
+<h3>Renting a Car</h3>
+<p>
+Car rental services are available at the San Francisco and San Jose
+Airports and at several locations in Palo Alto, including: 
+<p>
+<ul>
+  <li><a href="http://www.htirentacar.com/">Alamo</a></li>
+  <li><a href="http://san-francisco.avis.com/">Avis</a></li>
+  <li><a href="http://www.budget.com/budgetWeb/html/rentals/sanfrancisco-rental.html">Budget</a></li>
+  <li><a href="http://www.hertz.com/rentacar/reservation/home">Hertz</a></li>
+  <li><a href="http://www.paylesscar.com/locations/">PayLess</a></li>
+  <li><a href="http://www.thrifty.com/">Thrifty</a></li>
+</ul>
+<p>
+Car rental is likely to cost $60 a day or more, depending on the model. 
+Online reservations typically result in lower costs, with 
+<a href="http://www.expedia.com">Expedia</a> and sites for both 
+<a href="http://sanfranciscoairportcarrental.net/">San Francisco Airport</a> and 
+<a href="http://sanjoseairportcarrental.com/">San Jose Airport</a> providing
+useful price comparisons.
+<p>
+<h4>Driving on US 101 (Bayshore Freeway)</h4>
+<p>
+To reach the Oshman Center by car, take US 101 either south from San
+Francisco Airport or north from San Jose Airport. Leave the highway by
+the <strike>San Antonio Road South exit in the direction of Los Altos, then
+turn right at the first stop light onto Charleston Road. Take the
+second right onto Fabian Way, then enter the Center driveway on the
+right into the parking garage</strike>
+Rengstorff Avenue exit and continue on to North Rengstorff Avenue 
+(going straight if coming south on US 101 or turning right if coming
+north on US 101). 
+At the stop sign, turn left onto East Charleston Road. Continue on,
+crossing San Antonio Road, and turn right onto Fabian Way. Enter the Center
+driveway on the right into the parking garage. Note that 
+following these directions will let you avoid San Antonio Road between 
+Middlefield and Highway 101, which will be undergoing major roadwork 
+during December.
+More details are available
+<a href="http://www.paloaltojcc.org/hours-location/directions-during-construction/">here</a>.
+<p>
+<h4>Driving on Interstate 280</h4>
+<p>
+To reach the Oshman Center by this longer but more scenic route, take
+Interstate 280 either south from San Francisco Airport or north from
+San Jose Airport. Leave the highway by the El Monte Avenue East exit,
+turn left on Foothill Expressway, and then turn right on San Antonio
+Road. Continue on San Antonio until you 
+<strike>reach Charleston Road, then turn left onto Charleston. Take the
+second right onto Fabian Way, then enter the Center driveway on the
+right into the parking garage</strike>
+cross the railroad tracks, then turn left onto Alma Street immediately
+afterwards. Turn right at the intersection with Charleston Road. Follow 
+East Charleston, crossing Middlefield Road, and take the fourth left
+onto Fabian Way. Enter the Center driveway on the right into the
+parking garage. Note that following these directions will let you
+avoid San Antonio Road between Middlefield and Highway 101, which will
+be undergoing major roadwork during December.
+
+More details are available
+<a href="http://www.paloaltojcc.org/hours-location/directions-during-construction/">here</a>.
+<h4>Parking at the Oshman Center</h4>
+<p>
+Parking in the Oshman Center garage is free to guests. Valet parking
+is also available, but you will need to pay for that service. 
+<p>
+<h3>Shuttles and Taxis</h3>
+<p>
+In general, shuttles are available at both San Francisco and San Jose
+Airports without reservations (although these may be useful) with signs
+leading you to the shuttle pick up areas from baggage claim. Taxis are
+available in the same vicinity. 
+<ul>
+<li>
+<a href="http://www.vipairportshuttle.com">VIP Shuttle</a>
+<br>
+408-986-6000 (Local) / 800-235-8847 (Toll Free)
+<br>
+Shuttle service to and from San Francisco Airport or San Jose Airport. 
+One-way service for approximately $40.</li>
+<li>
+<a href="https://southandeastbayairportshuttle.com">
+South and East Bay Airport Shuttle</a>
+<br>
+408-559-9477 (Local) / 800-548-4664 (Toll Free)
+<br>
+One way service to and from San Francisco Airport for approximately
+$21 ($5 each additional person); one way service to and from San Jose
+Airport for approximately $39 ($5 each additional person).</li>
+<li>
+<a href="http://www.supershuttle.com/Locations/SFOAirportShuttleSanFrancisco.aspx">Super Shuttle San Francisco</a>
+<br>
+650-246-8942 (Local)
+<br>
+One-way service to and from San Francisco Airport for approximately
+$26 ($10 each additional person). No reservations are required, but for
+exclusive van service call 800-258-3826.</li>
+<li>
+<a href="http://www.supershuttle.com/Locations/SJCAirportShuttleSanFrancisco.aspx">Super Shuttle San Jose</a>
+<br>
+One way service to and from San Jose Airport for approximately $28
+($5 each additional person). Advance reservations are required:
+call 800-258-3826 to arrange them, then call the same number upon arrival.</li>
+<li>
+<a href="http://www.yellowtaxicabairport.com">Yellow Taxi Cab</a>
+<br>
+650-570-5000 / 650-572-5000 / 408-448-5000
+<br>
+Taxi company specialising in airport transportation.
+Travel to or from San Jose Airport for approximately $40.
+Travel to or from San Francisco Airport for approximately $70.</li>
+<li>
+<a href="http://www.yellowtaxicabserviceca.com">Yellow City Taxi Cab</a>
+<br>
+408-321-1234 / 650-293-1234
+<br>
+Pick up in 15-20 minutes after calling anywhere in the Bay area.
+Travel to or from San Jose Airport for $50 to $55. Must be pre-arranged.
+Travel to or from San Francisco Airport for $80 to $85. Call 650-570-5000 
+or 408-448-5000 (or 877-306-8294 toll free) 
+for curbside pick up.</li>
+</ul>
+Shuttles are invariably less expensive than taxis, ranging around
+$22-$30 to Palo Alto from either airport, but you may have to wait
+while other passengers are collected and taken to their destinations.
+<p>
+<hr>
+<br>
+

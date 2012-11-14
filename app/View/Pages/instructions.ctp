@@ -6,7 +6,7 @@ $this->end();
 // links for things on the site
 $format_pdf = $this->Html->url('/formats/format.pdf', true);
 $formats = $this->Html->url('/formats', true);
-$submit = $this->Html->url('/conference/submit', true);
+$submit = $this->Html->url('/submit', true);
 $journal_submit = $this->Html->url('/journal/submit', true);
 $faq = $this->Html->url('/faq', true);
 $review_form = $this->Html->url('/review-form', true);

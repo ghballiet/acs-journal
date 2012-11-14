@@ -2,7 +2,7 @@
   <h1>Welcome!</h1>
 </div>
 
-<p><i>Advances in Cognitive Systems</i> (ISSN TBD) publishes
+<p><i>Advances in Cognitive Systems</i> (ISSN 2324-8416) publishes
   research articles, review papers, and essays on the computational
   study of human-level intelligence, integrated intelligent systems,
   cognitive architectures, and related topics. Research on cognitive

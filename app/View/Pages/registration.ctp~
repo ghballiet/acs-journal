@@ -1,0 +1,42 @@
+
+<div class="page-header">
+<center>
+  <h1>
+    <span class="leading">First Annual Conference on</span>
+    Advances in Cognitive Systems
+<br>
+    <h2>Online Registration</h2>
+  </h1>
+</center>
+</div>
+
+<br>
+The registration fee to attend the First Annual Conference on Advances 
+in Cognitive Systems is US$200 before midnight on Thursday, November 22, 
+2012 and US$250 on Friday, November 23, 2012 or later.
+<p>
+<hr>
+<p>
+<h2>Instructions</h2>
+<li>Please select the appropriate menu item below.</li>
+<li>Click on 'Pay Now' to pay by credit card or Paypal tranfer.</li>
+<li>When prompted for 'shipping information', please enter your mailing address.</li>
+<li>Please use the email address you wish to use to receive communication relating
+to the conference.</li>
+<p>
+<hr>
+
+<p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="V9K9FZHL6LG4E">
+<table>
+<tr><td><input type="hidden" name="on0" value="Registration Fee">Registration Fee</td></tr><tr><td><select name="os0">
+	<option value="November 22, 2012 or earlier">November 22, 2012 or earlier $200.00 USD</option>
+	<option value="November 23, 2012 or later">November 23, 2012 or later $250.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
