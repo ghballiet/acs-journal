@@ -35,6 +35,14 @@ $url = $this->Html->url(array(
 printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
        '<i class="icon-file"></i> PDF</a>',
        $url);
+			 
+ // Final version button
+ if($submission['source_uploaded'] == 1){
+	 $url = "../sources/" . $submission['slug'] . ".zip";
+	 printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
+	        '<i class="icon-file"></i> Final Version</a>',
+	        $url);
+ }
 
 // actions menu: edit, delete, etc; depending on user's role
 $links = array();
@@ -54,8 +62,13 @@ if($author['id'] == $user['id'] || $user['is_admin'] == 1) {
     'text' => 'Submit Revision',
     'link' => array('action'=>'revise', $slug),
     'icon' => 'share');
+  $finalize = array(
+    'text' => 'Submit Final Version',
+    'link' => array('action'=>'finalize', $slug),
+    'icon' => 'share');
   $links[] = $edit;
   $links[] = $revise;
+	$links[] = $finalize;
   $links[] = $retract;
 }
 

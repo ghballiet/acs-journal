@@ -426,5 +426,126 @@ class SubmissionsController extends AppController {
       $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
+  
+  public function finalize($slug) {
+	//ini_set('memory_limit', '-1');
+    if($this->request->is('get')) {
+      $submission = $this->Submission->findBySlug($slug);
+      $this->set('submission', $submission);
+	  
+	  // Remove the abstract so that user has to input it. 
+	  $submission['Submission']['abstract'] = "";
+	  
+      $this->request->data = $submission;
+	  
+    } else {
+	  
+	  // get the submission currently in the DB to add the final source to.
+	  $submission = $this->Submission->findBySlug($slug);
+	  
+      $data = $this->request->data;
+      $new_submission_data = $data['Submission'];
+      $upload = $new_submission_data['Upload'];
+      $keywords = $new_submission_data['Keyword'];
+      $coauthors = $data['Coauthor'];
+	  
+	  //print_r($new_submission_data);
+	  $submission['Submission']['title'] = $new_submission_data['title'];
+	  $submission['Submission']['abstract'] = $new_submission_data['abstract'];
+	  $submission['Submission']['pages'] = $new_submission_data['pages'];
+	  $submission['Submission']['source_uploaded'] = 1;
+
+      // remove the upload from the submission data array
+      //unset($submission['Upload']);
+
+      // first, make sure a ZIP file was uploaded
+      if($upload['type'] != 'application/zip') {
+        $this->alertError(
+          'Error!',
+          sprintf('The file you uploaded - <strong>%s</strong> - was not ' . 
+                  'a ZIP file. Please select a ZIP and re-submit.', $upload['name']));
+        return false;
+      }
+
+      // get the date
+      $now = date('Y-m-d H:i:s');
+	  
+	  //print_r($upload);
+	  //print_r($data);
+	  
+	  // save the zip to the sources folder
+	  $target_path = "../webroot/sources/";
+	  $target_path = $target_path . $submission['Submission']['slug'] . '.zip'; 
+
+	  if(!move_uploaded_file($upload['tmp_name'], $target_path)) {
+	      //echo "There was an error uploading the file, please try again!";
+	  }
+	  
+      $submission = $this->Submission->save($submission);
+	  //print_r($submission['Keyword']);
+
+	  // delete keywords associated with submission
+	  foreach ($submission['Keyword'] as $words){
+		  //echo $words['id'];
+		  //echo "\n";
+		  $this->Submission->Keyword->delete($words['id']);
+	  }
+	  
+      // save the keywords
+      $words = explode(',', $keywords);
+      foreach($words as $word) {
+        $this->Submission->Keyword->create();
+        $arr = array(
+          'Keyword' => array(
+            'value' => trim($word),
+            'created' => $now,
+            'modified' => $now,
+            'submission_id' => $submission['Submission']['id']));
+        $this->Submission->Keyword->save($arr);                             
+      }
+	  
+	  // delete coauthors associated with submission
+	  
+	  if(isset($submission['Coauthor'])){
+		  //print_r($submission['Coauthor']);
+		  foreach ($submission['Coauthor'] as $ca){
+			  //echo $ca['id'];
+			  //echo "\n";
+			  $this->Submission->Coauthor->delete($ca['id']);
+		  }
+	  }
+
+
+      // build the coauthors
+      $ca = array();
+      foreach($coauthors as $i=>$coauthor) {
+        $coauthor['submission_id'] = $submission['Submission']['id'];
+        $coauthor['created'] = $now;
+        $coauthor['modified'] = $now;
+        if(empty($coauthor['name']) && empty($coauthor['email']) &&
+           empty($coauthor['institution']))
+          continue;
+        $coauthor = array('Coauthor' => $coauthor);
+        $this->Submission->Coauthor->create();
+        $this->Submission->Coauthor->save($coauthor);
+      }
+      
+      // success! send the email
+      try {
+        $view = new View($this);
+        $html = $view->loadHelper('Html');
+        $url = $html->url(array(
+          'action'=>'view', $submission['Submission']['slug']), true);
+
+        $this->Submission->revisedEmail($submission['Submission']['id'], $url);
+
+        $this->alertSuccess(
+          'Success!', sprintf('A camera ready version of <strong>%s</strong> was successfully submitted.',
+                              $submission['Submission']['title']), true);
+      } catch(Exception $e) {
+      }
+      $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+    }
+  }
 }
 ?>

@@ -1100,6 +1100,7 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .alert-danger,.alert-error{background-color:#f2dede;border-color:#eed3d7;color:#b94a48;}
 .alert-info{background-color:#d9edf7;border-color:#bce8f1;color:#3a87ad;}
 .alert-block{padding-top:14px;padding-bottom:14px;}
+.zip-note{width: 550px; margin: 0 0 0 100px;}
 .alert-block>p,.alert-block>ul{margin-bottom:0;}
 .alert-block p+p{margin-top:5px;}
 .nav{margin-left:0;margin-bottom:18px;list-style:none;}
