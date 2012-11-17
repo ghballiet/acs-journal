@@ -60,8 +60,8 @@
     </tr>
     <tr>
       <td>2:00 PM</td>
-      <td>Andrei Barbu</td>
-      <td>Seeing Unseeability to See the Unseeable</td>
+      <td><em>Siddharth Narayanaswamy</em>, Andrei Barbu, Jeffrey Siskind</td>
+	  <td>Seeing Unseeability to See the Unseeable</td>
     </tr>
     <tr>
       <td>2:30 PM</td>
@@ -80,8 +80,8 @@
     </tr>
     <tr class="lineAbove lineBelow">
       <td>4:00 PM</td>
-      <td>Invited talk (to be announced)</td>
-      <td></td>
+      <td>Invited talk: <i>Ronald Kaplan</i></td>
+      <td>Title to be announced</td>
     </tr>
     <tr>
       <td>4:30 PM</td>
@@ -215,7 +215,7 @@
 </table>
 
 <br>
-<h2>Saturday, December 6, 2012</h2>
+<h2>Saturday, December 8, 2012</h2>
 <br>
 <div align=left>
 <table border=0 cellPadding=4 width=800>
