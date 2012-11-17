@@ -537,7 +537,7 @@ class SubmissionsController extends AppController {
         $url = $html->url(array(
           'action'=>'view', $submission['Submission']['slug']), true);
 
-        $this->Submission->revisedEmail($submission['Submission']['id'], $url);
+        $this->Submission->finalEmail($submission['Submission']['id'], $url);
 
         $this->alertSuccess(
           'Success!', sprintf('A camera ready version of <strong>%s</strong> was successfully submitted.',

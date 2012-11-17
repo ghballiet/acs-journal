@@ -47,6 +47,19 @@ class Submission extends AppModel {
     $email->viewVars($submission);
     $email->send();
   }
+	
+  public function finalEmail($id, $url) {
+    $submission = $this->findById($id);
+    $submission['url'] = $url;
+    $email = new CakeEmail();
+    $email->template('final', 'default');
+    $email->emailFormat('html');
+    $email->to($submission['User']['email']);
+    $email->subject('Your Final Version Was Received');
+    $email->from('acs@cogsys.org');
+    $email->viewVars($submission);
+    $email->send();
+  }
 
   public function getCurrent($conditions = array()) {
     $opts = array(
