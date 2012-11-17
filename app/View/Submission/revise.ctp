@@ -42,27 +42,37 @@ echo $this->BootstrapForm->input('pages', array('icon'=>'paper-clip'));
 $add_btn = $this->Html->link('Add Coauthor', '#', array('class'=>'btn btn-mini add-coauthor'));
 ?>
 <h3>Coauthors</h3>
-<div class="coauthor base">
+
 <?
 // TODO: add code here to rebuild the full list of coauthors (if sent in request data)
+//print_r($submission['Coauthor']);
+
 $coauthors = $submission['Coauthor'];
 
-$next_num = count($coauthors);
+$next_num = 0;
 
 foreach($coauthors as $i=>$ca) {
+  echo "<div class=\"coauthor base\">";
+  echo '<a href="#" class="btn btn-mini btn-danger close-btn">Remove</a>';
   echo $this->BootstrapForm->input(
     sprintf('Coauthor.%d.name', $next_num),
-    array('label'=>'Name', 'required'=>false, 'icon'=>'user'));
+    array('label'=>'Name', 'required'=>false, 'icon'=>'user', 
+		  'value'=>$ca['name']));
   echo $this->BootstrapForm->input(
     sprintf('Coauthor.%d.email', $next_num),
     array('label'=>'Email', 'type'=>'email', 'required'=>false,
-          'icon'=>'envelope'));
+          'icon'=>'envelope', 'value'=>$ca['email']));
   echo $this->BootstrapForm->input(
     sprintf('Coauthor.%d.institution', $next_num),
     array('label'=>'Institution', 'required'=>false, 
-          'icon'=>'home'));
+          'icon'=>'home','value'=>$ca['institution']));
+
+  echo '</div>';
+  $next_num += 1;
 }
 
+//$next_num = count($coauthors);
+/*
 echo $this->BootstrapForm->input(
   sprintf('Coauthor.%d.name', $next_num),
   array('label'=>'Name', 'required'=>false, 'icon'=>'user'));
@@ -74,8 +84,9 @@ echo $this->BootstrapForm->input(
   sprintf('Coauthor.%d.institution', $next_num),
   array('label'=>'Institution', 'required'=>false, 
         'icon'=>'home'));
+*/
 ?>
-</div>
+
 <?
 echo $add_btn;
 echo $this->BootstrapForm->end('Submit Revision');
