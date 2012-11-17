@@ -72,7 +72,7 @@ foreach($coauthors as $i=>$ca) {
 }
 
 //$next_num = count($coauthors);
-/*
+echo "<div class=\"coauthor base\">";
 echo $this->BootstrapForm->input(
   sprintf('Coauthor.%d.name', $next_num),
   array('label'=>'Name', 'required'=>false, 'icon'=>'user'));
@@ -84,7 +84,8 @@ echo $this->BootstrapForm->input(
   sprintf('Coauthor.%d.institution', $next_num),
   array('label'=>'Institution', 'required'=>false, 
         'icon'=>'home'));
-*/
+echo '</div>';
+$next_num += 1;
 ?>
 
 <?
