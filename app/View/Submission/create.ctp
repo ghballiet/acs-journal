@@ -15,7 +15,7 @@ $this->end();
 <div class="alert alert-block">
   <h4>Submission Issues</h4>
   <p>
-    As of 2012-09-08 04:15 GMT, papers larger than <strong>2
+    As of 2012-11-18 04:15 GMT, papers larger than <strong>10
     MB</strong> are automatically being rejected. We are aware of this
     issue and are working quickly to resolve it. We will send a
     message to all registered users once this issue has been

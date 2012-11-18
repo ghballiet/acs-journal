@@ -540,7 +540,7 @@ class SubmissionsController extends AppController {
         $this->Submission->finalEmail($submission['Submission']['id'], $url);
 
         $this->alertSuccess(
-          'Success!', sprintf('A camera ready version of <strong>%s</strong> was successfully submitted.',
+          'Success!', sprintf('A final version of <strong>%s</strong> was successfully submitted.',
                               $submission['Submission']['title']), true);
       } catch(Exception $e) {
       }

@@ -40,8 +40,9 @@ echo $this->BootstrapForm->input('Keyword', array('icon'=>'tag',
 <div class="alert alert-block zip-note">
   <h4>Final submission file</h4>
   <p>
-    Please upload a ZIP file containing your PDF, LaTex source, and any
-		additional files necessary to compile your source.
+		Each submission should take the form of a zip file that includes the paper
+		in pdf format, the source document in either Latex or Word format, and
+		any auxiliary files such as figures.
   </p>
 </div>
 <?
