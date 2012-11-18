@@ -100,5 +100,5 @@ $next_num += 1;
 
 <?
 echo $add_btn;
-echo $this->BootstrapForm->end('Submit Revision');
+echo $this->BootstrapForm->end('Submit Final Version');
 ?>
