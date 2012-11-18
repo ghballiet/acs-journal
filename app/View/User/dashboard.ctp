@@ -18,9 +18,9 @@ echo $this->Html->link(
 <h2>My Submissions</h2>
 
 <p class="alert alert-info">
-  <strong>Quick tip:</strong> You can submit a revised version of a
+  <strong>Quick tip:</strong> You can submit a final version of a
   paper by clicking the submission title below, then
-  selecting <strong>Actions > Submit Revision</strong>.
+  selecting <strong>Actions > Submit Final Version</strong>.
 </p>
 
 <table class="table table-condensed">
