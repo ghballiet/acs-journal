@@ -67,7 +67,7 @@ if($author['id'] == $user['id'] || $user['is_admin'] == 1) {
     'link' => array('action'=>'finalize', $slug),
     'icon' => 'share');
   $links[] = $edit;
-  $links[] = $revise;
+//  $links[] = $revise;
 	$links[] = $finalize;
   $links[] = $retract;
 }
