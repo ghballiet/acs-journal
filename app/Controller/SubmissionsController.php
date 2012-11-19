@@ -459,7 +459,7 @@ class SubmissionsController extends AppController {
       //unset($submission['Upload']);
 
       // first, make sure a ZIP file was uploaded
-      if($upload['type'] != 'application/zip') {
+      if($upload['type'] == 'application/pdf') {
         $this->alertError(
           'Error!',
           sprintf('The file you uploaded - <strong>%s</strong> - was not ' . 
