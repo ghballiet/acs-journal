@@ -102,15 +102,20 @@ class Submission extends AppModel {
 
 	// added options = Array() so that it stopped throwing strict error.
   public function beforeSave($options = Array()) {
+
+		// TODO updating the slug is currently breaking the final
+		// version upload scheme - Chris Mac
+		/*
     $coll_id = $this->data['Submission']['collection_id'];
     $coll = $this->Collection->findById($coll_id);
     $order = $this->data['Submission']['order'];
+
 
     // update the slug
     $volume = $coll['Collection']['volume'];
     $slug = sprintf('paper-%d-%d-%d', $coll_id, $volume, $order);
     $this->data['Submission']['slug'] = $slug;
-
+		*/
     return true; 
   }
 }
