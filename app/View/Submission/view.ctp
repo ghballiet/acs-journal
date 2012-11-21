@@ -83,8 +83,10 @@ if(count($links) > 0) {
 
 <? if($author['id'] == $user['id']) { ?>
 <p class="alert alert-info">
-  <strong>Quick tip:</strong> You can submit a revised version of this
-  paper by clicking <strong>Actions > Submit Revision</strong>.
+  <strong>Quick tip:</strong> You can submit a camera-ready version of this
+  paper by clicking <strong>Actions > Submit Camera-Ready Version</strong>.
+	You can use the same procedure to resubmit camera-ready versions up until the 
+	deadline. 
 </p>
 <? } ?>
 
