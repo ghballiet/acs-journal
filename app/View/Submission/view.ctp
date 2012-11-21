@@ -40,7 +40,7 @@ printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
  if($submission['source_uploaded'] == 1){
 	 $url = "../sources/" . $submission['slug'] . ".zip";
 	 printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
-	        '<i class="icon-file"></i> Final Version</a>',
+	        '<i class="icon-file"></i> Camera-Ready Version</a>',
 	        $url);
  }
 
@@ -63,7 +63,7 @@ if($author['id'] == $user['id'] || $user['is_admin'] == 1) {
     'link' => array('action'=>'revise', $slug),
     'icon' => 'share');
   $finalize = array(
-    'text' => 'Submit Final Version',
+    'text' => 'Submit Camera-Ready Version',
     'link' => array('action'=>'finalize', $slug),
     'icon' => 'share');
   $links[] = $edit;
