@@ -48,6 +48,8 @@ Router::connect('/conference/2012', array('controller'=>'pages', 'action'=>'disp
 Router::connect('/paper/*', array('controller'=>'submissions', 'action'=>'view'));
 Router::connect('/pdf/*', array('controller'=>'submissions', 'action'=>'paper'));
 Router::connect('/journal/*', array('controller'=>'collections', 'action'=>'contents'));
+Router::connect('/posters/2012', array(
+  'controller'=>'pages', 'action'=>'display', '2012-posters'));
 
 // named route for assigning roles in collections
 Router::connect(
