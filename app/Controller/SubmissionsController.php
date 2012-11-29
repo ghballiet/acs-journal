@@ -90,6 +90,7 @@ class SubmissionsController extends AppController {
     $submission = $this->Submission->findBySlug($slug);
 
     // quick fix for bhatt-freska paper
+ /*
     if(trim($submission['User']['surname']) == 'Bhatt' &&
        $submission['Collection']['title'] == 'First Annual Conference on Advances in Cognitive Systems') {
       $file = sprintf('../webroot/papers/%s.pdf', $slug);
@@ -98,11 +99,12 @@ class SubmissionsController extends AppController {
       $this->response->type($type);
       $this->response->body($content);
     } else {
+ */
       $paper = $submission['Paper'];
       
       $this->response->type($paper['type']);
       $this->response->body($paper['content']);
-    }
+ //   }
   }
 
 	// the $id is the submission id. 
