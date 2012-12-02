@@ -37,7 +37,7 @@ printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
        $url);
 			 
  // Final version button
- if($submission['source_uploaded'] == 1){
+ if(($author['id'] == $user['id'] || $user['is_admin'] == 1) && $submission['source_uploaded'] == 1){
 	 $url = "../sources/" . $submission['slug'] . ".zip";
 	 printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
 	        '<i class="icon-file"></i> Camera-Ready Version</a>',
