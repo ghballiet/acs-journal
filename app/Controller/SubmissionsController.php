@@ -426,6 +426,115 @@ class SubmissionsController extends AppController {
       $this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
     }
   }
+	
+	public function adminupload($slug){
+    if($this->request->is('get')) {
+      $submission = $this->Submission->findBySlug($slug);
+      $this->set('submission', $submission);
+	  
+	  // Remove the abstract so that user has to input it. 
+	  //$submission['Submission']['abstract'] = "";
+	  
+      $this->request->data = $submission;
+	  
+    } else {
+		  // get the submission currently in the DB to add the final source to.
+		  $submission = $this->Submission->findBySlug($slug);
+			
+      $data = $this->request->data;
+      $new_submission_data = $data['Submission'];
+      $upload = $new_submission_data['Upload'];
+      $keywords = $new_submission_data['Keyword'];
+      $coauthors = $data['Coauthor'];
+	  
+		  //print_r($new_submission_data);
+		  $submission['Submission']['title'] = $new_submission_data['title'];
+		  $submission['Submission']['abstract'] = $new_submission_data['abstract'];
+		  $submission['Submission']['pages'] = $new_submission_data['pages'];
+			
+      // remove the upload from the submission data array
+      unset($submission['Upload']);
+
+      // first, make sure a PDF file was uploaded
+      if($upload['type'] != 'application/pdf') {
+        $this->alertError(
+          'Error!',
+          sprintf('The file you uploaded - <strong>%s</strong> - was not ' . 
+                  'a PDF file. Please select a PDF and re-submit.', $upload['name']));
+        return false;
+      }
+			
+      // get the date
+      $now = date('Y-m-d H:i:s');
+      
+      // build the upload data
+      /*
+			$upload['content'] = file_get_contents($upload['tmp_name']);
+      $upload['extension'] = pathinfo($upload['tmp_name'], PATHINFO_EXTENSION);
+      $upload['user_id'] = $this->Auth->user('id');
+      $upload['created'] = $now;
+      $upload['modified'] = $now;
+      $upload = array('Paper' => $upload);
+			*/
+			
+			//$this->loadModel('Upload');
+			
+      // save the upload
+      $p = $this->Submission->Paper->findById($submission['Submission']['current_version']);
+			$p['Paper']['content'] = file_get_contents($upload['tmp_name']);
+			$p['Paper']['extension']  = pathinfo($upload['tmp_name'], PATHINFO_EXTENSION);
+			$p['Paper']['modified'] = $now;
+			$this->Submission->Paper->save($p);
+			
+			//print_r($p);
+      //$upload = $this->Submission->Paper->save($upload);
+			
+      // save the keywords
+      $words = explode(',', $keywords);
+      foreach($words as $word) {
+        $this->Submission->Keyword->create();
+        $arr = array(
+          'Keyword' => array(
+            'value' => trim($word),
+            'created' => $now,
+            'modified' => $now,
+            'submission_id' => $submission['Submission']['id']));
+        $this->Submission->Keyword->save($arr);                             
+      }
+	  
+		  // delete coauthors associated with submission
+	  
+		  if(isset($submission['Coauthor'])){
+			  //print_r($submission['Coauthor']);
+			  foreach ($submission['Coauthor'] as $ca){
+				  //echo $ca['id'];
+				  //echo "\n";
+				  $this->Submission->Coauthor->delete($ca['id']);
+			  }
+		  }
+
+
+      // build the coauthors
+      $ca = array();
+      foreach($coauthors as $i=>$coauthor) {
+        $coauthor['submission_id'] = $submission['Submission']['id'];
+        $coauthor['created'] = $now;
+        $coauthor['modified'] = $now;
+        if(empty($coauthor['name']) && empty($coauthor['email']) &&
+           empty($coauthor['institution']))
+          continue;
+        $coauthor = array('Coauthor' => $coauthor);
+        $this->Submission->Coauthor->create();
+        $this->Submission->Coauthor->save($coauthor);
+      }
+			
+      $this->alertSuccess(
+        'Success!', sprintf('A revised version of <strong>%s</strong> was successfully submitted (as an admin upload).',
+                            $submission['Submission']['title']), true);
+
+			$this->redirect(array('controller'=>'users', 'action'=>'dashboard'));
+		}
+	}
   
   public function finalize($slug) {
 	//ini_set('memory_limit', '-1');
