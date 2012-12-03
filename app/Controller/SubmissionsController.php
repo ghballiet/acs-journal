@@ -486,6 +486,16 @@ class SubmissionsController extends AppController {
 			$p['Paper']['modified'] = $now;
 			$this->Submission->Paper->save($p);
 			
+			$this->Submission->save($submission);
+			
+
+		  // delete keywords associated with submission
+		  foreach ($submission['Keyword'] as $words){
+			  //echo $words['id'];
+			  //echo "\n";
+			  $this->Submission->Keyword->delete($words['id']);
+		  }
+			
 			//print_r($p);
       //$upload = $this->Submission->Paper->save($upload);
 			
