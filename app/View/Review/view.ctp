@@ -12,7 +12,6 @@ $save_url = $this->Html->url(array(
   'action'=>'saveJson'
 ));
 
-
 $user_id = $review['Submission']['user_id'];
 $sub_id = $review['Submission']['id'];
 $user_name = $user_list[$user_id];
@@ -29,6 +28,32 @@ $auth_str = implode(', ', $authors);
 $title = $review['Submission']['title'];
 $slug = $review['Submission']['slug'];
 ?>
+
+
+<?
+// This tag should be used to screen so that the only people who can see a review are
+// (a) The reviewer
+// (b) An editor assigned to the paper being reviewed
+// (c) Any admin.
+// - BM
+
+// The following code is partly based on manage() from ReviewsController.
+// But I don't know how to access that properly.
+/*
+    $user_role = $this->ReviewsController->Review->User->Role->find('first', array(
+      'conditions' => array(
+        'Role.collection_id' => 3,
+        'Role.user_id' => $this->Auth->user('id'))));
+    if(	$user['is_admin'] == 1 ||
+		$user_id == $user['id'] ||
+		$user_role['RoleType']['name'] == 'editor' ||
+		$user_role['RoleType']['name'] == 'admin' ||
+		$user_role['RoleType']['name'] == 'site_admin'){
+*/
+// For now, though, don't screen anything.
+if(true){
+?>
+
 
 <div class="page-header">
   <ul class="nav nav-pills pull-right">
@@ -66,3 +91,6 @@ $slug = $review['Submission']['slug'];
 </div>
 <? endforeach; ?>
 </div>
+
+<? } ?>
+

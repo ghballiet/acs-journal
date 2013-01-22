@@ -52,7 +52,7 @@ if(count($submissions) == 0) {
   echo $this->Html->tableHeaders(array(
     'Order', 'Title', 'Author', ''
   ));
-
+ 
   foreach($submissions as $submission) {
 		$id = $submission['Submission']['id'];
     $title = $submission['Submission']['title'];
@@ -348,32 +348,34 @@ if($js_sub_reviews == '[]')
   $js_sub_reviews = '{}';
 ?>
 <script type="text/javascript">
-  var user_reviews = <? echo $js_user_reviews; ?>;
-  var submission_reviews = <? echo $js_sub_reviews; ?>;
+var user_reviews = <? echo $js_user_reviews; ?>;
+var submission_reviews = <? echo $js_sub_reviews; ?>;
 </script>
 <?
 $this->end();
 ?>
-      </div>
-      <div class="span7 review-submissions">
-        <h4>Submissions</h4>
-        <div class="active-submissions"></div>
+</div>
+<div class="span7 review-submissions">
+<h4>Submissions</h4>
+<div class="active-submissions"></div>
 <?
-foreach($submissions as $submission) {
-  echo $this->Submission->badge($submission);
+if(count($submissions) > 0) {
+	foreach($submissions as $submission) {
+		echo $this->Submission->badge($submission);
+	}
 }
 ?>
-      </div>
-    </div>
-  </div> <!-- end assign reviewers -->
+</div>
+</div>
+</div> <!-- end assign reviewers -->
 
-  <div class="tab-pane" id="categorize-papers">
-    <h2>Categorize Papers</h2>
-    <? foreach($categorized as $cat_id=>$submissions): ?>
-    <div class="category">
-      <?
+<div class="tab-pane" id="categorize-papers">
+<h2>Categorize Papers</h2>
+<? foreach($categorized as $cat_id=>$submissions): ?>
+<div class="category">
+<?
       $subs = array_values($submissions);
-      echo $this->Html->link('Send Decision Letters',
+      echo $this->Html->link('Send All Decision Letters',
         array(
           'controller'=>'categories',
           'action'=>'notify',
@@ -383,16 +385,19 @@ foreach($submissions as $submission) {
           'class'=>'btn btn-primary btn-mini pull-left',
           'style'=>'margin-right: 10px;'
         ),
-        'Are you sure? This will send decision letters to all authors of these submissions.'
+        'Are you sure? This will send decision letters to all authors of all the submissions in this category.'
       );
+	  // The $categories[$cat_id] below had problems with the 0 index;
+	  // 'uncategorized' should be -1. However, it should now be fixed
+	  // so that new entries get a default value of '-1' instead of null. - BM
       ?>
-      <h3><? echo $categories[$cat_id]; ?>&nbsp;&nbsp;<small><? echo count($submissions); ?> paper(s)</small></h3>
-      <table class="table table-condensend">
-        <tbody>
-          <? foreach($submissions as $submission): ?>
-          <tr>
-            <td class="title">
-              <?
+<h3><? echo $categories[$cat_id]; ?>&nbsp;&nbsp;<small><? echo count($submissions); ?> paper(s)</small></h3>
+<table class="table table-condensend">
+<tbody>
+<? foreach($submissions as $submission): ?>
+<tr>
+<td class="title">
+<?
               echo $this->Html->link($submission['Submission']['title'],
                 array(
                   'controller'=>'submissions',
@@ -400,10 +405,10 @@ foreach($submissions as $submission) {
                   substr(md5($submission['Submission']['id']),0,7)
                 ));
               ?>
-            </td>
-            <td class="author"><? echo $submission['User']['full_name']; ?></td>
-            <td class="categorize">
-              <?
+</td>
+<td class="author"><? echo $submission['User']['full_name']; ?></td>
+<td class="categorize">
+<?
               $links = array();
               foreach($categories as $id=>$title) {
                 if($id != $cat_id)
@@ -431,14 +436,30 @@ foreach($submissions as $submission) {
               }
               echo $this->Bootstrap->dropdownBtn('Change Category&nbsp;', $links, 'btn-mini');
               ?>
-            </td>
-          </tr>
-          <? endforeach; ?>
-        </tbody>
-      </table>
-    </div>
-    <? endforeach; ?>
-  </div>  
+</td>
+<td class="decision">
+<?
+    echo $this->Html->link('Send Decision Letter',
+        array(
+          'controller'=>'categories',
+          'action'=>'notify_individual',
+          $cat_id,
+          $submission['Submission']['id']
+        ), array(
+          'class'=>'btn btn-danger btn-mini pull-left',
+          'style'=>'margin-right: 10px;'
+        ),
+        'Are you sure? This will send a single decision letter to the authors of the selected submission.'
+      );
+?>
+</td>
+</tr>
+<? endforeach; ?>
+</tbody>
+</table>
+</div>
+<? endforeach; ?>
+</div>
 </div>
 
 
@@ -448,13 +469,13 @@ foreach($submissions as $submission) {
 <script type="text/javascript">
 var user_list = <? echo json_encode(array_values($users)); ?>;
 $(document).ready(function() {
-  $('#CollectionUser').typeahead({
-    source: user_list
-  });
+$('#CollectionUser').typeahead({
+source: user_list
+});
 
-  // switch to active tab
-  var hash = window.location.hash;
-  $('#tab-headers a[href="' + hash + '"]').tab('show');
+// switch to active tab
+var hash = window.location.hash;
+$('#tab-headers a[href="' + hash + '"]').tab('show');
 });
 </script>
 <? echo $this->end(); ?>

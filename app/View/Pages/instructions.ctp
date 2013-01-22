@@ -4,7 +4,7 @@ echo $this->Html->css('submission_info');
 $this->end();
 
 // links for things on the site
-$format_pdf = $this->Html->url('/formats/format.pdf', true);
+$formatting = $this->Html->url('/formatting', true);
 $formats = $this->Html->url('/formats', true);
 $submit = $this->Html->url('/submit', true);
 $journal_submit = $this->Html->url('/journal/submit', true);
@@ -51,8 +51,8 @@ $review_form = $this->Html->url('/review-form', true);
 
 <h2 id="format">Paper Format</h2>
 <p><i>Advances in Cognitive Systems</i> will rely on electronic submission of
-  papers for review and publication. Papers must not exceed sixteen
-  (16) pages, including all figures, tables, and references. We will
+  papers for review and publication. Papers must not exceed eighteen
+  (18) pages, including all figures, tables, and references. We will
   return to the authors any submissions that exceed this page limit or
   that diverge significantly from the format specified herein.</p>
 
@@ -60,28 +60,20 @@ $review_form = $this->Html->url('/review-form', true);
   overall width of 6.0 inches (15.24 cm) and length of 8.0 inches
   (20.32 cm). The left margin should be 1.25 inches (3.175 cm) and the
   top margin 1.5 inches (3.81 cm). The right and bottom margins will
-  depend on whether one prints on US letter or A4 paper.</p> 
+  depend on whether the paper is presented on US letter or A4 paper.</p> 
 
 <p>The paper body should be set in 11 point type with a vertical spacing
   of 12 points. Please use Times Roman typeface throughout the text.
-  Additional details about paper format are available at</p>
+  Additional details about paper format and references, as well as
+  electronic templates for producing the camera-ready copy, are available at</p>
 
 <h3>
-<? echo $this->Html->link($format_pdf, $format_pdf, array('target'=>'_blank'));?>
+<? echo $this->Html->link($formatting, $formatting);?>
 </h3>
 
-<p>We assume that authors will have access to LaTeX or Word to format their 
-  documents and can use a Web browser to download style files and upload
-  their papers. Electronic templates for producing the camera-ready copy
-  are available for LaTeX and Microsoft Word. Templates are accessible
-  on the Web at:</p>
-
-<h3>
-<? echo $this->Html->link($formats, $formats); ?>
-</h3>
-
-<p>Authors who have questions about these electronic templates should 
-  send them to <a href="mailto:ACS <acs@cogsys.org>">acs@cogsys.org</a> by electronic mail.</p> 
+<p>We assume that authors will have access to LaTeX or Microsoft Word to format
+their documents and can use a Web browser to download style files and upload
+their papers.</p>
 
 <p>To ensure the ability to preview and print submissions, authors must
   provide their manuscripts in pdf format. Papers prepared in Word

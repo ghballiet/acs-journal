@@ -9,13 +9,37 @@ $sub = ClassRegistry::init('Submission');
 $papers = array(
   array(
     'slug' => 'paper-3-2-123',
+	),
+  array(
+    'slug' => 'paper-3-2-138',
+	),
+  array(
+    'slug' => 'paper-3-2-9',
+	),
+  array(
+    'slug' => 'paper-3-2-87',
+	),
+  array(
+    'slug' => 'paper-3-2-78',
+	),
+  array(
+    'slug' => 'paper-3-2-132',
+	),
+  array(
+    'slug' => 'paper-3-2-98',
+	),
+  array(
+    'slug' => 'paper-3-2-91',
+	),
+  array(
+    'slug' => 'paper-3-2-23',
 	)
 );
 ?>
 <div class="page-header">
-  <h1>First Conference on Advances in Cognitive Systems</h1>
-  <h2>December 6-8, 2012, Palo Alto, California</h2>
-  <h3>Table of Contents</h3>
+  <h2>First Annual Conference on</h2>
+  <h1>Advances in Cognitive Systems</h1>
+  <h2>2012 Poster Collection</h2>
 </div>
 
 <table class="table">
@@ -28,9 +52,8 @@ foreach($papers as $i=>$paper) {
   $title = '';
   $author = '';
   $pages = 0;
-
   if($i == 0)
-		echo $this->Html->tableHeaders(array('Posters', '', '', ''));
+    echo $this->Html->tableHeaders(array('Poster', '', '', ''));
 
   // get pdf and abstract links
   if(!isset($paper['slug'])) {

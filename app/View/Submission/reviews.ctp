@@ -43,7 +43,8 @@ $slug = $submission['Submission']['slug'];
   <? endif; ?>
   <h1><? echo $title; ?></h1>
   <h4 class="authors"><? echo $auth_str; ?></h4>
-
+  
+  
   <? if($admin): ?>
 	<h3>Metareviewers:</h3>
   <div class="reviewer">
@@ -66,16 +67,35 @@ $slug = $submission['Submission']['slug'];
 <hr />
 <? endif; ?>
 
+<h3>Decision:</h3>
+<h4>
+<span style="margin-left: 60px;">
+<? echo $submission['Category']['name']; ?>
+</span>
+</h4>
+<hr />
+
 <h3>Metareviews</h3>
 <div class="question"> 
 	<div class="question-text">
     <? foreach ($metareviews as $metareview): ?>
     <div class="answer">
       <h4>
+	    <? if($admin): ?>
         <span style="margin-right: 15px;">
-          <? echo $metareview['Category']['name']; ?>
-        </span>
-        <? if($admin): ?>
+          <? 
+				$cat = $metareview['Metareview']['category_id'];
+				echo ' Recommendation: ';
+				$categ = '[Uncategorized or major revisions]';
+				// This is really clunky. The 1/2/3/4/5 notation is only there for back compatibility,
+				// but even the 51/52/53/54 is annoyingly opaque. - BM Jan 2013
+				if(($cat == '51') || ($cat == '1')) $categ = 'Accept as talk';
+				if(($cat == '52') || ($cat == '2')) $categ = 'Accept conditionally as talk';
+				if(($cat == '53') || ($cat == '3')) $categ = 'Accept as poster';
+				if(($cat == '54') || ($cat == '5')) $categ = 'Reject';
+				echo $categ;
+			?>
+         </span>
         <small>
           <? echo $metareview['User']['full_name']; ?>
         </small>

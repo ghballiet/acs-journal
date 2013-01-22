@@ -28,7 +28,7 @@
 Router::parseExtensions('pdf');
 
 
-Router::connect('/', array('controller'=>'pages', 'action'=>'display', '2012'));
+Router::connect('/', array('controller'=>'pages', 'action'=>'display', 'home'));
 Router::connect('/acs/2012', array('controller'=>'pages', 'action'=>'display', '2012'));
 // Router::connect('/acs/2011', '/acs-old/');
 Router::connect('/login', array('controller'=>'users', 'action'=>'login'));
@@ -42,6 +42,10 @@ Router::connect('/conference/submit', array(
   'controller'=>'submissions', 'action'=>'create', 'acs-2012'));
 Router::connect('/journal/volume-1', array(
   'controller'=>'pages', 'action'=>'display', '2012-editorial-contents'));
+Router::connect('/journal/volume-2', array(
+  'controller'=>'pages', 'action'=>'display', '2012-conference-contents'));
+Router::connect('/journal/volumes', array(
+  'controller'=>'pages', 'action'=>'display', 'volume-index'));
 Router::connect('/journal/masthead', array('controller'=>'pages', 'action'=>'display', 'masthead'));
 Router::connect('/journal', array('controller'=>'pages', 'action'=>'display', 'home'));
 Router::connect('/conference/2012', array('controller'=>'pages', 'action'=>'display', '2012'));
@@ -50,6 +54,7 @@ Router::connect('/pdf/*', array('controller'=>'submissions', 'action'=>'paper'))
 Router::connect('/journal/*', array('controller'=>'collections', 'action'=>'contents'));
 Router::connect('/posters/2012', array(
   'controller'=>'pages', 'action'=>'display', '2012-posters'));
+Router::connect('/formatting', array('controller'=>'pages', 'action'=>'display', 'formatting'));
 
 // named route for assigning roles in collections
 Router::connect(

@@ -8,22 +8,21 @@ $instructions = $this->Html->url('/instructions', true);
 $submit = $this->Html->url(
 array('controller'=>'submissions','action'=>'create'), true);
 $review_form = $this->Html->url('/review-form', true);
-$faq_page = $this->Html->url('/faq', true);
 ?>
 
 <div class="page-header">
   <h1>
     <span class="leading">First Annual Conference on</span>
     Advances in Cognitive Systems
-    <small>December 6-8, 2012, Palo Alto, California</small>
+    <small>December 7-9, 2012, Mountain View, California</small>
   </h1>
 </div>
 
 <h3 id="overview">Overview</h3>
 <p>
   We invite submissions to the First Annual Conference on Advances in
-  Cognitive Systems, which will take place in Palo Alto, California,
-  on December 6, 7, and 8, 2012. Like the 2011 Fall Symposium on the
+  Cognitive Systems, which will take place in Mountain View, California,
+  on December 7, 8, and 9, 2012. Like the 2011 Fall Symposium on the
   same topic, the meeting will bring together researchers with interests
   in human-level intelligence, complex cognition, integrated intelligent
   systems, cognitive architectures, and related topics. The purpose is
@@ -71,7 +70,7 @@ $faq_page = $this->Html->url('/faq', true);
   conference. Submissions should follow the instructions provided at</p>
 
 <h4>
-  <? printf('<a href="%s">%s</a> ,', $instructions, $instructions); ?>
+  <? printf('<a href="%s">%s</a>,', $instructions, $instructions); ?>
 </h4>
 
 <p>which gives detailed information about format and provides Latex and
@@ -113,11 +112,11 @@ $faq_page = $this->Html->url('/faq', true);
   evaluate the paper for its contribution to understanding cognitive
   systems, clarity of claims about this contribution, convincing
   evidence in support of those claims, and cogent presentation of its
-  ideas to readers. We encourage authors to examine the 
-  <a href="<? echo $review_form; ?>">review form</a> before
+  ideas to readers. We encourage authors to examine the <a
+                                                           href="<? echo $review_form; ?>">review form</a> before
   drafting their manuscripts to ensure that their submissions address
   all of the dimensions on which reviewers will evaluate them. Accepted
-  papers will appear in <i>Advances in Cognitive Systems</i> (ISSN 2324-8416), an
+  papers will appear in <i>Advances in Cognitive Systems</i>, an
   electronic journal associated with the conference.
 </p>
 
@@ -130,38 +129,34 @@ $faq_page = $this->Html->url('/faq', true);
   publications, some submissions may be accepted on a conditional
   basis. We may accept some submissions for poster presentation at 
   the meeting.
+</p>
+
+<h3 id="info">Location, Dates, and Other Information</h3>
+
+<p>
+  The First Annual Conference on Advances in Cognitive Systems will run from
+  Friday, December 7, through Sunday, December 9, 2012, in Mountain
+  View, California. The meeting will include extended technical
+  presentations, leisurely breaks to encourage discussions, and 
+  receptions to foster additional interactions. 
+</p>
+
 <p>
   The conference aims to be as inclusive as possible while still
   fostering innovative research on the computational nature of
-  intelligence. The conference 
-  <a href="<? echo $faq_page; ?>">FAQ</a> 
-  page attempts to clarify the scope of the event. Authors who have
-  questions about whether their research is appropriate for the
-  meeting should contact the Program Chair, Pat Langley (<a
-  href="mailto:Pat Langley
-  <patrick.w.langley@gmail.com>">patrick.w.langley@gmail.com</a>), 
+  intelligence. The conference FAQ page attempts to clarify the scope 
+  of the event. Authors who have questions about whether their research 
+  is appropriate for the meeting should contact the Program Chair, Pat
+  Langley (<a href="mailto:Pat Langley <patrick.w.langley@gmail.com>">patrick.w.langley@gmail.com</a>),
   for additional information.
-
-<h3 id="info">Logistics and Registration</h3>
-
-<p>
-The First Annual Conference on Advances in Cognitive Systems will 
-run from 9:00 AM on Thursday, December 6, through 2:00 PM on 
-Saturday, December 8, 2012, at the <a href="http://www.paloaltojcc.org"> 
-Oshman Jewish Community Center</a> in Palo Alto, California.
-<p>
-The meeting will include extended technical presentations, leisurely
-breaks to encourage discussions, and evening poster receptions to 
-foster additional interactions among participants. Additional details
-about registration, lodging, and transportation is available at the
-meeting's <a href="/logistics">logistics</a> page. 
+</p>
 
 <h3>Important Dates</h3>
 <ul class="columns clean">
   <li><b>September 7, 2012</b> Deadline for paper submission</li>
-  <li><b>October 16, 2012</b> Decisions about paper acceptance</li>
-  <li><b>November 18, 2012</b> Deadline for final papers</li>
-  <li><b>December 6-8, 2012</b> Conference</li>
+  <li><b>October 15, 2012</b> Decisions about paper acceptance</li>
+  <li><b>November 21, 2012</b> Deadline for final papers</li>
+  <li><b>December 7-9, 2012</b> Conference</li>
 </ul>
 
 <h3 id="organizing_committee">Organizing Committee</h3>

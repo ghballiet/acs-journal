@@ -12,8 +12,8 @@
 
 <br>
 The registration fee to attend the First Annual Conference on Advances 
-in Cognitive Systems is US$200 before midnight on Thursday, November 22, 
-2012, or US$250 on Friday, November 23, 2012 or later.
+in Cognitive Systems is US$200 before midnight on Monday, November 26, 
+2012, or US$250 on Tuesday, November 27, 2012 or later.
 <p>
 <hr>
 <p>
@@ -34,10 +34,10 @@ to the right and following the prompts.</p>
 <p>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="V9K9FZHL6LG4E">
+<input type="hidden" name="hosted_button_id" value="JW22UGVT5NJN4">
 <table>
 <tr><td><input type="hidden" name="on0" value="Registration Fee">Registration Fee</td></tr><tr><td><select name="os0">
-        <option value="November 22, 2012 or earlier">November 22, 2012 or earlier $200.00 USD</option>
+        <option value="November 27, 2012 or later">November 27, 2012 or later $250.00 USD</option>
 </select> </td></tr>
 <tr><td><input type="hidden" name="on1" value="Name">Please enter your name:</td></tr>
 <tr><td><input type="text" name="os1" maxlength="200"></td></tr>

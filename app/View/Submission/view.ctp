@@ -14,6 +14,8 @@ $keywords = $data['Keyword'];
 $author = $data['User'];
 $modified = $this->Time->timeAgoInWords($submission['modified']);
 
+$sub = ClassRegistry::init('Submission');
+
 $authors = array();
 $authors[] = array(
   'name' => $this->Profile->name($author),
@@ -26,6 +28,63 @@ foreach($data['Coauthor'] as $coauthor)
 
 <div class="page-header">
 <?
+
+// Back to collection button (for published papers)
+// Need a more graceful way of doing this - BM 12/2012
+$back = "";
+$incollection = false;
+$jvol1 = array(14, 11, 8, 13, 7, 9, 6, 12, 10, 210);
+foreach($jvol1 as $i) {
+	$item = $sub->findById($i);
+	if($submission['slug'] == $item['Submission']['slug']) {
+		$back = "/journal/volume-1";
+		$incollection = true;
+	}}
+$jvol2 = array('141', '140', '133', '102', '134', '39', '55',
+'139', '136', '135', '104', '8', '97', '57', '38', '121');
+foreach($jvol2 as $i) {
+	if($submission['slug'] == ('paper-3-2-' . $i)) {
+		$back = "/journal/volume-2";
+		$incollection = true;
+	}}
+$pvol1 = array('123','138','9','87','78','132','98','91','23');
+foreach($pvol1 as $i) {
+	if($submission['slug'] == ('paper-3-2-' . $i)) {
+		$back = "/posters/2012";
+		$incollection = true;
+	}}
+if($incollection){
+printf('<a href="%s" class="btn btn pull-right">' .
+       '<i class="icon-file"></i> Return to Collection</a>',
+       $back);
+}
+
+
+if(($submission['category_id'] != '-1') && ($submission['category_id'] != '0')){ // BM 18 Jan 2013
+// BM 8 Jan 2013
+// This should create the collated-style review if the user is a site admin,
+// admin or editor, or if they are the author of the paper.
+// if($user_role == 'site_admin' || $user_role == 'admin' || $user_role == 'editor'){
+if($author['id'] == $user['id'] || $user['is_admin'] == 1){
+	$sub_id = $submission['id'];
+    $review_button = $this->Html->link('Reviews', array(
+			'controller'=>'submissions',
+			'action'=>'reviews',
+			substr(md5($sub_id),0,7)
+		), array('class'=>'btn btn-primary pull-right'));
+		//'btn-primary', 'pull-right');
+    //echo $this->Html->tableCells(array($order, $title, $author, $buttons));
+	//echo $this->Html->$review_button;
+	echo $this->Html->tableCells(array($review_button));
+	//echo $this->$review_button;
+	//echo $this->Bootstrap->dropdownBtn('Actions', $links, 'btn-primary', 'pull-right');
+	// $url = "../sources/" . $submission['slug'] . ".zip";
+	// printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
+	//        '<i class="icon-file"></i> View Reviews</a>',
+	//        $url);
+ }
+}
+ 
 // download button
 $url = $this->Html->url(array(
   'controller'=>'submissions',
@@ -33,7 +92,7 @@ $url = $this->Html->url(array(
   'ext'=>'pdf',
   $submission['slug']), true);
 printf('<a href="%s" class="pdf btn btn-danger pull-right">' .
-       '<i class="icon-file"></i> PDF</a>',
+       '<i class="icon-file"></i> View PDF</a>',
        $url);
 			 
  // Final version button
@@ -67,8 +126,10 @@ if($author['id'] == $user['id'] || $user['is_admin'] == 1) {
     'link' => array('action'=>'finalize', $slug),
     'icon' => 'share');
   $links[] = $edit;
-//  $links[] = $revise;
-	$links[] = $finalize;
+  $accepting = ($collection['accepting_submissions'] == 1);
+  if($accepting)
+    $links[] = $revise;
+  $links[] = $finalize; // ***
   $links[] = $retract;
 }
 
@@ -76,8 +137,10 @@ if($author['id'] == $user['id'] || $user['is_admin'] == 1) {
 if(count($links) > 0) {
   echo $this->Bootstrap->dropdownBtn(
     'Actions', $links, 'btn-primary', 'pull-right');
-}
+}	
+	
 ?>
+
   <h1><? echo $submission['title']; ?></h1>
 </div>
 
@@ -88,7 +151,12 @@ if(count($links) > 0) {
 	You can use the same procedure to resubmit camera-ready versions up until the 
 	deadline. 
 </p>
-<? } ?>
+<? if(($submission['category_id'] != '-1') && ($submission['category_id'] != '0')){ ?>
+<p class="alert alert-info">
+  <strong>Quick tip:</strong> You can view any reviews this paper has received
+  by clicking the <strong>'Reviews'</strong> button above.
+</p>
+<? } } ?>
 
 <div class="row">
   <div class="span3 left">

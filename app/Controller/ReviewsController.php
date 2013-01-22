@@ -35,6 +35,14 @@ class ReviewsController extends AppController {
   }
 
   public function status() {
+  
+	// BM 18 Jan 2013 - just added the reverse of the same guard from the manage() function
+    $role = $this->Review->User->Role->find('first', array(
+      'conditions' => array(
+        'Role.user_id' => $this->Auth->user('id'))));
+    if($role['RoleType']['name'] == 'reviewer')
+      $this->redirect(array('action'=>'manage'));
+  
     $coll_ids = $this->Review->User->Role->find('all', array(
       'conditions'=>array('Role.role_type_id'=>2),
       'fields'=>array('DISTINCT Role.collection_id')));
@@ -90,7 +98,7 @@ class ReviewsController extends AppController {
 
     $role = $this->Review->User->Role->find('first', array(
       'conditions' => array(
-        'Role.collection_id' => 3,
+        //'Role.collection_id' => 3, // BM 18 Jan 2013
         'Role.user_id' => $this->Auth->user('id'))));
     if($role['RoleType']['name'] == 'editor' || $role['RoleType']['name'] == 'admin')
       $this->redirect(array('action'=>'status'));

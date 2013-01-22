@@ -75,15 +75,28 @@ class Submission extends AppModel {
     
     return $this->find('all', $opts);
   }
-
+  
+  
   public function updateReviews($old_id, $new_id) {
     // update submission numbers for reviews
     $reviews = $this->Review->findAllBySubmissionId($old_id);
-    
-    foreach($reviews as $item) {
+        foreach($reviews as $item) {
       $item['Review']['submission_id'] = $new_id;
       $this->Review->save($item);
     }
+	
+	// Update metareviews too - BM Jan 2013
+	$metareviews = $this->Metareview->findAllBySubmissionId($old_id);
+	foreach($metareviews as $item) {
+      $item['Metareview']['submission_id'] = $new_id;
+      $this->Metareview->save($item);
+    }
+	
+	//  $this->data['Submission']['category_id'] = '-1';
+	
+/*	
+The categorization of the paper could (should) be updated here too. - BM Jan 2013
+*/	
   }
 
   public function nextOrder($id) {

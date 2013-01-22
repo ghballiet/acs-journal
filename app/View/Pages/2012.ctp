@@ -214,3 +214,41 @@ is available at the meeting's <a href="/logistics">logistics</a> page.
   <li><b>Gheorghe Tecuci</b> George Mason University</li>
   <li><b>R. Michael Young</b> North Carolina State University</li>  
 </ul>
+
+<!--
+<h3 id="ack">Acknowledgements</h3>
+<a href="http://www.ida.liu.se/ext/aijd/"><i>Artificial Intelligence</i> Journal</a>
+<p>
+<a href="http://www.onr.navy.mil/">Office of Naval Research</a>
+  -->
+
+<br>  
+<p>
+<br>
+<h3 id="sponsors" align="center">Sponsors</h3>  
+<div align="center">
+<table cellpadding="20">
+<tr>
+<td> &nbsp </td>
+<td><a href="http://www.ida.liu.se/ext/aijd/"><i>Artificial Intelligence</i> Journal</a></td>
+<td> &nbsp </td>
+<td> &nbsp </td>
+<td> &nbsp </td>
+<td><a href="http://www.onr.navy.mil/">Office of Naval Research</a></td>
+<td> &nbsp </td>
+</tr>
+</table> 
+</div> 
+  
+  <!--
+<p>  
+<table cellpadding="20">
+<tr>
+<td>   </td>
+<td><a href="http://www.ida.liu.se/ext/aijd/"><i>Artificial Intelligence</i> Journal</a></td>
+<td>   </td>
+<td><a href="http://www.onr.navy.mil/">Office of Naval Research</a></td>
+<td>   </td>
+</tr>
+</table> 
+-->

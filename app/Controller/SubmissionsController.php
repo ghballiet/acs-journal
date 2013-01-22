@@ -68,8 +68,11 @@ class SubmissionsController extends AppController {
     $this->autoRender = false;
     $submission = $this->Submission->findById($id);
     $submission['Submission']['category_id'] = $category_id;
-    foreach($submission['Metareview'] as &$metareview)
-      $metareview['category_id'] = $category_id;
+//    foreach($submission['Metareview'] as &$metareview)
+//      $metareview['category_id'] = $category_id;
+// Removed, BM, 22 Jan 2013 - I've been operating under the assumption that metareviewer
+// recommendation and actual categorisation are distinct. e.g. when there are multiple
+// metareviewers, or when the categorisation is changed by committee decision.
     $collection = $submission['Collection']['id'];
 
     if($this->Submission->save($submission)) {
@@ -263,6 +266,10 @@ class SubmissionsController extends AppController {
       $submission['modified'] = $now;
       $submission['order'] = $this->Submission->nextOrder($submission['collection_id']);
       $submission = array('Submission' => $submission);
+	  
+	  // Should fix new submissions, and shouldn't change the fact that resubmissions
+	  // take a default value for category.
+	  //$submission['category_id'] = '-1';
 
       // save the submission
       $this->Submission->create();

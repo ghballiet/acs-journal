@@ -13,12 +13,12 @@
 <p>
 The First Annual Conference on Advances in Cognitive Systems will run
 from on Thursday, December 6, through Saturday, December 8, 2012. The 
-meeting will start at 9:00 AM on the first day and end by 2:00 PM on 
+meeting will start at 9:00 AM on the first day and end by 1:30 PM on 
 the third day. 
 <p>
 The event will take place in the 
-<a href="http://www.paloaltojcc.org/quick-links/rentals-freidenrich/">
-Freidenrich Room</a>
+<a href="http://www.paloaltojcc.org/quick-links/freidenrich-conference-center/">
+Freidenrich Conference Center</a>
 at the 
 <a href="http://www.paloaltojcc.org"> 
 Oshman Jewish Community Center</a>
@@ -28,7 +28,7 @@ in Palo Alto, California. The Center is located at
 just off US Highway 101 near the intersection of East Charleston 
 Road and San Antonio Road. The Center's general telephone number 
 is 650-223-8700 and additional directions are available 
-<a href="http://www.paloaltojcc.org/hours-location/hours-and-directions/">
+<a href="http://www.paloaltojcc.org/header/hours-directions-and-taube-koret-campus-map/">
 here</a>. 
 <p>
 <h3>Conference Registration</h3>
@@ -82,10 +82,12 @@ useful price comparisons.
 <p>
 To reach the Oshman Center by car, take US 101 either south from San
 Francisco Airport or north from San Jose Airport. Leave the highway by
-the <strike>San Antonio Road South exit in the direction of Los Altos, then
-turn right at the first stop light onto Charleston Road. Take the
+the San Antonio Road South exit in the direction of Los Altos.
+Take care on San Antonio Road, which is currently undergoing some roadworks.
+Turn right at the first stop light onto Charleston Road. Take the
 second right onto Fabian Way, then enter the Center driveway on the
-right into the parking garage</strike>
+right into the parking garage.
+<!--
 Rengstorff Avenue exit and continue on to North Rengstorff Avenue 
 (going straight if coming south on US 101 or turning right if coming
 north on US 101). 
@@ -95,8 +97,9 @@ driveway on the right into the parking garage. Note that
 following these directions will let you avoid San Antonio Road between 
 Middlefield and Highway 101, which will be undergoing major roadwork 
 during December.
+-->
 More details are available
-<a href="http://www.paloaltojcc.org/hours-location/directions-during-construction/">here</a>.
+<a href="http://www.paloaltojcc.org/header/hours-directions-and-taube-koret-campus-map/">here</a>.
 <p>
 <h4>Driving on Interstate 280</h4>
 <p>
@@ -104,10 +107,11 @@ To reach the Oshman Center by this longer but more scenic route, take
 Interstate 280 either south from San Francisco Airport or north from
 San Jose Airport. Leave the highway by the El Monte Avenue East exit,
 turn left on Foothill Expressway, and then turn right on San Antonio
-Road. Continue on San Antonio until you 
-<strike>reach Charleston Road, then turn left onto Charleston. Take the
+Road. Take care, as San Antonio is currently undergoing some roadworks.
+Continue until you reach Charleston Road, then turn left onto Charleston. Take the
 second right onto Fabian Way, then enter the Center driveway on the
-right into the parking garage</strike>
+right into the parking garage.
+<!--
 cross the railroad tracks, then turn left onto Alma Street immediately
 afterwards. Turn right at the intersection with Charleston Road. Follow 
 East Charleston, crossing Middlefield Road, and take the fourth left
@@ -115,9 +119,10 @@ onto Fabian Way. Enter the Center driveway on the right into the
 parking garage. Note that following these directions will let you
 avoid San Antonio Road between Middlefield and Highway 101, which will
 be undergoing major roadwork during December.
+-->
 
 More details are available
-<a href="http://www.paloaltojcc.org/hours-location/directions-during-construction/">here</a>.
+<a href="http://www.paloaltojcc.org/header/hours-directions-and-taube-koret-campus-map/">here</a>.
 <h4>Parking at the Oshman Center</h4>
 <p>
 Parking in the Oshman Center garage is free to guests. Valet parking

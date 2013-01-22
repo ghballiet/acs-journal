@@ -33,12 +33,18 @@ $papers = array(
   ),
   array(
     'id' => 10, 
+  ),
+  array(
+    'id' => 210, 
+  ),
+  array(
+    'id' => 212, 
   )
 );
 ?>
 <div class="page-header">
   <h1>Advances in Cognitive Systems</h1>
-  <h2>Volume 1, July 2012 to present</h2>
+  <h2>Volume 1, July to December 2012</h2>
   <h3>Table of Contents</h3>
 </div>
 
@@ -56,7 +62,10 @@ foreach($papers as $i=>$paper) {
   if($i == 0)
     echo $this->Html->tableHeaders(array('Editorial', '', '', ''));
   else if ($i == 1)
-    echo $this->Html->tableHeaders(array('Invited Essays', '', '', ''));
+    echo $this->Html->tableHeaders(array('Essays', '', '', ''));
+  else if ($i == 9)
+  echo $this->Html->tableHeaders(array('Refereed Articles', '', '', ''));
+	
 
   // get pdf and abstract links
   if(!isset($paper['id'])) {

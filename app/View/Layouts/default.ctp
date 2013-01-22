@@ -38,10 +38,10 @@ echo $this->Html->css(array(
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<? echo $this->Html->url('/conference/2012'); ?>"><? echo $this->Html->image('acs_cropped_white.png'); ?></a>
+          <a class="brand" href="<? echo $this->Html->url('/'); ?>"><? echo $this->Html->image('acs_cropped_white.png'); ?></a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><? echo $this->Html->link('Contents', '/journal/volume-1'); ?></li>
+              <li><? echo $this->Html->link('Contents', '/journal/volumes'); ?></li>
               <li><? echo $this->Html->link('Masthead', '/journal/masthead'); ?></li>
               <li><? echo $this->Html->link('FAQ', '/faq'); ?></li>
               <li><? echo $this->Html->link('Instructions', '/instructions'); ?></li>
